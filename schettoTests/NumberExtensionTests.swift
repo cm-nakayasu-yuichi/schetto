@@ -33,4 +33,40 @@ class NumberExtensionTests: XCTestCase {
         XCTAssertFalse(b.reverse())
         XCTAssertFalse(b, "元の値は変更されること")
     }
+    
+    func test_percentage() {
+        XCTAssertEqual((-0.01).f.percentage, 0.0)
+        XCTAssertEqual(0.f.percentage, 0.0)
+        XCTAssertEqual((0.01).f.percentage, 0.01)
+        XCTAssertEqual((0.99).f.percentage, 0.99)
+        XCTAssertEqual((1.00).f.percentage, 1.00)
+        XCTAssertEqual((1.01).f.percentage, 1.00)
+        XCTAssertEqual(2.f.percentage, 1.00)
+    }
+    
+    func test_percentageString() {
+        let a = (0.123456).f.percentageString()
+        XCTAssertEqual(a, "12.35%")
+        
+        let b = (0.123456).f.percentageString(place: 1)
+        XCTAssertEqual(b, "12.3%")
+        
+        let c = (0.123456).f.percentageString(place: 0)
+        XCTAssertEqual(c, "12%")
+        
+        let d = (0.123456).f.percentageString(unit: "パーセント")
+        XCTAssertEqual(d, "12.35パーセント")
+        
+        let e = (0.11111).f.percentageString(rule: .down)
+        XCTAssertEqual(e, "11.11%")
+        
+        let f = (0.11111).f.percentageString(rule: .up)
+        XCTAssertEqual(f, "11.12%")
+        
+        let g = (0.123456).f.percentageString(place: 3, rule: .down, unit: "")
+        XCTAssertEqual(g, "12.345")
+        
+        let h = 123.f.percentageString()
+        XCTAssertEqual(h, "100.00%")
+    }
 }

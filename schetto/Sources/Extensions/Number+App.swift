@@ -72,6 +72,35 @@ extension CGFloat {
     var string: String {
         return "\(self)"
     }
+    
+    /// パーセンテージ (0未満は0, 1以上は1を返す)
+    var percentage: CGFloat {
+        if self <= 0 {
+            return 0
+        } else if 1 <= self {
+            return 1
+        } else {
+            return self
+        }
+    }
+    
+    /// パーセンテージ用文字列を取得する
+    /// - Parameters:
+    ///   - place: 小数点位置
+    ///   - rule: 丸めのルール
+    ///   - unit: 単位
+    /// - Returns: パーセンテージ用文字列
+    func percentageString(place: UInt = 2, rule: FloatingPointRoundingRule = .toNearestOrAwayFromZero, unit: String = "%") -> String {
+        let hundredfold = self.percentage * 100
+        let multiple = pow(10, CGFloat(place))
+        let rounded = (hundredfold * multiple).rounded(rule)
+        let percentage = rounded / multiple
+        if place == 0 {
+            return "\(Int(percentage))\(unit)"
+        } else {
+            return "\(percentage)\(unit)"
+        }
+    }
 }
 
 public extension Int {
