@@ -20,6 +20,7 @@
 		DBB52A5621761968009C5097 /* Notification+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4B21761968009C5097 /* Notification+App.swift */; };
 		DBB52A5721761968009C5097 /* Number+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4C21761968009C5097 /* Number+App.swift */; };
 		DBB52A5921761C1D009C5097 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */; };
+		DBB52A5B2176379B009C5097 /* NumberExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */; };
 		DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */; };
 		E493B1C9217593F80017F931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1C7217593F80017F931 /* Main.storyboard */; };
 		E493B1CB217593F90017F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CA217593F90017F931 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		DBB52A4B21761968009C5097 /* Notification+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+App.swift"; sourceTree = "<group>"; };
 		DBB52A4C21761968009C5097 /* Number+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+App.swift"; sourceTree = "<group>"; };
 		DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
+		DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensionTests.swift; sourceTree = "<group>"; };
 		E493B1C0217593F80017F931 /* schetto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schetto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1C8217593F80017F931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E493B1CA217593F90017F931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */,
+				DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */,
 				E493B1DA217593F90017F931 /* Info.plist */,
 			);
 			path = schettoTests;
@@ -262,14 +265,14 @@
 		E493B202217599900017F931 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DBB52A4A21761968009C5097 /* String+App.swift */,
+				DBB52A4C21761968009C5097 /* Number+App.swift */,
 				DBB52A4521761968009C5097 /* Array+App.swift */,
 				DBB52A4821761968009C5097 /* CoreGraphics+App.swift */,
 				DBB52A4721761968009C5097 /* Date+App.swift */,
 				DBB52A4921761968009C5097 /* Directory+App.swift */,
 				DBB52A4B21761968009C5097 /* Notification+App.swift */,
 				DBB52A4421761968009C5097 /* NSLayoutConstraint+App.swift */,
-				DBB52A4C21761968009C5097 /* Number+App.swift */,
-				DBB52A4A21761968009C5097 /* String+App.swift */,
 				DBB52A4221761968009C5097 /* UIColor+App.swift */,
 				DBB52A4621761968009C5097 /* UIImage+App.swift */,
 				DBB52A4321761968009C5097 /* UIView+App.swift */,
@@ -456,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB52A5B2176379B009C5097 /* NumberExtensionTests.swift in Sources */,
 				DBB52A5921761C1D009C5097 /* ArrayExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
