@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F738B7713350D884A1BAA34 /* Pods_schetto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */; };
+		DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */; };
 		E493B1C4217593F80017F931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1C3217593F80017F931 /* AppDelegate.swift */; };
 		E493B1C6217593F80017F931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1C5217593F80017F931 /* ViewController.swift */; };
 		E493B1C9217593F80017F931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1C7217593F80017F931 /* Main.storyboard */; };
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		026BEB29E289B49409FAE8F0 /* Pods-schetto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schetto.release.xcconfig"; path = "Pods/Target Support Files/Pods-schetto/Pods-schetto.release.xcconfig"; sourceTree = "<group>"; };
+		04279A0610D1FBE86B8892A7 /* Pods-schetto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schetto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-schetto/Pods-schetto.debug.xcconfig"; sourceTree = "<group>"; };
+		1420686342C19967B859D22B /* Pods-schettoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schettoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-schettoTests/Pods-schettoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schetto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schettoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-schettoTests/Pods-schettoTests.release.xcconfig"; sourceTree = "<group>"; };
+		9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schettoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1C0217593F80017F931 /* schetto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schetto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1C3217593F80017F931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E493B1C5217593F80017F931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F738B7713350D884A1BAA34 /* Pods_schetto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A7C0536FECA818C52176F03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */,
+				9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94CB17D9D1038AD30011EF11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04279A0610D1FBE86B8892A7 /* Pods-schetto.debug.xcconfig */,
+				026BEB29E289B49409FAE8F0 /* Pods-schetto.release.xcconfig */,
+				1420686342C19967B859D22B /* Pods-schettoTests.debug.xcconfig */,
+				7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E493B1B7217593F70017F931 = {
 			isa = PBXGroup;
 			children = (
 				E493B1C2217593F80017F931 /* schetto */,
 				E493B1D7217593F90017F931 /* schettoTests */,
 				E493B1C1217593F80017F931 /* Products */,
+				94CB17D9D1038AD30011EF11 /* Pods */,
+				5A7C0536FECA818C52176F03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E493B1DD217593F90017F931 /* Build configuration list for PBXNativeTarget "schetto" */;
 			buildPhases = (
+				F0D4161881094C3820AEFF26 /* [CP] Check Pods Manifest.lock */,
 				E493B1BC217593F80017F931 /* Sources */,
 				E493B1BD217593F80017F931 /* Frameworks */,
 				E493B1BE217593F80017F931 /* Resources */,
@@ -120,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E493B1E0217593F90017F931 /* Build configuration list for PBXNativeTarget "schettoTests" */;
 			buildPhases = (
+				D5F6B7E0D253E828201025EE /* [CP] Check Pods Manifest.lock */,
 				E493B1D0217593F90017F931 /* Sources */,
 				E493B1D1217593F90017F931 /* Frameworks */,
 				E493B1D2217593F90017F931 /* Resources */,
@@ -191,6 +225,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D5F6B7E0D253E828201025EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-schettoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D4161881094C3820AEFF26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-schetto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E493B1BC217593F80017F931 /* Sources */ = {
@@ -356,6 +429,7 @@
 		};
 		E493B1DE217593F90017F931 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04279A0610D1FBE86B8892A7 /* Pods-schetto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +448,7 @@
 		};
 		E493B1DF217593F90017F931 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 026BEB29E289B49409FAE8F0 /* Pods-schetto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +467,7 @@
 		};
 		E493B1E1217593F90017F931 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1420686342C19967B859D22B /* Pods-schettoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,6 +489,7 @@
 		};
 		E493B1E2217593F90017F931 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
