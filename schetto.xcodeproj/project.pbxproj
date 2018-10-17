@@ -24,6 +24,9 @@
 		E493B204217599900017F931 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B201217599900017F931 /* Translator.swift */; };
 		E493B205217599900017F931 /* Date+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B203217599900017F931 /* Date+App.swift */; };
 		E493B20821759A2C0017F931 /* EventTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20721759A2B0017F931 /* EventTranslator.swift */; };
+		E493B20F2176BF190017F931 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20D2176BF180017F931 /* Builder.swift */; };
+		E493B2102176BF190017F931 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20E2176BF190017F931 /* Wireframe.swift */; };
+		E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2122176BF890017F931 /* WireframeHelper.swift */; };
 		E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2092176BD360017F931 /* BootstrapViewController.swift */; };
 		E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B20A2176BD360017F931 /* Bootstrap.storyboard */; };
 /* End PBXBuildFile section */
@@ -64,6 +67,9 @@
 		E493B201217599900017F931 /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 		E493B203217599900017F931 /* Date+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+App.swift"; sourceTree = "<group>"; };
 		E493B20721759A2B0017F931 /* EventTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTranslator.swift; sourceTree = "<group>"; };
+		E493B20D2176BF180017F931 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		E493B20E2176BF190017F931 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		E493B2122176BF890017F931 /* WireframeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeHelper.swift; sourceTree = "<group>"; };
 		E493B2092176BD360017F931 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
 		E493B20A2176BD360017F931 /* Bootstrap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bootstrap.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +166,7 @@
 				E493B1F32175982B0017F931 /* Presenters */,
 				E493B1E72175979B0017F931 /* Views */,
 				E493B1FC217599810017F931 /* ViewComponents */,
+				E493B2112176BF890017F931 /* Utils */,
 			);
 			name = Sources;
 			path = schetto/Sources;
@@ -169,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				E493B1E5217595370017F931 /* AppDelegate.swift */,
+				E493B20D2176BF180017F931 /* Builder.swift */,
+				E493B20E2176BF190017F931 /* Wireframe.swift */,
 			);
 			path = Applications;
 			sourceTree = "<group>";
@@ -256,6 +265,14 @@
 				E493B20721759A2B0017F931 /* EventTranslator.swift */,
 			);
 			path = Translator;
+			sourceTree = "<group>";
+		};
+		E493B2112176BF890017F931 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E493B2122176BF890017F931 /* WireframeHelper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,12 +424,15 @@
 				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				E493B205217599900017F931 /* Date+App.swift in Sources */,
+				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
 				E493B1F02175979C0017F931 /* EventEditViewController.swift in Sources */,
 				E493B1FB217599450017F931 /* EventRepository.swift in Sources */,
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
 				E493B1FA217599450017F931 /* Event.swift in Sources */,
 				E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */,
+				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
+				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
