@@ -6,7 +6,7 @@ import UIKit
 
 class EventEditViewController: UIViewController {
 
-    private var presenter: EventEditPresenterProtocol!
+    var presenter: EventEditPresenterProtocol!
     private var adapter: EventEditAdapter!
     
     @IBOutlet private weak var tableView: UITableView!

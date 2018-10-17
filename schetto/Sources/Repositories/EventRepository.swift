@@ -13,7 +13,7 @@ protocol EventInteractorOutput: class {
     
 }
 
-class EventRepository {
+class EventRepository: EventInteractorInput {
     
     weak var output: EventInteractorOutput!
 }
