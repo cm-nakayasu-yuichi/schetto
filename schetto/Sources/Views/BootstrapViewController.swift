@@ -8,11 +8,11 @@ class BootstrapViewController: UITableViewController {
     
     // ここに定義します
     // =========================================================================
-    private let items: [(section: String, rows: [(title: String, handler: (UIViewController)->Void)])] = [
+    private let items: [(section: String, rows: [(title: String, handler: (UIViewController) -> Void)])] = [
         (section: "アプリ",
          rows: [
-            (title: "アプリ起動", handler: { vc in
-                
+            (title: "アプリ起動", handler: { bootstrap in
+                Wireframe.showEventEdit(from: bootstrap)
             }),
             ]),
         ]
