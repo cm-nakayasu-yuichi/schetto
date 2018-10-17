@@ -42,6 +42,7 @@
 		E493B2102176BF190017F931 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20E2176BF190017F931 /* Wireframe.swift */; };
 		E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2122176BF890017F931 /* WireframeHelper.swift */; };
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
+		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		E493B20E2176BF190017F931 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		E493B2122176BF890017F931 /* WireframeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeHelper.swift; sourceTree = "<group>"; };
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
+		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 				DBB52A4921761968009C5097 /* Directory+App.swift */,
 				DBB52A4B21761968009C5097 /* Notification+App.swift */,
 				DBB52A4421761968009C5097 /* NSLayoutConstraint+App.swift */,
+				E4DC8DC62176E2F100958641 /* Codable+App.swift */,
 				DBB52A4221761968009C5097 /* UIColor+App.swift */,
 				DBB52A4621761968009C5097 /* UIImage+App.swift */,
 				DBB52A4321761968009C5097 /* UIView+App.swift */,
@@ -463,6 +466,7 @@
 				E493B1F22175979C0017F931 /* EventEditCell.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
+				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
 				E493B204217599900017F931 /* Translator.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
