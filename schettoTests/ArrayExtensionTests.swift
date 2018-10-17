@@ -29,6 +29,18 @@ class ArrayExtensionTests: XCTestCase {
         XCTAssertEqual(empty.lastIndex, sample.invalidIndex, "空配列ののlastIndexはinvalidIndexであること")
     }
     
+    func test_isFirstIndex() {
+        XCTAssertFalse(sample.isFirstIndex(-1))
+        XCTAssertTrue(sample.isFirstIndex(0))
+        XCTAssertFalse(sample.isFirstIndex(1))
+    }
+    
+    func test_isLastIndex() {
+        XCTAssertFalse(sample.isLastIndex(5))
+        XCTAssertTrue(sample.isLastIndex(6))
+        XCTAssertFalse(sample.isLastIndex(7))
+    }
+    
     func test_pushed() {
         let arr = sample
         XCTAssertEqual(arr.pushed("I"), ["B", "C", "D", "E", "F", "G", "H", "I"], "末尾に値が足されること")

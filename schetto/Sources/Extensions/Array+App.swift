@@ -19,6 +19,20 @@ extension Array {
         return indices.last ?? invalidIndex
     }
     
+    /// 指定したインデックスが最初のインデックスかどうか
+    /// - Parameter index: インデックス
+    /// - Returns: 最初のインデックスかどうか
+    func isFirstIndex(_ index: Int) -> Bool {
+        return firstIndex != invalidIndex && firstIndex == index
+    }
+    
+    /// 指定したインデックスが最後のインデックスかどうか
+    /// - Parameter index: インデックス
+    /// - Returns: 最後のインデックスかどうか
+    func isLastIndex(_ index: Int) -> Bool {
+        return lastIndex != invalidIndex && lastIndex == index
+    }
+    
     /// 指定したインデックスが配列の範囲内かどうかを返す
     /// - Parameter index: インデックス
     /// - Returns: 配列の範囲内かどうか
