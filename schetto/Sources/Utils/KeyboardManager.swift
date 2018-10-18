@@ -6,8 +6,17 @@ import UIKit
 
 protocol KeyboardManagerDelegate: class {
     
+    /// キーボード領域が変更される時に呼ばれる
+    /// - Memo: 最後に view.layoutIfNeeded() を呼び出すと滑らかにアニメーションされます
+    /// - Parameters:
+    ///   - keyboardManager: キーボードマネージャ
+    ///   - frame: 変更後の矩形座標
     func keyboardManager(_ keyboardManager: KeyboardManager, willChange frame: CGRect)
     
+    /// キーボード領域が変更された時に呼ばれる
+    /// - Parameters:
+    ///   - keyboardManager: キーボードマネージャ
+    ///   - frame: 変更後の矩形座標
     func keyboardManager(_ keyboardManager: KeyboardManager, didChange frame: CGRect)
 }
 
@@ -19,6 +28,20 @@ class KeyboardManager {
     private var y = CGFloat.nan
     private(set) var beginFrame = CGRect.zero
     private(set) var endFrame = CGRect.zero
+    
+    /// 画面下からキーボード上端までの距離
+    var distanceFromScreenBottom: CGFloat {
+        var distance = UIScreen.main.bounds.height - endFrame.minY
+        if #available(iOS 11.0, *) {
+            if let window = UIApplication.shared.keyWindow {
+                distance -= window.safeAreaInsets.bottom
+            }
+        }
+        if distance < 0 {
+            distance = 0
+        }
+        return distance
+    }
     
     init() {
         observeKeyboardEvents()
@@ -43,7 +66,7 @@ class KeyboardManager {
         }
     }
     
-    @objc func willChangeKeyboardFrame(_ notify: Notification) {
+    @objc private func willChangeKeyboardFrame(_ notify: Notification) {
         guard
             let userInfo = notify.userInfo,
             let begin = userInfo[UIKeyboardFrameBeginUserInfoKey] as? CGRect,
@@ -78,26 +101,13 @@ class KeyboardManager {
         UIView.animate(
             withDuration: duration,
             delay: 0,
-            options: UIView.AnimationOptions(rawValue: curve),
+            options: UIViewAnimationOptions(rawValue: curve),
             animations: {
                 self.delegate?.keyboardManager(self, willChange: self.endFrame)
-        },
+            },
             completion: { _ in
                 self.delegate?.keyboardManager(self, didChange: self.endFrame)
-        }
-        )
-    }
-    
-    var distanceFromScreenBottom: CGFloat {
-        var distance = UIScreen.main.bounds.height - endFrame.minY
-        if #available(iOS 11.0, *) {
-            if let window = UIApplication.shared.keyWindow {
-                distance -= window.safeAreaInsets.bottom
             }
-        }
-        if distance < 0 {
-            distance = 0
-        }
-        return distance
+        )
     }
 }
