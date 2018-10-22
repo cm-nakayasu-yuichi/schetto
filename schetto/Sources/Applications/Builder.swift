@@ -19,6 +19,11 @@ class Builder {
         
         return view
     }
+    
+    func test() -> TestViewController {
+        let view = instantiate(TestViewController.self, storyboardName: "Test")
+        return view
+    }
 }
 
 extension Builder {
