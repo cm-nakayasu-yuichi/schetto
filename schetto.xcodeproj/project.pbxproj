@@ -24,6 +24,7 @@
 		DBB52A5D217647FE009C5097 /* CoreGraphicsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */; };
 		DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
+		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
 		E493B1CB217593F90017F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CA217593F90017F931 /* Assets.xcassets */; };
 		E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CC217593F90017F931 /* LaunchScreen.storyboard */; };
 		E493B1E6217595370017F931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1E5217595370017F931 /* AppDelegate.swift */; };
@@ -80,6 +81,7 @@
 		DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensionTests.swift; sourceTree = "<group>"; };
 		DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensionTests.swift; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
+		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		E493B1C0217593F80017F931 /* schetto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schetto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1CA217593F90017F931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E493B1CD217593F90017F931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				E493B2122176BF890017F931 /* WireframeHelper.swift */,
+				E477351321780C8F00DE3AA7 /* KeyboardManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				DBB52A4F21761968009C5097 /* NSLayoutConstraint+App.swift in Sources */,
 				E493B1F02175979C0017F931 /* EventEditViewController.swift in Sources */,
 				E493B1FB217599450017F931 /* EventRepository.swift in Sources */,
+				E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */,
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
 				E493B1FA217599450017F931 /* Event.swift in Sources */,
 				E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */,
