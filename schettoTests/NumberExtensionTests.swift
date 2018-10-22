@@ -68,5 +68,8 @@ class NumberExtensionTests: XCTestCase {
         
         let h = 123.f.percentageString()
         XCTAssertEqual(h, "100.00%")
+        
+        let i = (0.123).f.percentageString(place: 4)
+        XCTAssertEqual(i, "12.3000%")
     }
 }

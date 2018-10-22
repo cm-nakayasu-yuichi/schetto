@@ -98,7 +98,9 @@ extension CGFloat {
         if place == 0 {
             return "\(Int(percentage))\(unit)"
         } else {
-            return "\(percentage)\(unit)"
+            let format =  NSString(format: "%.\(place)f", arguments: getVaList([percentage]))
+            print("WOW \(format)\(unit)")
+            return "\(format)\(unit)"
         }
     }
 }
