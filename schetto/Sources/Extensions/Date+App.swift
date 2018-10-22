@@ -301,3 +301,15 @@ extension Date {
         return !isWeekend
     }
 }
+
+extension Date {
+    
+    func string(format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        formatter.calendar = calendar
+        formatter.timeZone = Date.currentTimezone
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        return formatter.string(from: self)
+    }
+}
