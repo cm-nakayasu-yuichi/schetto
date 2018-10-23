@@ -12,13 +12,13 @@ class TestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         _ = child.addConstraint(allSideSpaceTo: nil)
-//        _ = child.addConstraint(height: 50)
-//        _ = child.addConstraint(width: 100)
     }
     
     @IBAction private func didTapCloseButton() {
-        // NOP.
+        let vc = Builder().eventEdit()
+        let behavior = DialogRiseupBehavior(offset: 10)
+        behavior.fixedSize = CGSize(200, 300)
+        Dialog.show(vc, from: self, behavior: behavior)
     }
 }
