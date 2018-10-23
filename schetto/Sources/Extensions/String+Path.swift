@@ -31,6 +31,12 @@ extension String {
         return ext.isEmpty ? "" : "\(ext)"
     }
     
+    /// ディレクトリパス
+    var directoryPath: String {
+        if self == "/" { return "" }
+        return (self as NSString).deletingLastPathComponent
+    }
+    
     /// ファイルURL
     var fileURL: URL {
         return URL(fileURLWithPath: self)
