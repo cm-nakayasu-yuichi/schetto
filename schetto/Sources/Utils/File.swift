@@ -4,16 +4,9 @@
 //
 import UIKit
 
-class File {
-    
+struct File {
     /// ファイルパス
-    private(set) var path = ""
-    
-    /// ファイルパスを指定して初期化
-    /// - Parameter path: ファイルパス
-    init(path: String) {
-        self.path = path
-    }
+    let path: String
 }
 
 extension File {
@@ -50,21 +43,13 @@ extension File {
 extension File {
     
     static func +(lhs: File, rhs: String) -> File {
-        return lhs.appendPathComponent(rhs)
+        return lhs.append(pathComponent: rhs)
     }
     
     /// 自身のパスにパスコンポーネントを追加する
-    /// - Parameter component: 追加するコンポーネント
-    /// - Returns: 自身の参照
-    func appendPathComponent(_ component: String) -> Self {
-        path = path.appendingPathComponent(component)
-        return self
-    }
-    
-    /// 自身のパスにパスコンポーネントを追加した新しいFileを返す
     /// - Parameter pathComponent: 追加するコンポーネント
-    /// - Returns: 新しいFileの参照
-    func fileAppended(pathComponent: String) -> File {
+    /// - Returns: 自身の参照
+    func append(pathComponent: String) -> File {
         return File(path: path.appendingPathComponent(pathComponent))
     }
 }
@@ -88,7 +73,7 @@ extension File {
     }
     
     /// ファイルから取得した文字列
-    var contentsText: String? {
+    var contents: String? {
         guard let data = self.data else { return nil }
         return String(data: data, encoding: .utf8)
     }
@@ -150,15 +135,14 @@ extension File {
     }
     
     /// ファイルの作成日付
-    public var createdDate: Date? {
+    var createdDate: Date? {
         return attribute(key: .creationDate) as? Date
     }
     
     /// ファイルの更新日付
-    public var modifiedDate: Date? {
+    var modifiedDate: Date? {
         return attribute(key: .modificationDate) as? Date
     }
-    
 }
 
 extension File {
@@ -170,8 +154,8 @@ extension File {
     
     var files: [File] {
         if isDirectory, let fileNames = try? FileManager.default.contentsOfDirectory(atPath: path) {
-            return fileNames.map { filename -> File in
-                return fileAppended(pathComponent: filename)
+            return fileNames.sorted().map { filename -> File in
+                return append(pathComponent: filename)
             }
         }
         return []
@@ -181,8 +165,34 @@ extension File {
         return files.map { $0.path }
     }
     
-    var fileName: [String] {
+    var fileNames: [String] {
         return files.map { $0.name }
+    }
+}
+
+extension File {
+    
+    func delete() throws {
+        try FileManager.default.removeItem(atPath: path)
+    }
+    
+    func copy(to destination: File, force: Bool = true) throws {
+        if force {
+            try delete()
+        }
+        try FileManager.default.copyItem(atPath: path, toPath: destination.path)
+    }
+    
+    func move(to destination: File, force: Bool = true) throws {
+        if force {
+            try delete()
+        }
+        try FileManager.default.moveItem(atPath: path, toPath: destination.path)
+    }
+    
+    func rename(to name: String) throws {
+        let destination = File(path: directoryPath) + name
+        try FileManager.default.moveItem(atPath: path, toPath: destination.path)
     }
 }
 
@@ -193,21 +203,27 @@ extension File {
         return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
     }
     
-    /// 指定したディレクトリパス内のファイル名をすべて取得する
-    /// - Parameter path: ディレクトリパス文字列
-    /// - Returns: ファイル名の配列
-    class func fileNames(in path: String) -> [String] {
-        do {
-            return try FileManager.default.contentsOfDirectory(atPath: path).sorted()
-        } catch let error {
-            print("File: failed get file names in \(path). \(error.localizedDescription)")
-        }
-        return []
+    /// メインバンドルパス
+    static var mainBundlePath: String {
+        return Bundle.main.bundlePath
     }
+    
+    /// ドキュメントディレクトリ
+    static var documentDirectory: File {
+        return File(path: documentDirectoryPath)
+    }
+    
+    /// メインバンドル
+    static var mainBundle: File {
+        return File(path: mainBundlePath)
+    }
+}
+
+extension File {
     
     /// 指定したファイルを削除する
     /// - Parameter path: ファイルパス
-    class func delete(at path: String) {
+    static func delete(at path: String) {
         if FileManager.default.fileExists(atPath: path) {
             do {
                 try FileManager.default.removeItem(atPath: path)
@@ -222,7 +238,7 @@ extension File {
     ///   - path: ファイルパス
     ///   - content: テキストファイルの内容
     /// - Returns: 作成を完了した場合のみ true を返す
-    class func makeTextFileIfNeeded(to path: String, content: String = "") -> Bool {
+    static func makeTextFileIfNeeded(to path: String, content: String = "") -> Bool {
         if !FileManager.default.fileExists(atPath: path) {
             do {
                 try content.write(to: URL(fileURLWithPath: path), atomically: true, encoding: .utf8)
@@ -237,7 +253,7 @@ extension File {
     /// 指定したパスにディレクトリが存在しない場合にディレクトリを作成する
     /// - Parameter path: ディレクトリパス
     /// - Returns: 作成を完了した場合のみ true を返す
-    class func makeDirectoryIfNeeded(to path: String) -> Bool {
+    static func makeDirectoryIfNeeded(to path: String) -> Bool {
         if !FileManager.default.fileExists(atPath: path) {
             do {
                 try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
