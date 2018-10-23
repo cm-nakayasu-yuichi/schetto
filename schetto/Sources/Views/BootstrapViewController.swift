@@ -15,6 +15,15 @@ class BootstrapViewController: UITableViewController {
                 Wireframe.showEventEdit(from: bootstrap)
             }),
             ]),
+        (section: "テスト",
+         rows: [
+            (title: "テストUI", handler: { bootstrap in
+                Wireframe.showTest(from: bootstrap)
+            }),
+            (title: "画像テスト", handler: { bootstrap in
+                
+            }),
+            ]),
         ]
     // =========================================================================
     
