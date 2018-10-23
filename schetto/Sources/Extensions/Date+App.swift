@@ -6,27 +6,28 @@ import Foundation
 
 extension TimeZone {
     
-    static let japan = TimeZone(identifier: "Asia/Tokyo")!
+    static let jst = TimeZone(identifier: "Asia/Tokyo")!
 }
 
 extension Locale {
     
-    static let japan = Locale(identifier: "ja_JP")
-    static let us = Locale(identifier: "en_US")
-    static let korea = Locale(identifier: "ko_KR")
-    static let usposix = Locale(identifier: "en_US_POSIX")
+    static let jp = Locale(identifier: "ja_JP")
 }
 
 extension Date {
     
-    static var currentTimezone: TimeZone = .current
-    static var currentLocale: Locale = .current
+    static var timezone: TimeZone = .current
+    static var locale: Locale = .current
+    
+    static var calendar: Calendar {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = Date.timezone
+        calendar.locale = Date.locale
+        return calendar
+    }
     
     var calendar: Calendar {
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = Date.currentTimezone
-        calendar.locale = Date.currentLocale
-        return calendar
+        return Date.calendar
     }
 }
 
@@ -34,7 +35,6 @@ extension Date {
     
     func fixed(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> Date {
         let calendar = self.calendar
-        
         var comp = DateComponents()
         comp.year   = year   ?? calendar.component(.year,   from: self)
         comp.month  = month  ?? calendar.component(.month,  from: self)
@@ -42,7 +42,6 @@ extension Date {
         comp.hour   = hour   ?? calendar.component(.hour,   from: self)
         comp.minute = minute ?? calendar.component(.minute, from: self)
         comp.second = second ?? calendar.component(.second, from: self)
-        
         return calendar.date(from: comp)!
     }
     
@@ -56,7 +55,6 @@ extension Date {
         comp.hour   = (hour   ?? 0) + calendar.component(.hour,   from: self)
         comp.minute = (minute ?? 0) + calendar.component(.minute, from: self)
         comp.second = (second ?? 0) + calendar.component(.second, from: self)
-        
         return calendar.date(from: comp)!
     }
 }
@@ -206,17 +204,6 @@ extension Date {
 
 extension Date {
     
-    var oclock: Date {
-        return fixed(minute: 0, second: 0)
-    }
-    
-    var zeroclock: Date {
-        return fixed(hour: 0, minute: 0, second: 0)
-    }
-}
-
-extension Date {
-    
     static var now: Date {
         return Date()
     }
@@ -243,6 +230,22 @@ extension Date {
 }
 
 extension Date {
+    
+    var oclock: Date {
+        return fixed(minute: 0, second: 0)
+    }
+    
+    var zeroclock: Date {
+        return fixed(hour: 0, minute: 0, second: 0)
+    }
+    
+    var firstOfDay: Date {
+        return zeroclock
+    }
+    
+    var lastOfDay: Date {
+        return fixed(hour: 23, minute: 59, second: 59)
+    }
     
     var firstDayOfMonth: Date {
         return fixed(day: 1, hour: 0, minute: 0, second: 0)
@@ -282,15 +285,16 @@ extension Date {
 
 extension Date {
     
-    static let weekIndexOfSunday   = 0
-    static let weekIndexOfSaturday = 6
+    enum Week: Int {
+        case sunday, monday, tuesday, wednesday, thursday, friday, saturday
+    }
     
     var isSunday: Bool {
-        return weekIndex == Date.weekIndexOfSunday
+        return weekIndex == Week.sunday.rawValue
     }
     
     var isSaturday: Bool {
-        return weekIndex == Date.weekIndexOfSaturday
+        return weekIndex == Week.saturday.rawValue
     }
     
     var isWeekend: Bool {
@@ -304,12 +308,74 @@ extension Date {
 
 extension Date {
     
-    func string(format: String) -> String {
+    enum Format {
+        case slashedYMD
+        case slashedMD
+        case slashedYMDHM
+        case slashedYMDHMS
+        case slashedVerbose
+        case hyphenedYMD
+        case hyphenedMD
+        case hyphenedYMDHM
+        case hyphenedYMDHMS
+        case hyphenedVerbose 
+        case colonedHM 
+        case colonedHMS
+        case colonedVerbose
+        case japaneseYMD
+        case japaneseMD
+        case japaneseYMDHM 
+        case japaneseYMDHMS 
+        case japaneseVerbose
+        case japaneseHM
+        case japaneseHMS
+        case japaneseTimeVerbose
+        case custom(format: String)
+        
+        static var `default`: Format { return .slashedYMDHMS }
+        
+        var formatString: String {
+            switch self {
+            case .slashedYMD:          return "yyyy/MM/dd"
+            case .slashedMD:           return "MM/dd"
+            case .slashedYMDHM:        return "yyyy/MM/dd HH:mm"
+            case .slashedYMDHMS:       return "yyyy/MM/dd HH:mm:ss"
+            case .slashedVerbose:      return "yyyy/MM/dd HH:mm:ss.SSSS"
+            case .hyphenedYMD:         return "yyyy-MM-dd"
+            case .hyphenedMD:          return "MM-dd"
+            case .hyphenedYMDHM:       return "yyyy-MM-dd HH:mm"
+            case .hyphenedYMDHMS:      return "yyyy-MM-dd HH:mm:ss"
+            case .hyphenedVerbose:     return "yyyy-MM-dd HH:mm:ss.SSSS"
+            case .colonedHM:           return "HH:mm"
+            case .colonedHMS:          return "HH:mm:ss"
+            case .colonedVerbose:      return "HH:mm:ss.SSSS"
+            case .japaneseYMD:         return "yyyy年MM月dd日"
+            case .japaneseMD:          return "MM月dd日"
+            case .japaneseYMDHM:       return "yyyy年MM月dd日 HH時mm分"
+            case .japaneseYMDHMS:      return "yyyy年MM月dd日 HH時mm分ss秒"
+            case .japaneseVerbose:     return "yyyy年MM月dd日 HH時mm分ss秒 SSSS"
+            case .japaneseHM:          return "HH時mm分"
+            case .japaneseHMS:         return "HH時mm分ss秒"
+            case .japaneseTimeVerbose: return "HH時mm分ss秒 SSSS"
+            case .custom(let format):  return format
+            }
+        }
+    }
+    
+    func string(_ format: Format = .default) -> String {
+        return Date.dateFormatter(format).string(from: self)
+    }
+    
+    static func date(from string: String, format: Format = .default) -> Date? {
+        return dateFormatter(format).date(from: string)
+    }
+    
+    static func dateFormatter(_ format: Format = .default) -> DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = format
+        formatter.dateFormat = format.formatString
         formatter.calendar = calendar
-        formatter.timeZone = Date.currentTimezone
+        formatter.timeZone = Date.timezone
         formatter.locale = Locale(identifier: "en_US_POSIX")
-        return formatter.string(from: self)
+        return formatter
     }
 }
