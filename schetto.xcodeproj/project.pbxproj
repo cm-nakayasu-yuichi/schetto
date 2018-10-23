@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6F738B7713350D884A1BAA34 /* Pods_schetto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */; };
-		DB161CF0217E1467004678AB /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB161CEF217E1467004678AB /* Date+Format.swift */; };
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
 		DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4221761968009C5097 /* UIColor+App.swift */; };
 		DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4321761968009C5097 /* UIView+App.swift */; };
@@ -71,7 +70,6 @@
 		2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schetto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schettoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-schettoTests/Pods-schettoTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schettoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB161CEF217E1467004678AB /* Date+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		DBB52A4221761968009C5097 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		DBB52A4321761968009C5097 /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				E493B1E5217595370017F931 /* AppDelegate.swift */,
 				E493B20D2176BF180017F931 /* Builder.swift */,
 				E493B20E2176BF190017F931 /* Wireframe.swift */,
-				DB161CEF217E1467004678AB /* Date+Format.swift */,
 			);
 			path = Applications;
 			sourceTree = "<group>";
@@ -514,7 +511,6 @@
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
-				DB161CF0217E1467004678AB /* Date+Format.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
 				E493B1F02175979C0017F931 /* EventEditViewController.swift in Sources */,
 				E493B1FB217599450017F931 /* EventRepository.swift in Sources */,
