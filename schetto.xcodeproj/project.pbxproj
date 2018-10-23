@@ -50,7 +50,6 @@
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
 		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
-		E4DC8DC92176EA0400958641 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC82176EA0400958641 /* String+Path.swift */; };
 		E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,7 +115,6 @@
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
-		E4DC8DC82176EA0400958641 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
 		E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,7 +308,6 @@
 			isa = PBXGroup;
 			children = (
 				DBB52A4A21761968009C5097 /* String+App.swift */,
-				E4DC8DC82176EA0400958641 /* String+Path.swift */,
 				DBB52A4C21761968009C5097 /* Number+App.swift */,
 				DBB52A4521761968009C5097 /* Array+App.swift */,
 				DBB52A4821761968009C5097 /* CoreGraphics+App.swift */,
@@ -526,7 +523,6 @@
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
 				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
-				E4DC8DC92176EA0400958641 /* String+Path.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
