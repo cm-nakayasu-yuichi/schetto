@@ -77,6 +77,16 @@ extension File {
         guard let data = self.data else { return nil }
         return String(data: data, encoding: .utf8)
     }
+    
+    /// ファイルに文字列を書き込む
+    /// - Parameters:
+    ///   - contents: 書き込む内容
+    ///   - encoding: 文字エンコーディング
+    /// - Throws: 書き込み失敗時に例外を投げる
+    func write(contents: String, encoding: String.Encoding = .utf8) throws {
+        try makeDirectory()
+        try contents.write(to: url, atomically: true, encoding: encoding)
+    }
 }
 
 extension File {
@@ -172,27 +182,35 @@ extension File {
 
 extension File {
     
+    func makeDirectory() throws {
+        let dir = isDirectory ? self : directory
+        if !dir.exists {
+            try FileManager.default.createDirectory(atPath: dir.path, withIntermediateDirectories: true, attributes: nil)
+        }
+    }
+    
     func delete() throws {
         try FileManager.default.removeItem(atPath: path)
     }
     
     func copy(to destination: File, force: Bool = true) throws {
-        if force {
-            try delete()
+        if force && destination.exists {
+            try destination.delete()
         }
         try FileManager.default.copyItem(atPath: path, toPath: destination.path)
     }
     
     func move(to destination: File, force: Bool = true) throws {
-        if force {
-            try delete()
+        if force && destination.exists {
+            try destination.delete()
         }
         try FileManager.default.moveItem(atPath: path, toPath: destination.path)
     }
     
-    func rename(to name: String) throws {
+    func rename(to name: String, force: Bool = true) throws -> File {
         let destination = File(path: directoryPath) + name
-        try FileManager.default.moveItem(atPath: path, toPath: destination.path)
+        try move(to: destination, force: force)
+        return destination
     }
 }
 
@@ -221,49 +239,6 @@ extension File {
 
 extension File {
     
-    /// 指定したファイルを削除する
-    /// - Parameter path: ファイルパス
-    static func delete(at path: String) {
-        if FileManager.default.fileExists(atPath: path) {
-            do {
-                try FileManager.default.removeItem(atPath: path)
-            } catch let error {
-                print("File: failed delete at \(path). \(error.localizedDescription)")
-            }
-        }
-    }
-    
-    /// 指定したパスにファイルが存在しない場合に空のテキストファイルを作成する
-    /// - Parameters:
-    ///   - path: ファイルパス
-    ///   - content: テキストファイルの内容
-    /// - Returns: 作成を完了した場合のみ true を返す
-    static func makeTextFileIfNeeded(to path: String, content: String = "") -> Bool {
-        if !FileManager.default.fileExists(atPath: path) {
-            do {
-                try content.write(to: URL(fileURLWithPath: path), atomically: true, encoding: .utf8)
-                return true
-            } catch let error {
-                print("File: failed make text file to \(path). \(error.localizedDescription)")
-            }
-        }
-        return false
-    }
-    
-    /// 指定したパスにディレクトリが存在しない場合にディレクトリを作成する
-    /// - Parameter path: ディレクトリパス
-    /// - Returns: 作成を完了した場合のみ true を返す
-    static func makeDirectoryIfNeeded(to path: String) -> Bool {
-        if !FileManager.default.fileExists(atPath: path) {
-            do {
-                try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
-                return true
-            } catch(let error) {
-                print("File: failed make directory to \(path). \(error.localizedDescription)")
-            }
-        }
-        return false
-    }
 }
 
 extension String {
