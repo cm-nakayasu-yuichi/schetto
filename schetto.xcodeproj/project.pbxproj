@@ -29,6 +29,7 @@
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
+		E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E5E48217FF5BB0072C22F /* ClearButton.swift */; };
 		E493B1CB217593F90017F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CA217593F90017F931 /* Assets.xcassets */; };
 		E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CC217593F90017F931 /* LaunchScreen.storyboard */; };
 		E493B1E6217595370017F931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1E5217595370017F931 /* AppDelegate.swift */; };
@@ -93,6 +94,7 @@
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		E48E5E48217FF5BB0072C22F /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		E493B1C0217593F80017F931 /* schetto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schetto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1CA217593F90017F931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E493B1CD217593F90017F931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -180,6 +182,14 @@
 				E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		E48E5E47217FF5BB0072C22F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E48E5E48217FF5BB0072C22F /* ClearButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		E493B1B7217593F70017F931 = {
@@ -305,6 +315,7 @@
 		E493B1FC217599810017F931 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				E48E5E47217FF5BB0072C22F /* Buttons */,
 				E493B1FD217599810017F931 /* CalendarView */,
 			);
 			path = ViewComponents;
@@ -521,6 +532,7 @@
 				E493B20821759A2C0017F931 /* EventTranslator.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
+				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
 				E493B1F22175979C0017F931 /* EventEditCell.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,

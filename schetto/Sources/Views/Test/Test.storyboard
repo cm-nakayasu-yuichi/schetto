@@ -32,8 +32,15 @@
                                     <constraint firstAttribute="height" constant="200" id="CJZ-S7-gNN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6a-e2-3iR">
-                                <rect key="frame" x="16" y="621" width="46" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これはラベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-J7-FSs">
+                                <rect key="frame" x="255" y="621" width="104" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6a-e2-3iR" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
+                                <rect key="frame" x="255" y="621" width="104" height="30"/>
+                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.25433433220000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didTapCloseButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="vMF-9w-Y9j"/>
@@ -44,8 +51,12 @@
                         <constraints>
                             <constraint firstItem="1jj-B5-iu5" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="top" constant="50" id="0Dt-d9-Soq"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="1jj-B5-iu5" secondAttribute="trailing" constant="50" id="5Ka-NE-zQs"/>
-                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="bottom" secondItem="J6a-e2-3iR" secondAttribute="bottom" constant="16" id="aC5-Jb-tEg"/>
-                            <constraint firstItem="J6a-e2-3iR" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="16" id="cIV-A0-ycV"/>
+                            <constraint firstItem="J6a-e2-3iR" firstAttribute="bottom" secondItem="hFe-J7-FSs" secondAttribute="bottom" id="9lX-5U-anp"/>
+                            <constraint firstItem="J6a-e2-3iR" firstAttribute="trailing" secondItem="hFe-J7-FSs" secondAttribute="trailing" id="Zpo-0U-ntn"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="hFe-J7-FSs" secondAttribute="trailing" constant="16" id="aHG-1B-gNY"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="bottom" secondItem="hFe-J7-FSs" secondAttribute="bottom" constant="16" id="ezS-Js-PFl"/>
+                            <constraint firstItem="J6a-e2-3iR" firstAttribute="leading" secondItem="hFe-J7-FSs" secondAttribute="leading" id="oaY-WM-pT7"/>
+                            <constraint firstItem="J6a-e2-3iR" firstAttribute="top" secondItem="hFe-J7-FSs" secondAttribute="top" id="uXH-L0-7ym"/>
                             <constraint firstItem="1jj-B5-iu5" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="50" id="wqz-6T-DVt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
