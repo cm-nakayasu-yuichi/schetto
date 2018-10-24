@@ -26,4 +26,5 @@ class Wireframe {
     
     private static var builder: Builder { return Builder() }
     private static var helper: WireframeHelper { return WireframeHelper() }
+    private static var alertHelper: AlertHelper { return AlertHelper() }
 }
