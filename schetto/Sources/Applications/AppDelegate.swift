@@ -8,7 +8,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var lifeCycle: ApplicationLifeCycle = .none
+    private(set) var lifeCycle: ApplicationLifeCycle = .none
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true
