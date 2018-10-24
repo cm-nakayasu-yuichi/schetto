@@ -16,9 +16,8 @@ class TestViewController: UIViewController {
     }
     
     @IBAction private func didTapCloseButton() {
-        let vc = Builder().eventEdit()
-        let behavior = DialogRiseupBehavior(offset: 10)
-        behavior.fixedSize = CGSize(200, 300)
-        Dialog.show(vc, from: self, behavior: behavior)
+        Wireframe.showConfirmDeleteEvent(from: self) {
+            print("削除")
+        }
     }
 }
