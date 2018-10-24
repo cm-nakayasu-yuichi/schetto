@@ -53,6 +53,7 @@
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
+		E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */; };
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
 		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
 		E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */; };
@@ -123,6 +124,7 @@
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
 		E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				DBB52A4821761968009C5097 /* CoreGraphics+App.swift */,
 				DBB52A4721761968009C5097 /* Date+App.swift */,
 				DBB52A4921761968009C5097 /* Directory+App.swift */,
+				E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */,
 				DBB52A4B21761968009C5097 /* Notification+App.swift */,
 				E4DC8DC62176E2F100958641 /* Codable+App.swift */,
 				DBB52A4221761968009C5097 /* UIColor+App.swift */,
@@ -540,6 +543,7 @@
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
+				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
@@ -718,7 +722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2BFJGAX8E;
+				DEVELOPMENT_TEAM = K75PB9VKYT;
 				INFOPLIST_FILE = schetto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -737,7 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2BFJGAX8E;
+				DEVELOPMENT_TEAM = K75PB9VKYT;
 				INFOPLIST_FILE = schetto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
