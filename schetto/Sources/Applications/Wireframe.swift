@@ -24,6 +24,15 @@ class Wireframe {
         helper.dismiss(from: fromViewController, completion: completion)
     }
     
+    static func showConfirmDeleteEvent(from fromViewController: UIViewController, didDecide: @escaping () -> ()) {
+        alertHelper.alertDeleteCancel(
+            from: fromViewController,
+            title: "確認",
+            message: "このイベントを削除しますか",
+            didDecide: didDecide
+        )
+    }
+    
     private static var builder: Builder { return Builder() }
     private static var helper: WireframeHelper { return WireframeHelper() }
     private static var alertHelper: AlertHelper { return AlertHelper() }
