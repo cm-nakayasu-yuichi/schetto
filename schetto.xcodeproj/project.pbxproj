@@ -50,6 +50,7 @@
 		E493B20F2176BF190017F931 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20D2176BF180017F931 /* Builder.swift */; };
 		E493B2102176BF190017F931 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20E2176BF190017F931 /* Wireframe.swift */; };
 		E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2122176BF890017F931 /* WireframeHelper.swift */; };
+		E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495077B2181BE0500583C06 /* UITextField+App.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -128,6 +129,7 @@
 		E493B20D2176BF180017F931 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		E493B20E2176BF190017F931 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		E493B2122176BF890017F931 /* WireframeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeHelper.swift; sourceTree = "<group>"; };
+		E495077B2181BE0500583C06 /* UITextField+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+App.swift"; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				DBB52A4221761968009C5097 /* UIColor+App.swift */,
 				DBB52A4621761968009C5097 /* UIImage+App.swift */,
 				DBB52A4321761968009C5097 /* UIView+App.swift */,
+				E495077B2181BE0500583C06 /* UITextField+App.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
+				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
