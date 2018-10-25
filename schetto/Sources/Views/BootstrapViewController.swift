@@ -24,6 +24,13 @@ class BootstrapViewController: UITableViewController {
                 
             }),
             ]),
+        (section: "その他テスト",
+         rows: [
+            (title: "シェアプリ", handler: { bootstrap in
+                print(AppConfig().isFirstLaunch)
+                AppConfig().isFirstLaunch = true
+            }),
+            ]),
         ]
     // =========================================================================
     
