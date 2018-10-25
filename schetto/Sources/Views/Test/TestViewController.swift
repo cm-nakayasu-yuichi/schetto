@@ -17,8 +17,8 @@ class TestViewController: UIViewController {
     
     @IBAction private func didTapCloseButton() {
         let vc = Builder().eventEdit()
-        let behavior = DialogRiseupBehavior(offset: 10)
-        behavior.fixedSize = CGSize(200, 300)
+        let behavior = DialogBottomDrawBehavior()
+        //behavior.fixedSize = CGSize(300, 200)
         Dialog.show(vc, from: self, behavior: behavior)
     }
 }
