@@ -34,6 +34,8 @@
 		E43E8C65218323010059AA40 /* WebApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C5E218323010059AA40 /* WebApiRequest.swift */; };
 		E43E8C66218323010059AA40 /* WebApiRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C5F218323010059AA40 /* WebApiRequestMethod.swift */; };
 		E43E8C67218323010059AA40 /* WebApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C60218323010059AA40 /* WebApiError.swift */; };
+		E43E8C692183271C0059AA40 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C682183271C0059AA40 /* Weather.swift */; };
+		E43E8C6B2183274E0059AA40 /* LivedoorWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C6A2183274E0059AA40 /* LivedoorWeatherApi.swift */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
@@ -115,6 +117,8 @@
 		E43E8C5E218323010059AA40 /* WebApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequest.swift; sourceTree = "<group>"; };
 		E43E8C5F218323010059AA40 /* WebApiRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequestMethod.swift; sourceTree = "<group>"; };
 		E43E8C60218323010059AA40 /* WebApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiError.swift; sourceTree = "<group>"; };
+		E43E8C682183271C0059AA40 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		E43E8C6A2183274E0059AA40 /* LivedoorWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivedoorWeatherApi.swift; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 		E43E8C5B218323010059AA40 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E43E8C6A2183274E0059AA40 /* LivedoorWeatherApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 			children = (
 				E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */,
 				E493B1F7217599450017F931 /* Event.swift */,
+				E43E8C682183271C0059AA40 /* Weather.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -620,6 +626,7 @@
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
+				E43E8C692183271C0059AA40 /* Weather.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
 				E43E8C65218323010059AA40 /* WebApiRequest.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
@@ -627,6 +634,7 @@
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
+				E43E8C6B2183274E0059AA40 /* LivedoorWeatherApi.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
