@@ -20,15 +20,14 @@ class BootstrapViewController: UITableViewController {
             (title: "テストUI", handler: { bootstrap in
                 Wireframe.showTest(from: bootstrap)
             }),
-            (title: "画像テスト", handler: { bootstrap in
-                
-            }),
             ]),
         (section: "その他テスト",
          rows: [
-            (title: "シェアプリ", handler: { bootstrap in
-                print(AppConfig().isFirstLaunch)
-                AppConfig().isFirstLaunch = true
+            (title: "API", handler: { bootstrap in
+                let req = LivedoorWeatherApi(cityId: "400040")
+                WebApiAccessor().request(req) { (res: WebApiResponse) in
+                    print(res.response)
+                }
             }),
             ]),
         ]
