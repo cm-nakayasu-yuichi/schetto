@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F738B7713350D884A1BAA34 /* Pods_schetto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */; };
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
+		DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */; };
 		DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AD9EE217F60DD001243C3 /* FileTests.swift */; };
 		DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4221761968009C5097 /* UIColor+App.swift */; };
 		DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4321761968009C5097 /* UIView+App.swift */; };
@@ -50,12 +51,22 @@
 		E493B20F2176BF190017F931 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20D2176BF180017F931 /* Builder.swift */; };
 		E493B2102176BF190017F931 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20E2176BF190017F931 /* Wireframe.swift */; };
 		E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2122176BF890017F931 /* WireframeHelper.swift */; };
+		E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495077B2181BE0500583C06 /* UITextField+App.swift */; };
+		E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495077D2181C38D00583C06 /* TextFieldManager.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
+		E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */; };
+		E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */; };
+		E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */; };
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
 		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
 		E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */; };
+		E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */; };
+		E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */; };
+		E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */; };
+		E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1A21815260003C0CD0 /* DialogNoneBehavior.swift */; };
+		E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1B21815261003C0CD0 /* DialogLeftDrawBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +87,7 @@
 		7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schettoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-schettoTests/Pods-schettoTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schettoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DB7AD9EE217F60DD001243C3 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
 		DBB52A4221761968009C5097 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		DBB52A4321761968009C5097 /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
@@ -120,12 +132,22 @@
 		E493B20D2176BF180017F931 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		E493B20E2176BF190017F931 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		E493B2122176BF890017F931 /* WireframeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeHelper.swift; sourceTree = "<group>"; };
+		E495077B2181BE0500583C06 /* UITextField+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+App.swift"; sourceTree = "<group>"; };
+		E495077D2181C38D00583C06 /* TextFieldManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldManager.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
+		E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
 		E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFadeBehavior.swift; sourceTree = "<group>"; };
+		E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogZoomBehavior.swift; sourceTree = "<group>"; };
+		E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBottomDrawBehavior.swift; sourceTree = "<group>"; };
+		E4F86E1A21815260003C0CD0 /* DialogNoneBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogNoneBehavior.swift; sourceTree = "<group>"; };
+		E4F86E1B21815261003C0CD0 /* DialogLeftDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogLeftDrawBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +202,13 @@
 		E4204016217F2DDD0036DAE0 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */,
+				E4F86E1A21815260003C0CD0 /* DialogNoneBehavior.swift */,
+				E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */,
 				E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */,
+				E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */,
+				E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */,
+				E4F86E1B21815261003C0CD0 /* DialogLeftDrawBehavior.swift */,
+				E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -302,6 +329,7 @@
 		E493B1F6217599450017F931 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */,
 				E493B1F7217599450017F931 /* Event.swift */,
 			);
 			path = Entities;
@@ -338,6 +366,7 @@
 				E493B201217599900017F931 /* Translator.swift */,
 				E47278BD21780F5C003DA88E /* Notifiable.swift */,
 				E4A6D629217D89A600036D27 /* Anchorable.swift */,
+				E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -351,11 +380,13 @@
 				DBB52A4821761968009C5097 /* CoreGraphics+App.swift */,
 				DBB52A4721761968009C5097 /* Date+App.swift */,
 				DBB52A4921761968009C5097 /* Directory+App.swift */,
+				E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */,
 				DBB52A4B21761968009C5097 /* Notification+App.swift */,
 				E4DC8DC62176E2F100958641 /* Codable+App.swift */,
 				DBB52A4221761968009C5097 /* UIColor+App.swift */,
 				DBB52A4621761968009C5097 /* UIImage+App.swift */,
 				DBB52A4321761968009C5097 /* UIView+App.swift */,
+				E495077B2181BE0500583C06 /* UITextField+App.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -374,7 +405,9 @@
 				E4204014217F2DDD0036DAE0 /* Dialog */,
 				E493B2122176BF890017F931 /* WireframeHelper.swift */,
 				E477351321780C8F00DE3AA7 /* KeyboardManager.swift */,
+				E495077D2181C38D00583C06 /* TextFieldManager.swift */,
 				E420401C217F31230036DAE0 /* File.swift */,
+				DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -533,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E493B20821759A2C0017F931 /* EventTranslator.swift in Sources */,
+				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
@@ -541,15 +575,25 @@
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
 				E493B204217599900017F931 /* Translator.swift in Sources */,
+				E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
+				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
+				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
+				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
+				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
+				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
+				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
+				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
+				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
+				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
@@ -726,7 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2BFJGAX8E;
+				DEVELOPMENT_TEAM = K75PB9VKYT;
 				INFOPLIST_FILE = schetto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -745,7 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2BFJGAX8E;
+				DEVELOPMENT_TEAM = K75PB9VKYT;
 				INFOPLIST_FILE = schetto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
