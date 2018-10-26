@@ -6,14 +6,28 @@ import UIKit
 
 protocol TextFieldManagerDelegate: class {
     
+    /// テキストフィールドの値が変更された時に呼ばれる
+    /// - Parameters:
+    ///   - textFieldManager: テキストフィールドマネージャ
+    ///   - text: 変更後の文字列
     func textFieldManager(_ textFieldManager: TextFieldManager, changed text: String)
     
+    /// テキストフィールドの値が確定した時に呼ばれる
+    /// - Parameters:
+    ///   - textFieldManager: テキストフィールドマネージャ
+    ///   - text: 確定した文字列
     func textFieldManager(_ textFieldManager: TextFieldManager, commit text: String)
     
+    /// テキストフィールドで入力された値で変更を行うかどうかを返す
+    /// - Parameters:
+    ///   - textFieldManager: テキストフィールドマネージャ
+    ///   - range: 変更箇所範囲
+    ///   - string: 変更されようとしている値
+    /// - Returns: 変更を行うかどうか。false を返すとテキストフィールドに反映されない
     func textFieldManager(_ textFieldManager: TextFieldManager, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
 }
+// optionals
 extension TextFieldManagerDelegate {
-    
     func textFieldManager(_ textFieldManager: TextFieldManager, changed text: String) {}
     func textFieldManager(_ textFieldManager: TextFieldManager, commit text: String) {}
     func textFieldManager(_ textFieldManager: TextFieldManager, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool { return true }
