@@ -51,6 +51,7 @@
 		E493B2102176BF190017F931 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20E2176BF190017F931 /* Wireframe.swift */; };
 		E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2122176BF890017F931 /* WireframeHelper.swift */; };
 		E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495077B2181BE0500583C06 /* UITextField+App.swift */; };
+		E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495077D2181C38D00583C06 /* TextFieldManager.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -130,6 +131,7 @@
 		E493B20E2176BF190017F931 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		E493B2122176BF890017F931 /* WireframeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeHelper.swift; sourceTree = "<group>"; };
 		E495077B2181BE0500583C06 /* UITextField+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+App.swift"; sourceTree = "<group>"; };
+		E495077D2181C38D00583C06 /* TextFieldManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldManager.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				E4204014217F2DDD0036DAE0 /* Dialog */,
 				E493B2122176BF890017F931 /* WireframeHelper.swift */,
 				E477351321780C8F00DE3AA7 /* KeyboardManager.swift */,
+				E495077D2181C38D00583C06 /* TextFieldManager.swift */,
 				E420401C217F31230036DAE0 /* File.swift */,
 				DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */,
 			);
@@ -573,6 +576,7 @@
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
+				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
