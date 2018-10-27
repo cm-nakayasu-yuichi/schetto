@@ -24,6 +24,7 @@
 		DBB52A5921761C1D009C5097 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */; };
 		DBB52A5B2176379B009C5097 /* NumberExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */; };
 		DBB52A5D217647FE009C5097 /* CoreGraphicsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */; };
+		DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */; };
 		DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */; };
 		E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204015217F2DDD0036DAE0 /* Dialog.swift */; };
 		E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */; };
@@ -113,6 +114,7 @@
 		DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensionTests.swift; sourceTree = "<group>"; };
 		DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensionTests.swift; sourceTree = "<group>"; };
+		DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhighlightCell.swift; sourceTree = "<group>"; };
 		E4204015217F2DDD0036DAE0 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRightDrawBehavior.swift; sourceTree = "<group>"; };
 		E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
@@ -210,6 +212,14 @@
 				7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DBC0E1452184A5ED00E26514 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		E4204014217F2DDD0036DAE0 /* Dialog */ = {
@@ -370,6 +380,7 @@
 		E493B1FC217599810017F931 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				DBC0E1452184A5ED00E26514 /* TableViewCell */,
 				E48E5E47217FF5BB0072C22F /* Buttons */,
 				E493B1FD217599810017F931 /* CalendarView */,
 			);
@@ -672,6 +683,7 @@
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E43E8C692183271C0059AA40 /* Weather.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
+				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
