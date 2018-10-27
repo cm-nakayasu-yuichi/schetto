@@ -35,6 +35,11 @@ class BootstrapViewController: UITableViewController {
                     UIApplication.appDelegate.pushNotification.request(req)
                 }
             }),
+            (title: "タイマーテスト", handler: { bootstrap in
+                TimerHelper.start(time: 3) {
+                    print("1")
+                }
+            }),
             ]),
         ]
     // =========================================================================
