@@ -429,3 +429,17 @@ extension String {
         return padding("0", length: length, prefix: prefix)
     }
 }
+
+// MARK: - url encode and decode
+extension String {
+    
+    /// URLエンコードした文字列
+    var urlEncode: String {
+        return addingPercentEncoding(withAllowedCharacters: .alphanumerics) ?? ""
+    }
+    
+    /// URLデコードした文字列
+    var urlDecode: String {
+        return removingPercentEncoding ?? ""
+    }
+}
