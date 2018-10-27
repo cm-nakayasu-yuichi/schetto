@@ -25,6 +25,7 @@
 		DBB52A5B2176379B009C5097 /* NumberExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */; };
 		DBB52A5D217647FE009C5097 /* CoreGraphicsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */; };
 		DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD257392184D2CC0007AC44 /* UIApplication+App.swift */; };
+		DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */; };
 		DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */; };
 		E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204015217F2DDD0036DAE0 /* Dialog.swift */; };
 		E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */; };
@@ -34,6 +35,7 @@
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
+		E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E5E48217FF5BB0072C22F /* ClearButton.swift */; };
 		E493B1CB217593F90017F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CA217593F90017F931 /* Assets.xcassets */; };
 		E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CC217593F90017F931 /* LaunchScreen.storyboard */; };
 		E493B1E6217595370017F931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1E5217595370017F931 /* AppDelegate.swift */; };
@@ -118,6 +120,7 @@
 		DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensionTests.swift; sourceTree = "<group>"; };
 		DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensionTests.swift; sourceTree = "<group>"; };
 		DBD257392184D2CC0007AC44 /* UIApplication+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+App.swift"; sourceTree = "<group>"; };
+		DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhighlightCell.swift; sourceTree = "<group>"; };
 		E4204015217F2DDD0036DAE0 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRightDrawBehavior.swift; sourceTree = "<group>"; };
 		E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		E48E5E48217FF5BB0072C22F /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		E493B1C0217593F80017F931 /* schetto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schetto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1CA217593F90017F931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E493B1CD217593F90017F931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -221,6 +225,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DBC0E1452184A5ED00E26514 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		E4204014217F2DDD0036DAE0 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +254,14 @@
 				E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		E48E5E47217FF5BB0072C22F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E48E5E48217FF5BB0072C22F /* ClearButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		E493B1B7217593F70017F931 = {
@@ -375,6 +395,8 @@
 		E493B1FC217599810017F931 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				DBC0E1452184A5ED00E26514 /* TableViewCell */,
+				E48E5E47217FF5BB0072C22F /* Buttons */,
 				E493B1FD217599810017F931 /* CalendarView */,
 			);
 			path = ViewComponents;
@@ -672,6 +694,7 @@
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
 				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
+				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
 				E493B1F22175979C0017F931 /* EventEditCell.swift in Sources */,
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
@@ -686,6 +709,7 @@
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E43E8C692183271C0059AA40 /* Weather.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
+				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
