@@ -7,28 +7,39 @@ import RealmSwift
 
 class Realm {
     
-    private static var sharedRealm: RealmSwift.Realm!
-    
+    /// Realmファイルのパス
     static var path: String {
         return RealmSwift.Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? ""
     }
     
-    private static var realm: RealmSwift.Realm {
-        if sharedRealm == nil {
-            sharedRealm = try! RealmSwift.Realm()
+    private static var _realm: RealmSwift.Realm!
+    
+    private static var realm: RealmSwift.Realm! {
+        if _realm == nil {
+            _realm = try! RealmSwift.Realm()
         }
-        return sharedRealm
+        return _realm
     }
+}
+
+extension Realm {
     
-    class func begin() {
-        realm.beginWrite()
-    }
-    
-    class func create<Entity>(_ type: Entity.Type) -> Entity where Entity: RealmSwift.Object {
+    /// オブジェクトの作成
+    /// - Parameter type: 作成するオブジェクトの型
+    /// - Returns: オブジェクト
+    class func create<T>(_ type: T.Type) -> T where T: RealmSwift.Object {
         return realm.create(type)
     }
+}
+
+extension Realm {
     
-    class func select<Entity>(from type: Entity.Type, predicate: NSPredicate? = nil) -> RealmSwift.Results<Entity> where Entity: RealmSwift.Object {
+    /// データの取得
+    /// - Parameters:
+    ///   - type: 取得するオブジェクトの型
+    ///   - predicate: 条件
+    /// - Returns: 取得したデータ
+    class func select<T>(from type: T.Type, predicate: NSPredicate? = nil) -> RealmSwift.Results<T> where T: RealmSwift.Object {
         var results = realm.objects(type)
         if let predicate = predicate {
             results = results.filter(predicate)
@@ -36,31 +47,50 @@ class Realm {
         return results
     }
     
-    class func count<Entity>(of type: Entity.Type, predicate: NSPredicate? = nil) -> Int where Entity: RealmSwift.Object {
+    /// データの件数取得
+    /// - Parameters:
+    ///   - type: 取得するオブジェクトの型
+    ///   - predicate: 条件
+    /// - Returns: データの件数
+    class func count<T>(of type: T.Type, predicate: NSPredicate? = nil) -> Int where T: RealmSwift.Object {
         return select(from: type, predicate: predicate).count
     }
+}
+
+extension Realm {
     
-    class func save<Entity>(_ entity: Entity) where Entity: RealmSwift.Object {
-        save([entity])
+    /// オブジェクトの保存
+    /// - Parameter object: オブジェクト
+    class func save<T>(_ object: T) where T: RealmSwift.Object {
+        save([object])
     }
     
-    class func save<Entity>(_ entities: [Entity]) where Entity: RealmSwift.Object {
-        let r = realm
+    /// オブジェクトの保存
+    /// - Parameter objects: オブジェクトの配列
+    class func save<T>(_ objects: [T]) where T: RealmSwift.Object {
+        let r = realm!
         try! r.write {
-            r.add(entities, update: true)
+            r.add(objects, update: true)
         }
     }
-    
-    class func insert<Entity>(_ entity: Entity) where Entity: RealmSwift.Object {
-        insert([entity])
+}
+
+extension Realm {
+
+    /// オブジェクトの追加
+    /// - Parameter object: オブジェクト
+    class func insert<T>(_ object: T) where T: RealmSwift.Object {
+        insert([object])
     }
     
-    class func insert<Entity>(_ entities: [Entity]) where Entity: RealmSwift.Object {
-        let r = realm
+    /// オブジェクトの追加
+    /// - Parameter objects: オブジェクトの配列
+    class func insert<T>(_ objects: [T]) where T: RealmSwift.Object {
+        let r = realm!
         var i = 0, id = 0
         try! r.write {
-            for entity in entities {
-                if var identifiedObject = entity as? RealmIdentifiedObject {
+            for object in objects {
+                if var identifiedObject = object as? RealmIdentifiedObject {
                     if i == 0 {
                         id = identifiedObject.id
                     } else {
@@ -68,38 +98,76 @@ class Realm {
                         identifiedObject.id = id
                     }
                 }
-                r.add(entity, update: true)
+                r.add(object, update: true)
                 i += 1
             }
         }
     }
+}
+
+extension Realm {
     
-    class func delete<Entity>(for type: Entity.Type, predicate: NSPredicate? = nil) where Entity: RealmSwift.Object {
-        let r = realm
+    /// オブジェクトの削除
+    /// - Parameters:
+    ///   - type: 削除するオブジェクトの型
+    ///   - predicate: 条件
+    class func delete<T>(for type: T.Type, predicate: NSPredicate? = nil) where T: RealmSwift.Object {
+        let r = realm!
         try! r.write {
             if let predicate = predicate {
-                r.delete(r.objects(Entity.self).filter(predicate))
+                r.delete(r.objects(T.self).filter(predicate))
             } else {
-                r.delete(r.objects(Entity.self))
+                r.delete(r.objects(T.self))
             }
         }
     }
+}
+
+extension Realm {
     
-    class func update<Entity>(for type: Entity.Type, predicate: NSPredicate?, updating: @escaping (Entity, Int) -> Void) where Entity: RealmSwift.Object {
-        let r = realm
+    /// オブジェクトの更新
+    /// - Parameters:
+    ///   - type: 更新するオブジェクトの型
+    ///   - predicate: 条件
+    ///   - updating: 更新処理
+    class func update<T>(for type: T.Type, predicate: NSPredicate?, updating: @escaping (T, Int) -> Void) where T: RealmSwift.Object {
+        let r = realm!
         try! r.write {
-            let results: RealmSwift.Results<Entity>
+            let results: RealmSwift.Results<T>
             if let predicate = predicate {
-                results = r.objects(Entity.self).filter(predicate)
+                results = r.objects(T.self).filter(predicate)
             } else {
-                results = r.objects(Entity.self)
+                results = r.objects(T.self)
             }
             
             var i = 0
-            for entity in results {
-                updating(entity, i)
+            for object in results {
+                updating(object, i)
                 i += 1
             }
         }
+    }
+}
+
+extension Realm {
+    
+    /// トランザクションの開始
+    class func begin() {
+        realm.beginWrite()
+    }
+    
+    /// トランザクションの確定
+    class func commit(withoutNotifying tokens: [NotificationToken] = []) {
+        try? realm.commitWrite(withoutNotifying: tokens)
+    }
+    
+    /// トランザクションの中止
+    class func rollback() {
+        realm.cancelWrite()
+    }
+    
+    /// トランザクション中かどうか
+    static var inTransaction: Bool {
+        return realm.isInWriteTransaction
     }
 }

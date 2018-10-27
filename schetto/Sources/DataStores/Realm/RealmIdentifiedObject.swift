@@ -17,7 +17,6 @@ extension RealmIdentifiedObject where Self: RealmSwift.Object {
     static var idProperty: String { return IDProperty }
     
     func generateAutoIncrementedId() -> Int {
-        
         guard
             let realm = try? RealmSwift.Realm(),
             let max = realm.objects(Self.self).sorted(byKeyPath: IDProperty, ascending: false).first
