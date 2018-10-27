@@ -1,3 +1,32 @@
-PODFILE CHECKSUM: 207ee1da015e7490d92e764bad54dbbcf9f96ecc
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - Realm (3.11.0):
+    - Realm/Headers (= 3.11.0)
+  - Realm/Headers (3.11.0)
+  - RealmSwift (3.11.0):
+    - Realm (= 3.11.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - Realm
+  - RealmSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  Realm: 92f09a102692b96a9a10e9617f214f15c5ab85fc
+  RealmSwift: 5f0481cd658bb751c509314b964a35eaa264d2cf
+
+PODFILE CHECKSUM: 47c916205587e5eaadf9028827b2e972e23210d3
 
 COCOAPODS: 1.5.3
