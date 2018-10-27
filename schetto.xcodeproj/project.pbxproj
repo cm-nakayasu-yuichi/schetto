@@ -24,6 +24,7 @@
 		DBB52A5921761C1D009C5097 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */; };
 		DBB52A5B2176379B009C5097 /* NumberExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */; };
 		DBB52A5D217647FE009C5097 /* CoreGraphicsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */; };
+		DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD257392184D2CC0007AC44 /* UIApplication+App.swift */; };
 		DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */; };
 		E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204015217F2DDD0036DAE0 /* Dialog.swift */; };
 		E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */; };
@@ -66,6 +67,10 @@
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
+		E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8421802D2F00AFBAB8 /* ApplicationLifeCycle.swift */; };
+		E4BF1A872180361700AFBAB8 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A862180361700AFBAB8 /* Application.swift */; };
+		E4BF1A892180445700AFBAB8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A882180445700AFBAB8 /* main.swift */; };
+		E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8A2180685E00AFBAB8 /* PushNotification.swift */; };
 		E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */; };
 		E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */; };
 		E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */; };
@@ -112,6 +117,7 @@
 		DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensionTests.swift; sourceTree = "<group>"; };
 		DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensionTests.swift; sourceTree = "<group>"; };
+		DBD257392184D2CC0007AC44 /* UIApplication+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+App.swift"; sourceTree = "<group>"; };
 		E4204015217F2DDD0036DAE0 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRightDrawBehavior.swift; sourceTree = "<group>"; };
 		E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
@@ -157,6 +163,11 @@
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		E4BF1A8421802D2F00AFBAB8 /* ApplicationLifeCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationLifeCycle.swift; sourceTree = "<group>"; };
+		E4BF1A862180361700AFBAB8 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		E4BF1A882180445700AFBAB8 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E4BF1A8A2180685E00AFBAB8 /* PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		E4BF1A8C21806D8200AFBAB8 /* schetto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schetto.entitlements; sourceTree = "<group>"; };
 		E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
 		E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -257,8 +268,10 @@
 		E493B1C2217593F80017F931 /* schetto */ = {
 			isa = PBXGroup;
 			children = (
+				E4BF1A8C21806D8200AFBAB8 /* schetto.entitlements */,
 				E493B1CA217593F90017F931 /* Assets.xcassets */,
 				E493B1CC217593F90017F931 /* LaunchScreen.storyboard */,
+				E4BF1A882180445700AFBAB8 /* main.swift */,
 				E493B1CF217593F90017F931 /* Info.plist */,
 			);
 			path = schetto;
@@ -303,6 +316,8 @@
 			isa = PBXGroup;
 			children = (
 				E493B1E5217595370017F931 /* AppDelegate.swift */,
+				E4BF1A862180361700AFBAB8 /* Application.swift */,
+				E4BF1A8A2180685E00AFBAB8 /* PushNotification.swift */,
 				E493B20D2176BF180017F931 /* Builder.swift */,
 				E493B20E2176BF190017F931 /* Wireframe.swift */,
 			);
@@ -396,6 +411,7 @@
 				E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */,
 				DBB52A4B21761968009C5097 /* Notification+App.swift */,
 				E4DC8DC62176E2F100958641 /* Codable+App.swift */,
+				DBD257392184D2CC0007AC44 /* UIApplication+App.swift */,
 				DBB52A4221761968009C5097 /* UIColor+App.swift */,
 				DBB52A4621761968009C5097 /* UIImage+App.swift */,
 				DBB52A4321761968009C5097 /* UIView+App.swift */,
@@ -417,6 +433,7 @@
 			children = (
 				E4204014217F2DDD0036DAE0 /* Dialog */,
 				E493B2122176BF890017F931 /* WireframeHelper.swift */,
+				E4BF1A8421802D2F00AFBAB8 /* ApplicationLifeCycle.swift */,
 				E477351321780C8F00DE3AA7 /* KeyboardManager.swift */,
 				E495077D2181C38D00583C06 /* TextFieldManager.swift */,
 				E420401C217F31230036DAE0 /* File.swift */,
@@ -528,6 +545,11 @@
 				TargetAttributes = {
 					E493B1BF217593F80017F931 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					E493B1D3217593F90017F931 = {
 						CreatedOnToolsVersion = 9.4;
@@ -644,11 +666,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4BF1A872180361700AFBAB8 /* Application.swift in Sources */,
 				E493B20821759A2C0017F931 /* EventTranslator.swift in Sources */,
 				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
+				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				E493B1F22175979C0017F931 /* EventEditCell.swift in Sources */,
+				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
+				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
@@ -688,6 +714,7 @@
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
 				E4959D6B218368B3008778F1 /* LivedoorWeatherApi.swift in Sources */,
 				E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */,
+				DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */,
 				E493B1FA217599450017F931 /* Event.swift in Sources */,
 				E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */,
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
@@ -861,6 +888,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K75PB9VKYT;
 				INFOPLIST_FILE = schetto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -880,6 +908,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K75PB9VKYT;
 				INFOPLIST_FILE = schetto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

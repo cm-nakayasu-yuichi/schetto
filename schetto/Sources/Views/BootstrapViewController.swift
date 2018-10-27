@@ -29,6 +29,12 @@ class BootstrapViewController: UITableViewController {
                     print(res.response)
                 }
             }),
+            (title: "画像テスト", handler: { bootstrap in
+                UIApplication.appDelegate.pushNotification.register()
+                UIApplication.appDelegate.pushNotification.createLocalPushNotificationRequest() { req in
+                    UIApplication.appDelegate.pushNotification.request(req)
+                }
+            }),
             ]),
         ]
     // =========================================================================
