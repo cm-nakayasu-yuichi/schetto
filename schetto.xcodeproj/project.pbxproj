@@ -60,6 +60,9 @@
 		E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D65218368B2008778F1 /* WebApiRequest.swift */; };
 		E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D66218368B2008778F1 /* WebApiRequestMethod.swift */; };
 		E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D67218368B2008778F1 /* WebApiError.swift */; };
+		E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */; };
+		E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7021848299008778F1 /* RealmSwift+App.swift */; };
+		E4959D7421848299008778F1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7121848299008778F1 /* Realm.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -148,6 +151,9 @@
 		E4959D65218368B2008778F1 /* WebApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequest.swift; sourceTree = "<group>"; };
 		E4959D66218368B2008778F1 /* WebApiRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequestMethod.swift; sourceTree = "<group>"; };
 		E4959D67218368B2008778F1 /* WebApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiError.swift; sourceTree = "<group>"; };
+		E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIdentifiedObject.swift; sourceTree = "<group>"; };
+		E4959D7021848299008778F1 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
+		E4959D7121848299008778F1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -431,6 +437,9 @@
 		E4959D5E218368B2008778F1 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				E4959D7121848299008778F1 /* Realm.swift */,
+				E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */,
+				E4959D7021848299008778F1 /* RealmSwift+App.swift */,
 				E4959D5F218368B2008778F1 /* NSPredicate+Realm.swift */,
 			);
 			path = Realm;
@@ -658,7 +667,9 @@
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
+				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
+				E4959D7421848299008778F1 /* Realm.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
@@ -676,6 +687,7 @@
 				E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */,
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
 				E4959D6B218368B3008778F1 /* LivedoorWeatherApi.swift in Sources */,
+				E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */,
 				E493B1FA217599450017F931 /* Event.swift in Sources */,
 				E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */,
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
