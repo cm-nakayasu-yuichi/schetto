@@ -29,13 +29,7 @@
 		E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */; };
 		E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */; };
 		E420401D217F31230036DAE0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420401C217F31230036DAE0 /* File.swift */; };
-		E43E8C61218323010059AA40 /* WebApiAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C59218323010059AA40 /* WebApiAccessor.swift */; };
-		E43E8C62218323010059AA40 /* WebApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C5A218323010059AA40 /* WebApiResponse.swift */; };
-		E43E8C65218323010059AA40 /* WebApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C5E218323010059AA40 /* WebApiRequest.swift */; };
-		E43E8C66218323010059AA40 /* WebApiRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C5F218323010059AA40 /* WebApiRequestMethod.swift */; };
-		E43E8C67218323010059AA40 /* WebApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C60218323010059AA40 /* WebApiError.swift */; };
 		E43E8C692183271C0059AA40 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C682183271C0059AA40 /* Weather.swift */; };
-		E43E8C6B2183274E0059AA40 /* LivedoorWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C6A2183274E0059AA40 /* LivedoorWeatherApi.swift */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
@@ -59,6 +53,13 @@
 		E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2122176BF890017F931 /* WireframeHelper.swift */; };
 		E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495077B2181BE0500583C06 /* UITextField+App.swift */; };
 		E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E495077D2181C38D00583C06 /* TextFieldManager.swift */; };
+		E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D5F218368B2008778F1 /* NSPredicate+Realm.swift */; };
+		E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D61218368B2008778F1 /* WebApiAccessor.swift */; };
+		E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D62218368B2008778F1 /* WebApiResponse.swift */; };
+		E4959D6B218368B3008778F1 /* LivedoorWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D64218368B2008778F1 /* LivedoorWeatherApi.swift */; };
+		E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D65218368B2008778F1 /* WebApiRequest.swift */; };
+		E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D66218368B2008778F1 /* WebApiRequestMethod.swift */; };
+		E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D67218368B2008778F1 /* WebApiError.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -112,13 +113,7 @@
 		E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRightDrawBehavior.swift; sourceTree = "<group>"; };
 		E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
 		E420401C217F31230036DAE0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		E43E8C59218323010059AA40 /* WebApiAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiAccessor.swift; sourceTree = "<group>"; };
-		E43E8C5A218323010059AA40 /* WebApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiResponse.swift; sourceTree = "<group>"; };
-		E43E8C5E218323010059AA40 /* WebApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequest.swift; sourceTree = "<group>"; };
-		E43E8C5F218323010059AA40 /* WebApiRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequestMethod.swift; sourceTree = "<group>"; };
-		E43E8C60218323010059AA40 /* WebApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiError.swift; sourceTree = "<group>"; };
 		E43E8C682183271C0059AA40 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		E43E8C6A2183274E0059AA40 /* LivedoorWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivedoorWeatherApi.swift; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
@@ -146,6 +141,13 @@
 		E493B2122176BF890017F931 /* WireframeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WireframeHelper.swift; sourceTree = "<group>"; };
 		E495077B2181BE0500583C06 /* UITextField+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+App.swift"; sourceTree = "<group>"; };
 		E495077D2181C38D00583C06 /* TextFieldManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldManager.swift; sourceTree = "<group>"; };
+		E4959D5F218368B2008778F1 /* NSPredicate+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Realm.swift"; sourceTree = "<group>"; };
+		E4959D61218368B2008778F1 /* WebApiAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiAccessor.swift; sourceTree = "<group>"; };
+		E4959D62218368B2008778F1 /* WebApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiResponse.swift; sourceTree = "<group>"; };
+		E4959D64218368B2008778F1 /* LivedoorWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivedoorWeatherApi.swift; sourceTree = "<group>"; };
+		E4959D65218368B2008778F1 /* WebApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequest.swift; sourceTree = "<group>"; };
+		E4959D66218368B2008778F1 /* WebApiRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequestMethod.swift; sourceTree = "<group>"; };
+		E4959D67218368B2008778F1 /* WebApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiError.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -225,27 +227,6 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
-		E43E8C58218323010059AA40 /* Networkings */ = {
-			isa = PBXGroup;
-			children = (
-				E43E8C5B218323010059AA40 /* API */,
-				E43E8C59218323010059AA40 /* WebApiAccessor.swift */,
-				E43E8C5A218323010059AA40 /* WebApiResponse.swift */,
-				E43E8C5E218323010059AA40 /* WebApiRequest.swift */,
-				E43E8C5F218323010059AA40 /* WebApiRequestMethod.swift */,
-				E43E8C60218323010059AA40 /* WebApiError.swift */,
-			);
-			path = Networkings;
-			sourceTree = "<group>";
-		};
-		E43E8C5B218323010059AA40 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				E43E8C6A2183274E0059AA40 /* LivedoorWeatherApi.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		E493B1B7217593F70017F931 = {
 			isa = PBXGroup;
 			children = (
@@ -299,7 +280,7 @@
 				E493B1E4217595370017F931 /* Applications */,
 				E493B202217599900017F931 /* Extensions */,
 				E493B200217599900017F931 /* Protocols */,
-				E43E8C58218323010059AA40 /* Networkings */,
+				E4959D5D218368B2008778F1 /* DataStores */,
 				E493B1F6217599450017F931 /* Entities */,
 				E493B1F8217599450017F931 /* Repositories */,
 				E493B20621759A2B0017F931 /* Translator */,
@@ -436,6 +417,44 @@
 				DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E4959D5D218368B2008778F1 /* DataStores */ = {
+			isa = PBXGroup;
+			children = (
+				E4959D60218368B2008778F1 /* Networkings */,
+				E4959D5E218368B2008778F1 /* Realm */,
+			);
+			path = DataStores;
+			sourceTree = "<group>";
+		};
+		E4959D5E218368B2008778F1 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E4959D5F218368B2008778F1 /* NSPredicate+Realm.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E4959D60218368B2008778F1 /* Networkings */ = {
+			isa = PBXGroup;
+			children = (
+				E4959D61218368B2008778F1 /* WebApiAccessor.swift */,
+				E4959D62218368B2008778F1 /* WebApiResponse.swift */,
+				E4959D63218368B2008778F1 /* API */,
+				E4959D65218368B2008778F1 /* WebApiRequest.swift */,
+				E4959D66218368B2008778F1 /* WebApiRequestMethod.swift */,
+				E4959D67218368B2008778F1 /* WebApiError.swift */,
+			);
+			path = Networkings;
+			sourceTree = "<group>";
+		};
+		E4959D63218368B2008778F1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E4959D64218368B2008778F1 /* LivedoorWeatherApi.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		E4A6D62B217D8A6500036D27 /* Test */ = {
@@ -618,30 +637,29 @@
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				E493B1F22175979C0017F931 /* EventEditCell.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
-				E43E8C61218323010059AA40 /* WebApiAccessor.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
 				E493B204217599900017F931 /* Translator.swift in Sources */,
 				E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
+				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E43E8C692183271C0059AA40 /* Weather.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
-				E43E8C65218323010059AA40 /* WebApiRequest.swift in Sources */,
+				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
+				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
-				E43E8C6B2183274E0059AA40 /* LivedoorWeatherApi.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
-				E43E8C66218323010059AA40 /* WebApiRequestMethod.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
@@ -653,15 +671,17 @@
 				E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */,
 				E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */,
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
+				E4959D6B218368B3008778F1 /* LivedoorWeatherApi.swift in Sources */,
 				E493B1FA217599450017F931 /* Event.swift in Sources */,
 				E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */,
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
-				E43E8C67218323010059AA40 /* WebApiError.swift in Sources */,
+				E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */,
 				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
 				E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */,
-				E43E8C62218323010059AA40 /* WebApiResponse.swift in Sources */,
 				E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */,
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
+				E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */,
+				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,
 				E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
