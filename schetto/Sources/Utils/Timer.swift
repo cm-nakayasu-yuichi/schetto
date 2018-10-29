@@ -36,7 +36,7 @@ class TimerHelper {
             firedHandler?()
             self.timer = nil
             
-            if let index = TimerHelper.timerObjects.firstIndex(of: self) {
+            if let index = TimerHelper.timerObjects.index(of: self) {
                 TimerHelper.timerObjects.remove(at: index)
             }
         }
