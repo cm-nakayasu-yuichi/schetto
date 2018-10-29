@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F738B7713350D884A1BAA34 /* Pods_schetto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */; };
 		DB0455E921876B9A003902B8 /* Color+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0455E821876B9A003902B8 /* Color+Definition.swift */; };
+		DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840521876E09008F00F6 /* Font+Definition.swift */; };
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
 		DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */; };
 		DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AD9EE217F60DD001243C3 /* FileTests.swift */; };
@@ -106,6 +107,7 @@
 		7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-schettoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-schettoTests/Pods-schettoTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schettoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0455E821876B9A003902B8 /* Color+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Definition.swift"; sourceTree = "<group>"; };
+		DB22840521876E09008F00F6 /* Font+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Definition.swift"; sourceTree = "<group>"; };
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DB7AD9EE217F60DD001243C3 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				E4BF1A862180361700AFBAB8 /* Application.swift */,
 				E4BF1A8A2180685E00AFBAB8 /* PushNotification.swift */,
 				DB0455E821876B9A003902B8 /* Color+Definition.swift */,
+				DB22840521876E09008F00F6 /* Font+Definition.swift */,
 				E493B20D2176BF180017F931 /* Builder.swift */,
 				E493B20E2176BF190017F931 /* Wireframe.swift */,
 			);
@@ -721,6 +724,7 @@
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
+				DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */,
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
