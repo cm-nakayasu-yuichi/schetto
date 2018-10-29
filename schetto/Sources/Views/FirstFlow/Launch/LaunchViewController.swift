@@ -8,8 +8,8 @@ class LaunchViewController: UIViewController {
     
     var presenter: LaunchPresenterProtocol!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter.launch()
     }
 }
@@ -25,6 +25,6 @@ extension LaunchViewController: LaunchViewProtocol {
     }
     
     func showTutorial() {
-        
+        Wireframe.showTutorial(from: self)
     }
 }

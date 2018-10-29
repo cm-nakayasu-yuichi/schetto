@@ -20,6 +20,11 @@ class Builder {
         
         return view
     }
+    
+    func tutorial() -> TutorialViewController {
+        let view = instantiate(TutorialViewController.self, storyboardName: "Tutorial")        
+        return view
+    }
         
     func test() -> TestViewController {
         let view = instantiate(TestViewController.self, storyboardName: "Test")

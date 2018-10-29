@@ -61,6 +61,10 @@
 		E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E3221869B6D008778F1 /* LaunchRepository.swift */; };
 		E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4959E3421869B6D008778F1 /* Launch.storyboard */; };
 		E4959E3E21869B6D008778F1 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E3621869B6D008778F1 /* LaunchViewController.swift */; };
+		E4959E4C2186E1E9008778F1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E442186E1E9008778F1 /* TutorialViewController.swift */; };
+		E4959E4E2186E1E9008778F1 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4959E462186E1E9008778F1 /* Tutorial.storyboard */; };
+		E4959E5621870C93008778F1 /* TutorialAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E5421870C93008778F1 /* TutorialAdapter.swift */; };
+		E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E5521870C93008778F1 /* TutorialCell.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -154,6 +158,10 @@
 		E4959E3221869B6D008778F1 /* LaunchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRepository.swift; sourceTree = "<group>"; };
 		E4959E3421869B6D008778F1 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		E4959E3621869B6D008778F1 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		E4959E442186E1E9008778F1 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		E4959E462186E1E9008778F1 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		E4959E5421870C93008778F1 /* TutorialAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialAdapter.swift; sourceTree = "<group>"; };
+		E4959E5521870C93008778F1 /* TutorialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialCell.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -485,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				E4959E2E21869B6D008778F1 /* Launch */,
+				E4959E3F2186E1E9008778F1 /* Tutorial */,
 			);
 			path = FirstFlow;
 			sourceTree = "<group>";
@@ -496,6 +505,17 @@
 				E4959E3621869B6D008778F1 /* LaunchViewController.swift */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		E4959E3F2186E1E9008778F1 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				E4959E462186E1E9008778F1 /* Tutorial.storyboard */,
+				E4959E442186E1E9008778F1 /* TutorialViewController.swift */,
+				E4959E5421870C93008778F1 /* TutorialAdapter.swift */,
+				E4959E5521870C93008778F1 /* TutorialCell.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		E4A6D62B217D8A6500036D27 /* Test */ = {
@@ -600,6 +620,7 @@
 				E493B1CB217593F90017F931 /* Assets.xcassets in Resources */,
 				E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */,
 				E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */,
+				E4959E4E2186E1E9008778F1 /* Tutorial.storyboard in Resources */,
 				E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +717,7 @@
 				E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
+				E4959E5621870C93008778F1 /* TutorialAdapter.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
@@ -719,6 +741,7 @@
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
+				E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
@@ -735,6 +758,7 @@
 				E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */,
 				E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */,
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
+				E4959E4C2186E1E9008778F1 /* TutorialViewController.swift in Sources */,
 				E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */,
 				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,
 				E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */,
