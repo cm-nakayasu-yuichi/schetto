@@ -6,6 +6,20 @@ import UIKit
 
 class Builder {
     
+    func launch() -> LaunchViewController {
+        let view = instantiate(LaunchViewController.self, storyboardName: "Launch")
+        
+        let presenter: LaunchPresenterProtocol = LaunchPresenter()
+        presenter.view = view
+        
+        let interactor: LaunchInteractorInput = LaunchRepository()
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
     func eventEdit() -> EventEditViewController {
         let view = instantiate(EventEditViewController.self, storyboardName: "EventEdit")
         

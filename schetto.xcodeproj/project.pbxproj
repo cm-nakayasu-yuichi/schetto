@@ -67,6 +67,10 @@
 		E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */; };
 		E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7021848299008778F1 /* RealmSwift+App.swift */; };
 		E4959D7421848299008778F1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7121848299008778F1 /* Realm.swift */; };
+		E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E3021869B6D008778F1 /* LaunchPresenter.swift */; };
+		E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E3221869B6D008778F1 /* LaunchRepository.swift */; };
+		E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4959E3421869B6D008778F1 /* Launch.storyboard */; };
+		E4959E3E21869B6D008778F1 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E3621869B6D008778F1 /* LaunchViewController.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -166,6 +170,10 @@
 		E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIdentifiedObject.swift; sourceTree = "<group>"; };
 		E4959D7021848299008778F1 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E4959D7121848299008778F1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		E4959E3021869B6D008778F1 /* LaunchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
+		E4959E3221869B6D008778F1 /* LaunchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRepository.swift; sourceTree = "<group>"; };
+		E4959E3421869B6D008778F1 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		E4959E3621869B6D008778F1 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -349,6 +357,7 @@
 		E493B1E72175979B0017F931 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4959E1C21869A4F008778F1 /* FirstFlow */,
 				E493B20A2176BD360017F931 /* Bootstrap.storyboard */,
 				E493B2092176BD360017F931 /* BootstrapViewController.swift */,
 				E4A6D62B217D8A6500036D27 /* Test */,
@@ -371,6 +380,7 @@
 		E493B1F32175982B0017F931 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
 				E493B1F42175982B0017F931 /* EventEditPresenter.swift */,
 			);
 			path = Presenters;
@@ -389,6 +399,7 @@
 		E493B1F8217599450017F931 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				E493B1F9217599450017F931 /* EventRepository.swift */,
 			);
 			path = Repositories;
@@ -508,6 +519,23 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		E4959E1C21869A4F008778F1 /* FirstFlow */ = {
+			isa = PBXGroup;
+			children = (
+				E4959E2E21869B6D008778F1 /* Launch */,
+			);
+			path = FirstFlow;
+			sourceTree = "<group>";
+		};
+		E4959E2E21869B6D008778F1 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				E4959E3421869B6D008778F1 /* Launch.storyboard */,
+				E4959E3621869B6D008778F1 /* LaunchViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		E4A6D62B217D8A6500036D27 /* Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,6 +639,7 @@
 				E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */,
 				E493B1EF2175979C0017F931 /* EventEdit.storyboard in Resources */,
 				E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */,
+				E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,9 +750,11 @@
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
+				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E4959D7421848299008778F1 /* Realm.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
+				E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
@@ -747,6 +778,7 @@
 				E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */,
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
 				E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */,
+				E4959E3E21869B6D008778F1 /* LaunchViewController.swift in Sources */,
 				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
 				E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */,
 				E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */,
