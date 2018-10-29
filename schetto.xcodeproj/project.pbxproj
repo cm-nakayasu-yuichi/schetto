@@ -32,7 +32,6 @@
 		E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */; };
 		E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */; };
 		E420401D217F31230036DAE0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420401C217F31230036DAE0 /* File.swift */; };
-		E43E8C692183271C0059AA40 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43E8C682183271C0059AA40 /* Weather.swift */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
@@ -40,16 +39,8 @@
 		E493B1CB217593F90017F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CA217593F90017F931 /* Assets.xcassets */; };
 		E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CC217593F90017F931 /* LaunchScreen.storyboard */; };
 		E493B1E6217595370017F931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1E5217595370017F931 /* AppDelegate.swift */; };
-		E493B1EF2175979C0017F931 /* EventEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1EA2175979B0017F931 /* EventEdit.storyboard */; };
-		E493B1F02175979C0017F931 /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1EB2175979B0017F931 /* EventEditViewController.swift */; };
-		E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1EC2175979B0017F931 /* EventEditAdapter.swift */; };
-		E493B1F22175979C0017F931 /* EventEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1ED2175979C0017F931 /* EventEditCell.swift */; };
-		E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1F42175982B0017F931 /* EventEditPresenter.swift */; };
-		E493B1FA217599450017F931 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1F7217599450017F931 /* Event.swift */; };
-		E493B1FB217599450017F931 /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1F9217599450017F931 /* EventRepository.swift */; };
 		E493B1FF217599810017F931 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B1FE217599810017F931 /* CalendarView.swift */; };
 		E493B204217599900017F931 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B201217599900017F931 /* Translator.swift */; };
-		E493B20821759A2C0017F931 /* EventTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20721759A2B0017F931 /* EventTranslator.swift */; };
 		E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B2092176BD360017F931 /* BootstrapViewController.swift */; };
 		E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B20A2176BD360017F931 /* Bootstrap.storyboard */; };
 		E493B20F2176BF190017F931 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493B20D2176BF180017F931 /* Builder.swift */; };
@@ -60,7 +51,6 @@
 		E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D5F218368B2008778F1 /* NSPredicate+Realm.swift */; };
 		E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D61218368B2008778F1 /* WebApiAccessor.swift */; };
 		E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D62218368B2008778F1 /* WebApiResponse.swift */; };
-		E4959D6B218368B3008778F1 /* LivedoorWeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D64218368B2008778F1 /* LivedoorWeatherApi.swift */; };
 		E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D65218368B2008778F1 /* WebApiRequest.swift */; };
 		E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D66218368B2008778F1 /* WebApiRequestMethod.swift */; };
 		E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D67218368B2008778F1 /* WebApiError.swift */; };
@@ -131,7 +121,6 @@
 		E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRightDrawBehavior.swift; sourceTree = "<group>"; };
 		E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
 		E420401C217F31230036DAE0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		E43E8C682183271C0059AA40 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
@@ -143,16 +132,8 @@
 		E493B1D4217593F90017F931 /* schettoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = schettoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1DA217593F90017F931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E493B1E5217595370017F931 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E493B1EA2175979B0017F931 /* EventEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventEdit.storyboard; sourceTree = "<group>"; };
-		E493B1EB2175979B0017F931 /* EventEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
-		E493B1EC2175979B0017F931 /* EventEditAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditAdapter.swift; sourceTree = "<group>"; };
-		E493B1ED2175979C0017F931 /* EventEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditCell.swift; sourceTree = "<group>"; };
-		E493B1F42175982B0017F931 /* EventEditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditPresenter.swift; sourceTree = "<group>"; };
-		E493B1F7217599450017F931 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		E493B1F9217599450017F931 /* EventRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
 		E493B1FE217599810017F931 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		E493B201217599900017F931 /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
-		E493B20721759A2B0017F931 /* EventTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTranslator.swift; sourceTree = "<group>"; };
 		E493B2092176BD360017F931 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
 		E493B20A2176BD360017F931 /* Bootstrap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bootstrap.storyboard; sourceTree = "<group>"; };
 		E493B20D2176BF180017F931 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -163,7 +144,6 @@
 		E4959D5F218368B2008778F1 /* NSPredicate+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPredicate+Realm.swift"; sourceTree = "<group>"; };
 		E4959D61218368B2008778F1 /* WebApiAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiAccessor.swift; sourceTree = "<group>"; };
 		E4959D62218368B2008778F1 /* WebApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiResponse.swift; sourceTree = "<group>"; };
-		E4959D64218368B2008778F1 /* LivedoorWeatherApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivedoorWeatherApi.swift; sourceTree = "<group>"; };
 		E4959D65218368B2008778F1 /* WebApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequest.swift; sourceTree = "<group>"; };
 		E4959D66218368B2008778F1 /* WebApiRequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiRequestMethod.swift; sourceTree = "<group>"; };
 		E4959D67218368B2008778F1 /* WebApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiError.swift; sourceTree = "<group>"; };
@@ -361,27 +341,14 @@
 				E493B20A2176BD360017F931 /* Bootstrap.storyboard */,
 				E493B2092176BD360017F931 /* BootstrapViewController.swift */,
 				E4A6D62B217D8A6500036D27 /* Test */,
-				E493B1E82175979B0017F931 /* EventEdit */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		E493B1E82175979B0017F931 /* EventEdit */ = {
-			isa = PBXGroup;
-			children = (
-				E493B1EA2175979B0017F931 /* EventEdit.storyboard */,
-				E493B1EB2175979B0017F931 /* EventEditViewController.swift */,
-				E493B1EC2175979B0017F931 /* EventEditAdapter.swift */,
-				E493B1ED2175979C0017F931 /* EventEditCell.swift */,
-			);
-			path = EventEdit;
 			sourceTree = "<group>";
 		};
 		E493B1F32175982B0017F931 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
-				E493B1F42175982B0017F931 /* EventEditPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -390,8 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */,
-				E493B1F7217599450017F931 /* Event.swift */,
-				E43E8C682183271C0059AA40 /* Weather.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -400,7 +365,6 @@
 			isa = PBXGroup;
 			children = (
 				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
-				E493B1F9217599450017F931 /* EventRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -458,7 +422,6 @@
 		E493B20621759A2B0017F931 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
-				E493B20721759A2B0017F931 /* EventTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -514,7 +477,6 @@
 		E4959D63218368B2008778F1 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E4959D64218368B2008778F1 /* LivedoorWeatherApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -637,7 +599,6 @@
 				E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */,
 				E493B1CB217593F90017F931 /* Assets.xcassets in Resources */,
 				E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */,
-				E493B1EF2175979C0017F931 /* EventEdit.storyboard in Resources */,
 				E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */,
 				E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */,
 			);
@@ -721,13 +682,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BF1A872180361700AFBAB8 /* Application.swift in Sources */,
-				E493B20821759A2C0017F931 /* EventTranslator.swift in Sources */,
 				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
 				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
-				E493B1F22175979C0017F931 /* EventEditCell.swift in Sources */,
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
@@ -739,7 +698,6 @@
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
-				E43E8C692183271C0059AA40 /* Weather.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
 				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
@@ -757,7 +715,6 @@
 				E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
-				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
@@ -765,17 +722,12 @@
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
-				E493B1F02175979C0017F931 /* EventEditViewController.swift in Sources */,
-				E493B1FB217599450017F931 /* EventRepository.swift in Sources */,
 				E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */,
 				E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */,
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
-				E4959D6B218368B3008778F1 /* LivedoorWeatherApi.swift in Sources */,
 				E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */,
 				DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */,
 				DBD2573C2184D7300007AC44 /* Timer.swift in Sources */,
-				E493B1FA217599450017F931 /* Event.swift in Sources */,
-				E493B1F12175979C0017F931 /* EventEditAdapter.swift in Sources */,
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
 				E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */,
 				E4959E3E21869B6D008778F1 /* LaunchViewController.swift in Sources */,

@@ -19,21 +19,7 @@ class Builder {
         
         return view
     }
-    
-    func eventEdit() -> EventEditViewController {
-        let view = instantiate(EventEditViewController.self, storyboardName: "EventEdit")
         
-        let presenter: EventEditPresenterProtocol = EventEditPresenter()
-        presenter.view = view
-        
-        let interactor: EventInteractorInput = EventRepository()
-        presenter.interactor = interactor
-        
-        view.presenter = presenter
-        
-        return view
-    }
-    
     func test() -> TestViewController {
         let view = instantiate(TestViewController.self, storyboardName: "Test")
         return view
