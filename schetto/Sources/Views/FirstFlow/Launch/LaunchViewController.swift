@@ -8,17 +8,23 @@ class LaunchViewController: UIViewController {
     
     var presenter: LaunchPresenterProtocol!
 
-    @IBOutlet private weak var closeButton: UIButton!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction private func didTapCloseButton() {
-        // NOP.
+        presenter.launch()
     }
 }
 
 extension LaunchViewController: LaunchViewProtocol {
+
+    func showMain() {
+        print(2)
+    }
     
+    func showTerms() {
+        print(1)
+    }
+    
+    func showTutorial() {
+        
+    }
 }

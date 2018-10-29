@@ -13,6 +13,7 @@ class Builder {
         presenter.view = view
         
         let interactor: LaunchInteractorInput = LaunchRepository()
+        interactor.output = presenter as! LaunchInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
