@@ -24,7 +24,7 @@ class TutorialViewController: UIViewController {
     }
     
     @IBAction private func didTapSkipButton() {
-        // NOP.
+        Wireframe.showTerms(from: self)
     }
     
     @IBAction private func didTapNextButton() {

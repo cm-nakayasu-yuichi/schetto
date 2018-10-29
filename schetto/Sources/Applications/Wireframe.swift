@@ -15,6 +15,11 @@ class Wireframe {
         let viewController = builder.tutorial()
         helper.present(crossDisolve: viewController, from: fromViewController)
     }
+    
+    static func showTerms(from fromViewController: UIViewController) {
+        let viewController = builder.terms()
+        helper.present(crossDisolve: helper.withinNavigation(viewController), from: fromViewController)
+    }
         
     static func showTest(from fromViewController: UIViewController) {
         let viewController = builder.test()

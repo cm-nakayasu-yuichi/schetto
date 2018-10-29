@@ -21,7 +21,7 @@ extension LaunchViewController: LaunchViewProtocol {
     }
     
     func showTerms() {
-        print(1)
+        Wireframe.showTerms(from: self)
     }
     
     func showTutorial() {

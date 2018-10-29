@@ -25,6 +25,16 @@ class Builder {
         let view = instantiate(TutorialViewController.self, storyboardName: "Tutorial")        
         return view
     }
+    
+    func terms() -> TermsViewController {
+        let view = instantiate(TermsViewController.self, storyboardName: "Terms")
+        
+        let presenter: TermsPresenterProtocol = TermsPresenter()
+        presenter.view = view        
+        view.presenter = presenter
+        
+        return view
+    }
         
     func test() -> TestViewController {
         let view = instantiate(TestViewController.self, storyboardName: "Test")

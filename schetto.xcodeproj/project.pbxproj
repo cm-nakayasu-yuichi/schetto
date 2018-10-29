@@ -65,6 +65,9 @@
 		E4959E4E2186E1E9008778F1 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4959E462186E1E9008778F1 /* Tutorial.storyboard */; };
 		E4959E5621870C93008778F1 /* TutorialAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E5421870C93008778F1 /* TutorialAdapter.swift */; };
 		E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E5521870C93008778F1 /* TutorialCell.swift */; };
+		E4959E6521874A80008778F1 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E5D21874A80008778F1 /* TermsViewController.swift */; };
+		E4959E6621874A80008778F1 /* Terms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4959E5E21874A80008778F1 /* Terms.storyboard */; };
+		E4959E6821874A80008778F1 /* TermsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E6021874A80008778F1 /* TermsPresenter.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -162,6 +165,9 @@
 		E4959E462186E1E9008778F1 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		E4959E5421870C93008778F1 /* TutorialAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialAdapter.swift; sourceTree = "<group>"; };
 		E4959E5521870C93008778F1 /* TutorialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialCell.swift; sourceTree = "<group>"; };
+		E4959E5D21874A80008778F1 /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		E4959E5E21874A80008778F1 /* Terms.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Terms.storyboard; sourceTree = "<group>"; };
+		E4959E6021874A80008778F1 /* TermsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsPresenter.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -357,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
+				E4959E6021874A80008778F1 /* TermsPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -494,6 +501,7 @@
 			children = (
 				E4959E2E21869B6D008778F1 /* Launch */,
 				E4959E3F2186E1E9008778F1 /* Tutorial */,
+				E4959E5A21874A80008778F1 /* Terms */,
 			);
 			path = FirstFlow;
 			sourceTree = "<group>";
@@ -516,6 +524,15 @@
 				E4959E5521870C93008778F1 /* TutorialCell.swift */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		E4959E5A21874A80008778F1 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				E4959E5E21874A80008778F1 /* Terms.storyboard */,
+				E4959E5D21874A80008778F1 /* TermsViewController.swift */,
+			);
+			path = Terms;
 			sourceTree = "<group>";
 		};
 		E4A6D62B217D8A6500036D27 /* Test */ = {
@@ -616,6 +633,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4959E6621874A80008778F1 /* Terms.storyboard in Resources */,
 				E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */,
 				E493B1CB217593F90017F931 /* Assets.xcassets in Resources */,
 				E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */,
@@ -713,8 +731,10 @@
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
+				E4959E6821874A80008778F1 /* TermsPresenter.swift in Sources */,
 				E493B204217599900017F931 /* Translator.swift in Sources */,
 				E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */,
+				E4959E6521874A80008778F1 /* TermsViewController.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
 				E4959E5621870C93008778F1 /* TutorialAdapter.swift in Sources */,
