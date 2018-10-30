@@ -10,16 +10,33 @@ class MainViewController: UIViewController {
     
     private var adapter: MainAdapter!
     
+    @IBOutlet private weak var backgroundImageView: UIImageView!
     //@IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var menuButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBackgroundImageView()
         //adapter = MainAdapter(collectionView, delegate: self)
     }
     
-    @IBAction private func didTapCloseButton() {
+    @IBAction private func didTapMenuButton() {
         // NOP.
+    }
+    
+    private func setupBackgroundImageView() {
+        let ratioWidth: CGFloat = 320
+        let ratioHeight: CGFloat = 568
+        
+        var width: CGFloat = .screenWidth
+        var height: CGFloat = .screenWidth * (ratioHeight / ratioWidth)
+        if height < .screenHeight {
+            height = .screenHeight
+            width = .screenHeight * (ratioWidth / ratioHeight)
+        }
+        
+        _ = backgroundImageView.addConstraint(width: width)
+        _ = backgroundImageView.addConstraint(height: height)
     }
 }
 
