@@ -21,6 +21,11 @@ class Builder {
         return view
     }
     
+    func drawerMenu() -> DrawerMenuViewController {
+        let view = instantiate(DrawerMenuViewController.self, storyboardName: "DrawerMenu")
+        return view
+    }
+    
     func launch() -> LaunchViewController {
         let view = instantiate(LaunchViewController.self, storyboardName: "Launch")
         

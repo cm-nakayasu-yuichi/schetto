@@ -19,6 +19,10 @@
 		DB22841921888D6D008F00F6 /* MainAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840F21888D6D008F00F6 /* MainAdapter.swift */; };
 		DB22841D21888D6D008F00F6 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22841321888D6D008F00F6 /* MainCell.swift */; };
 		DB22841F2188C288008F00F6 /* CoreGraphics+Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22841E2188C288008F00F6 /* CoreGraphics+Dimension.swift */; };
+		DB22842E2188CD47008F00F6 /* DrawerMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2284242188CD47008F00F6 /* DrawerMenuCell.swift */; };
+		DB2284302188CD47008F00F6 /* DrawerMenuAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2284262188CD47008F00F6 /* DrawerMenuAdapter.swift */; };
+		DB2284312188CD47008F00F6 /* DrawerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2284272188CD47008F00F6 /* DrawerMenu.storyboard */; };
+		DB2284322188CD47008F00F6 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2284282188CD47008F00F6 /* DrawerMenuViewController.swift */; };
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
 		DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */; };
 		DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AD9EE217F60DD001243C3 /* FileTests.swift */; };
@@ -127,6 +131,10 @@
 		DB22840F21888D6D008F00F6 /* MainAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAdapter.swift; sourceTree = "<group>"; };
 		DB22841321888D6D008F00F6 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		DB22841E2188C288008F00F6 /* CoreGraphics+Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Dimension.swift"; sourceTree = "<group>"; };
+		DB2284242188CD47008F00F6 /* DrawerMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuCell.swift; sourceTree = "<group>"; };
+		DB2284262188CD47008F00F6 /* DrawerMenuAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuAdapter.swift; sourceTree = "<group>"; };
+		DB2284272188CD47008F00F6 /* DrawerMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrawerMenu.storyboard; sourceTree = "<group>"; };
+		DB2284282188CD47008F00F6 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DB7AD9EE217F60DD001243C3 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
@@ -262,6 +270,25 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		DB2284202188CD47008F00F6 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				DB2284212188CD47008F00F6 /* DrawerMenu */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
+		DB2284212188CD47008F00F6 /* DrawerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DB2284272188CD47008F00F6 /* DrawerMenu.storyboard */,
+				DB2284282188CD47008F00F6 /* DrawerMenuViewController.swift */,
+				DB2284262188CD47008F00F6 /* DrawerMenuAdapter.swift */,
+				DB2284242188CD47008F00F6 /* DrawerMenuCell.swift */,
+			);
+			path = DrawerMenu;
+			sourceTree = "<group>";
+		};
 		DBC0E1452184A5ED00E26514 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				DB22840921888D6D008F00F6 /* Main */,
+				DB2284202188CD47008F00F6 /* Drawer */,
 				E4959E1C21869A4F008778F1 /* FirstFlow */,
 				E493B20A2176BD360017F931 /* Bootstrap.storyboard */,
 				E493B2092176BD360017F931 /* BootstrapViewController.swift */,
@@ -680,6 +708,7 @@
 				DB22841721888D6D008F00F6 /* Main.storyboard in Resources */,
 				E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */,
 				E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */,
+				DB2284312188CD47008F00F6 /* DrawerMenu.storyboard in Resources */,
 				E4959E4E2186E1E9008778F1 /* Tutorial.storyboard in Resources */,
 				E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */,
 			);
@@ -768,6 +797,7 @@
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
 				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
+				DB2284322188CD47008F00F6 /* DrawerMenuViewController.swift in Sources */,
 				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
 				DB22841521888D6D008F00F6 /* MainViewController.swift in Sources */,
@@ -779,6 +809,7 @@
 				E493B204217599900017F931 /* Translator.swift in Sources */,
 				E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */,
 				E4959E6521874A80008778F1 /* TermsViewController.swift in Sources */,
+				DB2284302188CD47008F00F6 /* DrawerMenuAdapter.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
 				E4959E5621870C93008778F1 /* TutorialAdapter.swift in Sources */,
@@ -795,6 +826,7 @@
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
 				DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */,
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
+				DB22842E2188CD47008F00F6 /* DrawerMenuCell.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,

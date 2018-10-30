@@ -11,6 +11,12 @@ class Wireframe {
         helper.present(crossDisolve: viewController, from: fromViewController)
     }
     
+    static func showDrawerMenu(from fromViewController: UIViewController) {
+        let viewController = builder.drawerMenu()
+        let behavior = DialogLeftDrawBehavior(width: 160)
+        Dialog.show(viewController, from: fromViewController, behavior: behavior)
+    }
+    
     static func showLaunch(from fromViewController: UIViewController) {
         let viewController = builder.launch()
         helper.present(crossDisolve: viewController, from: fromViewController)

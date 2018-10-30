@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction private func didTapMenuButton() {
-        // NOP.
+        Wireframe.showDrawerMenu(from: self)
     }
     
     private func setupBackgroundImageView() {
