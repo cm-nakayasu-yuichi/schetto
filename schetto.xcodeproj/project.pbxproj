@@ -12,6 +12,12 @@
 		DB0455E921876B9A003902B8 /* Color+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0455E821876B9A003902B8 /* Color+Definition.swift */; };
 		DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840521876E09008F00F6 /* Font+Definition.swift */; };
 		DB22840821876FA8008F00F6 /* UIControl+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840721876FA8008F00F6 /* UIControl+App.swift */; };
+		DB22841521888D6D008F00F6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840B21888D6D008F00F6 /* MainViewController.swift */; };
+		DB22841621888D6D008F00F6 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840C21888D6D008F00F6 /* MainPresenter.swift */; };
+		DB22841721888D6D008F00F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB22840D21888D6D008F00F6 /* Main.storyboard */; };
+		DB22841821888D6D008F00F6 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840E21888D6D008F00F6 /* MainRepository.swift */; };
+		DB22841921888D6D008F00F6 /* MainAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840F21888D6D008F00F6 /* MainAdapter.swift */; };
+		DB22841D21888D6D008F00F6 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22841321888D6D008F00F6 /* MainCell.swift */; };
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
 		DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */; };
 		DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AD9EE217F60DD001243C3 /* FileTests.swift */; };
@@ -113,6 +119,12 @@
 		DB0455E821876B9A003902B8 /* Color+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Definition.swift"; sourceTree = "<group>"; };
 		DB22840521876E09008F00F6 /* Font+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Definition.swift"; sourceTree = "<group>"; };
 		DB22840721876FA8008F00F6 /* UIControl+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+App.swift"; sourceTree = "<group>"; };
+		DB22840B21888D6D008F00F6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DB22840C21888D6D008F00F6 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		DB22840D21888D6D008F00F6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DB22840E21888D6D008F00F6 /* MainRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
+		DB22840F21888D6D008F00F6 /* MainAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAdapter.swift; sourceTree = "<group>"; };
+		DB22841321888D6D008F00F6 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DB7AD9EE217F60DD001243C3 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
@@ -235,6 +247,17 @@
 				7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB22840921888D6D008F00F6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DB22840D21888D6D008F00F6 /* Main.storyboard */,
+				DB22840B21888D6D008F00F6 /* MainViewController.swift */,
+				DB22840F21888D6D008F00F6 /* MainAdapter.swift */,
+				DB22841321888D6D008F00F6 /* MainCell.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		DBC0E1452184A5ED00E26514 /* TableViewCell */ = {
@@ -362,6 +385,7 @@
 		E493B1E72175979B0017F931 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB22840921888D6D008F00F6 /* Main */,
 				E4959E1C21869A4F008778F1 /* FirstFlow */,
 				E493B20A2176BD360017F931 /* Bootstrap.storyboard */,
 				E493B2092176BD360017F931 /* BootstrapViewController.swift */,
@@ -373,6 +397,7 @@
 		E493B1F32175982B0017F931 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				DB22840C21888D6D008F00F6 /* MainPresenter.swift */,
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
 				E4959E6021874A80008778F1 /* TermsPresenter.swift */,
 			);
@@ -391,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
+				DB22840E21888D6D008F00F6 /* MainRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -648,6 +674,7 @@
 				E4959E6621874A80008778F1 /* Terms.storyboard in Resources */,
 				E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */,
 				E493B1CB217593F90017F931 /* Assets.xcassets in Resources */,
+				DB22841721888D6D008F00F6 /* Main.storyboard in Resources */,
 				E493B20C2176BD360017F931 /* Bootstrap.storyboard in Resources */,
 				E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */,
 				E4959E4E2186E1E9008778F1 /* Tutorial.storyboard in Resources */,
@@ -732,6 +759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB22841821888D6D008F00F6 /* MainRepository.swift in Sources */,
 				E4BF1A872180361700AFBAB8 /* Application.swift in Sources */,
 				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
@@ -739,6 +767,7 @@
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
+				DB22841521888D6D008F00F6 /* MainViewController.swift in Sources */,
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
@@ -754,6 +783,7 @@
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
 				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
+				DB22841921888D6D008F00F6 /* MainAdapter.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
@@ -771,7 +801,6 @@
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
-				E493B1F52175982B0017F931 /* EventEditPresenter.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
@@ -796,9 +825,11 @@
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
 				E4959E4C2186E1E9008778F1 /* TutorialViewController.swift in Sources */,
 				E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */,
+				DB22841621888D6D008F00F6 /* MainPresenter.swift in Sources */,
 				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,
 				DB22840821876FA8008F00F6 /* UIControl+App.swift in Sources */,
 				E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */,
+				DB22841D21888D6D008F00F6 /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

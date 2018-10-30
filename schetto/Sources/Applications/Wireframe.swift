@@ -6,6 +6,11 @@ import UIKit
 
 class Wireframe {
     
+    static func showMain(from fromViewController: UIViewController) {
+        let viewController = builder.main()
+        helper.present(crossDisolve: viewController, from: fromViewController)
+    }
+    
     static func showLaunch(from fromViewController: UIViewController) {
         let viewController = builder.launch()
         helper.present(crossDisolve: viewController, from: fromViewController)
