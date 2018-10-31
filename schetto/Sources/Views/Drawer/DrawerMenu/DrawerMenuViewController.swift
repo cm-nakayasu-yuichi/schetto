@@ -22,18 +22,20 @@ class DrawerMenuViewController: UIViewController {
 }
 
 extension DrawerMenuViewController: DrawerMenuAdapterDelegate {
-    
-    func numberOfItems(in adapter: DrawerMenuAdapter) -> Int {
-        return 20
-//        return presenter.items.count
+
+    func numberOfCalendars(in adapter: DrawerMenuAdapter) -> Int {
+        return 4
     }
     
-    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, itemAt index: Int) -> Any {
-        return "hoge"
-//        return presenter.items[index]
+    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, calendarTitleAt index: Int) -> String {
+        return "サンプルカレンダー"
     }
     
-    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, didSelectAt index: Int) {
-        // NOP.
+    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, didSelect item: DrawerMenuItem) {
+        
+    }
+    
+    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, didSelect calendar: Any?) {
+        
     }
 }

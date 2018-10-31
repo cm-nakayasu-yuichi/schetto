@@ -24,22 +24,84 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1N-hN-t6Z" userLabel="BottomArea">
                                 <rect key="frame" x="0.0" y="778" width="375" height="34"/>
-                                <color key="backgroundColor" white="1" alpha="0.63835081339999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kWd-mI-nGs">
                                 <rect key="frame" x="0.0" y="144" width="375" height="634"/>
-                                <color key="backgroundColor" white="1" alpha="0.63835081339999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.95820847607123283" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Cuc-kN-aG3" customClass="DrawerMenuCell" customModule="schetto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="section" rowHeight="64" id="awq-mL-o0x" customClass="DrawerMenuSectionCell" customModule="schetto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="awq-mL-o0x" id="XCR-jK-0IB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xY-wg-9aj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.66666666666666663"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="LbM-2E-Wej"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="セクションタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-dt-CT2">
+                                                    <rect key="frame" x="16" y="16" width="129" height="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" white="0.40923394097222221" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3xY-wg-9aj" firstAttribute="leading" secondItem="XCR-jK-0IB" secondAttribute="leading" id="JF0-fH-el1"/>
+                                                <constraint firstAttribute="trailing" secondItem="3xY-wg-9aj" secondAttribute="trailing" id="Ums-2I-WLY"/>
+                                                <constraint firstItem="ngV-dt-CT2" firstAttribute="top" secondItem="XCR-jK-0IB" secondAttribute="top" constant="16" id="cAh-na-3ip"/>
+                                                <constraint firstItem="3xY-wg-9aj" firstAttribute="top" secondItem="XCR-jK-0IB" secondAttribute="top" id="oyP-ff-xdA"/>
+                                                <constraint firstItem="ngV-dt-CT2" firstAttribute="leading" secondItem="XCR-jK-0IB" secondAttribute="leading" constant="16" id="rgF-fC-XHQ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ngV-dt-CT2" secondAttribute="bottom" constant="32" id="wWC-b4-oyH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="sectionTitleLabel" destination="ngV-dt-CT2" id="a5h-Ck-9mI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="item" id="Cuc-kN-aG3" customClass="DrawerMenuCell" customModule="schetto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cuc-kN-aG3" id="oOB-Qa-HfO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アイテムタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKy-yK-I9p">
+                                                    <rect key="frame" x="64" y="7.6666666666666679" width="295" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_weekly_black" translatesAutoresizingMaskIntoConstraints="NO" id="KAa-CO-8g9">
+                                                    <rect key="frame" x="16" y="0.0" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="KAa-CO-8g9" secondAttribute="height" multiplier="1:1" id="3fw-6i-E4S"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OKy-yK-I9p" firstAttribute="centerY" secondItem="KAa-CO-8g9" secondAttribute="centerY" id="15F-5K-xux"/>
+                                                <constraint firstItem="OKy-yK-I9p" firstAttribute="leading" secondItem="KAa-CO-8g9" secondAttribute="trailing" constant="16" id="2UU-28-w9J"/>
+                                                <constraint firstItem="KAa-CO-8g9" firstAttribute="leading" secondItem="oOB-Qa-HfO" secondAttribute="leading" constant="16" id="7xw-ra-90I"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KAa-CO-8g9" secondAttribute="bottom" constant="12" id="Oru-xS-ie6"/>
+                                                <constraint firstAttribute="trailing" secondItem="OKy-yK-I9p" secondAttribute="trailing" constant="16" id="VUk-Yw-3pQ"/>
+                                                <constraint firstItem="KAa-CO-8g9" firstAttribute="top" secondItem="oOB-Qa-HfO" secondAttribute="top" id="ndW-kI-aUZ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="KAa-CO-8g9" id="77F-1V-LNn"/>
+                                            <outlet property="itemTitleLabel" destination="OKy-yK-I9p" id="qdw-Bn-REK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zg7-7m-tbo" userLabel="NavigationArea">
                                 <rect key="frame" x="0.0" y="44" width="375" height="100"/>
@@ -78,4 +140,7 @@
             <point key="canvasLocation" x="-495.19999999999999" y="-1.4778325123152709"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn_weekly_black" width="32" height="32"/>
+    </resources>
 </document>

@@ -10,6 +10,7 @@
 		6F738B7713350D884A1BAA34 /* Pods_schetto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */; };
 		DB0455E7218767FD003902B8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0455E6218767FD003902B8 /* Button.swift */; };
 		DB0455E921876B9A003902B8 /* Color+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0455E821876B9A003902B8 /* Color+Definition.swift */; };
+		DB154CAC2189E6570092791F /* DrawerMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB154CAB2189E6560092791F /* DrawerMenuItem.swift */; };
 		DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840521876E09008F00F6 /* Font+Definition.swift */; };
 		DB22840821876FA8008F00F6 /* UIControl+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840721876FA8008F00F6 /* UIControl+App.swift */; };
 		DB22841521888D6D008F00F6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840B21888D6D008F00F6 /* MainViewController.swift */; };
@@ -122,6 +123,7 @@
 		9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schettoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0455E6218767FD003902B8 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DB0455E821876B9A003902B8 /* Color+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Definition.swift"; sourceTree = "<group>"; };
+		DB154CAB2189E6560092791F /* DrawerMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerMenuItem.swift; sourceTree = "<group>"; };
 		DB22840521876E09008F00F6 /* Font+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Definition.swift"; sourceTree = "<group>"; };
 		DB22840721876FA8008F00F6 /* UIControl+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+App.swift"; sourceTree = "<group>"; };
 		DB22840B21888D6D008F00F6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				DB2284272188CD47008F00F6 /* DrawerMenu.storyboard */,
+				DB154CAB2189E6560092791F /* DrawerMenuItem.swift */,
 				DB2284282188CD47008F00F6 /* DrawerMenuViewController.swift */,
 				DB2284262188CD47008F00F6 /* DrawerMenuAdapter.swift */,
 				DB2284242188CD47008F00F6 /* DrawerMenuCell.swift */,
@@ -831,6 +834,7 @@
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
+				DB154CAC2189E6570092791F /* DrawerMenuItem.swift in Sources */,
 				E4959D7421848299008778F1 /* Realm.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */,

@@ -6,11 +6,13 @@ import UIKit
 
 protocol DrawerMenuAdapterDelegate: class {
     
-    func numberOfItems(in adapter: DrawerMenuAdapter) -> Int
+    func numberOfCalendars(in adapter: DrawerMenuAdapter) -> Int
     
-    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, itemAt index: Int) -> Any
+    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, calendarTitleAt index: Int) -> String
     
-    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, didSelectAt index: Int)
+    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, didSelect item: DrawerMenuItem)
+    
+    func drawerMenuAdapter(_ adapter: DrawerMenuAdapter, didSelect calendar: Any?)
 }
 
 class DrawerMenuAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
@@ -27,21 +29,36 @@ class DrawerMenuAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return DrawerMenuItemSection.sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delegate.numberOfItems(in: self)
+        let sec = DrawerMenuItemSection.sections[section]
+        
+        var count = sec.items.count
+        if sec == .calendars {
+            count += delegate.numberOfCalendars(in: self)
+        }
+        return count + 1 // 1 = header section cell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DrawerMenuCell
-        cell.indexPath = indexPath
-        cell.delegate = self
-        cell.item = delegate.drawerMenuAdapter(self, itemAt: indexPath.row)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        delegate.drawerMenuAdapter(self, didSelectAt: indexPath.row)
+        let section = DrawerMenuItemSection.sections[indexPath.section]
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "section", for: indexPath) as! DrawerMenuSectionCell
+            cell.title = section.title
+            return cell
+        } else if section == .calendars {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "item", for: indexPath) as! DrawerMenuCell
+            return cell
+        } else {
+            let item = section.items[indexPath.row - 1]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "item", for: indexPath) as! DrawerMenuCell
+            cell.delegate = self
+            cell.item = item
+            return cell
+        }
     }
 }
 
