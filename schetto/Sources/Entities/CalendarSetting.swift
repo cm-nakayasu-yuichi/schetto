@@ -5,9 +5,9 @@
 import Foundation
 
 struct CalendarSetting: Codable {
-    let colorType: Int
-    let monthlyStartWeek: Int
-    let weeklyStartWeek: Int
+//    let colorType: Int
+//    let monthlyStartWeek: Int
+//    let weeklyStartWeek: Int
     
     let headerTheme: CalendarTheme?
     let calendarTheme: CalendarTheme?
@@ -48,8 +48,7 @@ struct CalendarSetting: Codable {
 }
 
 struct CalendarTheme: Codable {
-    let textColor: String
-    let textFont: Int
-    let backgroundColor: String
-    let backgroundImage: Bool
+    let color: String
+    let font: Int
+    let bg: String
 }
