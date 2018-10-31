@@ -6,13 +6,14 @@ import UIKit
 
 class Builder {
     
-    func eventEdit() -> EventEditViewController {
-        let view = instantiate(EventEditViewController.self, storyboardName: "EventEdit")
+    func main() -> MainViewController {
+        let view = instantiate(MainViewController.self, storyboardName: "Main")
         
-        let presenter: EventEditPresenterProtocol = EventEditPresenter()
+        let presenter: MainPresenterProtocol = MainPresenter()
         presenter.view = view
         
-        let interactor: EventInteractorInput = EventRepository()
+        let interactor: MainInteractorInput = MainRepository()
+        interactor.output = presenter as! MainInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
@@ -20,6 +21,41 @@ class Builder {
         return view
     }
     
+    func drawerMenu() -> DrawerMenuViewController {
+        let view = instantiate(DrawerMenuViewController.self, storyboardName: "DrawerMenu")
+        return view
+    }
+    
+    func launch() -> LaunchViewController {
+        let view = instantiate(LaunchViewController.self, storyboardName: "Launch")
+        
+        let presenter: LaunchPresenterProtocol = LaunchPresenter()
+        presenter.view = view
+        
+        let interactor: LaunchInteractorInput = LaunchRepository()
+        interactor.output = presenter as! LaunchInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
+    func tutorial() -> TutorialViewController {
+        let view = instantiate(TutorialViewController.self, storyboardName: "Tutorial")        
+        return view
+    }
+    
+    func terms() -> TermsViewController {
+        let view = instantiate(TermsViewController.self, storyboardName: "Terms")
+        
+        let presenter: TermsPresenterProtocol = TermsPresenter()
+        presenter.view = view        
+        view.presenter = presenter
+        
+        return view
+    }
+        
     func test() -> TestViewController {
         let view = instantiate(TestViewController.self, storyboardName: "Test")
         return view

@@ -12,33 +12,16 @@ class BootstrapViewController: UITableViewController {
         (section: "アプリ",
          rows: [
             (title: "アプリ起動", handler: { bootstrap in
-                Wireframe.showEventEdit(from: bootstrap)
+                Wireframe.showLaunch(from: bootstrap)
+            }),
+            (title: "メイン", handler: { bootstrap in
+                Wireframe.showMain(from: bootstrap)
             }),
             ]),
         (section: "テスト",
          rows: [
             (title: "テストUI", handler: { bootstrap in
                 Wireframe.showTest(from: bootstrap)
-            }),
-            ]),
-        (section: "その他テスト",
-         rows: [
-            (title: "API", handler: { bootstrap in
-                let req = LivedoorWeatherApi(cityId: "400040")
-                WebApiAccessor().request(req) { (res: WebApiResponse) in
-                    print(res.response)
-                }
-            }),
-            (title: "画像テスト", handler: { bootstrap in
-                UIApplication.appDelegate.pushNotification.register()
-                UIApplication.appDelegate.pushNotification.createLocalPushNotificationRequest() { req in
-                    UIApplication.appDelegate.pushNotification.request(req)
-                }
-            }),
-            (title: "タイマーテスト", handler: { bootstrap in
-                TimerHelper.start(time: 3) {
-                    print("1")
-                }
             }),
             ]),
         ]

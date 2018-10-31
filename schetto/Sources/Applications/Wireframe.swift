@@ -6,11 +6,32 @@ import UIKit
 
 class Wireframe {
     
-    static func showEventEdit(from fromViewController: UIViewController) {
-        let viewController = builder.eventEdit()
+    static func showMain(from fromViewController: UIViewController) {
+        let viewController = builder.main()
         helper.present(crossDisolve: viewController, from: fromViewController)
     }
     
+    static func showDrawerMenu(from fromViewController: UIViewController) {
+        let viewController = builder.drawerMenu()
+        let behavior = DialogLeftDrawBehavior(width: 160)
+        Dialog.show(viewController, from: fromViewController, behavior: behavior)
+    }
+    
+    static func showLaunch(from fromViewController: UIViewController) {
+        let viewController = builder.launch()
+        helper.present(crossDisolve: viewController, from: fromViewController)
+    }
+    
+    static func showTutorial(from fromViewController: UIViewController) {
+        let viewController = builder.tutorial()
+        helper.present(crossDisolve: viewController, from: fromViewController)
+    }
+    
+    static func showTerms(from fromViewController: UIViewController) {
+        let viewController = builder.terms()
+        helper.present(crossDisolve: helper.withinNavigation(viewController), from: fromViewController)
+    }
+        
     static func showTest(from fromViewController: UIViewController) {
         let viewController = builder.test()
         helper.present(crossDisolve: viewController, from: fromViewController)
