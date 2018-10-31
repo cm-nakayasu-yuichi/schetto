@@ -67,6 +67,7 @@
 		E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */; };
 		E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7021848299008778F1 /* RealmSwift+App.swift */; };
 		E4959D7421848299008778F1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7121848299008778F1 /* Realm.swift */; };
+		E4959E6D21893392008778F1 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E6C21893392008778F1 /* Json.swift */; };
 		E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D629217D89A600036D27 /* Anchorable.swift */; };
 		E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A6D62C217D8A6500036D27 /* TestViewController.swift */; };
 		E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4A6D62D217D8A6500036D27 /* Test.storyboard */; };
@@ -166,6 +167,7 @@
 		E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIdentifiedObject.swift; sourceTree = "<group>"; };
 		E4959D7021848299008778F1 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E4959D7121848299008778F1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		E4959E6C21893392008778F1 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		E4A6D629217D89A600036D27 /* Anchorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		E4A6D62C217D8A6500036D27 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E4A6D62D217D8A6500036D27 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 		E4959D5D218368B2008778F1 /* DataStores */ = {
 			isa = PBXGroup;
 			children = (
+				E4959E6B21893392008778F1 /* File */,
 				E4959D60218368B2008778F1 /* Networkings */,
 				E4959D5E218368B2008778F1 /* Realm */,
 			);
@@ -506,6 +509,14 @@
 				E4959D64218368B2008778F1 /* LivedoorWeatherApi.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		E4959E6B21893392008778F1 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				E4959E6C21893392008778F1 /* Json.swift */,
+			);
+			path = File;
 			sourceTree = "<group>";
 		};
 		E4A6D62B217D8A6500036D27 /* Test */ = {
@@ -714,6 +725,7 @@
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
 				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
+				E4959E6D21893392008778F1 /* Json.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
