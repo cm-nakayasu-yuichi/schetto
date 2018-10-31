@@ -48,6 +48,7 @@
 		E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */; };
 		E420401D217F31230036DAE0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420401C217F31230036DAE0 /* File.swift */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
+		E4456DC121894D5A00C13172 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC021894D5A00C13172 /* Json.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
 		E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E5E48217FF5BB0072C22F /* ClearButton.swift */; };
@@ -72,7 +73,6 @@
 		E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */; };
 		E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7021848299008778F1 /* RealmSwift+App.swift */; };
 		E4959D7421848299008778F1 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959D7121848299008778F1 /* Realm.swift */; };
-		E4959E6D21893392008778F1 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E6C21893392008778F1 /* Json.swift */; };
 		E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E3021869B6D008778F1 /* LaunchPresenter.swift */; };
 		E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4959E3221869B6D008778F1 /* LaunchRepository.swift */; };
 		E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4959E3421869B6D008778F1 /* Launch.storyboard */; };
@@ -160,6 +160,7 @@
 		E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
 		E420401C217F31230036DAE0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
+		E4456DC021894D5A00C13172 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		E48E5E48217FF5BB0072C22F /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
@@ -188,7 +189,6 @@
 		E4959D6F21848299008778F1 /* RealmIdentifiedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmIdentifiedObject.swift; sourceTree = "<group>"; };
 		E4959D7021848299008778F1 /* RealmSwift+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+App.swift"; sourceTree = "<group>"; };
 		E4959D7121848299008778F1 /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
-		E4959E6C21893392008778F1 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		E4959E3021869B6D008778F1 /* LaunchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		E4959E3221869B6D008778F1 /* LaunchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRepository.swift; sourceTree = "<group>"; };
 		E4959E3421869B6D008778F1 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
@@ -320,6 +320,14 @@
 				E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		E4456DBF21894D5A00C13172 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				E4456DC021894D5A00C13172 /* Json.swift */,
+			);
+			path = File;
 			sourceTree = "<group>";
 		};
 		E48E5E47217FF5BB0072C22F /* Buttons */ = {
@@ -530,7 +538,7 @@
 		E4959D5D218368B2008778F1 /* DataStores */ = {
 			isa = PBXGroup;
 			children = (
-				E4959E6B21893392008778F1 /* File */,
+				E4456DBF21894D5A00C13172 /* File */,
 				E4959D60218368B2008778F1 /* Networkings */,
 				E4959D5E218368B2008778F1 /* Realm */,
 			);
@@ -567,13 +575,6 @@
 			);
 			path = API;
 			sourceTree = "<group>";
-		};
-		E4959E6B21893392008778F1 /* File */ = {
-			isa = PBXGroup;
-			children = (
-				E4959E6C21893392008778F1 /* Json.swift */,
-			);
-			path = File;
 		};
 		E4959E1C21869A4F008778F1 /* FirstFlow */ = {
 			isa = PBXGroup;
@@ -829,7 +830,6 @@
 				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
 				DB22841921888D6D008F00F6 /* MainAdapter.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
-				E4959E6D21893392008778F1 /* Json.swift in Sources */,
 				DB22841F2188C288008F00F6 /* CoreGraphics+Dimension.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
@@ -853,6 +853,7 @@
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
 				E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */,
+				E4456DC121894D5A00C13172 /* Json.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
