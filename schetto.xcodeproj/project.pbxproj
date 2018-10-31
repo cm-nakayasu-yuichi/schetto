@@ -49,6 +49,7 @@
 		E420401D217F31230036DAE0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420401C217F31230036DAE0 /* File.swift */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
 		E4456DC121894D5A00C13172 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC021894D5A00C13172 /* Json.swift */; };
+		E4456DC321894DDB00C13172 /* File+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC221894DDB00C13172 /* File+Definition.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
 		E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E5E48217FF5BB0072C22F /* ClearButton.swift */; };
@@ -161,6 +162,7 @@
 		E420401C217F31230036DAE0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
 		E4456DC021894D5A00C13172 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		E4456DC221894DDB00C13172 /* File+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+Definition.swift"; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		E48E5E48217FF5BB0072C22F /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				E493B1E5217595370017F931 /* AppDelegate.swift */,
 				E4BF1A862180361700AFBAB8 /* Application.swift */,
 				E4BF1A8A2180685E00AFBAB8 /* PushNotification.swift */,
+				E4456DC221894DDB00C13172 /* File+Definition.swift */,
 				DB0455E821876B9A003902B8 /* Color+Definition.swift */,
 				DB22840521876E09008F00F6 /* Font+Definition.swift */,
 				E493B20D2176BF180017F931 /* Builder.swift */,
@@ -831,6 +834,7 @@
 				DB22841921888D6D008F00F6 /* MainAdapter.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
 				DB22841F2188C288008F00F6 /* CoreGraphics+Dimension.swift in Sources */,
+				E4456DC321894DDB00C13172 /* File+Definition.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,

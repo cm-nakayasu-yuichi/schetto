@@ -189,6 +189,12 @@ extension File {
         }
     }
     
+    func makeEmptyTextFile() throws {
+        if !exists {
+            try write(contents: "")
+        }
+    }
+    
     func delete() throws {
         try FileManager.default.removeItem(atPath: path)
     }
