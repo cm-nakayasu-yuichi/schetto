@@ -36,3 +36,16 @@ extension File {
         return ret
     }
 }
+
+extension File {
+    
+    /// アプリ設定初期値ファイル
+    static var defaultAppSetting: File {
+        return mainBundle + "default_app_setting.json"
+    }
+    
+    /// カレンダー設定初期値ファイル
+    static var defaultCalendarSetting: File {
+        return mainBundle + "default_calendar_setting.json"
+    }
+}
