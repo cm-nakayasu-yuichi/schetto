@@ -45,9 +45,9 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="セクションタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-dt-CT2">
-                                                    <rect key="frame" x="16" y="16" width="129" height="16"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                    <color key="textColor" white="0.40923394097222221" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="16" y="16" width="147" height="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                    <color key="textColor" white="0.65250651041666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -73,8 +73,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アイテムタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKy-yK-I9p">
-                                                    <rect key="frame" x="64" y="7.6666666666666679" width="295" height="17"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <rect key="frame" x="80" y="5.9999999999999982" width="279" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -87,7 +87,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OKy-yK-I9p" firstAttribute="centerY" secondItem="KAa-CO-8g9" secondAttribute="centerY" id="15F-5K-xux"/>
-                                                <constraint firstItem="OKy-yK-I9p" firstAttribute="leading" secondItem="KAa-CO-8g9" secondAttribute="trailing" constant="16" id="2UU-28-w9J"/>
+                                                <constraint firstItem="OKy-yK-I9p" firstAttribute="leading" secondItem="KAa-CO-8g9" secondAttribute="trailing" constant="32" id="2UU-28-w9J"/>
                                                 <constraint firstItem="KAa-CO-8g9" firstAttribute="leading" secondItem="oOB-Qa-HfO" secondAttribute="leading" constant="16" id="7xw-ra-90I"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KAa-CO-8g9" secondAttribute="bottom" constant="12" id="Oru-xS-ie6"/>
                                                 <constraint firstAttribute="trailing" secondItem="OKy-yK-I9p" secondAttribute="trailing" constant="16" id="VUk-Yw-3pQ"/>
