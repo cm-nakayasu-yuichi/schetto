@@ -1,0 +1,157 @@
+{
+    "april_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "august_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "calendar_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "december_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "event_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "february_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "footer_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "friday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "header_saturday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "header_sunday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "header_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "header_usualday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "holiday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "january_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "july_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "june_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "march_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "may_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "menu_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "monday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "november_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "october_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "other_month_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "selection_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "september_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "sunday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "suturday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "thursday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "today_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "tuesday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    },
+    "wednesday_theme" : {
+        "bg" : "FFFFFF",
+        "color" : "000000",
+        "font" : 0
+    }
+}
