@@ -13,7 +13,7 @@ class Wireframe {
     
     static func showDrawerMenu(from fromViewController: UIViewController) {
         let viewController = builder.drawerMenu()
-        let behavior = DialogLeftDrawBehavior(width: 160)
+        let behavior = DialogLeftDrawBehavior(width: .screenWidth * 0.75)
         Dialog.show(viewController, from: fromViewController, behavior: behavior)
     }
     
