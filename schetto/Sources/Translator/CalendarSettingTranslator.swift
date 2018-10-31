@@ -10,47 +10,23 @@ class CalendarSettingTranslator: Translator {
     
     func translate(_ input: CalendarSetting) -> CalendarSettingModel {
         let model = CalendarSettingModel()
-        model.themes = translateThemes(input)
+        let def = loadDefaultEntity()
+        model.themes = translateThemes(input, default: def)
         return model
     }
     
-    private func translateThemes(_ input: CalendarSetting) -> CalendarSettingModel.Themes {
-        
-        
-        
-        
-        
+    private func translateThemes(_ input: CalendarSetting, default def: CalendarSetting) -> CalendarSettingModel.Themes {
         let themes = CalendarSettingModel.Themes()
-        themes.event = CalendarThemeModel(entity: input.eventTheme) ?? defaultEventTheme
+        themes.event = CalendarThemeModel(entity: input.eventTheme ?? def.eventTheme!)
         
         
         return themes
     }
     
-    private func loadDefaultEntity() -> CalendarTheme {
-        let file = File.mainBundle + "default_calendar_setting.json"
-        
-        
-        
-        /*
-        let f = File.mainBundle + "default_calendar_setting.json"
-        if let entity = Json().decode(path: f.path, to: CalendarSetting.self) {
-            let translator = CalendarSettingTranslator()
-            let model = translator.translate(entity)
-            print(Json().encode(entity))
-            
-        }
-        */
-    }
-}
-
-extension CalendarSettingTranslator {
-    
-    var defaultEventTheme: CalendarThemeModel {
-        let model = CalendarThemeModel()
-        model.textColor = .gray
-        model.textColor = .gray
-        model.textColor = .gray
-        return model
+    private func loadDefaultEntity() -> CalendarSetting {
+        return Json().decode(
+            path: File.defaultCalendarSetting.path,
+            to: CalendarSetting.self
+        )!
     }
 }
