@@ -27,4 +27,8 @@ class WireframeHelper {
         controller.modalTransitionStyle = .crossDissolve
         present(controller, from: fromViewController, completion: completion)
     }
+    
+    func withinNavigation(_ viewController: UIViewController) -> UINavigationController {
+        return UINavigationController(rootViewController: viewController)
+    }
 }
