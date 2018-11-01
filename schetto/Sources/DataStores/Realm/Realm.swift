@@ -90,7 +90,7 @@ extension Realm {
         var i = 0, id = 0
         try! r.write {
             for object in objects {
-                if var identifiedObject = object as? RealmIdentifiedObject {
+                if var identifiedObject = object as? RealmIncrementableIdentifiedObject {
                     if i == 0 {
                         id = identifiedObject.id
                     } else {

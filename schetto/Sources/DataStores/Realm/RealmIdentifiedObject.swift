@@ -5,21 +5,41 @@
 import UIKit
 import RealmSwift
 
-private let IDProperty = "id"
-
 protocol RealmIdentifiedObject {
+    
+    var id: String { get set }
+}
+
+protocol RealmIncrementableIdentifiedObject {
     
     var id: Int { get set }
 }
 
 extension RealmIdentifiedObject where Self: RealmSwift.Object {
     
-    static var idProperty: String { return IDProperty }
+    static func generateId() -> String {
+        return "" // TODO:
+    }
+}
+
+extension NSPredicate {
     
-    func generateAutoIncrementedId() -> Int {
+    convenience init(id: Int) {
+        self.init(format: "id = %@", argumentArray: [NSNumber(value: id)])
+    }
+    
+    convenience init(ids: [Int]) {
+        let arr = ids.map { NSNumber(value: $0) }
+        self.init(format: "id IN %@", argumentArray: [arr])
+    }
+}
+
+extension RealmIncrementableIdentifiedObject where Self: RealmSwift.Object {
+    
+    func incrementedId() -> Int {
         guard
             let realm = try? RealmSwift.Realm(),
-            let max = realm.objects(Self.self).sorted(byKeyPath: IDProperty, ascending: false).first
+            let max = realm.objects(Self.self).sorted(byKeyPath: "id", ascending: false).first
             else {
                 return 1
         }
@@ -29,12 +49,11 @@ extension RealmIdentifiedObject where Self: RealmSwift.Object {
 
 extension NSPredicate {
     
-    convenience init(id: Int) {
-        self.init(format: "\(IDProperty) = %@", argumentArray: [NSNumber(value: id)])
+    convenience init(id: String) {
+        self.init(format: "id = %@", argumentArray: [id])
     }
     
-    convenience init(ids: [Int]) {
-        let arr = ids.map { NSNumber(value: $0) }
-        self.init(format: "\(IDProperty) IN %@", argumentArray: [arr])
+    convenience init(ids: [String]) {
+        self.init(format: "id IN %@", argumentArray: [ids])
     }
 }
