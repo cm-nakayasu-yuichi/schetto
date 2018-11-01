@@ -23,6 +23,15 @@ class BootstrapViewController: UITableViewController {
             (title: "テストUI", handler: { bootstrap in
                 Wireframe.showTest(from: bootstrap)
             }),
+            (title: "CalendarSettingTranslator", handler: { bootstrap in
+                let f = File.mainBundle + "default_calendar_setting.json"
+                if let entity = Json().decode(path: f.path, to: CalendarSetting.self) {
+                    let translator = CalendarSettingTranslator()
+                    let model = translator.translate(entity)
+                    print(Json().encode(entity))
+                    
+                }
+            }),
             ]),
         ]
     // =========================================================================

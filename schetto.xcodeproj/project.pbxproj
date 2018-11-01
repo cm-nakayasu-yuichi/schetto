@@ -48,7 +48,16 @@
 		E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */; };
 		E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */; };
 		E420401D217F31230036DAE0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E420401C217F31230036DAE0 /* File.swift */; };
+		E42F69642189A32B00426E3C /* CalendarSettingTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */; };
+		E42F69662189A3EA00426E3C /* CalendarThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */; };
+		E42F69682189A80300426E3C /* Detranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F69672189A80300426E3C /* Detranslator.swift */; };
+		E42F696B2189B99C00426E3C /* default_calendar_setting.json in Resources */ = {isa = PBXBuildFile; fileRef = E42F696A2189B99C00426E3C /* default_calendar_setting.json */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
+		E4456DC121894D5A00C13172 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC021894D5A00C13172 /* Json.swift */; };
+		E4456DC321894DDB00C13172 /* File+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC221894DDB00C13172 /* File+Definition.swift */; };
+		E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */; };
+		E4456DCB2189601300C13172 /* CalendarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DCA2189601300C13172 /* CalendarSetting.swift */; };
+		E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DCC2189603D00C13172 /* AppConfig.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
 		E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E5E48217FF5BB0072C22F /* ClearButton.swift */; };
@@ -93,7 +102,6 @@
 		E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8A2180685E00AFBAB8 /* PushNotification.swift */; };
 		E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */; };
 		E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */; };
-		E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */; };
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
 		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
 		E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */; };
@@ -160,7 +168,16 @@
 		E4204017217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRightDrawBehavior.swift; sourceTree = "<group>"; };
 		E4204018217F2DDD0036DAE0 /* DialogRiseupBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogRiseupBehavior.swift; sourceTree = "<group>"; };
 		E420401C217F31230036DAE0 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSettingTranslator.swift; sourceTree = "<group>"; };
+		E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarThemeModel.swift; sourceTree = "<group>"; };
+		E42F69672189A80300426E3C /* Detranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detranslator.swift; sourceTree = "<group>"; };
+		E42F696A2189B99C00426E3C /* default_calendar_setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default_calendar_setting.json; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
+		E4456DC021894D5A00C13172 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		E4456DC221894DDB00C13172 /* File+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+Definition.swift"; sourceTree = "<group>"; };
+		E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSettingModel.swift; sourceTree = "<group>"; };
+		E4456DCA2189601300C13172 /* CalendarSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSetting.swift; sourceTree = "<group>"; };
+		E4456DCC2189603D00C13172 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		E48E5E48217FF5BB0072C22F /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
@@ -210,7 +227,6 @@
 		E4BF1A8C21806D8200AFBAB8 /* schetto.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = schetto.entitlements; sourceTree = "<group>"; };
 		E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+App.swift"; sourceTree = "<group>"; };
 		E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
-		E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
 		E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -323,6 +339,40 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		E42F69622189A32B00426E3C /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		E42F69692189B99C00426E3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E42F696A2189B99C00426E3C /* default_calendar_setting.json */,
+			);
+			name = Resources;
+			path = schetto/Resources;
+			sourceTree = "<group>";
+		};
+		E4456DBF21894D5A00C13172 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				E4456DC021894D5A00C13172 /* Json.swift */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		E4456DC521895FCC00C13172 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */,
+				E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E48E5E47217FF5BB0072C22F /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				E493B1E3217595370017F931 /* Sources */,
+				E42F69692189B99C00426E3C /* Resources */,
 				E493B1C2217593F80017F931 /* schetto */,
 				E493B1D7217593F90017F931 /* schettoTests */,
 				E493B1C1217593F80017F931 /* Products */,
@@ -389,8 +440,9 @@
 				E493B200217599900017F931 /* Protocols */,
 				E4959D5D218368B2008778F1 /* DataStores */,
 				E493B1F6217599450017F931 /* Entities */,
+				E4456DC521895FCC00C13172 /* Models */,
 				E493B1F8217599450017F931 /* Repositories */,
-				E493B20621759A2B0017F931 /* Translator */,
+				E42F69622189A32B00426E3C /* Translator */,
 				E493B1F32175982B0017F931 /* Presenters */,
 				E493B1E72175979B0017F931 /* Views */,
 				E493B1FC217599810017F931 /* ViewComponents */,
@@ -406,6 +458,7 @@
 				E493B1E5217595370017F931 /* AppDelegate.swift */,
 				E4BF1A862180361700AFBAB8 /* Application.swift */,
 				E4BF1A8A2180685E00AFBAB8 /* PushNotification.swift */,
+				E4456DC221894DDB00C13172 /* File+Definition.swift */,
 				DB0455E821876B9A003902B8 /* Color+Definition.swift */,
 				DB22840521876E09008F00F6 /* Font+Definition.swift */,
 				E493B20D2176BF180017F931 /* Builder.swift */,
@@ -440,7 +493,8 @@
 		E493B1F6217599450017F931 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				E4BF1A912180C46D00AFBAB8 /* AppConfig.swift */,
+				E4456DCC2189603D00C13172 /* AppConfig.swift */,
+				E4456DCA2189601300C13172 /* CalendarSetting.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -476,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				E493B201217599900017F931 /* Translator.swift */,
+				E42F69672189A80300426E3C /* Detranslator.swift */,
 				E47278BD21780F5C003DA88E /* Notifiable.swift */,
 				E4A6D629217D89A600036D27 /* Anchorable.swift */,
 				E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */,
@@ -506,13 +561,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E493B20621759A2B0017F931 /* Translator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Translator;
-			sourceTree = "<group>";
-		};
 		E493B2112176BF890017F931 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +579,7 @@
 		E4959D5D218368B2008778F1 /* DataStores */ = {
 			isa = PBXGroup;
 			children = (
+				E4456DBF21894D5A00C13172 /* File */,
 				E4959D60218368B2008778F1 /* Networkings */,
 				E4959D5E218368B2008778F1 /* Realm */,
 			);
@@ -713,6 +762,7 @@
 				E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */,
 				DB2284312188CD47008F00F6 /* DrawerMenu.storyboard in Resources */,
 				E4959E4E2186E1E9008778F1 /* Tutorial.storyboard in Resources */,
+				E42F696B2189B99C00426E3C /* default_calendar_setting.json in Resources */,
 				E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,21 +846,23 @@
 			files = (
 				DB22841821888D6D008F00F6 /* MainRepository.swift in Sources */,
 				E4BF1A872180361700AFBAB8 /* Application.swift in Sources */,
+				E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */,
 				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
 				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				DB2284322188CD47008F00F6 /* DrawerMenuViewController.swift in Sources */,
 				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
+				E42F69662189A3EA00426E3C /* CalendarThemeModel.swift in Sources */,
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
 				DB22841521888D6D008F00F6 /* MainViewController.swift in Sources */,
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
+				E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
 				E4959E6821874A80008778F1 /* TermsPresenter.swift in Sources */,
 				E493B204217599900017F931 /* Translator.swift in Sources */,
-				E4BF1A922180C46D00AFBAB8 /* AppConfig.swift in Sources */,
 				E4959E6521874A80008778F1 /* TermsViewController.swift in Sources */,
 				DB2284302188CD47008F00F6 /* DrawerMenuAdapter.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
@@ -823,6 +875,7 @@
 				DB22841921888D6D008F00F6 /* MainAdapter.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
 				DB22841F2188C288008F00F6 /* CoreGraphics+Dimension.swift in Sources */,
+				E4456DC321894DDB00C13172 /* File+Definition.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
@@ -841,16 +894,19 @@
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
+				E42F69642189A32B00426E3C /* CalendarSettingTranslator.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
 				E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */,
+				E4456DC121894D5A00C13172 /* Json.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
 				E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */,
 				E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */,
+				E4456DCB2189601300C13172 /* CalendarSetting.swift in Sources */,
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
 				E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */,
 				DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */,
@@ -859,6 +915,7 @@
 				E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */,
 				E4959E3E21869B6D008778F1 /* LaunchViewController.swift in Sources */,
 				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
+				E42F69682189A80300426E3C /* Detranslator.swift in Sources */,
 				E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */,
 				E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */,
 				DB0455E921876B9A003902B8 /* Color+Definition.swift in Sources */,
