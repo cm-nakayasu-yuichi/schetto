@@ -10,7 +10,8 @@ class DBStickerGroup: RealmSwift.Object, RealmIdentifiedObject {
     @objc dynamic var name = ""
     @objc dynamic var author = ""
     @objc dynamic var price = 0
-    @objc dynamic var type = 0
+    @objc dynamic var type = StickerType.event.rawValue
+    @objc dynamic var sort = 0
     
     var stickers = RealmSwift.List<DBSticker>()
     

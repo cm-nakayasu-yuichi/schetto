@@ -114,6 +114,19 @@
 		E4DCFBE4218BD42B0091B016 /* DBDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDD218BD42B0091B016 /* DBDay.swift */; };
 		E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDE218BD42B0091B016 /* DBSticker.swift */; };
 		E4DCFBE6218BD42B0091B016 /* DBTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDF218BD42B0091B016 /* DBTodo.swift */; };
+		E4DCFBEA218C1B360091B016 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBE9218C1B360091B016 /* CalendarModel.swift */; };
+		E4DCFBED218C1BA00091B016 /* RecordStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */; };
+		E4DCFBF0218C1DCC0091B016 /* TemplateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */; };
+		E4DCFBF1218C1DCC0091B016 /* AssetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEF218C1DCC0091B016 /* AssetType.swift */; };
+		E4DCFBFA218C26310091B016 /* StickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF2218C26300091B016 /* StickerModel.swift */; };
+		E4DCFBFB218C26310091B016 /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF3218C26300091B016 /* DiaryModel.swift */; };
+		E4DCFBFC218C26310091B016 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF4218C26300091B016 /* EventModel.swift */; };
+		E4DCFBFD218C26310091B016 /* StickerGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF5218C26310091B016 /* StickerGroupModel.swift */; };
+		E4DCFBFE218C26310091B016 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF6218C26310091B016 /* DayModel.swift */; };
+		E4DCFBFF218C26310091B016 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF7218C26310091B016 /* TemplateModel.swift */; };
+		E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF8218C26310091B016 /* TodoModel.swift */; };
+		E4DCFC01218C26310091B016 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF9218C26310091B016 /* AssetModel.swift */; };
+		E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC02218C2B1D0091B016 /* StickerType.swift */; };
 		E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */; };
 		E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */; };
 		E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */; };
@@ -248,6 +261,19 @@
 		E4DCFBDD218BD42B0091B016 /* DBDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDay.swift; sourceTree = "<group>"; };
 		E4DCFBDE218BD42B0091B016 /* DBSticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBSticker.swift; sourceTree = "<group>"; };
 		E4DCFBDF218BD42B0091B016 /* DBTodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTodo.swift; sourceTree = "<group>"; };
+		E4DCFBE9218C1B360091B016 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordStatus.swift; sourceTree = "<group>"; };
+		E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateType.swift; sourceTree = "<group>"; };
+		E4DCFBEF218C1DCC0091B016 /* AssetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetType.swift; sourceTree = "<group>"; };
+		E4DCFBF2218C26300091B016 /* StickerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerModel.swift; sourceTree = "<group>"; };
+		E4DCFBF3218C26300091B016 /* DiaryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
+		E4DCFBF4218C26300091B016 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		E4DCFBF5218C26310091B016 /* StickerGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerGroupModel.swift; sourceTree = "<group>"; };
+		E4DCFBF6218C26310091B016 /* DayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		E4DCFBF7218C26310091B016 /* TemplateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
+		E4DCFBF8218C26310091B016 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		E4DCFBF9218C26310091B016 /* AssetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
+		E4DCFC02218C2B1D0091B016 /* StickerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerType.swift; sourceTree = "<group>"; };
 		E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFadeBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogZoomBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBottomDrawBehavior.swift; sourceTree = "<group>"; };
@@ -387,6 +413,15 @@
 			children = (
 				E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */,
 				E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */,
+				E4DCFBE9218C1B360091B016 /* CalendarModel.swift */,
+				E4DCFBF6218C26310091B016 /* DayModel.swift */,
+				E4DCFBF4218C26300091B016 /* EventModel.swift */,
+				E4DCFBF9218C26310091B016 /* AssetModel.swift */,
+				E4DCFBF8218C26310091B016 /* TodoModel.swift */,
+				E4DCFBF3218C26300091B016 /* DiaryModel.swift */,
+				E4DCFBF5218C26310091B016 /* StickerGroupModel.swift */,
+				E4DCFBF2218C26300091B016 /* StickerModel.swift */,
+				E4DCFBF7218C26310091B016 /* TemplateModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -456,6 +491,7 @@
 				E493B1E4217595370017F931 /* Applications */,
 				E493B202217599900017F931 /* Extensions */,
 				E493B200217599900017F931 /* Protocols */,
+				E4DCFBEB218C1BA00091B016 /* Enums */,
 				E4959D5D218368B2008778F1 /* DataStores */,
 				E493B1F6217599450017F931 /* Entities */,
 				E4456DC521895FCC00C13172 /* Models */,
@@ -700,6 +736,17 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		E4DCFBEB218C1BA00091B016 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */,
+				E4DCFBEF218C1DCC0091B016 /* AssetType.swift */,
+				E4DCFC02218C2B1D0091B016 /* StickerType.swift */,
+				E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -894,16 +941,21 @@
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
 				DB22841521888D6D008F00F6 /* MainViewController.swift in Sources */,
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
+				E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
+				E4DCFBFF218C26310091B016 /* TemplateModel.swift in Sources */,
+				E4DCFBFB218C26310091B016 /* DiaryModel.swift in Sources */,
 				E4959E6821874A80008778F1 /* TermsPresenter.swift in Sources */,
 				E493B204217599900017F931 /* Translator.swift in Sources */,
 				E4959E6521874A80008778F1 /* TermsViewController.swift in Sources */,
 				DB2284302188CD47008F00F6 /* DrawerMenuAdapter.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
+				E4DCFBF1218C1DCC0091B016 /* AssetType.swift in Sources */,
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
+				E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */,
 				E4959E5621870C93008778F1 /* TutorialAdapter.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
@@ -933,8 +985,11 @@
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
 				E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */,
+				E4DCFBFE218C26310091B016 /* DayModel.swift in Sources */,
 				E42F69642189A32B00426E3C /* CalendarSettingTranslator.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
+				E4DCFBED218C1BA00091B016 /* RecordStatus.swift in Sources */,
+				E4DCFBEA218C1B360091B016 /* CalendarModel.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				E4DCFBE6218BD42B0091B016 /* DBTodo.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
@@ -966,9 +1021,11 @@
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
 				E4959E4C2186E1E9008778F1 /* TutorialViewController.swift in Sources */,
 				E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */,
+				E4DCFC01218C26310091B016 /* AssetModel.swift in Sources */,
 				DB22841621888D6D008F00F6 /* MainPresenter.swift in Sources */,
 				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,
 				DB22840821876FA8008F00F6 /* UIControl+App.swift in Sources */,
+				E4DCFBFA218C26310091B016 /* StickerModel.swift in Sources */,
 				E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */,
 				DB22841D21888D6D008F00F6 /* MainCell.swift in Sources */,
 			);

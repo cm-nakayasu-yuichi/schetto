@@ -15,7 +15,7 @@ class DBEvent: RealmSwift.Object, RealmIdentifiedObject {
     @objc dynamic var place = ""
     @objc dynamic var notify = 0 // notify分前に通知する
     @objc dynamic var color = "" // rgb
-    @objc dynamic var status = 0
+    @objc dynamic var status = RecordStatus.draft.rawValue
     
     var stickers = RealmSwift.List<DBSticker>()
     var assets = RealmSwift.List<DBAsset>()

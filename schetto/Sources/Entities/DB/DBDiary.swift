@@ -8,7 +8,8 @@ import RealmSwift
 class DBDiary: RealmSwift.Object, RealmIdentifiedObject {
     @objc dynamic var id = ""
     @objc dynamic var title: String? = nil
-    @objc dynamic var status = 0
+    @objc dynamic var status = RecordStatus.draft.rawValue
+    @objc dynamic var sort = 0
     
     var assets = RealmSwift.List<DBAsset>()
     
