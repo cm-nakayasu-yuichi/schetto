@@ -17,6 +17,9 @@ class BootstrapViewController: UITableViewController {
             (title: "メイン", handler: { bootstrap in
                 Wireframe.showMain(from: bootstrap)
             }),
+            (title: "フォント設定", handler: { bootstrap in
+                Wireframe.showDesignFontSetting(from: bootstrap)
+            }),
             (title: "WEBビュー", handler: { bootstrap in
                 Wireframe.showWeb(from: bootstrap)
             }),

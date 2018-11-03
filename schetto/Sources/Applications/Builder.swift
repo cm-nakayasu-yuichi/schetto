@@ -55,6 +55,21 @@ class Builder {
         
         return view
     }
+    
+    func designFontSetting() -> DesignFontSettingViewController {
+        let view = instantiate(DesignFontSettingViewController.self, storyboardName: "DesignFontSetting")
+        
+        let presenter: DesignFontSettingPresenterProtocol = DesignFontSettingPresenter()
+        presenter.view = view
+        
+        let interactor: DesignFontSettingInteractorInput = DesignFontSettingRepository()
+        interactor.output = presenter as! DesignFontSettingInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
         
     func test() -> TestViewController {
         let view = instantiate(TestViewController.self, storyboardName: "Test")

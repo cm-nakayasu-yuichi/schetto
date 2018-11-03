@@ -31,6 +31,11 @@ class Wireframe {
         let viewController = builder.terms()
         helper.present(crossDisolve: helper.withinNavigation(viewController), from: fromViewController)
     }
+    
+    static func showDesignFontSetting(from fromViewController: UIViewController) {
+        let viewController = builder.designFontSetting()
+        helper.push(viewController, from: fromViewController)
+    }
         
     static func showTest(from fromViewController: UIViewController) {
         let viewController = builder.test()
