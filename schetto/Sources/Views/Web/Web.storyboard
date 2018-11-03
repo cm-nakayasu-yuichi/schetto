@@ -36,14 +36,23 @@
                                             <constraint firstAttribute="height" constant="44" id="Rqu-Ly-Ep8"/>
                                         </constraints>
                                         <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="didTapPrevButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="VVM-Wo-7et"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btj-RG-STh">
                                         <rect key="frame" x="68" y="4" width="44" height="44"/>
                                         <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="didTapNextButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="tHB-Ug-nad"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyB-FX-RLO">
                                         <rect key="frame" x="315" y="4" width="44" height="44"/>
                                         <state key="normal" title="共"/>
+                                        <connections>
+                                            <action selector="didTapShareButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="aRy-53-Dw1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,14 +86,23 @@
                                             <constraint firstAttribute="width" secondItem="7Hc-8C-L7o" secondAttribute="height" multiplier="1:1" id="SCL-CL-YIz"/>
                                         </constraints>
                                         <state key="normal" title="閉"/>
+                                        <connections>
+                                            <action selector="didTapCloseButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="Arp-5v-mLJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHI-7o-6lN">
                                         <rect key="frame" x="315" y="0.0" width="44" height="44"/>
                                         <state key="normal" title="更"/>
+                                        <connections>
+                                            <action selector="didTapReloadButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="XAP-b2-A6w"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSR-pj-hgI">
                                         <rect key="frame" x="315" y="0.0" width="44" height="44"/>
                                         <state key="normal" title="停"/>
+                                        <connections>
+                                            <action selector="didTapStopButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="aFi-aj-ejZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -185,6 +203,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="7Hc-8C-L7o" id="Nqh-qc-wHg"/>
+                        <outlet property="nextButton" destination="Btj-RG-STh" id="qFY-Ih-Jsm"/>
+                        <outlet property="prevButton" destination="jaU-d7-E3I" id="Ew6-rf-oYT"/>
+                        <outlet property="progressView" destination="sdM-JF-cjy" id="4lI-76-CnP"/>
+                        <outlet property="reloadButton" destination="ZHI-7o-6lN" id="FN5-fE-0If"/>
+                        <outlet property="shareButton" destination="eyB-FX-RLO" id="Mqt-hY-G6v"/>
+                        <outlet property="stopButton" destination="NSR-pj-hgI" id="VJw-bp-tq6"/>
+                        <outlet property="titleLabel" destination="MII-b9-4nY" id="3vb-5R-Oaf"/>
+                        <outlet property="urlLabel" destination="87k-Ab-vNQ" id="TKO-JS-i2d"/>
+                        <outlet property="webView" destination="TIX-xC-SGj" id="xmI-ot-PSK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ic7-TX-6P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

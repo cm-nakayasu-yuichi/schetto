@@ -39,7 +39,7 @@ class Wireframe {
     
     static func showWeb(from fromViewController: UIViewController) {
         let viewController = builder.web()
-        helper.present(crossDisolve: viewController, from: fromViewController)
+        helper.present(viewController, from: fromViewController)
     }
     
     static func pop(from fromViewController: UIViewController) {
