@@ -30,14 +30,12 @@
 		DB950A11218B543300D0B286 /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A09218B543300D0B286 /* WebPresenter.swift */; };
 		DB950A14218B543300D0B286 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB950A0C218B543300D0B286 /* Web.storyboard */; };
 		DB950A17218B543300D0B286 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A0F218B543300D0B286 /* WebViewController.swift */; };
-		DB950A24218D7C9F00D0B286 /* DesignFontSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1A218D7C9F00D0B286 /* DesignFontSettingCell.swift */; };
 		DB950A25218D7C9F00D0B286 /* DesignFontSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */; };
 		DB950A26218D7C9F00D0B286 /* DesignFontSettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */; };
 		DB950A27218D7C9F00D0B286 /* DesignFontSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1D218D7C9F00D0B286 /* DesignFontSettingViewController.swift */; };
 		DB950A28218D7C9F00D0B286 /* DesignFontSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */; };
 		DB950A2A218D7C9F00D0B286 /* DesignFontSettingTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A20218D7C9F00D0B286 /* DesignFontSettingTranslator.swift */; };
 		DB950A2B218D7C9F00D0B286 /* DesignFontSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A21218D7C9F00D0B286 /* DesignFontSetting.swift */; };
-		DB950A2C218D7C9F00D0B286 /* DesignFontSettingAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A22218D7C9F00D0B286 /* DesignFontSettingAdapter.swift */; };
 		DB950A2D218D7C9F00D0B286 /* DesignFontSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB950A23218D7C9F00D0B286 /* DesignFontSetting.storyboard */; };
 		DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4221761968009C5097 /* UIColor+App.swift */; };
 		DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4321761968009C5097 /* UIView+App.swift */; };
@@ -163,14 +161,12 @@
 		DB950A09218B543300D0B286 /* WebPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
 		DB950A0C218B543300D0B286 /* Web.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		DB950A0F218B543300D0B286 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		DB950A1A218D7C9F00D0B286 /* DesignFontSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingCell.swift; sourceTree = "<group>"; };
 		DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingPresenter.swift; sourceTree = "<group>"; };
 		DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingRepository.swift; sourceTree = "<group>"; };
 		DB950A1D218D7C9F00D0B286 /* DesignFontSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingViewController.swift; sourceTree = "<group>"; };
 		DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingModel.swift; sourceTree = "<group>"; };
 		DB950A20218D7C9F00D0B286 /* DesignFontSettingTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingTranslator.swift; sourceTree = "<group>"; };
 		DB950A21218D7C9F00D0B286 /* DesignFontSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSetting.swift; sourceTree = "<group>"; };
-		DB950A22218D7C9F00D0B286 /* DesignFontSettingAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingAdapter.swift; sourceTree = "<group>"; };
 		DB950A23218D7C9F00D0B286 /* DesignFontSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DesignFontSetting.storyboard; sourceTree = "<group>"; };
 		DBB52A4221761968009C5097 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		DBB52A4321761968009C5097 /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
@@ -346,8 +342,6 @@
 			children = (
 				DB950A23218D7C9F00D0B286 /* DesignFontSetting.storyboard */,
 				DB950A1D218D7C9F00D0B286 /* DesignFontSettingViewController.swift */,
-				DB950A22218D7C9F00D0B286 /* DesignFontSettingAdapter.swift */,
-				DB950A1A218D7C9F00D0B286 /* DesignFontSettingCell.swift */,
 			);
 			path = DesignFontSetting;
 			sourceTree = "<group>";
@@ -957,7 +951,6 @@
 				E42F69642189A32B00426E3C /* CalendarSettingTranslator.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
-				DB950A2C218D7C9F00D0B286 /* DesignFontSettingAdapter.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
 				E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */,
@@ -983,7 +976,6 @@
 				DB0455E921876B9A003902B8 /* Color+Definition.swift in Sources */,
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
 				E4959E4C2186E1E9008778F1 /* TutorialViewController.swift in Sources */,
-				DB950A24218D7C9F00D0B286 /* DesignFontSettingCell.swift in Sources */,
 				E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */,
 				DB22841621888D6D008F00F6 /* MainPresenter.swift in Sources */,
 				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,

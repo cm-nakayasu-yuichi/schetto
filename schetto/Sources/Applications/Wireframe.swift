@@ -34,7 +34,8 @@ class Wireframe {
     
     static func showDesignFontSetting(from fromViewController: UIViewController) {
         let viewController = builder.designFontSetting()
-        helper.push(viewController, from: fromViewController)
+        let behavior = DialogRiseupBehavior()
+        Dialog.show(viewController, from: fromViewController, behavior: behavior)
     }
         
     static func showTest(from fromViewController: UIViewController) {
