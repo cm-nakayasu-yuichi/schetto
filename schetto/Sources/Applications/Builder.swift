@@ -13,7 +13,22 @@ class Builder {
         presenter.view = view
         
         let interactor: MainInteractorInput = MainRepository()
-        interactor.output = presenter as! MainInteractorOutput
+        interactor.output = presenter as? MainInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
+    func eventEdit() -> EventEditViewController {
+        let view = instantiate(EventEditViewController.self, storyboardName: "EventEdit")
+        
+        let presenter: EventEditPresenterProtocol = EventEditPresenter()
+        presenter.view = view
+        
+        let interactor: EventEditInteractorInput = EventEditRepository()
+        interactor.output = presenter as? EventEditInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
@@ -33,7 +48,7 @@ class Builder {
         presenter.view = view
         
         let interactor: LaunchInteractorInput = LaunchRepository()
-        interactor.output = presenter as! LaunchInteractorOutput
+        interactor.output = presenter as? LaunchInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
@@ -63,7 +78,7 @@ class Builder {
         presenter.view = view
         
         let interactor: DesignFontSettingInteractorInput = DesignFontSettingRepository()
-        interactor.output = presenter as! DesignFontSettingInteractorOutput
+        interactor.output = presenter as? DesignFontSettingInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
