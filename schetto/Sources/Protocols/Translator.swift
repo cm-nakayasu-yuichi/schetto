@@ -10,3 +10,8 @@ protocol Translator {
     
     func translate(_ input: Input) -> Output
 }
+
+protocol MultiTranslator: Translator {
+    
+    func translate(_ inputs: [Input]) -> [Output]
+}

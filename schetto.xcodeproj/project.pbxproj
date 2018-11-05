@@ -121,6 +121,36 @@
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
 		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
 		E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */; };
+		E4DCFBD7218BD12E0091B016 /* DBCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBD5218BD12E0091B016 /* DBCalendar.swift */; };
+		E4DCFBD8218BD12E0091B016 /* DBEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBD6218BD12E0091B016 /* DBEvent.swift */; };
+		E4DCFBE0218BD42B0091B016 /* DBDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBD9218BD42B0091B016 /* DBDiary.swift */; };
+		E4DCFBE1218BD42B0091B016 /* DBStickerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDA218BD42B0091B016 /* DBStickerGroup.swift */; };
+		E4DCFBE2218BD42B0091B016 /* DBAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDB218BD42B0091B016 /* DBAsset.swift */; };
+		E4DCFBE3218BD42B0091B016 /* DBTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDC218BD42B0091B016 /* DBTemplate.swift */; };
+		E4DCFBE4218BD42B0091B016 /* DBDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDD218BD42B0091B016 /* DBDay.swift */; };
+		E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDE218BD42B0091B016 /* DBSticker.swift */; };
+		E4DCFBE6218BD42B0091B016 /* DBTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDF218BD42B0091B016 /* DBTodo.swift */; };
+		E4DCFBE8218C1B0E0091B016 /* TodoTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */; };
+		E4DCFBEA218C1B360091B016 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBE9218C1B360091B016 /* CalendarModel.swift */; };
+		E4DCFBED218C1BA00091B016 /* RecordStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */; };
+		E4DCFBF0218C1DCC0091B016 /* TemplateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */; };
+		E4DCFBF1218C1DCC0091B016 /* AssetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEF218C1DCC0091B016 /* AssetType.swift */; };
+		E4DCFBFA218C26310091B016 /* StickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF2218C26300091B016 /* StickerModel.swift */; };
+		E4DCFBFB218C26310091B016 /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF3218C26300091B016 /* DiaryModel.swift */; };
+		E4DCFBFC218C26310091B016 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF4218C26300091B016 /* EventModel.swift */; };
+		E4DCFBFD218C26310091B016 /* StickerGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF5218C26310091B016 /* StickerGroupModel.swift */; };
+		E4DCFBFE218C26310091B016 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF6218C26310091B016 /* DayModel.swift */; };
+		E4DCFBFF218C26310091B016 /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF7218C26310091B016 /* TemplateModel.swift */; };
+		E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF8218C26310091B016 /* TodoModel.swift */; };
+		E4DCFC01218C26310091B016 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF9218C26310091B016 /* AssetModel.swift */; };
+		E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC02218C2B1D0091B016 /* StickerType.swift */; };
+		E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC04218C327F0091B016 /* TodoPriority.swift */; };
+		E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */; };
+		E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */; };
+		E4DCFC0B218FD9960091B016 /* TemplateTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */; };
+		E4DCFC0D218FDA270091B016 /* StickerTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0C218FDA260091B016 /* StickerTranslator.swift */; };
+		E4DCFC0F218FDA5A0091B016 /* AssetTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0E218FDA590091B016 /* AssetTranslator.swift */; };
+		E4DCFC11218FDB2A0091B016 /* StickerGroupTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC10218FDB2A0091B016 /* StickerGroupTranslator.swift */; };
 		E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */; };
 		E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */; };
 		E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */; };
@@ -262,6 +292,36 @@
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
 		E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		E4DCFBD5218BD12E0091B016 /* DBCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBCalendar.swift; sourceTree = "<group>"; };
+		E4DCFBD6218BD12E0091B016 /* DBEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBEvent.swift; sourceTree = "<group>"; };
+		E4DCFBD9218BD42B0091B016 /* DBDiary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDiary.swift; sourceTree = "<group>"; };
+		E4DCFBDA218BD42B0091B016 /* DBStickerGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBStickerGroup.swift; sourceTree = "<group>"; };
+		E4DCFBDB218BD42B0091B016 /* DBAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBAsset.swift; sourceTree = "<group>"; };
+		E4DCFBDC218BD42B0091B016 /* DBTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTemplate.swift; sourceTree = "<group>"; };
+		E4DCFBDD218BD42B0091B016 /* DBDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDay.swift; sourceTree = "<group>"; };
+		E4DCFBDE218BD42B0091B016 /* DBSticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBSticker.swift; sourceTree = "<group>"; };
+		E4DCFBDF218BD42B0091B016 /* DBTodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTodo.swift; sourceTree = "<group>"; };
+		E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTranslator.swift; sourceTree = "<group>"; };
+		E4DCFBE9218C1B360091B016 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordStatus.swift; sourceTree = "<group>"; };
+		E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateType.swift; sourceTree = "<group>"; };
+		E4DCFBEF218C1DCC0091B016 /* AssetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetType.swift; sourceTree = "<group>"; };
+		E4DCFBF2218C26300091B016 /* StickerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerModel.swift; sourceTree = "<group>"; };
+		E4DCFBF3218C26300091B016 /* DiaryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
+		E4DCFBF4218C26300091B016 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		E4DCFBF5218C26310091B016 /* StickerGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerGroupModel.swift; sourceTree = "<group>"; };
+		E4DCFBF6218C26310091B016 /* DayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		E4DCFBF7218C26310091B016 /* TemplateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
+		E4DCFBF8218C26310091B016 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		E4DCFBF9218C26310091B016 /* AssetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
+		E4DCFC02218C2B1D0091B016 /* StickerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerType.swift; sourceTree = "<group>"; };
+		E4DCFC04218C327F0091B016 /* TodoPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoPriority.swift; sourceTree = "<group>"; };
+		E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
+		E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateRepository.swift; sourceTree = "<group>"; };
+		E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateTranslator.swift; sourceTree = "<group>"; };
+		E4DCFC0C218FDA260091B016 /* StickerTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerTranslator.swift; sourceTree = "<group>"; };
+		E4DCFC0E218FDA590091B016 /* AssetTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTranslator.swift; sourceTree = "<group>"; };
+		E4DCFC10218FDB2A0091B016 /* StickerGroupTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerGroupTranslator.swift; sourceTree = "<group>"; };
 		E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFadeBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogZoomBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBottomDrawBehavior.swift; sourceTree = "<group>"; };
@@ -405,6 +465,11 @@
 			children = (
 				DB950A20218D7C9F00D0B286 /* DesignFontSettingTranslator.swift */,
 				E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */,
+				E4DCFC0E218FDA590091B016 /* AssetTranslator.swift */,
+				E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */,
+				E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */,
+				E4DCFC10218FDB2A0091B016 /* StickerGroupTranslator.swift */,
+				E4DCFC0C218FDA260091B016 /* StickerTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -431,6 +496,15 @@
 			children = (
 				E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */,
 				E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */,
+				E4DCFBE9218C1B360091B016 /* CalendarModel.swift */,
+				E4DCFBF6218C26310091B016 /* DayModel.swift */,
+				E4DCFBF4218C26300091B016 /* EventModel.swift */,
+				E4DCFBF9218C26310091B016 /* AssetModel.swift */,
+				E4DCFBF8218C26310091B016 /* TodoModel.swift */,
+				E4DCFBF3218C26300091B016 /* DiaryModel.swift */,
+				E4DCFBF5218C26310091B016 /* StickerGroupModel.swift */,
+				E4DCFBF2218C26300091B016 /* StickerModel.swift */,
+				E4DCFBF7218C26310091B016 /* TemplateModel.swift */,
 				DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */,
 			);
 			path = Models;
@@ -501,6 +575,7 @@
 				E493B1E4217595370017F931 /* Applications */,
 				E493B202217599900017F931 /* Extensions */,
 				E493B200217599900017F931 /* Protocols */,
+				E4DCFBEB218C1BA00091B016 /* Enums */,
 				E4959D5D218368B2008778F1 /* DataStores */,
 				E493B1F6217599450017F931 /* Entities */,
 				E4456DC521895FCC00C13172 /* Models */,
@@ -562,6 +637,7 @@
 		E493B1F6217599450017F931 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E4DCFBD4218BD12E0091B016 /* DB */,
 				E4456DCC2189603D00C13172 /* AppConfig.swift */,
 				E4456DCA2189601300C13172 /* CalendarSetting.swift */,
 				DB950A21218D7C9F00D0B286 /* DesignFontSetting.swift */,
@@ -574,6 +650,8 @@
 			children = (
 				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				DB22840E21888D6D008F00F6 /* MainRepository.swift */,
+				E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */,
+				E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */,
 				DB950A33218E806600D0B286 /* EventEditRepository.swift */,
 				DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */,
 			);
@@ -735,6 +813,34 @@
 				E4A6D62C217D8A6500036D27 /* TestViewController.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		E4DCFBD4218BD12E0091B016 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				E4DCFBD5218BD12E0091B016 /* DBCalendar.swift */,
+				E4DCFBDD218BD42B0091B016 /* DBDay.swift */,
+				E4DCFBD6218BD12E0091B016 /* DBEvent.swift */,
+				E4DCFBDB218BD42B0091B016 /* DBAsset.swift */,
+				E4DCFBDF218BD42B0091B016 /* DBTodo.swift */,
+				E4DCFBD9218BD42B0091B016 /* DBDiary.swift */,
+				E4DCFBDA218BD42B0091B016 /* DBStickerGroup.swift */,
+				E4DCFBDE218BD42B0091B016 /* DBSticker.swift */,
+				E4DCFBDC218BD42B0091B016 /* DBTemplate.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		E4DCFBEB218C1BA00091B016 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */,
+				E4DCFBEF218C1DCC0091B016 /* AssetType.swift */,
+				E4DCFC02218C2B1D0091B016 /* StickerType.swift */,
+				E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */,
+				E4DCFC04218C327F0091B016 /* TodoPriority.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -924,26 +1030,35 @@
 				E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */,
 				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
+				E4DCFC11218FDB2A0091B016 /* StickerGroupTranslator.swift in Sources */,
+				E4DCFBE0218BD42B0091B016 /* DBDiary.swift in Sources */,
 				DB950A28218D7C9F00D0B286 /* DesignFontSettingModel.swift in Sources */,
 				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				DB2284322188CD47008F00F6 /* DrawerMenuViewController.swift in Sources */,
 				E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */,
+				E4DCFC0F218FDA5A0091B016 /* AssetTranslator.swift in Sources */,
+				E4DCFBE3218BD42B0091B016 /* DBTemplate.swift in Sources */,
 				E42F69662189A3EA00426E3C /* CalendarThemeModel.swift in Sources */,
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
 				DB22841521888D6D008F00F6 /* MainViewController.swift in Sources */,
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
+				E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */,
 				DB950A11218B543300D0B286 /* WebPresenter.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
+				E4DCFBFF218C26310091B016 /* TemplateModel.swift in Sources */,
+				E4DCFBFB218C26310091B016 /* DiaryModel.swift in Sources */,
 				E4959E6821874A80008778F1 /* TermsPresenter.swift in Sources */,
 				E493B204217599900017F931 /* Translator.swift in Sources */,
 				E4959E6521874A80008778F1 /* TermsViewController.swift in Sources */,
 				DB2284302188CD47008F00F6 /* DrawerMenuAdapter.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
+				E4DCFBF1218C1DCC0091B016 /* AssetType.swift in Sources */,
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
+				E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */,
 				E4959E5621870C93008778F1 /* TutorialAdapter.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
@@ -958,6 +1073,7 @@
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
+				E4DCFBFD218C26310091B016 /* StickerGroupModel.swift in Sources */,
 				DB950A40218E806600D0B286 /* EventEditAdapter.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
 				DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */,
@@ -965,22 +1081,35 @@
 				DB950A25218D7C9F00D0B286 /* DesignFontSettingPresenter.swift in Sources */,
 				DB950A26218D7C9F00D0B286 /* DesignFontSettingRepository.swift in Sources */,
 				DB22842E2188CD47008F00F6 /* DrawerMenuCell.swift in Sources */,
+				E4DCFBFC218C26310091B016 /* EventModel.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
+				E4DCFBE4218BD42B0091B016 /* DBDay.swift in Sources */,
+				E4DCFC0D218FDA270091B016 /* StickerTranslator.swift in Sources */,
+				E4DCFBF0218C1DCC0091B016 /* TemplateType.swift in Sources */,
 				DB950A3D218E806600D0B286 /* EventEditRepository.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
 				DB950A39218E806600D0B286 /* EventEditPresenter.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
+				E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				DB154CAC2189E6570092791F /* DrawerMenuItem.swift in Sources */,
 				E4959D7421848299008778F1 /* Realm.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */,
+				E4DCFBE8218C1B0E0091B016 /* TodoTranslator.swift in Sources */,
+				E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
+				E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
+				E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */,
+				E4DCFBFE218C26310091B016 /* DayModel.swift in Sources */,
 				E42F69642189A32B00426E3C /* CalendarSettingTranslator.swift in Sources */,
 				E4BF1A8E2180C2A200AFBAB8 /* IndexPath+App.swift in Sources */,
+				E4DCFBED218C1BA00091B016 /* RecordStatus.swift in Sources */,
+				E4DCFBEA218C1B360091B016 /* CalendarModel.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
+				E4DCFBE6218BD42B0091B016 /* DBTodo.swift in Sources */,
 				DBB52A5321761968009C5097 /* CoreGraphics+App.swift in Sources */,
 				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
 				E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */,
@@ -991,16 +1120,21 @@
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
 				E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */,
+				E4DCFBE2218BD42B0091B016 /* DBAsset.swift in Sources */,
 				E4A6D62F217D8A6500036D27 /* TestViewController.swift in Sources */,
 				E4456DCB2189601300C13172 /* CalendarSetting.swift in Sources */,
 				E493B20B2176BD360017F931 /* BootstrapViewController.swift in Sources */,
+				E4DCFBE1218BD42B0091B016 /* DBStickerGroup.swift in Sources */,
 				E4959D7221848299008778F1 /* RealmIdentifiedObject.swift in Sources */,
+				E4DCFBD7218BD12E0091B016 /* DBCalendar.swift in Sources */,
 				DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */,
 				DBD2573C2184D7300007AC44 /* Timer.swift in Sources */,
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
 				E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */,
 				E4959E3E21869B6D008778F1 /* LaunchViewController.swift in Sources */,
 				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
+				E4DCFBD8218BD12E0091B016 /* DBEvent.swift in Sources */,
+				E4DCFC0B218FD9960091B016 /* TemplateTranslator.swift in Sources */,
 				E42F69682189A80300426E3C /* Detranslator.swift in Sources */,
 				E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */,
 				E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */,
@@ -1008,10 +1142,12 @@
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
 				E4959E4C2186E1E9008778F1 /* TutorialViewController.swift in Sources */,
 				E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */,
+				E4DCFC01218C26310091B016 /* AssetModel.swift in Sources */,
 				DB950A3C218E806600D0B286 /* EventEditViewController.swift in Sources */,
 				DB22841621888D6D008F00F6 /* MainPresenter.swift in Sources */,
 				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,
 				DB22840821876FA8008F00F6 /* UIControl+App.swift in Sources */,
+				E4DCFBFA218C26310091B016 /* StickerModel.swift in Sources */,
 				E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */,
 				DB950A27218D7C9F00D0B286 /* DesignFontSettingViewController.swift in Sources */,
 				DB22841D21888D6D008F00F6 /* MainCell.swift in Sources */,
