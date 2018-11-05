@@ -10,3 +10,8 @@ protocol Detranslator {
     
     func detranslate(_ output: Output) -> Input
 }
+
+protocol MultiDetranslator: Detranslator {
+    
+    func detranslate(_ outputs: [Output]) -> [Input]
+}
