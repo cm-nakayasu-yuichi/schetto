@@ -14,6 +14,9 @@ class BootstrapViewController: UITableViewController {
             (title: "アプリ起動", handler: { bootstrap in
                 Wireframe.showLaunch(from: bootstrap)
             }),
+            (title: "予定編集", handler: { bootstrap in
+                Wireframe.showEventEdit(from: bootstrap)
+            }),
             (title: "メイン", handler: { bootstrap in
                 Wireframe.showMain(from: bootstrap)
             }),
