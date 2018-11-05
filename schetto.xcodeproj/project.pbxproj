@@ -134,6 +134,7 @@
 		E4DCFC0B218FD9960091B016 /* TemplateTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */; };
 		E4DCFC0D218FDA270091B016 /* StickerTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0C218FDA260091B016 /* StickerTranslator.swift */; };
 		E4DCFC0F218FDA5A0091B016 /* AssetTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0E218FDA590091B016 /* AssetTranslator.swift */; };
+		E4DCFC11218FDB2A0091B016 /* StickerGroupTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC10218FDB2A0091B016 /* StickerGroupTranslator.swift */; };
 		E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */; };
 		E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */; };
 		E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */; };
@@ -288,6 +289,7 @@
 		E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateTranslator.swift; sourceTree = "<group>"; };
 		E4DCFC0C218FDA260091B016 /* StickerTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerTranslator.swift; sourceTree = "<group>"; };
 		E4DCFC0E218FDA590091B016 /* AssetTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTranslator.swift; sourceTree = "<group>"; };
+		E4DCFC10218FDB2A0091B016 /* StickerGroupTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerGroupTranslator.swift; sourceTree = "<group>"; };
 		E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFadeBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogZoomBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBottomDrawBehavior.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				E4DCFC0E218FDA590091B016 /* AssetTranslator.swift */,
 				E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */,
 				E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */,
+				E4DCFC10218FDB2A0091B016 /* StickerGroupTranslator.swift */,
 				E4DCFC0C218FDA260091B016 /* StickerTranslator.swift */,
 			);
 			path = Translator;
@@ -952,6 +955,7 @@
 				E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */,
 				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
+				E4DCFC11218FDB2A0091B016 /* StickerGroupTranslator.swift in Sources */,
 				E4DCFBE0218BD42B0091B016 /* DBDiary.swift in Sources */,
 				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
