@@ -27,6 +27,22 @@
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
 		DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */; };
 		DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AD9EE217F60DD001243C3 /* FileTests.swift */; };
+		DB950A11218B543300D0B286 /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A09218B543300D0B286 /* WebPresenter.swift */; };
+		DB950A14218B543300D0B286 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB950A0C218B543300D0B286 /* Web.storyboard */; };
+		DB950A17218B543300D0B286 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A0F218B543300D0B286 /* WebViewController.swift */; };
+		DB950A25218D7C9F00D0B286 /* DesignFontSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */; };
+		DB950A26218D7C9F00D0B286 /* DesignFontSettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */; };
+		DB950A27218D7C9F00D0B286 /* DesignFontSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1D218D7C9F00D0B286 /* DesignFontSettingViewController.swift */; };
+		DB950A28218D7C9F00D0B286 /* DesignFontSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */; };
+		DB950A2A218D7C9F00D0B286 /* DesignFontSettingTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A20218D7C9F00D0B286 /* DesignFontSettingTranslator.swift */; };
+		DB950A2B218D7C9F00D0B286 /* DesignFontSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A21218D7C9F00D0B286 /* DesignFontSetting.swift */; };
+		DB950A2D218D7C9F00D0B286 /* DesignFontSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB950A23218D7C9F00D0B286 /* DesignFontSetting.storyboard */; };
+		DB950A39218E806600D0B286 /* EventEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A2F218E806600D0B286 /* EventEditPresenter.swift */; };
+		DB950A3B218E806600D0B286 /* EventEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB950A31218E806600D0B286 /* EventEdit.storyboard */; };
+		DB950A3C218E806600D0B286 /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A32218E806600D0B286 /* EventEditViewController.swift */; };
+		DB950A3D218E806600D0B286 /* EventEditRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A33218E806600D0B286 /* EventEditRepository.swift */; };
+		DB950A40218E806600D0B286 /* EventEditAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A36218E806600D0B286 /* EventEditAdapter.swift */; };
+		DB950A42218E806600D0B286 /* EventEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A38218E806600D0B286 /* EventEditCell.swift */; };
 		DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4221761968009C5097 /* UIColor+App.swift */; };
 		DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4321761968009C5097 /* UIView+App.swift */; };
 		DBB52A5021761968009C5097 /* Array+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4521761968009C5097 /* Array+App.swift */; };
@@ -148,6 +164,22 @@
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DB7AD9EE217F60DD001243C3 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
+		DB950A09218B543300D0B286 /* WebPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
+		DB950A0C218B543300D0B286 /* Web.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
+		DB950A0F218B543300D0B286 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingPresenter.swift; sourceTree = "<group>"; };
+		DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingRepository.swift; sourceTree = "<group>"; };
+		DB950A1D218D7C9F00D0B286 /* DesignFontSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingViewController.swift; sourceTree = "<group>"; };
+		DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingModel.swift; sourceTree = "<group>"; };
+		DB950A20218D7C9F00D0B286 /* DesignFontSettingTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSettingTranslator.swift; sourceTree = "<group>"; };
+		DB950A21218D7C9F00D0B286 /* DesignFontSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignFontSetting.swift; sourceTree = "<group>"; };
+		DB950A23218D7C9F00D0B286 /* DesignFontSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DesignFontSetting.storyboard; sourceTree = "<group>"; };
+		DB950A2F218E806600D0B286 /* EventEditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditPresenter.swift; sourceTree = "<group>"; };
+		DB950A31218E806600D0B286 /* EventEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventEdit.storyboard; sourceTree = "<group>"; };
+		DB950A32218E806600D0B286 /* EventEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
+		DB950A33218E806600D0B286 /* EventEditRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditRepository.swift; sourceTree = "<group>"; };
+		DB950A36218E806600D0B286 /* EventEditAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditAdapter.swift; sourceTree = "<group>"; };
+		DB950A38218E806600D0B286 /* EventEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditCell.swift; sourceTree = "<group>"; };
 		DBB52A4221761968009C5097 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		DBB52A4321761968009C5097 /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		DBB52A4521761968009C5097 /* Array+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+App.swift"; sourceTree = "<group>"; };
@@ -308,6 +340,35 @@
 			path = DrawerMenu;
 			sourceTree = "<group>";
 		};
+		DB950A08218B543300D0B286 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				DB950A0C218B543300D0B286 /* Web.storyboard */,
+				DB950A0F218B543300D0B286 /* WebViewController.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		DB950A19218D7C9F00D0B286 /* DesignFontSetting */ = {
+			isa = PBXGroup;
+			children = (
+				DB950A23218D7C9F00D0B286 /* DesignFontSetting.storyboard */,
+				DB950A1D218D7C9F00D0B286 /* DesignFontSettingViewController.swift */,
+			);
+			path = DesignFontSetting;
+			sourceTree = "<group>";
+		};
+		DB950A2E218E806600D0B286 /* EventEdit */ = {
+			isa = PBXGroup;
+			children = (
+				DB950A31218E806600D0B286 /* EventEdit.storyboard */,
+				DB950A32218E806600D0B286 /* EventEditViewController.swift */,
+				DB950A36218E806600D0B286 /* EventEditAdapter.swift */,
+				DB950A38218E806600D0B286 /* EventEditCell.swift */,
+			);
+			path = EventEdit;
+			sourceTree = "<group>";
+		};
 		DBC0E1452184A5ED00E26514 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +403,7 @@
 		E42F69622189A32B00426E3C /* Translator */ = {
 			isa = PBXGroup;
 			children = (
+				DB950A20218D7C9F00D0B286 /* DesignFontSettingTranslator.swift */,
 				E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */,
 			);
 			path = Translator;
@@ -369,6 +431,7 @@
 			children = (
 				E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */,
 				E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */,
+				DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -471,8 +534,11 @@
 			isa = PBXGroup;
 			children = (
 				DB22840921888D6D008F00F6 /* Main */,
+				DB950A2E218E806600D0B286 /* EventEdit */,
 				DB2284202188CD47008F00F6 /* Drawer */,
 				E4959E1C21869A4F008778F1 /* FirstFlow */,
+				DB950A08218B543300D0B286 /* Web */,
+				DB950A19218D7C9F00D0B286 /* DesignFontSetting */,
 				E493B20A2176BD360017F931 /* Bootstrap.storyboard */,
 				E493B2092176BD360017F931 /* BootstrapViewController.swift */,
 				E4A6D62B217D8A6500036D27 /* Test */,
@@ -484,8 +550,11 @@
 			isa = PBXGroup;
 			children = (
 				DB22840C21888D6D008F00F6 /* MainPresenter.swift */,
+				DB950A2F218E806600D0B286 /* EventEditPresenter.swift */,
+				DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */,
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
 				E4959E6021874A80008778F1 /* TermsPresenter.swift */,
+				DB950A09218B543300D0B286 /* WebPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -495,6 +564,7 @@
 			children = (
 				E4456DCC2189603D00C13172 /* AppConfig.swift */,
 				E4456DCA2189601300C13172 /* CalendarSetting.swift */,
+				DB950A21218D7C9F00D0B286 /* DesignFontSetting.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -504,6 +574,8 @@
 			children = (
 				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				DB22840E21888D6D008F00F6 /* MainRepository.swift */,
+				DB950A33218E806600D0B286 /* EventEditRepository.swift */,
+				DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -754,7 +826,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB950A14218B543300D0B286 /* Web.storyboard in Resources */,
 				E4959E6621874A80008778F1 /* Terms.storyboard in Resources */,
+				DB950A2D218D7C9F00D0B286 /* DesignFontSetting.storyboard in Resources */,
 				E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */,
 				E493B1CB217593F90017F931 /* Assets.xcassets in Resources */,
 				DB22841721888D6D008F00F6 /* Main.storyboard in Resources */,
@@ -762,6 +836,7 @@
 				E4A6D630217D8A6500036D27 /* Test.storyboard in Resources */,
 				DB2284312188CD47008F00F6 /* DrawerMenu.storyboard in Resources */,
 				E4959E4E2186E1E9008778F1 /* Tutorial.storyboard in Resources */,
+				DB950A3B218E806600D0B286 /* EventEdit.storyboard in Resources */,
 				E42F696B2189B99C00426E3C /* default_calendar_setting.json in Resources */,
 				E4959E3C21869B6D008778F1 /* Launch.storyboard in Resources */,
 			);
@@ -849,6 +924,7 @@
 				E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */,
 				E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */,
 				DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */,
+				DB950A28218D7C9F00D0B286 /* DesignFontSettingModel.swift in Sources */,
 				E4BF1A8521802D2F00AFBAB8 /* ApplicationLifeCycle.swift in Sources */,
 				DBB52A5721761968009C5097 /* Number+App.swift in Sources */,
 				DB2284322188CD47008F00F6 /* DrawerMenuViewController.swift in Sources */,
@@ -859,6 +935,7 @@
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */,
+				DB950A11218B543300D0B286 /* WebPresenter.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
 				E4959E6821874A80008778F1 /* TermsPresenter.swift in Sources */,
@@ -874,17 +951,24 @@
 				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
 				DB22841921888D6D008F00F6 /* MainAdapter.swift in Sources */,
 				E4959D68218368B3008778F1 /* NSPredicate+Realm.swift in Sources */,
+				DB950A2B218D7C9F00D0B286 /* DesignFontSetting.swift in Sources */,
+				DB950A17218B543300D0B286 /* WebViewController.swift in Sources */,
 				DB22841F2188C288008F00F6 /* CoreGraphics+Dimension.swift in Sources */,
 				E4456DC321894DDB00C13172 /* File+Definition.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
+				DB950A40218E806600D0B286 /* EventEditAdapter.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
 				DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */,
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
+				DB950A25218D7C9F00D0B286 /* DesignFontSettingPresenter.swift in Sources */,
+				DB950A26218D7C9F00D0B286 /* DesignFontSettingRepository.swift in Sources */,
 				DB22842E2188CD47008F00F6 /* DrawerMenuCell.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
+				DB950A3D218E806600D0B286 /* EventEditRepository.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
+				DB950A39218E806600D0B286 /* EventEditPresenter.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				DB154CAC2189E6570092791F /* DrawerMenuItem.swift in Sources */,
@@ -902,6 +986,8 @@
 				E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */,
 				E4456DC121894D5A00C13172 /* Json.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
+				DB950A42218E806600D0B286 /* EventEditCell.swift in Sources */,
+				DB950A2A218D7C9F00D0B286 /* DesignFontSettingTranslator.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
 				E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */,
@@ -922,10 +1008,12 @@
 				E4A6D62A217D89A600036D27 /* Anchorable.swift in Sources */,
 				E4959E4C2186E1E9008778F1 /* TutorialViewController.swift in Sources */,
 				E4959D6D218368B3008778F1 /* WebApiRequestMethod.swift in Sources */,
+				DB950A3C218E806600D0B286 /* EventEditViewController.swift in Sources */,
 				DB22841621888D6D008F00F6 /* MainPresenter.swift in Sources */,
 				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,
 				DB22840821876FA8008F00F6 /* UIControl+App.swift in Sources */,
 				E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */,
+				DB950A27218D7C9F00D0B286 /* DesignFontSettingViewController.swift in Sources */,
 				DB22841D21888D6D008F00F6 /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1087,7 +1175,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K75PB9VKYT;
+				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = schetto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1107,7 +1195,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K75PB9VKYT;
+				DEVELOPMENT_TEAM = F5GAB67SL8;
 				INFOPLIST_FILE = schetto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
