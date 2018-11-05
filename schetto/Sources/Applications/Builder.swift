@@ -13,7 +13,22 @@ class Builder {
         presenter.view = view
         
         let interactor: MainInteractorInput = MainRepository()
-        interactor.output = presenter as! MainInteractorOutput
+        interactor.output = presenter as? MainInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
+    func eventEdit() -> EventEditViewController {
+        let view = instantiate(EventEditViewController.self, storyboardName: "EventEdit")
+        
+        let presenter: EventEditPresenterProtocol = EventEditPresenter()
+        presenter.view = view
+        
+        let interactor: EventEditInteractorInput = EventEditRepository()
+        interactor.output = presenter as? EventEditInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
@@ -33,7 +48,7 @@ class Builder {
         presenter.view = view
         
         let interactor: LaunchInteractorInput = LaunchRepository()
-        interactor.output = presenter as! LaunchInteractorOutput
+        interactor.output = presenter as? LaunchInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
@@ -55,9 +70,32 @@ class Builder {
         
         return view
     }
+    
+    func designFontSetting() -> DesignFontSettingViewController {
+        let view = instantiate(DesignFontSettingViewController.self, storyboardName: "DesignFontSetting")
+        
+        let presenter: DesignFontSettingPresenterProtocol = DesignFontSettingPresenter()
+        presenter.view = view
+        
+        let interactor: DesignFontSettingInteractorInput = DesignFontSettingRepository()
+        interactor.output = presenter as? DesignFontSettingInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
         
     func test() -> TestViewController {
         let view = instantiate(TestViewController.self, storyboardName: "Test")
+        return view
+    }
+    
+    func web() -> WebViewController {
+        let view = instantiate(WebViewController.self, storyboardName: "Web")
+        let presenter: WebPresenterProtocol = WebPresenter()
+        presenter.view = view
+        view.presenter = presenter
         return view
     }
 }
