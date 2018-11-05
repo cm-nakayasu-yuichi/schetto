@@ -101,6 +101,21 @@ class Builder {
         return view
     }
     
+    func todoEdit() -> TodoEditViewController {
+        let view = instantiate(TodoEditViewController.self, storyboardName: "TodoEdit")
+        
+        let presenter: TodoEditPresenterProtocol = TodoEditPresenter()
+        presenter.view = view
+        
+        let interactor: TodoInteractorInput = TodoRepository()
+        interactor.output = presenter as? TodoInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
     func web() -> WebViewController {
         let view = instantiate(WebViewController.self, storyboardName: "Web")
         let presenter: WebPresenterProtocol = WebPresenter()
