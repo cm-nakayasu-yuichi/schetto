@@ -130,6 +130,7 @@
 		E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC02218C2B1D0091B016 /* StickerType.swift */; };
 		E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC04218C327F0091B016 /* TodoPriority.swift */; };
 		E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */; };
+		E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */; };
 		E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */; };
 		E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */; };
 		E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */; };
@@ -280,6 +281,7 @@
 		E4DCFC02218C2B1D0091B016 /* StickerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerType.swift; sourceTree = "<group>"; };
 		E4DCFC04218C327F0091B016 /* TodoPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoPriority.swift; sourceTree = "<group>"; };
 		E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
+		E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateRepository.swift; sourceTree = "<group>"; };
 		E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFadeBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogZoomBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBottomDrawBehavior.swift; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 			children = (
 				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				DB22840E21888D6D008F00F6 /* MainRepository.swift */,
+				E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */,
 				E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */,
 			);
 			path = Repositories;
@@ -997,6 +1000,7 @@
 				E4DCFBE8218C1B0E0091B016 /* TodoTranslator.swift in Sources */,
 				E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
+				E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
 				E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */,
