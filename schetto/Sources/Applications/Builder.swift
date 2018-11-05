@@ -85,9 +85,19 @@ class Builder {
         
         return view
     }
+    
+    func todoList() -> TodoListViewController {
+        let view = instantiate(TodoListViewController.self, storyboardName: "TodoList")
         
-    func test() -> TestViewController {
-        let view = instantiate(TestViewController.self, storyboardName: "Test")
+        let presenter: TodoListPresenterProtocol = TodoListPresenter()
+        presenter.view = view
+        
+        let interactor: TodoInteractorInput = TodoRepository()
+        interactor.output = presenter as? TodoInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
         return view
     }
     
@@ -96,6 +106,11 @@ class Builder {
         let presenter: WebPresenterProtocol = WebPresenter()
         presenter.view = view
         view.presenter = presenter
+        return view
+    }
+    
+    func test() -> TestViewController {
+        let view = instantiate(TestViewController.self, storyboardName: "Test")
         return view
     }
 }
