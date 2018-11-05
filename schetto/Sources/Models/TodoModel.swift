@@ -8,7 +8,7 @@ class TodoModel {
     var id = ""
     var name = ""
     var limit: Date? = nil
-    var primary = 0
+    var priority = TodoPriority.normal
     var summery = ""
     var completed = false
     var notify = 0 // notify分前に通知する

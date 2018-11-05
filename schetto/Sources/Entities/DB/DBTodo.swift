@@ -9,7 +9,7 @@ class DBTodo: RealmSwift.Object, RealmIdentifiedObject {
     @objc dynamic var id = ""
     @objc dynamic var name = ""
     @objc dynamic var limit: Date? = nil
-    @objc dynamic var primary = 0
+    @objc dynamic var priority = TodoPriority.normal.rawValue
     @objc dynamic var summery = ""
     @objc dynamic var completed = false
     @objc dynamic var notify = 0 // notify分前に通知する

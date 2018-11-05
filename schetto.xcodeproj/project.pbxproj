@@ -114,6 +114,7 @@
 		E4DCFBE4218BD42B0091B016 /* DBDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDD218BD42B0091B016 /* DBDay.swift */; };
 		E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDE218BD42B0091B016 /* DBSticker.swift */; };
 		E4DCFBE6218BD42B0091B016 /* DBTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBDF218BD42B0091B016 /* DBTodo.swift */; };
+		E4DCFBE8218C1B0E0091B016 /* TodoTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */; };
 		E4DCFBEA218C1B360091B016 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBE9218C1B360091B016 /* CalendarModel.swift */; };
 		E4DCFBED218C1BA00091B016 /* RecordStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */; };
 		E4DCFBF0218C1DCC0091B016 /* TemplateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */; };
@@ -127,6 +128,7 @@
 		E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF8218C26310091B016 /* TodoModel.swift */; };
 		E4DCFC01218C26310091B016 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF9218C26310091B016 /* AssetModel.swift */; };
 		E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC02218C2B1D0091B016 /* StickerType.swift */; };
+		E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC04218C327F0091B016 /* TodoPriority.swift */; };
 		E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */; };
 		E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */; };
 		E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */; };
@@ -261,6 +263,7 @@
 		E4DCFBDD218BD42B0091B016 /* DBDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBDay.swift; sourceTree = "<group>"; };
 		E4DCFBDE218BD42B0091B016 /* DBSticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBSticker.swift; sourceTree = "<group>"; };
 		E4DCFBDF218BD42B0091B016 /* DBTodo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBTodo.swift; sourceTree = "<group>"; };
+		E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTranslator.swift; sourceTree = "<group>"; };
 		E4DCFBE9218C1B360091B016 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		E4DCFBEC218C1BA00091B016 /* RecordStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordStatus.swift; sourceTree = "<group>"; };
 		E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateType.swift; sourceTree = "<group>"; };
@@ -274,6 +277,7 @@
 		E4DCFBF8218C26310091B016 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		E4DCFBF9218C26310091B016 /* AssetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
 		E4DCFC02218C2B1D0091B016 /* StickerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerType.swift; sourceTree = "<group>"; };
+		E4DCFC04218C327F0091B016 /* TodoPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoPriority.swift; sourceTree = "<group>"; };
 		E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFadeBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogZoomBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBottomDrawBehavior.swift; sourceTree = "<group>"; };
@@ -387,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */,
+				E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -743,6 +748,7 @@
 				E4DCFBEF218C1DCC0091B016 /* AssetType.swift */,
 				E4DCFC02218C2B1D0091B016 /* StickerType.swift */,
 				E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */,
+				E4DCFC04218C327F0091B016 /* TodoPriority.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -968,12 +974,15 @@
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
+				E4DCFBFD218C26310091B016 /* StickerGroupModel.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
 				DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */,
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
 				DB22842E2188CD47008F00F6 /* DrawerMenuCell.swift in Sources */,
+				E4DCFBFC218C26310091B016 /* EventModel.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
 				E4DCFBE4218BD42B0091B016 /* DBDay.swift in Sources */,
+				E4DCFBF0218C1DCC0091B016 /* TemplateType.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
@@ -981,6 +990,8 @@
 				E4959D7421848299008778F1 /* Realm.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */,
+				E4DCFBE8218C1B0E0091B016 /* TodoTranslator.swift in Sources */,
+				E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
