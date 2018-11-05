@@ -131,6 +131,7 @@
 		E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC04218C327F0091B016 /* TodoPriority.swift */; };
 		E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */; };
 		E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */; };
+		E4DCFC0B218FD9960091B016 /* TemplateTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */; };
 		E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */; };
 		E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */; };
 		E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */; };
@@ -282,6 +283,7 @@
 		E4DCFC04218C327F0091B016 /* TodoPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoPriority.swift; sourceTree = "<group>"; };
 		E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
 		E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateRepository.swift; sourceTree = "<group>"; };
+		E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateTranslator.swift; sourceTree = "<group>"; };
 		E4F86E1721815260003C0CD0 /* DialogFadeBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFadeBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1821815260003C0CD0 /* DialogZoomBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogZoomBehavior.swift; sourceTree = "<group>"; };
 		E4F86E1921815260003C0CD0 /* DialogBottomDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBottomDrawBehavior.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */,
+				E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */,
 				E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */,
 			);
 			path = Translator;
@@ -1033,6 +1036,7 @@
 				E4959E3E21869B6D008778F1 /* LaunchViewController.swift in Sources */,
 				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
 				E4DCFBD8218BD12E0091B016 /* DBEvent.swift in Sources */,
+				E4DCFC0B218FD9960091B016 /* TemplateTranslator.swift in Sources */,
 				E42F69682189A80300426E3C /* Detranslator.swift in Sources */,
 				E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */,
 				E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */,
