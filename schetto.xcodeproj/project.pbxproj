@@ -53,6 +53,11 @@
 		DB954F9A2190AE50007BC9D1 /* TodoEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954F902190AE50007BC9D1 /* TodoEditPresenter.swift */; };
 		DB954F9B2190AE50007BC9D1 /* TodoEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB954F912190AE50007BC9D1 /* TodoEdit.storyboard */; };
 		DB954F9D2190AE50007BC9D1 /* TodoEditAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954F932190AE50007BC9D1 /* TodoEditAdapter.swift */; };
+		DB954FAE2190B04F007BC9D1 /* TodoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954FA42190B04F007BC9D1 /* TodoDetailCell.swift */; };
+		DB954FB12190B04F007BC9D1 /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */; };
+		DB954FB22190B04F007BC9D1 /* TodoDetailAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954FA82190B04F007BC9D1 /* TodoDetailAdapter.swift */; };
+		DB954FB32190B04F007BC9D1 /* TodoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB954FA92190B04F007BC9D1 /* TodoDetail.storyboard */; };
+		DB954FB42190B04F007BC9D1 /* TodoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954FAA2190B04F007BC9D1 /* TodoDetailViewController.swift */; };
 		DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4221761968009C5097 /* UIColor+App.swift */; };
 		DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4321761968009C5097 /* UIView+App.swift */; };
 		DBB52A5021761968009C5097 /* Array+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4521761968009C5097 /* Array+App.swift */; };
@@ -230,6 +235,11 @@
 		DB954F902190AE50007BC9D1 /* TodoEditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoEditPresenter.swift; sourceTree = "<group>"; };
 		DB954F912190AE50007BC9D1 /* TodoEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodoEdit.storyboard; sourceTree = "<group>"; };
 		DB954F932190AE50007BC9D1 /* TodoEditAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoEditAdapter.swift; sourceTree = "<group>"; };
+		DB954FA42190B04F007BC9D1 /* TodoDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailCell.swift; sourceTree = "<group>"; };
+		DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
+		DB954FA82190B04F007BC9D1 /* TodoDetailAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailAdapter.swift; sourceTree = "<group>"; };
+		DB954FA92190B04F007BC9D1 /* TodoDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodoDetail.storyboard; sourceTree = "<group>"; };
+		DB954FAA2190B04F007BC9D1 /* TodoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailViewController.swift; sourceTree = "<group>"; };
 		DBB52A4221761968009C5097 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
 		DBB52A4321761968009C5097 /* UIView+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		DBB52A4521761968009C5097 /* Array+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+App.swift"; sourceTree = "<group>"; };
@@ -471,6 +481,17 @@
 			path = TodoEdit;
 			sourceTree = "<group>";
 		};
+		DB954FA02190B04F007BC9D1 /* TodoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DB954FA92190B04F007BC9D1 /* TodoDetail.storyboard */,
+				DB954FAA2190B04F007BC9D1 /* TodoDetailViewController.swift */,
+				DB954FA82190B04F007BC9D1 /* TodoDetailAdapter.swift */,
+				DB954FA42190B04F007BC9D1 /* TodoDetailCell.swift */,
+			);
+			path = TodoDetail;
+			sourceTree = "<group>";
+		};
 		DBC0E1452184A5ED00E26514 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,8 +671,9 @@
 		E493B1E72175979B0017F931 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DB954F8B2190AE50007BC9D1 /* TodoEdit */,
 				DB954F762190AC4E007BC9D1 /* TodoList */,
+				DB954F8B2190AE50007BC9D1 /* TodoEdit */,
+				DB954FA02190B04F007BC9D1 /* TodoDetail */,
 				DB22840921888D6D008F00F6 /* Main */,
 				DB950A2E218E806600D0B286 /* EventEdit */,
 				DB2284202188CD47008F00F6 /* Drawer */,
@@ -670,6 +692,7 @@
 			children = (
 				DB954F782190AC4E007BC9D1 /* TodoListPresenter.swift */,
 				DB954F902190AE50007BC9D1 /* TodoEditPresenter.swift */,
+				DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */,
 				DB22840C21888D6D008F00F6 /* MainPresenter.swift */,
 				DB950A2F218E806600D0B286 /* EventEditPresenter.swift */,
 				DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */,
@@ -983,6 +1006,7 @@
 				DB950A2D218D7C9F00D0B286 /* DesignFontSetting.storyboard in Resources */,
 				E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */,
 				DB954F852190AC4E007BC9D1 /* TodoList.storyboard in Resources */,
+				DB954FB32190B04F007BC9D1 /* TodoDetail.storyboard in Resources */,
 				DB954F9B2190AE50007BC9D1 /* TodoEdit.storyboard in Resources */,
 				E493B1CB217593F90017F931 /* Assets.xcassets in Resources */,
 				DB22841721888D6D008F00F6 /* Main.storyboard in Resources */,
@@ -1133,11 +1157,13 @@
 				DB954F992190AE50007BC9D1 /* TodoEditCell.swift in Sources */,
 				DB950A25218D7C9F00D0B286 /* DesignFontSettingPresenter.swift in Sources */,
 				DB950A26218D7C9F00D0B286 /* DesignFontSettingRepository.swift in Sources */,
+				DB954FAE2190B04F007BC9D1 /* TodoDetailCell.swift in Sources */,
 				DB22842E2188CD47008F00F6 /* DrawerMenuCell.swift in Sources */,
 				E4DCFBFC218C26310091B016 /* EventModel.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
 				E4DCFBE4218BD42B0091B016 /* DBDay.swift in Sources */,
 				E4DCFC0D218FDA270091B016 /* StickerTranslator.swift in Sources */,
+				DB954FB22190B04F007BC9D1 /* TodoDetailAdapter.swift in Sources */,
 				E4DCFBF0218C1DCC0091B016 /* TemplateType.swift in Sources */,
 				DB950A3D218E806600D0B286 /* EventEditRepository.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
@@ -1169,6 +1195,7 @@
 				E4F86E1C21815261003C0CD0 /* DialogFadeBehavior.swift in Sources */,
 				E4959E5721870C93008778F1 /* TutorialCell.swift in Sources */,
 				E4456DC121894D5A00C13172 /* Json.swift in Sources */,
+				DB954FB42190B04F007BC9D1 /* TodoDetailViewController.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				DB950A42218E806600D0B286 /* EventEditCell.swift in Sources */,
 				DB954F822190AC4E007BC9D1 /* TodoListPresenter.swift in Sources */,
@@ -1202,6 +1229,7 @@
 				DB950A3C218E806600D0B286 /* EventEditViewController.swift in Sources */,
 				DB22841621888D6D008F00F6 /* MainPresenter.swift in Sources */,
 				E4959D6E218368B3008778F1 /* WebApiError.swift in Sources */,
+				DB954FB12190B04F007BC9D1 /* TodoDetailPresenter.swift in Sources */,
 				DB22840821876FA8008F00F6 /* UIControl+App.swift in Sources */,
 				E4DCFBFA218C26310091B016 /* StickerModel.swift in Sources */,
 				E4204019217F2DDD0036DAE0 /* Dialog.swift in Sources */,
