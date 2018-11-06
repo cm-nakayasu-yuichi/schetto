@@ -45,7 +45,7 @@ class Wireframe {
     
     static func showTodoList(from fromViewController: UIViewController) {
         let viewController = builder.todoList()
-        helper.present(crossDisolve: viewController, from: fromViewController)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func showTodoEdit(from fromViewController: UIViewController) {
@@ -55,7 +55,7 @@ class Wireframe {
     
     static func showTodoDetail(from fromViewController: UIViewController) {
         let viewController = builder.todoDetail()
-        helper.present(crossDisolve: viewController, from: fromViewController)
+        helper.push(viewController, from: fromViewController)
     }
     
     static func showWeb(from fromViewController: UIViewController) {

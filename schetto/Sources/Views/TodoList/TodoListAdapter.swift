@@ -6,9 +6,15 @@ import UIKit
 
 protocol TodoListAdapterDelegate: class {
     
-    func numberOfItems(in adapter: TodoListAdapter) -> Int
+    func numberOfSections(_ adapter: TodoListAdapter) -> Int
     
-    func todoListAdapter(_ adapter: TodoListAdapter, itemAt index: Int) -> Any
+    func numberOfTodos(_ adapter: TodoListAdapter, in section: Int) -> Int
+    
+    func todoListAdapter(_ adapter: TodoListAdapter, titleForSection section: Int) -> String
+    
+    func todoListAdapter(_ adapter: TodoListAdapter, todoAt index: Int, in section: Int) -> TodoModel?
+    
+    func todoListAdapter(_ adapter: TodoListAdapter, didTapCompleteAt index: Int, in section: Int, to value: Bool)
     
     func todoListAdapter(_ adapter: TodoListAdapter, didSelectAt index: Int)
 }
@@ -27,16 +33,29 @@ class TodoListAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return delegate?.numberOfSections(self) ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delegate.numberOfItems(in: self)
+        if let num = delegate?.numberOfTodos(self, in: section) {
+            return num + 1 // 1 = section title cell
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListCell
-        cell.indexPath = indexPath
-        cell.delegate = self
-        cell.item = delegate.todoListAdapter(self, itemAt: indexPath.row)
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! TodoListTitleCell
+            cell.title = delegate?.todoListAdapter(self, titleForSection: indexPath.section) ?? ""
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListCell
+            cell.indexPath = indexPath
+            cell.delegate = self
+            //cell.todo = delegate?.todoListAdapter(self, todoAt: indexPath.row - 1, in: indexPath.section)
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

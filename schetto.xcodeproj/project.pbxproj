@@ -159,7 +159,7 @@
 		E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF8218C26310091B016 /* TodoModel.swift */; };
 		E4DCFC01218C26310091B016 /* AssetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFBF9218C26310091B016 /* AssetModel.swift */; };
 		E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC02218C2B1D0091B016 /* StickerType.swift */; };
-		E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC04218C327F0091B016 /* TodoPriority.swift */; };
+		E4DCFC05218C327F0091B016 /* TodoEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC04218C327F0091B016 /* TodoEnums.swift */; };
 		E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */; };
 		E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */; };
 		E4DCFC0B218FD9960091B016 /* TemplateTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */; };
@@ -345,7 +345,7 @@
 		E4DCFBF8218C26310091B016 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		E4DCFBF9218C26310091B016 /* AssetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetModel.swift; sourceTree = "<group>"; };
 		E4DCFC02218C2B1D0091B016 /* StickerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerType.swift; sourceTree = "<group>"; };
-		E4DCFC04218C327F0091B016 /* TodoPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoPriority.swift; sourceTree = "<group>"; };
+		E4DCFC04218C327F0091B016 /* TodoEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoEnums.swift; sourceTree = "<group>"; };
 		E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
 		E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateRepository.swift; sourceTree = "<group>"; };
 		E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateTranslator.swift; sourceTree = "<group>"; };
@@ -907,7 +907,7 @@
 				E4DCFBEF218C1DCC0091B016 /* AssetType.swift */,
 				E4DCFC02218C2B1D0091B016 /* StickerType.swift */,
 				E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */,
-				E4DCFC04218C327F0091B016 /* TodoPriority.swift */,
+				E4DCFC04218C327F0091B016 /* TodoEnums.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1176,7 +1176,7 @@
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
 				E4959E3821869B6D008778F1 /* LaunchPresenter.swift in Sources */,
 				E4DCFBE8218C1B0E0091B016 /* TodoTranslator.swift in Sources */,
-				E4DCFC05218C327F0091B016 /* TodoPriority.swift in Sources */,
+				E4DCFC05218C327F0091B016 /* TodoEnums.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				DB954F812190AC4E007BC9D1 /* TodoListAdapter.swift in Sources */,
 				E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */,

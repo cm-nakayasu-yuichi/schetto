@@ -4,6 +4,11 @@
 //
 import UIKit
 
+class TodoListModel {
+    var title = ""
+    var todos = [TodoModel]()
+}
+
 class TodoModel {
     var id = ""
     var name = ""

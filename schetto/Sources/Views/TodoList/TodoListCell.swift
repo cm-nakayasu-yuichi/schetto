@@ -19,3 +19,14 @@ class TodoListCell: UITableViewCell {
         }
     }
 }
+
+class TodoListTitleCell: UITableViewCell {
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    
+    var title = "" {
+        didSet {
+            titleLabel.text = title
+        }
+    }
+}

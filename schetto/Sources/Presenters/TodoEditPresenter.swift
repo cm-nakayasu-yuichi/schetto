@@ -23,6 +23,10 @@ class TodoEditPresenter: TodoEditPresenterProtocol {
 
 extension TodoEditPresenter: TodoInteractorOutput {
     
+    func fetched(list: [TodoListModel]) {
+        
+    }
+    
     func updated(_ models: [TodoModel]) {
         
     }
