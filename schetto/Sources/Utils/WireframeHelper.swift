@@ -29,6 +29,22 @@ class WireframeHelper {
     }
     
     func withinNavigation(_ viewController: UIViewController) -> UINavigationController {
-        return UINavigationController(rootViewController: viewController)
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barTintColor = .baseNavigationBackground
+        UINavigationBar.appearance().tintColor = .baseNavigationForeground
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor.baseNavigationForeground,
+            .font: UIFont.navigationTitle
+        ]
+        
+        let navi = UINavigationController(rootViewController: viewController)
+        viewController.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 5)
+        viewController.navigationController?.navigationBar.layer.shadowOpacity = 0.07
+        viewController.navigationController?.navigationBar.layer.shadowRadius = 2
+        
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        viewController.navigationItem.backBarButtonItem = backButton
+        
+        return navi
     }
 }
