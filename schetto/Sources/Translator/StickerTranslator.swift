@@ -17,23 +17,6 @@ class StickerTranslator: MultiTranslator {
     
     func translate(_ input: DBTodo) -> TodoModel {
         let model = TodoModel()
-        model.id = input.id
-        
-        // string
-        model.name = input.name
-        model.summery = input.summery
-        // date
-        model.limit = input.limit
-        // enum
-        model.priority = TodoPriority(rawValue: input.priority) ?? .normal
-        model.status = RecordStatus(rawValue: input.status) ?? .draft
-        // boolean
-        model.completed = input.completed
-        // integer
-        model.notify = input.notify
-        // array
-        model.stickers = [] // TODO: StickerTranslator
-        model.assets = [] // TODO: AssetsTranslator
         
         return model
     }
