@@ -6,15 +6,33 @@ import UIKit
 
 class TextViewController: UIViewController {
     
-    @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var okButton: UIButton!
     @IBOutlet private weak var textView: UITextView!
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
+    
+    private var keyboard: KeyboardManager!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        keyboard = KeyboardManager(delegate: self)
+        setupCloseButtonOnNavigationBar()
     }
     
-    @IBAction private func didTapCloseButton() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    @IBAction private func didTapOkButton() {
         // NOP.
+    }
+}
+
+extension TextViewController: KeyboardManagerDelegate {
+    
+    func keyboardManager(_ keyboardManager: KeyboardManager, willChange frame: CGRect) {
+        bottomConstraint.constant = frame.height
+    }
+    
+    func keyboardManager(_ keyboardManager: KeyboardManager, didChange frame: CGRect) {
     }
 }

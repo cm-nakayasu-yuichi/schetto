@@ -50,7 +50,7 @@ class Wireframe {
     
     static func showText(from fromViewController: UIViewController) {
         let viewController = builder.text()
-        helper.present(crossDisolve: viewController, from: fromViewController)
+        helper.present(crossDisolve: helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func showTest(from fromViewController: UIViewController) {
