@@ -17,9 +17,13 @@ class BootstrapViewController: UITableViewController {
             (title: "予定編集", handler: { bootstrap in
                 Wireframe.showEventEdit(from: bootstrap)
             }),
+            (title: "テキスト編集", handler: { bootstrap in
+                Wireframe.showText(from: bootstrap)
+            }),
             (title: "メイン", handler: { bootstrap in
                 Wireframe.showMain(from: bootstrap)
             }),
+            
             (title: "フォント設定", handler: { bootstrap in
                 Wireframe.showDesignFontSetting(from: bootstrap)
             }),
