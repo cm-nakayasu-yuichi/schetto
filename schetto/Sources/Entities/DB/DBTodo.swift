@@ -7,7 +7,7 @@ import RealmSwift
 
 class DBTodo: RealmSwift.Object, RealmIdentifiedObject {
     @objc dynamic var id = ""
-    @objc dynamic var name = ""
+    @objc dynamic var title = ""
     @objc dynamic var limit: Date? = nil
     @objc dynamic var priority = TodoPriority.normal.rawValue
     @objc dynamic var summery = ""

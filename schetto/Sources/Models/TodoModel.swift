@@ -11,7 +11,7 @@ class TodoListModel {
 
 class TodoModel {
     var id = ""
-    var name = ""
+    var title = ""
     var limit: Date? = nil
     var priority = TodoPriority.normal
     var summery = ""
