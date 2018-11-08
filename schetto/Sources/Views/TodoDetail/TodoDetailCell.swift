@@ -8,7 +8,12 @@ protocol TodoDetailCellDelegate: class {
     
 }
 
-class TodoDetailTitleCell: UITableViewCell {
+protocol TodoDetailCell: class {
+    
+    var delegate: TodoDetailCellDelegate! { get set }
+}
+
+class TodoDetailTitleCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
     
@@ -17,7 +22,7 @@ class TodoDetailTitleCell: UITableViewCell {
     
     var check = false {
         didSet {
-            completeCheck.isSelected = check
+            //completeCheck.isSelected = check
         }
     }
     
@@ -30,9 +35,15 @@ class TodoDetailTitleCell: UITableViewCell {
     @IBAction private func didTapCheckButton() {
         
     }
+    
+    @IBAction private func didTapEditButton() {
+        
+    }
 }
 
-class TodoDetailSummeryCell: UITableViewCell {
+class TodoDetailSummeryCell: UITableViewCell, TodoDetailCell {
+    
+    weak var delegate: TodoDetailCellDelegate!
     
     @IBOutlet private weak var summeryLabel: UILabel!
     
@@ -41,12 +52,19 @@ class TodoDetailSummeryCell: UITableViewCell {
             summeryLabel.text = summery
         }
     }
+    
+    @IBAction private func didTapEditButton() {
+        
+    }
 }
 
-class TodoDetailKeyValueCell: UITableViewCell {
+class TodoDetailKeyValueCell: UITableViewCell, TodoDetailCell {
+    
+    weak var delegate: TodoDetailCellDelegate!
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
+    @IBOutlet private weak var editButton: UIButton!
     
     var title = "" {
         didSet {
@@ -65,20 +83,32 @@ class TodoDetailKeyValueCell: UITableViewCell {
             valueLabel.textColor = valueColor
         }
     }
+    
+    var editable = true {
+        didSet {
+            editButton.isHidden = !editable
+        }
+    }
+    
+    @IBAction private func didTapEditButton() {
+        
+    }
 }
 
-class TodoDetailPriorityCell: UITableViewCell {
+class TodoDetailPriorityCell: UITableViewCell, TodoDetailCell {
+    
+    weak var delegate: TodoDetailCellDelegate!
     
     @IBOutlet private weak var titleLabel: UILabel!
     
-    var title = "" {
+    var priority: TodoPriority = .normal {
         didSet {
-            titleLabel.text = title
+            
         }
     }
 }
 
-class TodoDetailAssetCell: UITableViewCell {
+class TodoDetailAssetCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
     
@@ -95,7 +125,7 @@ class TodoDetailAssetCell: UITableViewCell {
     }
 }
 
-class TodoDetailDeleteCell: UITableViewCell {
+class TodoDetailDeleteCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
     

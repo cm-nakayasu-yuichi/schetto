@@ -80,7 +80,7 @@ extension TodoDetailAdapter {
     
     private var sectionsItems: [[RowItem]] {
         var ret: [[RowItem]] = [
-            [.title, .limit, .summery],
+            [.title, .summery, .limit],
             [.priority, .registered],
             [.notify],
             // insert assets when exists
@@ -111,8 +111,13 @@ extension TodoDetailAdapter {
     }
     
     private func bind(cell original: UITableViewCell) {
-        if let cell = original as? TodoDetailTitleCell {
+        if let cell = original as? TodoDetailCell {
             cell.delegate = self
+        }
+        
+        if let cell = original as? TodoDetailTitleCell {
+            cell.check = true
+            cell.title = todo?.title ?? "タイトル"
         }
         else if let cell = original as? TodoDetailSummeryCell {
             cell.summery = todo?.summery ?? "概要"
@@ -122,13 +127,10 @@ extension TodoDetailAdapter {
             cell.value = "値"
         }
         else if let cell = original as? TodoDetailPriorityCell {
-            // TODO:
+            cell.priority = todo?.priority ?? .normal
         }
         else if let cell = original as? TodoDetailAssetCell {
             cell.assetImage = nil
-        }
-        else if let cell = original as? TodoDetailDeleteCell {
-            cell.delegate = self
         }
     }
 }
