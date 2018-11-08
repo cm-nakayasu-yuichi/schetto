@@ -43,7 +43,8 @@ class KeyboardManager {
         return distance
     }
     
-    init() {
+    init(delegate: KeyboardManagerDelegate?) {
+        self.delegate = delegate
         observeKeyboardEvents()
     }
     
