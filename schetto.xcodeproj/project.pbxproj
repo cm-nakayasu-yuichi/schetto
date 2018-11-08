@@ -57,6 +57,7 @@
 		DBB52A5B2176379B009C5097 /* NumberExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */; };
 		DBB52A5D217647FE009C5097 /* CoreGraphicsExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */; };
 		DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */; };
+		DBC49DF421947C8F00221F2B /* UIViewController+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC49DF321947C8F00221F2B /* UIViewController+App.swift */; };
 		DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD257392184D2CC0007AC44 /* UIApplication+App.swift */; };
 		DBD2573C2184D7300007AC44 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD2573B2184D7300007AC44 /* Timer.swift */; };
 		DFDEB38864CC84733C03D277 /* Pods_schettoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */; };
@@ -225,6 +226,7 @@
 		DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensionTests.swift; sourceTree = "<group>"; };
 		DBB52A5C217647FE009C5097 /* CoreGraphicsExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensionTests.swift; sourceTree = "<group>"; };
 		DBC0E1462184A5ED00E26514 /* UnhighlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnhighlightCell.swift; sourceTree = "<group>"; };
+		DBC49DF321947C8F00221F2B /* UIViewController+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+App.swift"; sourceTree = "<group>"; };
 		DBD257392184D2CC0007AC44 /* UIApplication+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+App.swift"; sourceTree = "<group>"; };
 		DBD2573B2184D7300007AC44 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		E4204015217F2DDD0036DAE0 /* Dialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
@@ -709,6 +711,7 @@
 				DBB52A4221761968009C5097 /* UIColor+App.swift */,
 				DBB52A4621761968009C5097 /* UIImage+App.swift */,
 				DBB52A4321761968009C5097 /* UIView+App.swift */,
+				DBC49DF321947C8F00221F2B /* UIViewController+App.swift */,
 				E495077B2181BE0500583C06 /* UITextField+App.swift */,
 			);
 			path = Extensions;
@@ -1058,6 +1061,7 @@
 				E493B204217599900017F931 /* Translator.swift in Sources */,
 				E4959E6521874A80008778F1 /* TermsViewController.swift in Sources */,
 				DB2284302188CD47008F00F6 /* DrawerMenuAdapter.swift in Sources */,
+				DBC49DF421947C8F00221F2B /* UIViewController+App.swift in Sources */,
 				E420401D217F31230036DAE0 /* File.swift in Sources */,
 				E4DCFBF1218C1DCC0091B016 /* AssetType.swift in Sources */,
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,

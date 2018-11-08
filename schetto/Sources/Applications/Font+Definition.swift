@@ -6,6 +6,8 @@ import UIKit
 
 extension UIFont {
     
+    static let navigationTitle = applicationBoldFont(size: 20)
+    
     static let subhead = applicationFont(size: 16)
     static let subheadBold = applicationBoldFont(size: 16)
     
