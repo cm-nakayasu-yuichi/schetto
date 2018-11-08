@@ -80,8 +80,8 @@ extension TodoDetailAdapter {
     
     private var sectionsItems: [[RowItem]] {
         var ret: [[RowItem]] = [
-            [.title, .summery],
-            [.limit, .priority, .registered],
+            [.title, .limit, .summery],
+            [.priority, .registered],
             [.notify],
             // insert assets when exists
             [.delete],

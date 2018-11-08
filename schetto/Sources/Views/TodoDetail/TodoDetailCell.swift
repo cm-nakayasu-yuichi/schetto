@@ -8,10 +8,6 @@ protocol TodoDetailCellDelegate: class {
     
 }
 
-protocol TodoDetailCell {
-    var delegate: TodoDetailCellDelegate! { get set }
-}
-
 class TodoDetailTitleCell: UITableViewCell {
     
     weak var delegate: TodoDetailCellDelegate!
@@ -99,7 +95,7 @@ class TodoDetailAssetCell: UITableViewCell {
     }
 }
 
-class TodoDetailDeleteCell: UITableViewCell, TodoDetailCell {
+class TodoDetailDeleteCell: UITableViewCell {
     
     weak var delegate: TodoDetailCellDelegate!
     
