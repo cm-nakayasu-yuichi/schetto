@@ -20,6 +20,7 @@ class TextViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        textView.becomeFirstResponder()
     }
     
     @IBAction private func didTapOkButton() {
@@ -30,7 +31,8 @@ class TextViewController: UIViewController {
 extension TextViewController: KeyboardManagerDelegate {
     
     func keyboardManager(_ keyboardManager: KeyboardManager, willChange frame: CGRect) {
-        bottomConstraint.constant = frame.height
+        bottomConstraint.constant = frame.height - .safeAreaBottom(self)
+        view.layoutIfNeeded()
     }
     
     func keyboardManager(_ keyboardManager: KeyboardManager, didChange frame: CGRect) {
