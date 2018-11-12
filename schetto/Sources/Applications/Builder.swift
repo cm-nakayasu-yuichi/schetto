@@ -124,6 +124,13 @@ class Builder {
         return view
     }
     
+    func text(options: TextViewControllerOptions, handler: @escaping (String) -> ()) -> TextViewController {
+        let view = instantiate(TextViewController.self, storyboardName: "Text")
+        view.options = options
+        view.handler = handler
+        return view
+    }
+    
     func test() -> TestViewController {
         let view = instantiate(TestViewController.self, storyboardName: "Test")
         return view
