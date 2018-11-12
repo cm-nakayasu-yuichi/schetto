@@ -4,16 +4,30 @@
 //
 import UIKit
 
+struct TextViewControllerOptions {
+    let title: String
+    let placeholder: String
+    let text: String
+    let multiLine: Bool
+}
+
 class TextViewController: UIViewController {
+    
+    typealias Handler = (String) -> ()
     
     @IBOutlet private weak var okButton: UIButton!
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
     
+    var options: TextViewControllerOptions!
+    var handler: Handler!
+    
     private var keyboard: KeyboardManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = options.title
+        textView.text = options.text
         keyboard = KeyboardManager(delegate: self)
         setupCloseButtonOnNavigationBar()
     }

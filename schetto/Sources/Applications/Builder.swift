@@ -94,8 +94,10 @@ class Builder {
         return view
     }
     
-    func text() -> TextViewController {
+    func text(options: TextViewControllerOptions, handler: @escaping (String) -> ()) -> TextViewController {
         let view = instantiate(TextViewController.self, storyboardName: "Text")
+        view.options = options
+        view.handler = handler
         return view
     }
     

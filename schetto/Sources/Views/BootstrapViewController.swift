@@ -18,7 +18,15 @@ class BootstrapViewController: UITableViewController {
                 Wireframe.showEventEdit(from: bootstrap)
             }),
             (title: "テキスト編集", handler: { bootstrap in
-                Wireframe.showText(from: bootstrap)
+                let options = TextViewControllerOptions(
+                    title: "名前",
+                    placeholder: "あなたのお名前を入力してください",
+                    text: "やまだたろう",
+                    multiLine: true
+                )
+                Wireframe.showText(from: bootstrap, options: options) { text in
+                    print(text)
+                }
             }),
             (title: "メイン", handler: { bootstrap in
                 Wireframe.showMain(from: bootstrap)
