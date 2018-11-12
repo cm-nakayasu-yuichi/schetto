@@ -17,6 +17,7 @@ class TextViewController: UIViewController {
     
     @IBOutlet private weak var okButton: UIButton!
     @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var placeholderLabel: UILabel!
     @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
     
     var options: TextViewControllerOptions!
@@ -26,9 +27,17 @@ class TextViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = options.title
+        
         textView.text = options.text
+        textView.delegate = self
+        
+        placeholderLabel.text = options.placeholder
+        placeholderLabel.isHidden = !textView.text.isEmpty
+        
         keyboard = KeyboardManager(delegate: self)
+        
         setupCloseButtonOnNavigationBar()
     }
     
@@ -39,6 +48,13 @@ class TextViewController: UIViewController {
     
     @IBAction private func didTapOkButton() {
         // NOP.
+    }
+}
+
+extension TextViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
     }
 }
 
