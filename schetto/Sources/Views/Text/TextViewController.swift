@@ -18,6 +18,8 @@ class TextViewController: UIViewController {
     @IBOutlet private weak var okButton: UIButton!
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var placeholderLabel: UILabel!
+    @IBOutlet private weak var bottomLine: UIView!
+    @IBOutlet private weak var bottomHeight: NSLayoutConstraint!
     @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
     
     var options: TextViewControllerOptions!
@@ -32,14 +34,18 @@ class TextViewController: UIViewController {
         
         textView.text = options.text
         textView.delegate = self
-        textView.returnKeyType = options.multiLine ? .default : .done
-        
-        okButton.isHidden = !options.multiLine
         
         placeholderLabel.text = options.placeholder
         placeholderLabel.isHidden = !textView.text.isEmpty
         
         keyboard = KeyboardManager(delegate: self)
+        
+        if !options.multiLine {
+            okButton.isHidden = true
+            bottomLine.isHidden = true
+            textView.returnKeyType = .done
+            bottomHeight.constant = 0
+        }
         
         setupCloseButtonOnNavigationBar()
     }

@@ -80,6 +80,8 @@
                     <navigationItem key="navigationItem" id="w5l-EB-Fr5"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="iFJ-aC-TbA" id="YLo-j2-MWt"/>
+                        <outlet property="bottomHeight" destination="eLR-kM-zO2" id="bAw-3n-Xqc"/>
+                        <outlet property="bottomLine" destination="WXH-Ng-7Oh" id="cGb-Fw-KoN"/>
                         <outlet property="okButton" destination="zLM-Rm-diX" id="z4f-pu-9sx"/>
                         <outlet property="placeholderLabel" destination="2x6-ut-yL8" id="l7b-iD-9g1"/>
                         <outlet property="textView" destination="ume-Z8-gSd" id="pTT-2z-cw9"/>
