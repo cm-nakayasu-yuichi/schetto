@@ -11,47 +11,11 @@ class BootstrapViewController: UITableViewController {
     private let items: [(section: String, rows: [(title: String, handler: (UIViewController) -> Void)])] = [
         (section: "アプリ",
          rows: [
-            (title: "アプリ起動", handler: { bootstrap in
-                Wireframe.showLaunch(from: bootstrap)
-            }),
             (title: "TODO", handler: { bootstrap in
                 Wireframe.showTodoList(from: bootstrap)
             }),
-            (title: "テキスト編集", handler: { bootstrap in
-                let options = TextViewControllerOptions(
-                    title: "名前",
-                    placeholder: "あなたのお名前を入力してください",
-                    text: "やまだたろう",
-                    multiLine: false
-                )
-                Wireframe.showText(from: bootstrap, options: options) { text in
-                    print(text)
-                }
-            }),
-            (title: "メイン", handler: { bootstrap in
-                Wireframe.showMain(from: bootstrap)
-            }),
-            
-            (title: "フォント設定", handler: { bootstrap in
-                Wireframe.showDesignFontSetting(from: bootstrap)
-            }),
             (title: "WEBビュー", handler: { bootstrap in
                 Wireframe.showWeb(from: bootstrap)
-            }),
-            ]),
-        (section: "テスト",
-         rows: [
-            (title: "テストUI", handler: { bootstrap in
-                Wireframe.showTest(from: bootstrap)
-            }),
-            (title: "CalendarSettingTranslator", handler: { bootstrap in
-                let f = File.mainBundle + "default_calendar_setting.json"
-                if let entity = Json().decode(path: f.path, to: CalendarSetting.self) {
-                    let translator = CalendarSettingTranslator()
-                    let model = translator.translate(entity)
-                    print(Json().encode(entity))
-                    
-                }
             }),
             ]),
         ]
