@@ -85,17 +85,24 @@ class Builder {
         
         return view
     }
-        
-    func test() -> TestViewController {
-        let view = instantiate(TestViewController.self, storyboardName: "Test")
-        return view
-    }
     
     func web() -> WebViewController {
         let view = instantiate(WebViewController.self, storyboardName: "Web")
         let presenter: WebPresenterProtocol = WebPresenter()
         presenter.view = view
         view.presenter = presenter
+        return view
+    }
+    
+    func text(options: TextViewControllerOptions, handler: @escaping (String) -> ()) -> TextViewController {
+        let view = instantiate(TextViewController.self, storyboardName: "Text")
+        view.options = options
+        view.handler = handler
+        return view
+    }
+    
+    func test() -> TestViewController {
+        let view = instantiate(TestViewController.self, storyboardName: "Test")
         return view
     }
 }
