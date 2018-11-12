@@ -22,7 +22,7 @@ class BootstrapViewController: UITableViewController {
                     title: "名前",
                     placeholder: "あなたのお名前を入力してください",
                     text: "やまだたろう",
-                    multiLine: true
+                    multiLine: false
                 )
                 Wireframe.showText(from: bootstrap, options: options) { text in
                     print(text)

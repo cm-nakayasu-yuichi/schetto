@@ -32,6 +32,9 @@ class TextViewController: UIViewController {
         
         textView.text = options.text
         textView.delegate = self
+        textView.returnKeyType = options.multiLine ? .default : .done
+        
+        okButton.isHidden = !options.multiLine
         
         placeholderLabel.text = options.placeholder
         placeholderLabel.isHidden = !textView.text.isEmpty
@@ -47,14 +50,28 @@ class TextViewController: UIViewController {
     }
     
     @IBAction private func didTapOkButton() {
-        // NOP.
+        commit()
     }
+    
+    private func commit() {
+        handler(textView.text)
+        Wireframe.dismiss(from: self)
+    }
+
 }
 
 extension TextViewController: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         placeholderLabel.isHidden = !textView.text.isEmpty
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if !options.multiLine && text == "\n" {
+            commit()
+            return false
+        }
+        return true
     }
 }
 
