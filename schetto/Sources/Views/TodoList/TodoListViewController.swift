@@ -9,7 +9,7 @@ class TodoListViewController: UIViewController {
     var presenter: TodoListPresenterProtocol!
     
     private var adapter: TodoListAdapter!
-    private var sortType: TodoSortType = .limit
+    private var todoListModels = [TodoListModel]()
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var closeButton: UIButton!
@@ -21,12 +21,11 @@ class TodoListViewController: UIViewController {
         adapter = TodoListAdapter(tableView, delegate: self)
         
         setupSortTypeSegment()
-        // 閉じるボタン設置
         setupCloseButtonOnNavigationBar()
     }
     
     @IBAction private func didChangeSortTypeSegment() {
-        
+        presenter.fetchList(sortType: sortType)
     }
     
     private func setupSortTypeSegment() {
@@ -36,37 +35,40 @@ class TodoListViewController: UIViewController {
         }
         presenter.fetchStoredSortType()
     }
+    
+    private var sortType: TodoSortType {
+        let index = sortTypeSegment.selectedSegmentIndex
+        return TodoSortType(rawValue: index)!
+    }
 }
 
 extension TodoListViewController: TodoListViewProtocol {
     
+    func fetched(list: [TodoListModel]) {
+        tableView.reloadData()
+    }
+    
     func fetched(storedSortType: TodoSortType) {
-        sortTypeSegment.selectedSegmentIndex = sortType.rawValue
+        sortTypeSegment.selectedSegmentIndex = storedSortType.rawValue
     }
 }
 
 extension TodoListViewController: TodoListAdapterDelegate {
     
     func numberOfSections(_ adapter: TodoListAdapter) -> Int {
-        switch sortType {
-        case .limit: return TodoLimitType.sortItems.count
-        case .priority: return TodoPriority.sortItems.count
-        }
+        return todoListModels.count
     }
     
     func numberOfTodos(_ adapter: TodoListAdapter, in section: Int) -> Int {
-        return 5 // TODO:
+        return todoListModels[section].todos.count
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, titleForSection section: Int) -> String {
-        switch sortType {
-        case .limit: return TodoLimitType.sortItems[section].title
-        case .priority: return TodoPriority.sortItems[section].title
-        }
+        return todoListModels[section].title
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, todoAt index: Int, in section: Int) -> TodoModel? {
-        return nil // TODO:
+        return todoListModels[section].todos[index]
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, didTapCompleteAt index: Int, in section: Int, to value: Bool) {

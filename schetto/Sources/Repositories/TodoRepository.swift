@@ -54,7 +54,7 @@ class TodoRepositoryMock: TodoInteractorInput {
     weak var output: TodoInteractorOutput!
     
     func fetchList(sortType: TodoSortType) {
-        
+        output.fetched(list: [])
     }
     
     func register(_ model: TodoModel) {
