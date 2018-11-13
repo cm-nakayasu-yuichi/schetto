@@ -22,3 +22,13 @@ class TodoModel {
     var stickers = [StickerModel]()
     var assets = [AssetModel]()
 }
+
+extension TodoModel {
+    
+    var limitText: String {
+        guard let date = limit else {
+            return "期限なし"
+        }
+        return date.todoLimitString
+    }
+}

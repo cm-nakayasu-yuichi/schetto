@@ -56,7 +56,7 @@ extension TodoListViewController: TodoListViewProtocol {
 }
 
 extension TodoListViewController: TodoListAdapterDelegate {
-    
+
     func numberOfSections(_ adapter: TodoListAdapter) -> Int {
         return todoListModels.count
     }
@@ -73,11 +73,11 @@ extension TodoListViewController: TodoListAdapterDelegate {
         return todoListModels[section].todos[index]
     }
     
-    func todoListAdapter(_ adapter: TodoListAdapter, didTapCompleteAt index: Int, in section: Int, to value: Bool) {
+    func todoListAdapter(_ adapter: TodoListAdapter, didTapComplete todo: TodoModel, to complete: Bool) {
         
     }
     
-    func todoListAdapter(_ adapter: TodoListAdapter, didSelectAt index: Int) {
+    func todoListAdapter(_ adapter: TodoListAdapter, didSelectTodo todo: TodoModel) {
         Wireframe.showTodoDetail(from: self)
     }
 }

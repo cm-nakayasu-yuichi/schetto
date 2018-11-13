@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="0.89815231164296472" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" id="BFG-EY-d2r" customClass="TodoListTitleCell" customModule="schetto" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="title" id="BFG-EY-d2r" customClass="TodoListTitleCell" customModule="schetto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BFG-EY-d2r" id="UN2-Es-sfX">
@@ -88,7 +88,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="didTapCompleteCheckButton" destination="5gq-as-QUi" eventType="touchUpInside" id="3zR-jO-GLo"/>
+                                                        <action selector="didTapCompletedCheckButton" destination="5gq-as-QUi" eventType="touchUpInside" id="raQ-4i-9SW"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="優先度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCy-aS-Bfx">
@@ -123,7 +123,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="completeCheck" destination="KeF-Tf-icb" id="cOk-t6-OLd"/>
+                                            <outlet property="completedCheckButton" destination="KeF-Tf-icb" id="HyP-b9-gxL"/>
                                             <outlet property="limitLabel" destination="0U1-iV-VuM" id="AzS-4W-ygN"/>
                                             <outlet property="priorityView" destination="no0-5y-7af" id="POF-ZP-s3z"/>
                                             <outlet property="titleLabel" destination="SE0-qE-l2E" id="9mK-d3-UpM"/>
@@ -134,8 +134,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-TI-lmX">
                                 <rect key="frame" x="16" y="36" width="343" height="29"/>
                                 <segments>
-                                    <segment title="期限の近い順"/>
-                                    <segment title="優先順位の高い順"/>
+                                    <segment title="期限"/>
+                                    <segment title="優先順位"/>
                                 </segments>
                                 <connections>
                                     <action selector="didChangeSortTypeSegment" destination="zNM-R7-ofK" eventType="valueChanged" id="iew-VL-HMZ"/>
