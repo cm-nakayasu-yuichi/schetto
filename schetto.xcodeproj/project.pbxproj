@@ -55,6 +55,7 @@
 		DB22841821888D6D008F00F6 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22840E21888D6D008F00F6 /* MainRepository.swift */; };
 		DB22841F2188C288008F00F6 /* CoreGraphics+Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22841E2188C288008F00F6 /* CoreGraphics+Dimension.swift */; };
 		DB40E094219B1C280088441D /* Date+Conversion .swift in Sources */ = {isa = PBXBuildFile; fileRef = DB40E093219B1C280088441D /* Date+Conversion .swift */; };
+		DB40E097219B207D0088441D /* EmptyViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB40E096219B207C0088441D /* EmptyViewControllable.swift */; };
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
 		DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */; };
 		DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AD9EE217F60DD001243C3 /* FileTests.swift */; };
@@ -239,6 +240,7 @@
 		DB22840E21888D6D008F00F6 /* MainRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
 		DB22841E2188C288008F00F6 /* CoreGraphics+Dimension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Dimension.swift"; sourceTree = "<group>"; };
 		DB40E093219B1C280088441D /* Date+Conversion .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Conversion .swift"; sourceTree = "<group>"; };
+		DB40E096219B207C0088441D /* EmptyViewControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewControllable.swift; sourceTree = "<group>"; };
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DB7AD9EE217F60DD001243C3 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
@@ -524,6 +526,14 @@
 			path = EventEdit;
 			sourceTree = "<group>";
 		};
+		DB40E095219B207C0088441D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB40E096219B207C0088441D /* EmptyViewControllable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		DBA6BCB5219B0D0B00FE5CD9 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -725,6 +735,7 @@
 				DB1CF2932199CAA100C61995 /* EventEdit */,
 				DB1CF2652199CAA100C61995 /* Text */,
 				DB1CF2762199CAA100C61995 /* Web */,
+				DB40E095219B207C0088441D /* Common */,
 				DB1CF27F2199CAA100C61995 /* Test */,
 			);
 			path = Views;
@@ -1189,6 +1200,7 @@
 				E4DCFBED218C1BA00091B016 /* RecordStatus.swift in Sources */,
 				E4DCFBEA218C1B360091B016 /* CalendarModel.swift in Sources */,
 				DB1CF2B32199CAA100C61995 /* TermsViewController.swift in Sources */,
+				DB40E097219B207D0088441D /* EmptyViewControllable.swift in Sources */,
 				DB1CF2B52199CAA100C61995 /* DesignFontSettingViewController.swift in Sources */,
 				E493B1FF217599810017F931 /* CalendarView.swift in Sources */,
 				E4DCFBE6218BD42B0091B016 /* DBTodo.swift in Sources */,
