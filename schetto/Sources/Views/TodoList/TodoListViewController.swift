@@ -69,7 +69,7 @@ extension TodoListViewController: TodoListAdapterDelegate {
         return todoListModels[section].title
     }
     
-    func todoListAdapter(_ adapter: TodoListAdapter, todoAt index: Int, in section: Int) -> TodoModel? {
+    func todoListAdapter(_ adapter: TodoListAdapter, todoAt index: Int, in section: Int) -> TodoModel {
         return todoListModels[section].todos[index]
     }
     

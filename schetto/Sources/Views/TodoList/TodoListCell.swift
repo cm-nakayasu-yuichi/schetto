@@ -13,10 +13,22 @@ class TodoListCell: UITableViewCell {
     weak var delegate: TodoListCellDelegate!
     var indexPath: IndexPath!
     
-    var item: Any! {
+    @IBOutlet private weak var completeCheck: UIButton!
+    @IBOutlet private weak var limitLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var priorityView: UIView!
+    
+    var todo: TodoModel! {
         didSet {
-            // NOP.
+            completeCheck.isSelected = todo.completed
+            //limitLabel.text = todo.limit
+            titleLabel.text = todo.title
+            //priorityView
         }
+    }
+    
+    @IBAction private func didTapCompleteCheckButton() {
+        
     }
 }
 

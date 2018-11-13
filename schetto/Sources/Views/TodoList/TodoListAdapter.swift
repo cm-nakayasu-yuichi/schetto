@@ -12,7 +12,7 @@ protocol TodoListAdapterDelegate: class {
     
     func todoListAdapter(_ adapter: TodoListAdapter, titleForSection section: Int) -> String
     
-    func todoListAdapter(_ adapter: TodoListAdapter, todoAt index: Int, in section: Int) -> TodoModel?
+    func todoListAdapter(_ adapter: TodoListAdapter, todoAt index: Int, in section: Int) -> TodoModel
     
     func todoListAdapter(_ adapter: TodoListAdapter, didTapCompleteAt index: Int, in section: Int, to value: Bool)
     
@@ -53,7 +53,9 @@ class TodoListAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListCell
             cell.indexPath = indexPath
             cell.delegate = self
-            //cell.todo = delegate?.todoListAdapter(self, todoAt: indexPath.row - 1, in: indexPath.section)
+            if let todo = delegate?.todoListAdapter(self, todoAt: indexPath.row - 1, in: indexPath.section) {
+                cell.todo = todo
+            }
             return cell
         }
     }
