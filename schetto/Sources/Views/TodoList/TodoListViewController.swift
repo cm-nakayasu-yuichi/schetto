@@ -13,19 +13,36 @@ class TodoListViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var sortTypeSegment: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "タスク"
         adapter = TodoListAdapter(tableView, delegate: self)
         
+        setupSortTypeSegment()
         // 閉じるボタン設置
         setupCloseButtonOnNavigationBar()
+    }
+    
+    @IBAction private func didChangeSortTypeSegment() {
+        
+    }
+    
+    private func setupSortTypeSegment() {
+        sortTypeSegment.removeAllSegments()
+        TodoSortType.types.enumerated().forEach { i, type in
+            sortTypeSegment.insertSegment(withTitle: type.title, at: i, animated: false)
+        }
+        presenter.fetchStoredSortType()
     }
 }
 
 extension TodoListViewController: TodoListViewProtocol {
     
+    func fetched(storedSortType: TodoSortType) {
+        sortTypeSegment.selectedSegmentIndex = sortType.rawValue
+    }
 }
 
 extension TodoListViewController: TodoListAdapterDelegate {

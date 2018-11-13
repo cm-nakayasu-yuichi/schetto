@@ -8,4 +8,6 @@ class AppConfig: Configurable {
     
     dynamic var isFirstLaunch: Bool = false
     dynamic var isAgreeTerms: Bool = false
+    
+    dynamic var todoSortType: Int = TodoSortType.limit.rawValue
 }

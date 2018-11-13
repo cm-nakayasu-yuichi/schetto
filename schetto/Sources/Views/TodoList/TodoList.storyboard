@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Kq-rp-BHI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="0.89815231164296472" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" id="BFG-EY-d2r" customClass="TodoListTitleCell" customModule="schetto" customModuleProvider="target">
@@ -122,17 +122,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-TI-lmX">
+                                <rect key="frame" x="16" y="36" width="343" height="29"/>
+                                <segments>
+                                    <segment title="期限の近い順"/>
+                                    <segment title="優先順位の高い順"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeSortTypeSegment" destination="zNM-R7-ofK" eventType="valueChanged" id="iew-VL-HMZ"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="4Kq-rp-BHI" firstAttribute="top" secondItem="v4P-TI-lmX" secondAttribute="bottom" constant="16" id="1Zw-P5-vOm"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="bottom" secondItem="4Kq-rp-BHI" secondAttribute="bottom" id="FPa-Sy-ODf"/>
                             <constraint firstItem="4Kq-rp-BHI" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" id="L8G-2p-ECq"/>
+                            <constraint firstItem="v4P-TI-lmX" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="16" id="RA8-6T-akg"/>
+                            <constraint firstItem="v4P-TI-lmX" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="top" constant="16" id="X8n-Bh-zGS"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="4Kq-rp-BHI" secondAttribute="trailing" id="dDt-GZ-wfd"/>
-                            <constraint firstItem="4Kq-rp-BHI" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="top" id="sAh-cJ-n6M"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="v4P-TI-lmX" secondAttribute="trailing" constant="16" id="xpt-XL-YNt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
                     </view>
                     <connections>
+                        <outlet property="sortTypeSegment" destination="v4P-TI-lmX" id="uXG-gn-V6W"/>
                         <outlet property="tableView" destination="4Kq-rp-BHI" id="7zI-bk-eFz"/>
                     </connections>
                 </viewController>
