@@ -6,6 +6,21 @@ import UIKit
 
 protocol TodoDetailCellDelegate: class {
     
+    func didTapComplete(at cell: TodoDetailCell)
+    
+    func didTapEditTitle(at cell: TodoDetailCell)
+    
+    func didTapEditSummery(at cell: TodoDetailCell)
+    
+    func didChangePriority(at cell: TodoDetailCell, priority: TodoPriority)
+    
+    func didSelectLimit(at cell: TodoDetailCell)
+    
+    func didSelectNotify(at cell: TodoDetailCell)
+    
+    func didTapAsset(at cell: TodoDetailCell,  asset: AssetModel?)
+    
+    func didTapDelete(at cell: TodoDetailCell)
 }
 
 protocol TodoDetailCell: class {

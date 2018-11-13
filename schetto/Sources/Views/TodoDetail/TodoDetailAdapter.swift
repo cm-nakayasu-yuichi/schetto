@@ -139,4 +139,35 @@ extension TodoDetailAdapter {
 
 extension TodoDetailAdapter: TodoDetailCellDelegate {
     
+    func didTapComplete(at cell: TodoDetailCell) {
+        
+    }
+    
+    func didTapEditTitle(at cell: TodoDetailCell) {
+        delegate.todoDetailAdapter(self, didTapEditTitle: todo)
+    }
+    
+    func didTapEditSummery(at cell: TodoDetailCell) {
+        delegate.todoDetailAdapter(self, didTapEditSummery: todo)
+    }
+    
+    func didChangePriority(at cell: TodoDetailCell, priority: TodoPriority) {
+        delegate.todoDetailAdapter(self, didChangePriority: .normal, todo: todo) // TODO: priorityがnormal固定になっているのを直す
+    }
+    
+    func didSelectLimit(at cell: TodoDetailCell) {
+        delegate.todoDetailAdapter(self, didSelectLimit: todo)
+    }
+    
+    func didSelectNotify(at cell: TodoDetailCell) {
+        delegate.todoDetailAdapter(self, didSelectNotify: todo)
+    }
+    
+    func didTapAsset(at cell: TodoDetailCell, asset: AssetModel?) {
+        delegate.todoDetailAdapter(self, didTapAsset: nil, todo: todo) // TODO: Assetがnil固定になっているのを直す
+    }
+    
+    func didTapDelete(at cell: TodoDetailCell) {
+        delegate.todoDetailAdapter(self, didTapDelete: todo)
+    }
 }
