@@ -16,7 +16,7 @@ class TodoListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "TODO"
+        title = "タスク"
         adapter = TodoListAdapter(tableView, delegate: self)
     }
     
