@@ -45,11 +45,13 @@ class TodoListViewController: UIViewController {
 extension TodoListViewController: TodoListViewProtocol {
     
     func fetched(list: [TodoListModel]) {
+        todoListModels = list
         tableView.reloadData()
     }
     
     func fetched(storedSortType: TodoSortType) {
         sortTypeSegment.selectedSegmentIndex = storedSortType.rawValue
+        presenter.fetchList(sortType: sortType)
     }
 }
 
