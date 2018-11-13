@@ -6,7 +6,7 @@ import UIKit
 
 protocol EmptyViewControllable {
     
-    var emptyView: UIView { get }
+    var emptyView: UIView! { get }
 }
 
 extension EmptyViewControllable {
