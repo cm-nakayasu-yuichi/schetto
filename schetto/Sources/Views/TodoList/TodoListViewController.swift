@@ -18,10 +18,9 @@ class TodoListViewController: UIViewController {
         super.viewDidLoad()
         title = "タスク"
         adapter = TodoListAdapter(tableView, delegate: self)
-    }
-    
-    @IBAction private func didTapCloseButton() {
-        // NOP.
+        
+        // 閉じるボタン設置
+        setupCloseButtonOnNavigationBar()
     }
 }
 
