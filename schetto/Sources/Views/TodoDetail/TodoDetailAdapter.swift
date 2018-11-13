@@ -34,6 +34,10 @@ class TodoDetailAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         case notify
         case asset(model: AssetModel)
         case delete
+        
+        var assetModel: AssetModel? {
+            switch self { case .asset(let model): return model; default: return nil }
+        }
     }
     
     weak var tableView: UITableView!
@@ -63,7 +67,7 @@ class TodoDetailAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         let rowItem = rowItemAt(indexPath)
         let cellIdentifier = cellIdentifierOf(rowItem)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        bind(cell: cell)
+        bind(cell: cell, at: indexPath)
         return cell
     }
     
@@ -114,7 +118,7 @@ extension TodoDetailAdapter {
         return sectionsItems[indexPath.section][indexPath.row]
     }
     
-    private func bind(cell original: UITableViewCell) {
+    private func bind(cell original: UITableViewCell, at indexPath: IndexPath) {
         if let cell = original as? TodoDetailCell {
             cell.delegate = self
         }
@@ -127,6 +131,7 @@ extension TodoDetailAdapter {
             cell.summery = todo?.summery ?? "概要"
         }
         else if let cell = original as? TodoDetailKeyValueCell {
+            cell.indexPath = indexPath
             cell.title = "キー"
             cell.value = "値"
         }
@@ -134,13 +139,14 @@ extension TodoDetailAdapter {
             cell.priority = todo?.priority ?? .normal
         }
         else if let cell = original as? TodoDetailAssetCell {
+            cell.indexPath = indexPath
             cell.assetImage = nil
         }
     }
 }
 
 extension TodoDetailAdapter: TodoDetailCellDelegate {
-    
+
     func didTapComplete(at cell: TodoDetailCell) {
         delegate.todoDetailAdapter(self, didTapComplete: todo)
     }
@@ -157,16 +163,25 @@ extension TodoDetailAdapter: TodoDetailCellDelegate {
         delegate.todoDetailAdapter(self, didChangePriority: .normal, todo: todo) // TODO: priorityがnormal固定になっているのを直す
     }
     
-    func didSelectLimit(at cell: TodoDetailCell) {
-        delegate.todoDetailAdapter(self, didSelectLimit: todo)
+    func didSelectKeyValue(at cell: TodoDetailCell, indexPath: IndexPath) {
+        switch rowItemAt(indexPath) {
+        case .limit:
+            delegate.todoDetailAdapter(self, didSelectLimit: todo)
+        case .notify:
+            delegate.todoDetailAdapter(self, didSelectNotify: todo)
+        default:
+            return
+        }
     }
     
     func didSelectNotify(at cell: TodoDetailCell) {
         delegate.todoDetailAdapter(self, didSelectNotify: todo)
     }
     
-    func didTapAsset(at cell: TodoDetailCell, asset: AssetModel?) {
-        delegate.todoDetailAdapter(self, didTapAsset: nil, todo: todo) // TODO: Assetがnil固定になっているのを直す
+    func didTapAsset(at cell: TodoDetailCell, indexPath: IndexPath) {
+        if let asset = rowItemAt(indexPath).assetModel {
+            delegate.todoDetailAdapter(self, didTapAsset: asset, todo: todo)
+        }
     }
     
     func didTapDelete(at cell: TodoDetailCell) {

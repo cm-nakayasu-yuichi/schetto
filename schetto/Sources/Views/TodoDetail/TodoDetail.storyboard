@@ -69,6 +69,9 @@
                                                     <state key="normal" title="編">
                                                         <color key="titleColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didTapEditButton" destination="5gq-as-QUi" eventType="touchUpInside" id="i2U-PU-6jb"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -110,6 +113,9 @@
                                                     <state key="normal" title="編">
                                                         <color key="titleColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didTapEditButton" destination="5mT-VE-Fja" eventType="touchUpInside" id="9QI-RR-IBI"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -150,6 +156,9 @@
                                                     <state key="normal">
                                                         <color key="titleColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didTapEditButton" destination="wmc-m3-o5T" eventType="touchUpInside" id="8by-ev-9IU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -205,14 +214,31 @@
                                                         <constraint firstAttribute="width" constant="367" id="PpC-Xs-J3T"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9B-v3-3cl" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
+                                                    <rect key="frame" x="4" y="4" width="367" height="47.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTapAssetImageView" destination="tdz-Um-2s4" eventType="touchUpInside" id="Ibj-Tv-IUH"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="M9B-v3-3cl" firstAttribute="trailing" secondItem="dS7-Bv-VBh" secondAttribute="trailing" id="ChC-ZA-1cv"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dS7-Bv-VBh" secondAttribute="bottom" constant="4" id="I2H-Qz-rmU"/>
                                                 <constraint firstItem="dS7-Bv-VBh" firstAttribute="leading" secondItem="SUP-BJ-aBL" secondAttribute="leading" constant="4" id="NWq-YQ-CFt"/>
                                                 <constraint firstItem="dS7-Bv-VBh" firstAttribute="top" secondItem="SUP-BJ-aBL" secondAttribute="top" constant="4" id="W8q-Ln-eR9"/>
+                                                <constraint firstItem="M9B-v3-3cl" firstAttribute="leading" secondItem="dS7-Bv-VBh" secondAttribute="leading" id="Ylc-qd-Lba"/>
                                                 <constraint firstAttribute="trailing" secondItem="dS7-Bv-VBh" secondAttribute="trailing" constant="4" id="kl4-bJ-B4M"/>
+                                                <constraint firstItem="M9B-v3-3cl" firstAttribute="bottom" secondItem="dS7-Bv-VBh" secondAttribute="bottom" id="lch-3K-XEc"/>
+                                                <constraint firstItem="M9B-v3-3cl" firstAttribute="top" secondItem="dS7-Bv-VBh" secondAttribute="top" id="n1D-9w-0dE"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="assetImageView" destination="dS7-Bv-VBh" id="isZ-Vu-JZ4"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="delete" rowHeight="56" id="7bb-G2-ZQU" customClass="TodoDetailDeleteCell" customModule="schetto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="429.5" width="375" height="56"/>

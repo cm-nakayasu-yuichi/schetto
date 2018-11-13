@@ -14,11 +14,9 @@ protocol TodoDetailCellDelegate: class {
     
     func didChangePriority(at cell: TodoDetailCell, priority: TodoPriority)
     
-    func didSelectLimit(at cell: TodoDetailCell)
+    func didSelectKeyValue(at cell: TodoDetailCell, indexPath: IndexPath)
     
-    func didSelectNotify(at cell: TodoDetailCell)
-    
-    func didTapAsset(at cell: TodoDetailCell,  asset: AssetModel?)
+    func didTapAsset(at cell: TodoDetailCell, indexPath: IndexPath)
     
     func didTapDelete(at cell: TodoDetailCell)
 }
@@ -48,11 +46,11 @@ class TodoDetailTitleCell: UITableViewCell, TodoDetailCell {
     }
     
     @IBAction private func didTapCheckButton() {
-        
+        delegate.didTapComplete(at: self)
     }
     
     @IBAction private func didTapEditButton() {
-        
+        delegate.didTapEditTitle(at: self)
     }
 }
 
@@ -69,13 +67,14 @@ class TodoDetailSummeryCell: UITableViewCell, TodoDetailCell {
     }
     
     @IBAction private func didTapEditButton() {
-        
+        delegate.didTapEditSummery(at: self)
     }
 }
 
 class TodoDetailKeyValueCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
+    var indexPath: IndexPath!
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
@@ -106,15 +105,13 @@ class TodoDetailKeyValueCell: UITableViewCell, TodoDetailCell {
     }
     
     @IBAction private func didTapEditButton() {
-        
+        delegate.didSelectKeyValue(at: self, indexPath: indexPath)
     }
 }
 
 class TodoDetailPriorityCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
-    
-    @IBOutlet private weak var titleLabel: UILabel!
     
     var priority: TodoPriority = .normal {
         didSet {
@@ -126,6 +123,7 @@ class TodoDetailPriorityCell: UITableViewCell, TodoDetailCell {
 class TodoDetailAssetCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
+    var indexPath: IndexPath!
     
     @IBOutlet private weak var assetImageView: UIImageView!
     
@@ -135,8 +133,8 @@ class TodoDetailAssetCell: UITableViewCell, TodoDetailCell {
         }
     }
     
-    @IBAction private func didTapCheckButton() {
-        
+    @IBAction private func didTapAssetImageView() {
+        delegate.didTapAsset(at: self, indexPath: indexPath)
     }
 }
 
@@ -147,6 +145,6 @@ class TodoDetailDeleteCell: UITableViewCell, TodoDetailCell {
     @IBOutlet private weak var deleteButton: UIButton!
     
     @IBAction private func didTapDeleteButton() {
-        
+        delegate.didTapDelete(at: self)
     }
 }
