@@ -134,6 +134,7 @@ extension TodoDetailAdapter {
             cell.indexPath = indexPath
             cell.title = "キー"
             cell.value = "値"
+            cell.editable = keyValueEditable(rowItem: rowItemAt(indexPath))
         }
         else if let cell = original as? TodoDetailPriorityCell {
             cell.priority = todo?.priority ?? .normal
@@ -141,6 +142,13 @@ extension TodoDetailAdapter {
         else if let cell = original as? TodoDetailAssetCell {
             cell.indexPath = indexPath
             cell.assetImage = nil
+        }
+    }
+    
+    private func keyValueEditable(rowItem: RowItem) -> Bool {
+        switch rowItem {
+        case .limit, .notify: return true
+        default: return false
         }
     }
 }

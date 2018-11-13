@@ -175,6 +175,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="editButton" destination="LIB-LP-T2W" id="iDi-Hw-zsb"/>
                                             <outlet property="titleLabel" destination="eh8-pq-LvS" id="64j-lY-oJ3"/>
                                             <outlet property="valueLabel" destination="wPJ-jE-GDt" id="8wG-vF-kg2"/>
                                         </connections>
