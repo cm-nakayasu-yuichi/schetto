@@ -16,8 +16,8 @@ protocol TodoListPresenterProtocol: class {
 protocol TodoListViewProtocol: class {
     
     func fetched(storedSortType: TodoSortType)
-    
-    func fetched(list: [TodoListModel])
+    func show(todoListModels: [TodoListModel])
+    func showEmpty()
 }
 
 class TodoListPresenter: TodoListPresenterProtocol {
@@ -39,7 +39,11 @@ class TodoListPresenter: TodoListPresenterProtocol {
 extension TodoListPresenter: TodoInteractorOutput {
     
     func fetched(list: [TodoListModel]) {
-        view.fetched(list: list)
+        if list.isEmpty {
+            view.showEmpty()
+        } else {
+            view.show(todoListModels: list)
+        }
     }
     
     func updated(_ models: [TodoModel]) {

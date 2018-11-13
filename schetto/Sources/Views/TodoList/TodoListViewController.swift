@@ -27,6 +27,10 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
         setupEmptyView()
     }
     
+    @IBAction private func didTapAddButton() {
+        
+    }
+    
     override func didTapAddButtonOnNavigationBar() {
         
     }
@@ -51,8 +55,17 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
 
 extension TodoListViewController: TodoListViewProtocol {
     
-    func fetched(list: [TodoListModel]) {
-        todoListModels = list
+    func show(todoListModels: [TodoListModel]) {
+        self.todoListModels = todoListModels
+        emptyView.isHidden = true
+        tableView.isHidden = false
+        tableView.reloadData()
+    }
+    
+    func showEmpty() {
+        self.todoListModels = []
+        emptyView.isHidden = false
+        tableView.isHidden = true
         tableView.reloadData()
     }
     

@@ -9,8 +9,12 @@ class TodoRepositoryMock: TodoInteractorInput {
     weak var output: TodoInteractorOutput!
     
     func fetchList(sortType: TodoSortType) {
-        let todoListModels = TodoRepositoryMock.todoListModels()
-        output.fetched(list: todoListModels)
+        if sortType == .limit {
+            let todoListModels = TodoRepositoryMock.todoListModels()
+            output.fetched(list: todoListModels)
+        } else {
+            output.fetched(list: [])
+        }
     }
     
     func register(_ model: TodoModel) {
