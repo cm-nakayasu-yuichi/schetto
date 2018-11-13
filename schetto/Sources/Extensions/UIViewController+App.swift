@@ -15,3 +15,15 @@ extension UIViewController {
         Wireframe.dismiss(from: self)
     }
 }
+
+extension UIViewController {
+    
+    func setupAddButtonOnNavigationBar() {
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddButtonOnNavigationBar))
+        navigationItem.rightBarButtonItem = button
+    }
+    
+    @objc func didTapAddButtonOnNavigationBar() {
+        
+    }
+}

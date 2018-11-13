@@ -23,7 +23,12 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
         
         setupSortTypeSegment()
         setupCloseButtonOnNavigationBar()
+        setupAddButtonOnNavigationBar()
         setupEmptyView()
+    }
+    
+    override func didTapAddButtonOnNavigationBar() {
+        
     }
     
     @IBAction private func didChangeSortTypeSegment() {
