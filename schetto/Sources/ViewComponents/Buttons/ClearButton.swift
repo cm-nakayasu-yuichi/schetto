@@ -6,10 +6,12 @@ import UIKit
 
 class ClearButton: UIButton {
     
+    @IBInspectable var highlightedColor: UIColor? = .clearButtonDefaultHighlighted
+    
     override var isHighlighted: Bool {
         didSet {
             if isHighlighted {
-                backgroundColor = tintColor
+                backgroundColor = highlightedColor
             } else {
                 UIView.transition(
                     with: self,

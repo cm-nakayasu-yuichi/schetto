@@ -6,34 +6,17 @@ import Foundation
 
 class StickerGroupTranslator: MultiTranslator {
     
-    typealias Input = DBTodo
-    typealias Output = TodoModel
+    typealias Input = DBStickerGroup
+    typealias Output = StickerGroupModel
     
-    func translate(_ inputs: [DBTodo]) -> [TodoModel] {
-        return inputs.map { input -> TodoModel in
+    func translate(_ inputs: [DBStickerGroup]) -> [StickerGroupModel] {
+        return inputs.map { input -> StickerGroupModel in
             return translate(input)
         }
     }
     
-    func translate(_ input: DBTodo) -> TodoModel {
-        let model = TodoModel()
-        model.id = input.id
-        
-        // string
-        model.name = input.name
-        model.summery = input.summery
-        // date
-        model.limit = input.limit
-        // enum
-        model.priority = TodoPriority(rawValue: input.priority) ?? .normal
-        model.status = RecordStatus(rawValue: input.status) ?? .draft
-        // boolean
-        model.completed = input.completed
-        // integer
-        model.notify = input.notify
-        // array
-        model.stickers = [] // TODO: StickerTranslator
-        model.assets = [] // TODO: AssetsTranslator
+    func translate(_ input: DBStickerGroup) -> StickerGroupModel {
+        let model = StickerGroupModel()
         
         return model
     }

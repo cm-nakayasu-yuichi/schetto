@@ -43,6 +43,16 @@ class Wireframe {
         Dialog.show(viewController, from: fromViewController, behavior: behavior)
     }
     
+    static func showTodoList(from fromViewController: UIViewController) {
+        let viewController = builder.todoList()
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
+    }
+    
+    static func showTodoDetail(from fromViewController: UIViewController) {
+        let viewController = builder.todoDetail()
+        helper.push(viewController, from: fromViewController)
+    }
+    
     static func showWeb(from fromViewController: UIViewController) {
         let viewController = builder.web()
         helper.present(viewController, from: fromViewController)

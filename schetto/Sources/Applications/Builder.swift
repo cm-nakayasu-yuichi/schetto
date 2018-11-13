@@ -86,6 +86,36 @@ class Builder {
         return view
     }
     
+    func todoList() -> TodoListViewController {
+        let view = instantiate(TodoListViewController.self, storyboardName: "TodoList")
+        
+        let presenter: TodoListPresenterProtocol = TodoListPresenter()
+        presenter.view = view
+        
+        let interactor: TodoInteractorInput = TodoRepository()
+        interactor.output = presenter as? TodoInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+        
+    func todoDetail() -> TodoDetailViewController {
+        let view = instantiate(TodoDetailViewController.self, storyboardName: "TodoDetail")
+        
+        let presenter: TodoDetailPresenterProtocol = TodoDetailPresenter()
+        presenter.view = view
+        
+        let interactor: TodoInteractorInput = TodoRepository()
+        interactor.output = presenter as? TodoInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
     func web() -> WebViewController {
         let view = instantiate(WebViewController.self, storyboardName: "Web")
         let presenter: WebPresenterProtocol = WebPresenter()

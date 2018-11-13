@@ -4,9 +4,14 @@
 //
 import UIKit
 
+class TodoListModel {
+    var title = ""
+    var todos = [TodoModel]()
+}
+
 class TodoModel {
     var id = ""
-    var name = ""
+    var title = ""
     var limit: Date? = nil
     var priority = TodoPriority.normal
     var summery = ""
