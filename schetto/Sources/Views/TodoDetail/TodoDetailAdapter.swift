@@ -6,6 +6,8 @@ import UIKit
 
 protocol TodoDetailAdapterDelegate: class {
     
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapComplete todo: TodoModel?)
+    
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditTitle todo: TodoModel?)
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditSummery todo: TodoModel?)
@@ -140,7 +142,7 @@ extension TodoDetailAdapter {
 extension TodoDetailAdapter: TodoDetailCellDelegate {
     
     func didTapComplete(at cell: TodoDetailCell) {
-        
+        delegate.todoDetailAdapter(self, didTapComplete: todo)
     }
     
     func didTapEditTitle(at cell: TodoDetailCell) {

@@ -29,6 +29,10 @@ extension TodoDetailViewController: TodoDetailViewProtocol {
 
 extension TodoDetailViewController: TodoDetailAdapterDelegate {
     
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapComplete todo: TodoModel?) {
+        print("didTapComplete")
+    }
+    
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditTitle todo: TodoModel?) {
         print("didTapEditTitle")
     }
