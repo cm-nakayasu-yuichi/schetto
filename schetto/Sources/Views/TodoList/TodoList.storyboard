@@ -131,6 +131,41 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WS-hq-t7R">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xi7-4y-8pA">
+                                        <rect key="frame" x="0.0" y="293.5" width="375" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="g28-GE-l3x"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-C1-yBH">
+                                        <rect key="frame" x="103" y="297.5" width="169" height="30"/>
+                                        <state key="normal" title="タスクを新たに追加する"/>
+                                        <connections>
+                                            <action selector="didTapAddButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="LME-w2-GcG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タスクはありません" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-CX-ihb">
+                                        <rect key="frame" x="114" y="270" width="147" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="hyj-CX-ihb" firstAttribute="centerX" secondItem="4WS-hq-t7R" secondAttribute="centerX" id="ahD-Z6-dVr"/>
+                                    <constraint firstItem="DG4-C1-yBH" firstAttribute="top" secondItem="Xi7-4y-8pA" secondAttribute="bottom" constant="4" id="cPw-x0-3lV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xi7-4y-8pA" secondAttribute="trailing" id="e4R-bB-1i8"/>
+                                    <constraint firstItem="Xi7-4y-8pA" firstAttribute="centerY" secondItem="4WS-hq-t7R" secondAttribute="centerY" id="kbg-wu-XYa"/>
+                                    <constraint firstItem="Xi7-4y-8pA" firstAttribute="top" secondItem="hyj-CX-ihb" secondAttribute="bottom" constant="4" id="tf8-Bt-SNA"/>
+                                    <constraint firstItem="DG4-C1-yBH" firstAttribute="centerX" secondItem="4WS-hq-t7R" secondAttribute="centerX" id="wAE-hl-Tmd"/>
+                                    <constraint firstItem="Xi7-4y-8pA" firstAttribute="leading" secondItem="4WS-hq-t7R" secondAttribute="leading" id="wYc-Bw-eph"/>
+                                </constraints>
+                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-TI-lmX">
                                 <rect key="frame" x="16" y="36" width="343" height="29"/>
                                 <segments>
@@ -147,14 +182,19 @@
                             <constraint firstItem="4Kq-rp-BHI" firstAttribute="top" secondItem="v4P-TI-lmX" secondAttribute="bottom" constant="16" id="1Zw-P5-vOm"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="bottom" secondItem="4Kq-rp-BHI" secondAttribute="bottom" id="FPa-Sy-ODf"/>
                             <constraint firstItem="4Kq-rp-BHI" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" id="L8G-2p-ECq"/>
+                            <constraint firstItem="4WS-hq-t7R" firstAttribute="bottom" secondItem="4Kq-rp-BHI" secondAttribute="bottom" id="O2m-rL-Dkx"/>
                             <constraint firstItem="v4P-TI-lmX" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="16" id="RA8-6T-akg"/>
+                            <constraint firstItem="4WS-hq-t7R" firstAttribute="top" secondItem="4Kq-rp-BHI" secondAttribute="top" id="UNo-Lg-irZ"/>
                             <constraint firstItem="v4P-TI-lmX" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="top" constant="16" id="X8n-Bh-zGS"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="4Kq-rp-BHI" secondAttribute="trailing" id="dDt-GZ-wfd"/>
+                            <constraint firstItem="4WS-hq-t7R" firstAttribute="leading" secondItem="4Kq-rp-BHI" secondAttribute="leading" id="p2F-oI-fCQ"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="v4P-TI-lmX" secondAttribute="trailing" constant="16" id="xpt-XL-YNt"/>
+                            <constraint firstItem="4WS-hq-t7R" firstAttribute="trailing" secondItem="4Kq-rp-BHI" secondAttribute="trailing" id="yfF-R4-pyd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
                     </view>
                     <connections>
+                        <outlet property="emptyView" destination="4WS-hq-t7R" id="8WL-mw-QgR"/>
                         <outlet property="sortTypeSegment" destination="v4P-TI-lmX" id="uXG-gn-V6W"/>
                         <outlet property="tableView" destination="4Kq-rp-BHI" id="7zI-bk-eFz"/>
                     </connections>

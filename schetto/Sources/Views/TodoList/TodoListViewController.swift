@@ -4,7 +4,7 @@
 //
 import UIKit
 
-class TodoListViewController: UIViewController {
+class TodoListViewController: UIViewController, EmptyViewControllable {
     
     var presenter: TodoListPresenterProtocol!
     
@@ -14,6 +14,7 @@ class TodoListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var sortTypeSegment: UISegmentedControl!
+    @IBOutlet weak var emptyView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class TodoListViewController: UIViewController {
         
         setupSortTypeSegment()
         setupCloseButtonOnNavigationBar()
+        setupEmptyView()
     }
     
     @IBAction private func didChangeSortTypeSegment() {
