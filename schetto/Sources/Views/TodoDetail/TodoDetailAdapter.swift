@@ -6,17 +6,19 @@ import UIKit
 
 protocol TodoDetailAdapterDelegate: class {
     
-//    func numberOfSections(_ adapter: TodoDetailAdapter) -> Int
-//    
-//    func numberOfRows(_ adapter: TodoDetailAdapter, in section: Int) -> Int
-//    
-//    func todoDetailAdapter(_ adapter: TodoDetailAdapter, titleForSection section: Int) -> String
-//    
-//    func todoDetailAdapter(_ adapter: TodoDetailAdapter, todoAt index: Int, in section: Int) -> TodoModel?
-//    
-//    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapCompleteAt index: Int, in section: Int, to value: Bool)
-//    
-//    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didSelectAt index: Int)
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditTitle todo: TodoModel?)
+    
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditSummery todo: TodoModel?)
+    
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didChangePriority priority: TodoPriority, todo: TodoModel?)
+    
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didSelectLimit todo: TodoModel?)
+    
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didSelectNotify todo: TodoModel?)
+    
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapAsset asset: AssetModel?, todo: TodoModel?)
+    
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapDelete todo: TodoModel?)
 }
 
 class TodoDetailAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
