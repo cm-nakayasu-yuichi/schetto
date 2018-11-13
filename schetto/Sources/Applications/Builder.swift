@@ -92,7 +92,7 @@ class Builder {
         let presenter: TodoListPresenterProtocol = TodoListPresenter()
         presenter.view = view
         
-        let interactor: TodoInteractorInput = TodoRepository()
+        let interactor: TodoInteractorInput = TodoRepositoryMock()//TodoRepository()
         interactor.output = presenter as? TodoInteractorOutput
         presenter.interactor = interactor
         
@@ -107,7 +107,7 @@ class Builder {
         let presenter: TodoDetailPresenterProtocol = TodoDetailPresenter()
         presenter.view = view
         
-        let interactor: TodoInteractorInput = TodoRepository()
+        let interactor: TodoInteractorInput = TodoRepositoryMock()//TodoRepository()
         interactor.output = presenter as? TodoInteractorOutput
         presenter.interactor = interactor
         

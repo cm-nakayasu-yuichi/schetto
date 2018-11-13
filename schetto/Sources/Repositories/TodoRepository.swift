@@ -47,3 +47,29 @@ class TodoRepository: TodoInteractorInput {
         
     }
 }
+
+// MOCK
+class TodoRepositoryMock: TodoInteractorInput {
+    
+    weak var output: TodoInteractorOutput!
+    
+    func fetchList(sortType: TodoSortType) {
+        
+    }
+    
+    func register(_ model: TodoModel) {
+        
+    }
+    
+    func remove(_ model: TodoModel) {
+        
+    }
+    
+    func updateComplete(_ complete: Bool, to id: String) {
+        
+    }
+    
+    func registerNotify(before minutes: Int, to id: String) {
+        
+    }
+}
