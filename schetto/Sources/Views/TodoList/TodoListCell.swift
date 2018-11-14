@@ -6,18 +6,18 @@ import UIKit
 
 protocol TodoListCellDelegate: class {
     
-    func didTapComplete(at cell: TodoListCell, complete: Bool)
+    func didTapComplete(of cell: TodoListCell, completed: Bool)
 }
 
 class TodoListCell: UITableViewCell {
     
     weak var delegate: TodoListCellDelegate!
-    var indexPath: IndexPath!
     
     @IBOutlet private weak var completedCheckButton: UIButton!
     @IBOutlet private weak var limitLabel: UILabel!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var priorityView: UIView!
+    @IBOutlet private weak var separatorLine: UIView!
     
     var todo: TodoModel! {
         didSet {
@@ -28,9 +28,15 @@ class TodoListCell: UITableViewCell {
         }
     }
     
+    var isLastRow = false {
+        didSet {
+            separatorLine.isHidden = isLastRow
+        }
+    }
+    
     @IBAction private func didTapCompletedCheckButton() {
         completedCheckButton.isSelected = !completedCheckButton.isSelected
-        delegate.didTapComplete(at: self, complete: completedCheckButton.isSelected)
+        delegate.didTapComplete(of: self, completed: completedCheckButton.isSelected)
     }
 }
 

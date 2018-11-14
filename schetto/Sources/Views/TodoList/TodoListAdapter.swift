@@ -14,7 +14,7 @@ protocol TodoListAdapterDelegate: class {
     
     func todoListAdapter(_ adapter: TodoListAdapter, todoAt index: Int, in section: Int) -> TodoModel
     
-    func todoListAdapter(_ adapter: TodoListAdapter, didTapComplete todo: TodoModel, to complete: Bool)
+    func todoListAdapter(_ adapter: TodoListAdapter, didTapComplete todo: TodoModel, to completed: Bool)
     
     func todoListAdapter(_ adapter: TodoListAdapter, didSelectTodo todo: TodoModel)
 }
@@ -38,7 +38,7 @@ class TodoListAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delegate.numberOfTodos(self, in: section) + 1 // 1 = section title cell
+        return delegate.numberOfTodos(self, in: section) + 1 // 1 = タイトル行用
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,25 +48,30 @@ class TodoListAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TodoListCell
-            cell.indexPath = indexPath
             cell.delegate = self
             cell.todo = delegate.todoListAdapter(self, todoAt: indexPath.row - 1, in: indexPath.section)
+            cell.isLastRow = isLastRow(at: indexPath)
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 { return }
+        if indexPath.row == 0 { return } // タイトル行は無視
         tableView.deselectRow(at: indexPath, animated: true)
         
         let todo = delegate.todoListAdapter(self, todoAt: indexPath.row - 1, in: indexPath.section)
         delegate.todoListAdapter(self, didSelectTodo: todo)
     }
+    
+    private func isLastRow(at indexPath: IndexPath) -> Bool {
+        let lastIndex = tableView(tableView, numberOfRowsInSection: indexPath.section) - 1
+        return indexPath.row == lastIndex
+    }
 }
 
 extension TodoListAdapter: TodoListCellDelegate {
     
-    func didTapComplete(at cell: TodoListCell, complete: Bool) {
-        delegate.todoListAdapter(self, didTapComplete: cell.todo, to: complete)
+    func didTapComplete(of cell: TodoListCell, completed: Bool) {
+        delegate.todoListAdapter(self, didTapComplete: cell.todo, to: completed)
     }
 }
