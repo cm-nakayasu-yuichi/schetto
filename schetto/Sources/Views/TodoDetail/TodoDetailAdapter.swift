@@ -125,10 +125,10 @@ extension TodoDetailAdapter {
         
         if let cell = original as? TodoDetailTitleCell {
             cell.check = true
-            cell.title = todo?.title ?? "タイトル"
+            cell.title = todo?.title ?? ""
         }
         else if let cell = original as? TodoDetailSummeryCell {
-            cell.summery = todo?.summery ?? "概要"
+            cell.summery = todo?.summery ?? ""
         }
         else if let cell = original as? TodoDetailKeyValueCell {
             cell.indexPath = indexPath

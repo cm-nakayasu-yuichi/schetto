@@ -28,11 +28,11 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
     }
     
     @IBAction private func didTapAddButton() {
-        
+        Wireframe.showTodoDetail(from: self, todo: nil)
     }
     
     override func didTapAddButtonOnNavigationBar() {
-        
+        Wireframe.showTodoDetail(from: self, todo: nil)
     }
     
     @IBAction private func didChangeSortTypeSegment() {
@@ -98,6 +98,6 @@ extension TodoListViewController: TodoListAdapterDelegate {
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, didSelectTodo todo: TodoModel) {
-        Wireframe.showTodoDetail(from: self)
+        Wireframe.showTodoDetail(from: self, todo: todo)
     }
 }

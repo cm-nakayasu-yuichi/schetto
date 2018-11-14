@@ -48,8 +48,8 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
-    static func showTodoDetail(from fromViewController: UIViewController) {
-        let viewController = builder.todoDetail()
+    static func showTodoDetail(from fromViewController: UIViewController, todo: TodoModel?) {
+        let viewController = builder.todoDetail(todo: todo)
         helper.push(viewController, from: fromViewController)
     }
     

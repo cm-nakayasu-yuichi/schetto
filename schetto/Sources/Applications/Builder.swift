@@ -101,8 +101,9 @@ class Builder {
         return view
     }
         
-    func todoDetail() -> TodoDetailViewController {
+    func todoDetail(todo: TodoModel?) -> TodoDetailViewController {
         let view = instantiate(TodoDetailViewController.self, storyboardName: "TodoDetail")
+        view.todo = todo
         
         let presenter: TodoDetailPresenterProtocol = TodoDetailPresenter()
         presenter.view = view

@@ -7,6 +7,7 @@ import UIKit
 class TodoDetailViewController: UIViewController {
         
     var presenter: TodoDetailPresenterProtocol!
+    var todo: TodoModel?
     
     private var adapter: TodoDetailAdapter!
     
@@ -15,7 +16,8 @@ class TodoDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        adapter = TodoDetailAdapter(tableView, todo: nil, delegate: self)
+        title = "タスク詳細"
+        adapter = TodoDetailAdapter(tableView, todo: todo, delegate: self)
     }
     
     @IBAction private func didTapCloseButton() {
