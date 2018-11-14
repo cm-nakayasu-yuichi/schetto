@@ -38,6 +38,15 @@ class TodoDetailAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         var assetModel: AssetModel? {
             switch self { case .asset(let model): return model; default: return nil }
         }
+        
+        var title: String {
+            switch self {
+            case .limit: return "期限"
+            case .registered: return "登録日時"
+            case .notify: return "通知"
+            default: return ""
+            }
+        }
     }
     
     weak var tableView: UITableView!
@@ -132,9 +141,8 @@ extension TodoDetailAdapter {
         }
         else if let cell = original as? TodoDetailKeyValueCell {
             cell.indexPath = indexPath
-            cell.title = "キー"
-            cell.value = "値"
-            cell.editable = keyValueEditable(rowItem: rowItemAt(indexPath))
+            let rowItem = rowItemAt(indexPath)
+            bindKeyValue(cell: cell, rowItem: rowItem)
         }
         else if let cell = original as? TodoDetailPriorityCell {
             cell.priority = todo?.priority ?? .normal
@@ -142,6 +150,22 @@ extension TodoDetailAdapter {
         else if let cell = original as? TodoDetailAssetCell {
             cell.indexPath = indexPath
             cell.assetImage = nil
+        }
+    }
+    
+    private func bindKeyValue(cell: TodoDetailKeyValueCell, rowItem: RowItem) {
+        cell.title = rowItem.title
+        cell.editable = keyValueEditable(rowItem: rowItem)
+        
+        switch rowItem {
+        case .limit:
+            cell.value = TodoModel.limitText(model: todo)
+        case .registered:
+            cell.value = "TODO:登録日時"
+        case .notify:
+            cell.value = "TODO:通知"
+        default:
+            return
         }
     }
     

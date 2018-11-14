@@ -86,7 +86,7 @@ class TodoDetailKeyValueCell: UITableViewCell, TodoDetailCell {
         }
     }
     
-    var value = "" {
+    var value: String? = "" {
         didSet {
             valueLabel.text = value
         }
