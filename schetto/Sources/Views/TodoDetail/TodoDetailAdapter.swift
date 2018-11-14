@@ -97,7 +97,7 @@ extension TodoDetailAdapter {
     
     private var sectionsItems: [[RowItem]] {
         var ret: [[RowItem]] = [
-            [.title, .summery, .limit],
+            [.title, .limit, .summery],
             [.priority, .registered],
             [.notify]
         ]

@@ -85,6 +85,15 @@ class Wireframe {
         )
     }
     
+    static func showConfirmDeleteTodo(from fromViewController: UIViewController, didDecide: @escaping () -> ()) {
+        alertHelper.alertDeleteCancel(
+            from: fromViewController,
+            title: "確認",
+            message: "このタスクを削除しますか",
+            didDecide: didDecide
+        )
+    }
+    
     private static var builder: Builder { return Builder() }
     private static var helper: WireframeHelper { return WireframeHelper() }
     private static var alertHelper: AlertHelper { return AlertHelper() }

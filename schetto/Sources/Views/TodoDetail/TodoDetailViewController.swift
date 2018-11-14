@@ -36,11 +36,29 @@ extension TodoDetailViewController: TodoDetailAdapterDelegate {
     }
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditTitle todo: TodoModel?) {
-        print("didTapEditTitle")
+        let options = TextViewControllerOptions(
+            title: "タスクのタイトル",
+            placeholder: "タスクのタイトルを入力してください",
+            text: todo?.title ?? "",
+            multiLine: false
+        )
+        Wireframe.showText(from: self, options: options) { [unowned self] text in
+            todo?.title = text
+            self.tableView.reloadData()
+        }
     }
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditSummery todo: TodoModel?) {
-        print("didTapEditSummery")
+        let options = TextViewControllerOptions(
+            title: "タスクの概要",
+            placeholder: "タスクの概要を入力してください",
+            text: todo?.summery ?? "",
+            multiLine: true
+        )
+        Wireframe.showText(from: self, options: options) { [unowned self] text in
+            todo?.summery = text
+            self.tableView.reloadData()
+        }
     }
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didChangePriority priority: TodoPriority, todo: TodoModel?) {
@@ -60,6 +78,8 @@ extension TodoDetailViewController: TodoDetailAdapterDelegate {
     }
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapDelete todo: TodoModel?) {
-        print("didTapDelete")
+        Wireframe.showConfirmDeleteTodo(from: self) {
+            Wireframe.pop(from: self)
+        }
     }
 }
