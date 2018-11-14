@@ -99,15 +99,16 @@ extension TodoDetailAdapter {
         var ret: [[RowItem]] = [
             [.title, .summery, .limit],
             [.priority, .registered],
-            [.notify],
-            // insert assets when exists
-            [.delete],
+            [.notify]
         ]
         if let assets = todo?.assets, !assets.isEmpty {
             let assetsItems = assets.map { asset -> RowItem in
                 RowItem.asset(model: asset)
             }
-            ret.insert(assetsItems, at: 3) // 3 = under .notify
+            ret.append(assetsItems)
+        }
+        if todo != nil {
+            ret.append([.delete])
         }
         return ret
     }
