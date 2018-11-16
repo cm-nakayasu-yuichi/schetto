@@ -5,9 +5,20 @@
 import UIKit
 
 /// TODOの並び順
-enum TodoSortType {
+enum TodoSortType: Int {
     case limit
     case priority
+    
+    var title: String {
+        switch self {
+        case .limit: return "期限が近い順"
+        case .priority: return "優先順位が高い順"
+        }
+    }
+    
+    static let types: [TodoSortType] = [
+        .limit, .priority
+    ]
 }
 
 /// TODOの優先度

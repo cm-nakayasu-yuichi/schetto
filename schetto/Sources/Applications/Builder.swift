@@ -92,7 +92,7 @@ class Builder {
         let presenter: TodoListPresenterProtocol = TodoListPresenter()
         presenter.view = view
         
-        let interactor: TodoInteractorInput = TodoRepository()
+        let interactor: TodoInteractorInput = TodoRepositoryMock()//TodoRepository()
         interactor.output = presenter as? TodoInteractorOutput
         presenter.interactor = interactor
         
@@ -101,13 +101,14 @@ class Builder {
         return view
     }
         
-    func todoDetail() -> TodoDetailViewController {
+    func todoDetail(todo: TodoModel?) -> TodoDetailViewController {
         let view = instantiate(TodoDetailViewController.self, storyboardName: "TodoDetail")
+        view.todo = todo
         
         let presenter: TodoDetailPresenterProtocol = TodoDetailPresenter()
         presenter.view = view
         
-        let interactor: TodoInteractorInput = TodoRepository()
+        let interactor: TodoInteractorInput = TodoRepositoryMock()//TodoRepository()
         interactor.output = presenter as? TodoInteractorOutput
         presenter.interactor = interactor
         

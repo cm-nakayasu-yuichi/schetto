@@ -48,8 +48,8 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
-    static func showTodoDetail(from fromViewController: UIViewController) {
-        let viewController = builder.todoDetail()
+    static func showTodoDetail(from fromViewController: UIViewController, todo: TodoModel?) {
+        let viewController = builder.todoDetail(todo: todo)
         helper.push(viewController, from: fromViewController)
     }
     
@@ -81,6 +81,15 @@ class Wireframe {
             from: fromViewController,
             title: "確認",
             message: "このイベントを削除しますか",
+            didDecide: didDecide
+        )
+    }
+    
+    static func showConfirmDeleteTodo(from fromViewController: UIViewController, didDecide: @escaping () -> ()) {
+        alertHelper.alertDeleteCancel(
+            from: fromViewController,
+            title: "確認",
+            message: "このタスクを削除しますか",
             didDecide: didDecide
         )
     }
