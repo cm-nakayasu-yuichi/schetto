@@ -575,11 +575,11 @@
 		E42F69622189A32B00426E3C /* Translator */ = {
 			isa = PBXGroup;
 			children = (
+				E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */,
 				DB950A20218D7C9F00D0B286 /* DesignFontSettingTranslator.swift */,
 				E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */,
 				E4DCFC0E218FDA590091B016 /* AssetTranslator.swift */,
 				E4DCFC0A218FD9960091B016 /* TemplateTranslator.swift */,
-				E4DCFBE7218C1B0D0091B016 /* TodoTranslator.swift */,
 				E4DCFC10218FDB2A0091B016 /* StickerGroupTranslator.swift */,
 				E4DCFC0C218FDA260091B016 /* StickerTranslator.swift */,
 			);

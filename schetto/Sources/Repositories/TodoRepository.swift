@@ -8,20 +8,20 @@ protocol TodoInteractorInput: class {
     
     var output: TodoInteractorOutput! { get set }
     
-    func create()
-    func copy(_ model: TodoModel)
-    func fetchList(sortType: TodoSortType)
-    func register(_ model: TodoModel)
+    func createTodo()
+    func copy(_ todo: TodoModel)
+    func fetchTodoList(sortType: TodoSortType)
+    func register(_ todo: TodoModel)
     func registerNotify(before minutes: Int, to id: String)
-    func remove(_ model: TodoModel)
+    func remove(_ todo: TodoModel)
 }
 
 protocol TodoInteractorOutput: class {
     
-    func created(model: TodoModel)
-    func copied(model: TodoModel)
+    func created(todo: TodoModel)
+    func copied(todo: TodoModel)
     func fetched(list: [TodoListModel])
-    func registered(model: TodoModel)
+    func registered(todo: TodoModel)
     func removed()
 }
 
@@ -29,27 +29,28 @@ class TodoRepository: TodoInteractorInput {
     
     weak var output: TodoInteractorOutput!
     
-    func create() {
+    func createTodo() {
+        let todo = TodoModel()
+        output.created(todo: todo)
+    }
+    
+    func copy(_ todo: TodoModel) {
         
     }
     
-    func copy(_ model: TodoModel) {
+    func fetchTodoList(sortType: TodoSortType) {
         
     }
     
-    func fetchList(sortType: TodoSortType) {
-        
-    }
-    
-    func register(_ model: TodoModel) {
-        output.registered(model: model)
+    func register(_ todo: TodoModel) {
+        output.registered(todo: todo)
     }
     
     func registerNotify(before minutes: Int, to id: String) {
         
     }
     
-    func remove(_ model: TodoModel) {
+    func remove(_ todo: TodoModel) {
         
     }
 }

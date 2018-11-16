@@ -36,7 +36,7 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
     }
     
     @IBAction private func didChangeSortTypeSegment() {
-        presenter.fetchList(sortType: sortType)
+        presenter.fetchTodoList(sortType: sortType)
     }
     
     private func setupSortTypeSegment() {
@@ -71,7 +71,7 @@ extension TodoListViewController: TodoListViewProtocol {
     
     func fetched(storedSortType: TodoSortType) {
         sortTypeSegment.selectedSegmentIndex = storedSortType.rawValue
-        presenter.fetchList(sortType: sortType)
+        presenter.fetchTodoList(sortType: sortType)
     }
 }
 

@@ -8,15 +8,16 @@ class TodoRepositoryMock: TodoInteractorInput {
 
     weak var output: TodoInteractorOutput!
         
-    func create() {
+    func createTodo() {
+        let todo = TodoModel()
+        output.created(todo: todo)
+    }
+    
+    func copy(_ todo: TodoModel) {
         
     }
     
-    func copy(_ model: TodoModel) {
-        
-    }
-    
-    func fetchList(sortType: TodoSortType) {
+    func fetchTodoList(sortType: TodoSortType) {
         if sortType == .limit {
             let todoListModels = TodoRepositoryMock.todoListModels()
             output.fetched(list: todoListModels)
@@ -25,15 +26,15 @@ class TodoRepositoryMock: TodoInteractorInput {
         }
     }
     
-    func register(_ model: TodoModel) {
-        output.registered(model: model)
+    func register(_ todo: TodoModel) {
+        output.registered(todo: todo)
     }
     
     func registerNotify(before minutes: Int, to id: String) {
         
     }
     
-    func remove(_ model: TodoModel) {
+    func remove(_ todo: TodoModel) {
         
     }
 }

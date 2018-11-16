@@ -31,7 +31,7 @@ class TodoDetailPresenter: TodoDetailPresenterProtocol {
         if let todo = soruceTodo {
             interactor.copy(todo)
         } else {
-            interactor.create()
+            interactor.createTodo()
         }
     }
     
@@ -46,15 +46,15 @@ class TodoDetailPresenter: TodoDetailPresenterProtocol {
 
 extension TodoDetailPresenter: TodoInteractorOutput {
     
-    func created(model: TodoModel) {
-        view.fetchedEditable(todo: model)
+    func created(todo: TodoModel) {
+        view.fetchedEditable(todo: todo)
     }
     
-    func copied(model: TodoModel) {
-        view.fetchedEditable(todo: model)
+    func copied(todo: TodoModel) {
+        view.fetchedEditable(todo: todo)
     }
     
-    func registered(model: TodoModel) {
+    func registered(todo: TodoModel) {
         
     }
     

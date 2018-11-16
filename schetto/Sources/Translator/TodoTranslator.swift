@@ -4,8 +4,8 @@
 //
 import Foundation
 
-class TodoTranslator: MultiTranslator {
-    
+class TodoTranslator: MultiTranslator, MultiDetranslator {
+
     typealias Input = DBTodo
     typealias Output = TodoModel
     
@@ -19,5 +19,13 @@ class TodoTranslator: MultiTranslator {
         let model = TodoModel()
         
         return model
+    }
+    
+    func detranslate(_ outputs: [TodoModel]) -> [DBTodo] {
+        abort()
+    }
+    
+    func detranslate(_ output: TodoModel) -> DBTodo {
+        abort()
     }
 }
