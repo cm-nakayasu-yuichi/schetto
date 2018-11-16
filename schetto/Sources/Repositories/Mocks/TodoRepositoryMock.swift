@@ -5,8 +5,16 @@
 import Foundation
 
 class TodoRepositoryMock: TodoInteractorInput {
-    
+
     weak var output: TodoInteractorOutput!
+        
+    func create() {
+        
+    }
+    
+    func copy(_ model: TodoModel) {
+        
+    }
     
     func fetchList(sortType: TodoSortType) {
         if sortType == .limit {
@@ -21,11 +29,11 @@ class TodoRepositoryMock: TodoInteractorInput {
         output.registered(model: model)
     }
     
-    func remove(_ model: TodoModel) {
+    func registerNotify(before minutes: Int, to id: String) {
         
     }
     
-    func registerNotify(before minutes: Int, to id: String) {
+    func remove(_ model: TodoModel) {
         
     }
 }

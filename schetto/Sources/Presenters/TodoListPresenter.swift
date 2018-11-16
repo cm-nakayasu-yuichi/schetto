@@ -55,4 +55,16 @@ extension TodoListPresenter: TodoInteractorOutput {
     func registered(model: TodoModel) {
         // NOP.
     }
+    
+    // unuse.
+    func created(model: TodoModel) {
+    }
+    
+    // unuse.
+    func removed() {
+    }
+    
+    // unuse.
+    func copied(model: TodoModel) {
+    }
 }

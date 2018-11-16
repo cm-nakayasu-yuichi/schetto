@@ -10,40 +10,53 @@ class TodoDetailViewController: UIViewController {
     var todo: TodoModel?
     
     private var adapter: TodoDetailAdapter!
+    private var editTodo: TodoModel!
     
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "タスク詳細"
-        adapter = TodoDetailAdapter(tableView, todo: todo, delegate: self)
+        presenter.fetchEditableTodo(from: todo)
     }
     
-    @IBAction private func didTapCloseButton() {
-        // NOP.
+    @IBAction private func didTapSaveButton() {
+        
     }
 }
 
 extension TodoDetailViewController: TodoDetailViewProtocol {
     
+    func fetchedEditable(todo: TodoModel) {
+        editTodo = todo
+        adapter = TodoDetailAdapter(tableView, todo: editTodo, delegate: self)
+    }
+    
+    func registered() {
+        
+    }
+    
+    func removed() {
+        
+    }
 }
 
 extension TodoDetailViewController: TodoDetailAdapterDelegate {
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapComplete todo: TodoModel?) {
-        print("didTapComplete")
+        editTodo.completed = !editTodo.completed
     }
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapEditTitle todo: TodoModel?) {
         let options = TextViewControllerOptions(
             title: "タスクのタイトル",
             placeholder: "タスクのタイトルを入力してください",
-            text: todo?.title ?? "",
+            text: editTodo.title,
             multiLine: false
         )
         Wireframe.showText(from: self, options: options) { [unowned self] text in
-            todo?.title = text
+            self.editTodo.title = text
             self.tableView.reloadData()
         }
     }
@@ -52,11 +65,11 @@ extension TodoDetailViewController: TodoDetailAdapterDelegate {
         let options = TextViewControllerOptions(
             title: "タスクの概要",
             placeholder: "タスクの概要を入力してください",
-            text: todo?.summery ?? "",
+            text: editTodo.summery,
             multiLine: true
         )
         Wireframe.showText(from: self, options: options) { [unowned self] text in
-            todo?.summery = text
+            self.editTodo.summery = text
             self.tableView.reloadData()
         }
     }
