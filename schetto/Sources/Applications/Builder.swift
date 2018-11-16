@@ -125,6 +125,11 @@ class Builder {
         return view
     }
     
+    func datePicker() -> DatePickerViewController {
+        let view = instantiate(DatePickerViewController.self, storyboardName: "DatePicker")
+        return view
+    }
+    
     func text(options: TextViewControllerOptions, handler: @escaping (String) -> ()) -> TextViewController {
         let view = instantiate(TextViewController.self, storyboardName: "Text")
         view.options = options

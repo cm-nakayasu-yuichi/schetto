@@ -58,6 +58,11 @@ class Wireframe {
         helper.present(viewController, from: fromViewController)
     }
     
+    static func showDatePicker(from fromViewController: UIViewController) {
+        let viewController = builder.datePicker()
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
+    }
+    
     static func showText(from fromViewController: UIViewController, options: TextViewControllerOptions, handler: @escaping (String) -> ()) {
         let viewController = builder.text(options: options, handler: handler)
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
