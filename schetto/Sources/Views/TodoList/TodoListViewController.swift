@@ -94,7 +94,7 @@ extension TodoListViewController: TodoListAdapterDelegate {
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, didTapComplete todo: TodoModel, to completed: Bool) {
-        
+        presenter.update(completed: completed, todo: todo)
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, didSelectTodo todo: TodoModel) {

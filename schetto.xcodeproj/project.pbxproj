@@ -68,7 +68,6 @@
 		DB950A39218E806600D0B286 /* EventEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A2F218E806600D0B286 /* EventEditPresenter.swift */; };
 		DB950A3D218E806600D0B286 /* EventEditRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB950A33218E806600D0B286 /* EventEditRepository.swift */; };
 		DB954F822190AC4E007BC9D1 /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954F782190AC4E007BC9D1 /* TodoListPresenter.swift */; };
-		DB954F9A2190AE50007BC9D1 /* TodoEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954F902190AE50007BC9D1 /* TodoEditPresenter.swift */; };
 		DB954FB12190B04F007BC9D1 /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */; };
 		DBA6BCB7219B0D0B00FE5CD9 /* TodoRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA6BCB6219B0D0B00FE5CD9 /* TodoRepositoryMock.swift */; };
 		DBB52A4D21761968009C5097 /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB52A4221761968009C5097 /* UIColor+App.swift */; };
@@ -253,7 +252,6 @@
 		DB950A2F218E806600D0B286 /* EventEditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditPresenter.swift; sourceTree = "<group>"; };
 		DB950A33218E806600D0B286 /* EventEditRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventEditRepository.swift; sourceTree = "<group>"; };
 		DB954F782190AC4E007BC9D1 /* TodoListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
-		DB954F902190AE50007BC9D1 /* TodoEditPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoEditPresenter.swift; sourceTree = "<group>"; };
 		DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
 		DBA6BCB6219B0D0B00FE5CD9 /* TodoRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoRepositoryMock.swift; sourceTree = "<group>"; };
 		DBB52A4221761968009C5097 /* UIColor+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
@@ -745,7 +743,6 @@
 			isa = PBXGroup;
 			children = (
 				DB954F782190AC4E007BC9D1 /* TodoListPresenter.swift */,
-				DB954F902190AE50007BC9D1 /* TodoEditPresenter.swift */,
 				DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */,
 				DB22840C21888D6D008F00F6 /* MainPresenter.swift */,
 				DB950A2F218E806600D0B286 /* EventEditPresenter.swift */,
@@ -772,10 +769,10 @@
 			isa = PBXGroup;
 			children = (
 				DBA6BCB5219B0D0B00FE5CD9 /* Mocks */,
+				E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */,
 				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				DB22840E21888D6D008F00F6 /* MainRepository.swift */,
 				E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */,
-				E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */,
 				DB950A33218E806600D0B286 /* EventEditRepository.swift */,
 				DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */,
 			);
@@ -1188,7 +1185,6 @@
 				E4DCFC05218C327F0091B016 /* TodoEnums.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
 				E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */,
-				DB954F9A2190AE50007BC9D1 /* TodoEditPresenter.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
 				E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */,

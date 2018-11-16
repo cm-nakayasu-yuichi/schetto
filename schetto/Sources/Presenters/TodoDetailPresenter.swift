@@ -27,7 +27,7 @@ extension TodoDetailPresenter: TodoInteractorOutput {
         
     }
     
-    func updated(_ models: [TodoModel]) {
+    func registered(model: TodoModel) {
         
     }
 }

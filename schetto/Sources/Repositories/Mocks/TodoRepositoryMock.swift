@@ -18,14 +18,10 @@ class TodoRepositoryMock: TodoInteractorInput {
     }
     
     func register(_ model: TodoModel) {
-        
+        output.registered(model: model)
     }
     
     func remove(_ model: TodoModel) {
-        
-    }
-    
-    func updateComplete(_ complete: Bool, to id: String) {
         
     }
     

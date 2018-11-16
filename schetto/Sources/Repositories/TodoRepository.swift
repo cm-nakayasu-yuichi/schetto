@@ -9,18 +9,15 @@ protocol TodoInteractorInput: class {
     var output: TodoInteractorOutput! { get set }
     
     func fetchList(sortType: TodoSortType)
-    
     func register(_ model: TodoModel)
     func remove(_ model: TodoModel)
-    func updateComplete(_ complete: Bool, to id: String)
     func registerNotify(before minutes: Int, to id: String)
 }
 
 protocol TodoInteractorOutput: class {
     
     func fetched(list: [TodoListModel])
-    
-    func updated(_ models: [TodoModel])
+    func registered(model: TodoModel)
 }
 
 class TodoRepository: TodoInteractorInput {
@@ -32,14 +29,10 @@ class TodoRepository: TodoInteractorInput {
     }
     
     func register(_ model: TodoModel) {
-        
+        output.registered(model: model)
     }
     
     func remove(_ model: TodoModel) {
-        
-    }
-    
-    func updateComplete(_ complete: Bool, to id: String) {
         
     }
     
