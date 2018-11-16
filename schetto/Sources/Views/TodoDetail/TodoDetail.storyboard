@@ -242,8 +242,37 @@
                                             <outlet property="assetImageView" destination="dS7-Bv-VBh" id="isZ-Vu-JZ4"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="add-asset" rowHeight="120" id="hAD-M4-4vH" customClass="TodoDetailDeleteCell" customModule="schetto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="429.33333333333337" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hAD-M4-4vH" id="c5R-kY-vgA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ng4-Sw-rSt">
+                                                    <rect key="frame" x="172.66666666666666" y="31.999999999999996" width="30" height="55.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="＋">
+                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTapDeleteButton" destination="hAD-M4-4vH" eventType="touchUpInside" id="fVF-Kg-ypX"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ng4-Sw-rSt" firstAttribute="top" secondItem="c5R-kY-vgA" secondAttribute="top" constant="32" id="646-6n-bzi"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ng4-Sw-rSt" secondAttribute="bottom" constant="32" id="LMl-bf-Suf"/>
+                                                <constraint firstItem="ng4-Sw-rSt" firstAttribute="centerX" secondItem="c5R-kY-vgA" secondAttribute="centerX" id="PZ4-sA-xE5"/>
+                                                <constraint firstItem="ng4-Sw-rSt" firstAttribute="centerY" secondItem="c5R-kY-vgA" secondAttribute="centerY" id="ode-yX-J2H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deleteButton" destination="ng4-Sw-rSt" id="Ivh-mP-PJx"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="delete" rowHeight="56" id="7bb-G2-ZQU" customClass="TodoDetailDeleteCell" customModule="schetto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="429.33333333333337" width="375" height="56"/>
+                                        <rect key="frame" x="0.0" y="549.33333333333337" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7bb-G2-ZQU" id="uHQ-1g-lnp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55.666666666666664"/>

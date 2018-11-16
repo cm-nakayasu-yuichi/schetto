@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zNM-R7-ofK">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,34 +15,59 @@
             <objects>
                 <viewController id="zNM-R7-ofK" customClass="TodoListViewController" customModule="schetto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8dL-s5-t7B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ig-rh-m5Z">
+                                <rect key="frame" x="0.0" y="778" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV9-gg-jOJ">
+                                <rect key="frame" x="0.0" y="722" width="375" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU6-Cd-bhx">
+                                        <rect key="frame" x="146" y="6" width="213" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vaT-GZ-py0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="完了したタスクを全削除する">
+                                            <color key="titleColor" red="0.20784313730000001" green="0.21960784310000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96078431372549022" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XU6-Cd-bhx" secondAttribute="trailing" constant="16" id="dla-Vc-UZQ"/>
+                                    <constraint firstAttribute="height" constant="56" id="mEj-Xd-EuN"/>
+                                    <constraint firstItem="XU6-Cd-bhx" firstAttribute="centerY" secondItem="dV9-gg-jOJ" secondAttribute="centerY" id="w8Q-tT-GPK"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WS-hq-t7R">
-                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="674"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xi7-4y-8pA">
-                                        <rect key="frame" x="0.0" y="379" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="337" width="375" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="g28-GE-l3x"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-C1-yBH">
-                                        <rect key="frame" x="122.66666666666669" y="383" width="169" height="30"/>
+                                        <rect key="frame" x="103" y="341" width="169" height="30"/>
                                         <state key="normal" title="タスクを新たに追加する"/>
                                         <connections>
                                             <action selector="didTapAddButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="LME-w2-GcG"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タスクはありません" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-CX-ihb">
-                                        <rect key="frame" x="133.66666666666666" y="355.66666666666669" width="146.99999999999997" height="19.333333333333314"/>
+                                        <rect key="frame" x="114" y="313.66666666666669" width="147" height="19.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="hyj-CX-ihb" firstAttribute="centerX" secondItem="4WS-hq-t7R" secondAttribute="centerX" id="ahD-Z6-dVr"/>
                                     <constraint firstItem="DG4-C1-yBH" firstAttribute="top" secondItem="Xi7-4y-8pA" secondAttribute="bottom" constant="4" id="cPw-x0-3lV"/>
@@ -54,18 +79,18 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Kq-rp-BHI">
-                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="618"/>
                                 <color key="backgroundColor" white="0.89815231164296472" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="title" id="BFG-EY-d2r" customClass="TodoListTitleCell" customModule="schetto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BFG-EY-d2r" id="UN2-Es-sfX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いつかやる" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-tW-8GK">
-                                                    <rect key="frame" x="16" y="4" width="382" height="21.666666666666668"/>
+                                                    <rect key="frame" x="16" y="4" width="288" height="21.666666666666668"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -84,27 +109,27 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="216" id="5gq-as-QUi" customClass="TodoListCell" customModule="schetto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="216"/>
+                                        <rect key="frame" x="0.0" y="72" width="375" height="216"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5gq-as-QUi" id="SAZ-SE-ZsD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaS-rn-WTA">
-                                                    <rect key="frame" x="16" y="215" width="398" height="1"/>
+                                                    <rect key="frame" x="16" y="215" width="304" height="1"/>
                                                     <color key="backgroundColor" white="0.89815231159999998" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="NSK-Kw-DA9"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年11月06日(火) 10:00 まで" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U1-iV-VuM">
-                                                    <rect key="frame" x="64" y="21.666666666666671" width="334" height="21"/>
+                                                    <rect key="frame" x="64" y="21.666666666666671" width="240" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE0-qE-l2E">
-                                                    <rect key="frame" x="64" y="50.666666666666664" width="334" height="64.666666666666686"/>
+                                                    <rect key="frame" x="64" y="50.666666666666664" width="240" height="64.666666666666686"/>
                                                     <string key="text">TODOの内容が
 ここに入ります
 複数行可能です</string>
@@ -119,7 +144,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="no0-5y-7af">
-                                                    <rect key="frame" x="121" y="131.33333333333334" width="205" height="20"/>
+                                                    <rect key="frame" x="121" y="131.33333333333334" width="111" height="20"/>
                                                     <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.28472816779999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="odb-YL-Tri"/>
@@ -178,7 +203,7 @@
                                 </prototypes>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v4P-TI-lmX">
-                                <rect key="frame" x="16" y="60" width="382" height="29"/>
+                                <rect key="frame" x="16" y="60" width="343" height="29"/>
                                 <segments>
                                     <segment title="期限"/>
                                     <segment title="優先順位"/>
@@ -191,28 +216,35 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4Kq-rp-BHI" firstAttribute="top" secondItem="v4P-TI-lmX" secondAttribute="bottom" constant="16" id="1Zw-P5-vOm"/>
-                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="bottom" secondItem="4Kq-rp-BHI" secondAttribute="bottom" id="FPa-Sy-ODf"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="4Ig-rh-m5Z" secondAttribute="trailing" id="3h9-1v-8ah"/>
+                            <constraint firstItem="dV9-gg-jOJ" firstAttribute="top" secondItem="4Kq-rp-BHI" secondAttribute="bottom" id="DFo-id-RQ4"/>
+                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="dV9-gg-jOJ" secondAttribute="trailing" id="Dvn-61-AdH"/>
                             <constraint firstItem="4Kq-rp-BHI" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" id="L8G-2p-ECq"/>
-                            <constraint firstItem="4WS-hq-t7R" firstAttribute="bottom" secondItem="4Kq-rp-BHI" secondAttribute="bottom" id="O2m-rL-Dkx"/>
+                            <constraint firstItem="4Ig-rh-m5Z" firstAttribute="top" secondItem="dV9-gg-jOJ" secondAttribute="bottom" id="NeV-m3-eRr"/>
                             <constraint firstItem="v4P-TI-lmX" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="16" id="RA8-6T-akg"/>
                             <constraint firstItem="4WS-hq-t7R" firstAttribute="top" secondItem="4Kq-rp-BHI" secondAttribute="top" id="UNo-Lg-irZ"/>
                             <constraint firstItem="v4P-TI-lmX" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="top" constant="16" id="X8n-Bh-zGS"/>
+                            <constraint firstItem="4Ig-rh-m5Z" firstAttribute="top" secondItem="4WS-hq-t7R" secondAttribute="bottom" id="a6G-uz-lxT"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="4Kq-rp-BHI" secondAttribute="trailing" id="dDt-GZ-wfd"/>
+                            <constraint firstAttribute="bottom" secondItem="4Ig-rh-m5Z" secondAttribute="bottom" id="kAB-u1-41c"/>
                             <constraint firstItem="4WS-hq-t7R" firstAttribute="leading" secondItem="4Kq-rp-BHI" secondAttribute="leading" id="p2F-oI-fCQ"/>
+                            <constraint firstItem="dV9-gg-jOJ" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" id="seO-wL-nZH"/>
+                            <constraint firstItem="4Ig-rh-m5Z" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="bottom" id="wH7-ex-zWd"/>
                             <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="v4P-TI-lmX" secondAttribute="trailing" constant="16" id="xpt-XL-YNt"/>
+                            <constraint firstItem="4Ig-rh-m5Z" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" id="y0K-p6-Cbd"/>
                             <constraint firstItem="4WS-hq-t7R" firstAttribute="trailing" secondItem="4Kq-rp-BHI" secondAttribute="trailing" id="yfF-R4-pyd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
                     </view>
                     <connections>
                         <outlet property="emptyView" destination="4WS-hq-t7R" id="8WL-mw-QgR"/>
-                        <outlet property="sortTypeSegment" destination="v4P-TI-lmX" id="uXG-gn-V6W"/>
+                        <outlet property="sortTypeSegmentedControl" destination="v4P-TI-lmX" id="6LK-zg-oHh"/>
                         <outlet property="tableView" destination="4Kq-rp-BHI" id="7zI-bk-eFz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ic7-TX-6P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-0.80000000000000004" y="-1.3493253373313345"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-2.2167487684729066"/>
         </scene>
     </scenes>
 </document>

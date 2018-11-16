@@ -90,6 +90,10 @@ extension TodoDetailViewController: TodoDetailAdapterDelegate {
         print("didTapAsset")
     }
     
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapAddAsset todo: TodoModel?) {
+        print("didTapAddAsset")
+    }
+    
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapDelete todo: TodoModel?) {
         Wireframe.showConfirmDeleteTodo(from: self) {
             Wireframe.pop(from: self)

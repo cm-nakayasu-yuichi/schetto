@@ -18,6 +18,8 @@ protocol TodoDetailCellDelegate: class {
     
     func didTapAsset(at cell: TodoDetailCell, indexPath: IndexPath)
     
+    func didTapAddAsset(at cell: TodoDetailCell)
+    
     func didTapDelete(at cell: TodoDetailCell)
 }
 
@@ -137,6 +139,18 @@ class TodoDetailAssetCell: UITableViewCell, TodoDetailCell {
         delegate.didTapAsset(at: self, indexPath: indexPath)
     }
 }
+
+class TodoDetailAddAssetCell: UITableViewCell, TodoDetailCell {
+    
+    weak var delegate: TodoDetailCellDelegate!
+    
+    @IBOutlet private weak var addButton: UIButton!
+    
+    @IBAction private func didTapAddButton() {
+        delegate.didTapAddAsset(at: self)
+    }
+}
+
 
 class TodoDetailDeleteCell: UITableViewCell, TodoDetailCell {
     

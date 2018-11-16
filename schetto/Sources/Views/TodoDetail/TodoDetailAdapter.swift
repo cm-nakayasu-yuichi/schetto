@@ -20,6 +20,8 @@ protocol TodoDetailAdapterDelegate: class {
     
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapAsset asset: AssetModel?, todo: TodoModel?)
     
+    func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapAddAsset todo: TodoModel?)
+    
     func todoDetailAdapter(_ adapter: TodoDetailAdapter, didTapDelete todo: TodoModel?)
 }
 
@@ -33,6 +35,7 @@ class TodoDetailAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         case registered
         case notify
         case asset(model: AssetModel)
+        case addAsset
         case delete
         
         var assetModel: AssetModel? {
@@ -101,15 +104,20 @@ extension TodoDetailAdapter {
             [.priority, .registered],
             [.notify]
         ]
+        
         if let assets = todo?.assets, !assets.isEmpty {
             let assetsItems = assets.map { asset -> RowItem in
                 RowItem.asset(model: asset)
             }
             ret.append(assetsItems)
+        } else {
+            ret.append([.addAsset])
         }
+        
         if todo != nil {
             ret.append([.delete])
         }
+        
         return ret
     }
     
@@ -120,6 +128,7 @@ extension TodoDetailAdapter {
         case .limit, .registered, .notify: return "key-value"
         case .priority: return "priority"
         case .asset(_): return "asset"
+        case .addAsset: return "add-asset"
         case .delete: return "delete"
         }
     }
@@ -215,6 +224,10 @@ extension TodoDetailAdapter: TodoDetailCellDelegate {
         if let asset = rowItemAt(indexPath).assetModel {
             delegate.todoDetailAdapter(self, didTapAsset: asset, todo: todo)
         }
+    }
+    
+    func didTapAddAsset(at cell: TodoDetailCell) {
+        delegate.todoDetailAdapter(self, didTapAddAsset: todo)
     }
     
     func didTapDelete(at cell: TodoDetailCell) {

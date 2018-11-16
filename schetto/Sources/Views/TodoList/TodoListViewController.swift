@@ -13,7 +13,7 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var closeButton: UIButton!
-    @IBOutlet private weak var sortTypeSegment: UISegmentedControl!
+    @IBOutlet private weak var sortTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var emptyView: UIView!
 
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
         title = "タスク"
         adapter = TodoListAdapter(tableView, delegate: self)
         
-        setupSortTypeSegment()
+        setupSortTypeSegmentedControl()
         setupCloseButtonOnNavigationBar()
         setupAddButtonOnNavigationBar()
         setupEmptyView()
@@ -39,16 +39,16 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
         presenter.fetchTodoList(sortType: sortType)
     }
     
-    private func setupSortTypeSegment() {
-        sortTypeSegment.removeAllSegments()
+    private func setupSortTypeSegmentedControl() {
+        sortTypeSegmentedControl.removeAllSegments()
         TodoSortType.types.enumerated().forEach { i, type in
-            sortTypeSegment.insertSegment(withTitle: type.title, at: i, animated: false)
+            sortTypeSegmentedControl.insertSegment(withTitle: type.title, at: i, animated: false)
         }
         presenter.fetchStoredSortType()
     }
     
     private var sortType: TodoSortType {
-        let index = sortTypeSegment.selectedSegmentIndex
+        let index = sortTypeSegmentedControl.selectedSegmentIndex
         return TodoSortType(rawValue: index)!
     }
 }
@@ -70,7 +70,7 @@ extension TodoListViewController: TodoListViewProtocol {
     }
     
     func fetched(storedSortType: TodoSortType) {
-        sortTypeSegment.selectedSegmentIndex = storedSortType.rawValue
+        sortTypeSegmentedControl.selectedSegmentIndex = storedSortType.rawValue
         presenter.fetchTodoList(sortType: sortType)
     }
 }
@@ -94,7 +94,8 @@ extension TodoListViewController: TodoListAdapterDelegate {
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, didTapComplete todo: TodoModel, to completed: Bool) {
-        presenter.update(completed: completed, todo: todo)
+        todo.completed = completed
+        presenter.register(todo)
     }
     
     func todoListAdapter(_ adapter: TodoListAdapter, didSelectTodo todo: TodoModel) {

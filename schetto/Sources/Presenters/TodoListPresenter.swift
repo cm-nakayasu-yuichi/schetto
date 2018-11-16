@@ -11,7 +11,7 @@ protocol TodoListPresenterProtocol: class {
     
     func fetchTodoList(sortType: TodoSortType)
     func fetchStoredSortType()
-    func update(completed: Bool, todo: TodoModel)
+    func register(_ todo: TodoModel)
 }
 
 protocol TodoListViewProtocol: class {
@@ -36,8 +36,7 @@ class TodoListPresenter: TodoListPresenterProtocol {
         view.fetched(storedSortType: sortType)
     }
     
-    func update(completed: Bool, todo: TodoModel) {
-        todo.completed = completed
+    func register(_ todo: TodoModel) {
         interactor.register(todo)
     }
 }
