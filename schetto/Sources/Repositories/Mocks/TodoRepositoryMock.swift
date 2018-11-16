@@ -14,7 +14,10 @@ class TodoRepositoryMock: TodoInteractorInput {
     }
     
     func copy(_ todo: TodoModel) {
-        
+        let translator = TodoTranslator()
+        let dbEntity = translator.detranslate(todo)
+        let copied = translator.translate(dbEntity)
+        output.copied(todo: copied)
     }
     
     func fetchTodoList(sortType: TodoSortType) {
