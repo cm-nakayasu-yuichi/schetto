@@ -58,6 +58,7 @@
 		DB40E097219B207D0088441D /* EmptyViewControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB40E096219B207C0088441D /* EmptyViewControllable.swift */; };
 		DB6C41E6219F32790073EFAA /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */; };
 		DB6C41E8219F32790073EFAA /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C41E0219F32790073EFAA /* DatePicker.storyboard */; };
+		DB6C41EC219F3A630073EFAA /* DateCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41EB219F3A630073EFAA /* DateCalendarTests.swift */; };
 		DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */; };
 		DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */; };
 		DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7AD9EE217F60DD001243C3 /* FileTests.swift */; };
@@ -244,6 +245,7 @@
 		DB40E096219B207C0088441D /* EmptyViewControllable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewControllable.swift; sourceTree = "<group>"; };
 		DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		DB6C41E0219F32790073EFAA /* DatePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
+		DB6C41EB219F3A630073EFAA /* DateCalendarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarTests.swift; sourceTree = "<group>"; };
 		DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		DB7A7B74217F8BFB0070EAEF /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DB7AD9EE217F60DD001243C3 /* FileTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTests.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 			isa = PBXGroup;
 			children = (
 				DB780DBF217E0E0E00E0F1D0 /* DateTests.swift */,
+				DB6C41EB219F3A630073EFAA /* DateCalendarTests.swift */,
 				DB7AD9EE217F60DD001243C3 /* FileTests.swift */,
 				DBB52A5821761C1D009C5097 /* ArrayExtensionTests.swift */,
 				DBB52A5A2176379B009C5097 /* NumberExtensionTests.swift */,
@@ -1270,6 +1273,7 @@
 				DBB52A5D217647FE009C5097 /* CoreGraphicsExtensionTests.swift in Sources */,
 				E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */,
 				DB780DC0217E0E0E00E0F1D0 /* DateTests.swift in Sources */,
+				DB6C41EC219F3A630073EFAA /* DateCalendarTests.swift in Sources */,
 				DBB52A5921761C1D009C5097 /* ArrayExtensionTests.swift in Sources */,
 				DB7AD9EF217F60DE001243C3 /* FileTests.swift in Sources */,
 				E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */,

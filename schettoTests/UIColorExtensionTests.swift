@@ -20,11 +20,6 @@ class UIColorExtensionTests: XCTestCase {
         XCTAssertEqual(color.rgbString, "123456")
     }
     
-    func test_rgba() {
-        let color = UIColor(rgba: 0x12345678)
-        XCTAssertEqual(color.rgbaString, "12345678")
-    }
-    
     func test_component() {
         let color = UIColor(red: 0.3765733507, green: 0.2125651042, blue: 0.7119954427, alpha: 1)
         XCTAssertEqual(color.redComponent, 0.3765733507)
