@@ -4,39 +4,124 @@
 //
 import UIKit
 
-class CalendarView: UIView {
+// dataStore
+protocol CalendarViewDataStore: class {
     
-    @IBInspectable var o: UIColor = .lightGray {
-        didSet {
-            
-        }
+    func nibNameOfDayCell(_ calendarView: CalendarView) -> String
+    
+    func nibNameOfWeekCell(_ calendarView: CalendarView) -> String
+    
+    func calendarView(_ calendarView: CalendarView, dayCell: CalendarViewDayCell, date: Date, month: Date)
+    
+    func calendarView(_ calendarView: CalendarView, weekCell: CalendarViewWeekCell, week: Date.Week)
+    
+    func weeksHeight(_ calendarView: CalendarView) -> CGFloat
+    
+    func separatorWidth(_ calendarView: CalendarView) -> CGFloat
+    
+    func startWeek(_ calendarView: CalendarView) -> Date.Week
+}
+extension CalendarViewDataStore {
+    
+    func weeksHeight(_ calendarView: CalendarView) -> CGFloat {
+        return 32.0
     }
     
-    override func draw(_ rect: CGRect) {
-        //let context = UIGraphicsGetCurrentContext()!
-        
-        print(rect)
+    func separatorWidth(_ calendarView: CalendarView) -> CGFloat {
+        return 0.0
+    }
+    
+    func startWeek(_ calendarView: CalendarView) -> Date.Week {
+        return .sunday
     }
 }
 
-/*
-override open func draw(_ rect: CGRect) {
-    let opt = self.options
-    let context = UIGraphicsGetCurrentContext()
+// delegate
+protocol CalendarViewDelegate: class {
     
-    opt?.backgroundColor.setFill(); UIRectFill(rect)
-    
-    context?.move(to: CGPoint(x: 0, y: 0))
-    context?.setFillColor(self.properBackgroundColor(opt!).cgColor)
-    context?.fill(rect)
-    
-    let minX: CGFloat = opt!.separatorLeftMargin
-    let maxX: CGFloat = rect.maxX - opt!.separatorRightMargin
-    let y:    CGFloat = rect.maxY - opt!.separatorWidth / 2
-    context?.setStrokeColor((opt?.separatorColor.cgColor)!)
-    context?.setLineWidth((opt?.separatorWidth)!)
-    context?.move(to: CGPoint(x: minX, y: y))
-    context?.addLine(to: CGPoint(x: maxX, y: y))
-    context?.strokePath()
+    func calendarView(_ calendarView: CalendarView, didChangeMonth month: Date)
 }
-*/
+
+class CalendarView: UIView {
+    
+    weak var dataStore: CalendarViewDataStore! {
+        didSet {
+            if contentsCollectionView == nil {
+                setupContentsCollectionView()
+            }
+        }
+    }
+    
+    weak var delegate: CalendarViewDelegate?
+    
+    private var month = Date.now.firstDayOfMonth
+    private var contentsCollectionView: UICollectionView!
+        
+    private func setupContentsCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        contentsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        contentsCollectionView.parent = self
+        contentsCollectionView.isPagingEnabled = true
+        contentsCollectionView.showsHorizontalScrollIndicator = false
+        _ = contentsCollectionView.addConstraint(allSideSpaceTo: self)
+        contentsCollectionView.register(CalendarViewMonthCell.self, forCellWithReuseIdentifier: "month")
+        contentsCollectionView.delegate = self
+        contentsCollectionView.dataSource = self
+        
+        contentsCollectionView.backgroundColor = .clear
+        contentsCollectionView.backgroundView = UIView(frame: .zero)
+        
+        contentsCollectionView.layoutIfNeeded()
+        contentsCollectionViewToCenter()
+    }
+    
+    private func reloadCalendarMonthCell(position: Int) {
+        if position == 0 { return }
+        month = month.added(month: position)
+        contentsCollectionViewToCenter()
+        delegate?.calendarView(self, didChangeMonth: month)
+    }
+    
+    private func contentsCollectionViewToCenter() {
+        contentsCollectionView.scrollToItem(at: IndexPath(1), at: .centeredHorizontally, animated: false)
+        contentsCollectionView.reloadItems(at: contentsCollectionView.indexPathsForVisibleItems)
+    }
+}
+
+extension CalendarView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "month", for: indexPath) as! CalendarViewMonthCell
+        cell.calendarView = self
+        cell.setupIfNeeded()
+        cell.month = month.added(month: indexPath.row - 1)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return collectionView.bounds.size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let position = Int(ceil(scrollView.contentOffset.x / bounds.width)) - 1
+        reloadCalendarMonthCell(position: position)
+    }
+}

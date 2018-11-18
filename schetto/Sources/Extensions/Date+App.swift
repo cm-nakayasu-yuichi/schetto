@@ -299,11 +299,15 @@ extension Date {
 extension Date {
     
     func isSameDay(_ otherDay: Date) -> Bool {
-        return self.zeroclock == otherDay.zeroclock
+        return zeroclock == otherDay.zeroclock
     }
     
     func isSameDay(after days: Int) -> Bool {
         return isSameDay(Date.day(after: days))
+    }
+    
+    func isSameMonth(_ otherDay: Date) -> Bool {
+        return year == otherDay.year && month == otherDay.month
     }
     
     var isToday: Bool {
@@ -353,7 +357,27 @@ extension Date {
         return ret
     }
     
-    static func datesMatrixForCalendar(year: Int, month: Int, startWeek: Date.Week = .sunday) -> [[Date]] {
+    static func datesMatrixForCalendar(year: Int, month: Int, startWeek: Date.Week = .sunday) -> [Date] {
+        var ret = [Date]()
+        var i = 0, add = 1
+        let dates = datesForCalendar(year: year, month: month, startWeek: startWeek)
+        
+        (0..<6).forEach { _ in // rows
+            (0..<7).forEach { _ in // columns
+                if i <= dates.lastIndex {
+                    ret.append(dates[i])
+                    i += 1
+                } else {
+                    ret.append(dates.last!.added(day: add))
+                    add += 1
+                }
+            }
+        }
+        
+        return ret
+    }
+    
+    static func datesMatrixArraysForCalendar(year: Int, month: Int, startWeek: Date.Week = .sunday) -> [[Date]] {
         var ret = [[Date]]()
         var i = 0, add = 1
         let dates = datesForCalendar(year: year, month: month, startWeek: startWeek)
