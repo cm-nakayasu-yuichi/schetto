@@ -7,12 +7,37 @@ import UIKit
 class DatePickerViewController: UIViewController {
     
     @IBOutlet private weak var calendarView: CalendarView!
+    @IBOutlet private weak var hourPickerView: RepeatingPickerView!
+    @IBOutlet private weak var minutePickerView: RepeatingPickerView!
+    @IBOutlet private weak var menuTableView: UITableView!
+    
+    @IBOutlet private weak var calendarYearMonthLabel: UILabel!
+    @IBOutlet private weak var yearLabel: UILabel!
+    @IBOutlet private weak var monthDayLabel: UILabel!
+    @IBOutlet private weak var weekLabel: UILabel!
+    @IBOutlet private weak var hourLabel: UILabel!
+    @IBOutlet private weak var minuteLabel: UILabel!
+    
+    @IBOutlet private weak var centerTopView: UIView!
+    @IBOutlet private weak var centerBottomView: UIView!
+    @IBOutlet private weak var bottomView: UIView!
+    
+    var dateTime: Date = .now
     
     private var layouted = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCloseButtonOnNavigationBar()
+        setupHourPickerView()
+        setupMinutePickerView()
+        
+        centerTopView.dropShadowTop()
+        centerBottomView.dropShadowBottom()
+        bottomView.dropShadowTop()
+        
+        updateDateTime()
+        updateCalendarYearMonth(month: dateTime)
     }
     
     override func viewDidLayoutSubviews() {
@@ -23,16 +48,55 @@ class DatePickerViewController: UIViewController {
             layouted = true
         }
     }
+    
+    private func setupHourPickerView() {
+        hourPickerView.repeatingDelegate = self
+        let components = [(0..<24).map { i -> String in i.string }]
+        let indecies = [dateTime.hour]
+        hourPickerView.set(rowsInComponents: components, indecies: indecies)
+    }
+    
+    private func setupMinutePickerView() {
+        minutePickerView.repeatingDelegate = self
+        let components = [(0..<60).map { i -> String in i.string }]
+        let indecies = [dateTime.minute]
+        minutePickerView.set(rowsInComponents: components, indecies: indecies)
+    }
+    
+    private func setupBottomView() {
+//        bottomView.layer.masksToBounds = false
+        bottomView.layer.shadowColor = UIColor.black.cgColor
+        bottomView.layer.shadowOffset = CGSize(width: 0, height: -2)
+        bottomView.layer.shadowOpacity = 0.15
+        bottomView.layer.shadowRadius = 2
+//        bottomView.layer.shadowPath = UIBezierPath(rect: bottomView.bounds).cgPath
+    }
+    
+    private func updateDateTime() {
+        yearLabel.text = dateTime.string(.custom(format: "yyyy年"))
+        monthDayLabel.text = dateTime.string(.custom(format: "MM月dd日"))
+        weekLabel.text = "(\(dateTime.weak.symbol))"
+        hourLabel.text = dateTime.string(.custom(format: "HH"))
+        minuteLabel.text = dateTime.string(.custom(format: "mm"))
+    }
+    
+    private func updateCalendarYearMonth(month: Date) {
+        calendarYearMonthLabel.text = month.string(.custom(format: "yyyy年MM月"))
+    }
+    
+    @IBAction private func didTapOkButton() {
+        Wireframe.dismiss(from: self)
+    }
 }
 
 extension DatePickerViewController: CalendarViewDataStore, CalendarViewDelegate {
 
     func nibNameOfDayCell(_ calendarView: CalendarView) -> String {
-        return "DatePickerDayView"
+        return "DatePickerDayCell"
     }
     
     func nibNameOfWeekCell(_ calendarView: CalendarView) -> String {
-        return "DatePickerWeekView"
+        return "DatePickerWeekCell"
     }
     
     func calendarView(_ calendarView: CalendarView, dayCell: CalendarViewDayCell, date: Date, month: Date) {
@@ -45,11 +109,24 @@ extension DatePickerViewController: CalendarViewDataStore, CalendarViewDelegate 
     }
     
     func calendarView(_ calendarView: CalendarView, didChangeMonth month: Date) {
-        print(month.string())
+        updateCalendarYearMonth(month: month)
     }
 }
 
-class DatePickerWeekView: CalendarViewWeekCell {
+extension DatePickerViewController: RepeatingPickerViewDelegate {
+    
+    func repeatingPickerView(_ pickerView: RepeatingPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == hourPickerView {
+            dateTime.hour = row
+        }
+        if pickerView == minutePickerView {
+            dateTime.minute = row
+        }
+        updateDateTime()
+    }
+}
+
+class DatePickerWeekCell: CalendarViewWeekCell {
     
     @IBOutlet private weak var weekLabel: UILabel!
     
@@ -60,7 +137,7 @@ class DatePickerWeekView: CalendarViewWeekCell {
     }
 }
 
-class DatePickerDayView: CalendarViewDayCell{
+class DatePickerDayCell: CalendarViewDayCell{
     
     @IBOutlet private weak var dayButton: UIButton!
     

@@ -59,8 +59,8 @@
 		DB6C41E6219F32790073EFAA /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */; };
 		DB6C41E8219F32790073EFAA /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C41E0219F32790073EFAA /* DatePicker.storyboard */; };
 		DB6C41EC219F3A630073EFAA /* DateCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41EB219F3A630073EFAA /* DateCalendarTests.swift */; };
-		DB6C41F821A167B50073EFAA /* DatePickerWeekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C41F721A167B50073EFAA /* DatePickerWeekView.xib */; };
-		DB6C41FA21A168E50073EFAA /* DatePickerDayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C41F921A168E50073EFAA /* DatePickerDayView.xib */; };
+		DB6C41F821A167B50073EFAA /* DatePickerWeekCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C41F721A167B50073EFAA /* DatePickerWeekCell.xib */; };
+		DB6C41FA21A168E50073EFAA /* DatePickerDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C41F921A168E50073EFAA /* DatePickerDayCell.xib */; };
 		DB6C420221A16B7D0073EFAA /* CalendarViewDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41FD21A16B7D0073EFAA /* CalendarViewDayCell.swift */; };
 		DB6C420321A16B7D0073EFAA /* CalendarViewMonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41FE21A16B7D0073EFAA /* CalendarViewMonthCell.swift */; };
 		DB6C420421A16B7D0073EFAA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41FF21A16B7D0073EFAA /* CalendarView.swift */; };
@@ -114,6 +114,7 @@
 		E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DCC2189603D00C13172 /* AppConfig.swift */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
+		E489D0BD21A2B0AE000DE3AA /* RepeatingPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489D0BC21A2B0AE000DE3AA /* RepeatingPickerView.swift */; };
 		E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E5E48217FF5BB0072C22F /* ClearButton.swift */; };
 		E493B1CB217593F90017F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CA217593F90017F931 /* Assets.xcassets */; };
 		E493B1CE217593F90017F931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E493B1CC217593F90017F931 /* LaunchScreen.storyboard */; };
@@ -251,8 +252,8 @@
 		DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		DB6C41E0219F32790073EFAA /* DatePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
 		DB6C41EB219F3A630073EFAA /* DateCalendarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarTests.swift; sourceTree = "<group>"; };
-		DB6C41F721A167B50073EFAA /* DatePickerWeekView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerWeekView.xib; sourceTree = "<group>"; };
-		DB6C41F921A168E50073EFAA /* DatePickerDayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerDayView.xib; sourceTree = "<group>"; };
+		DB6C41F721A167B50073EFAA /* DatePickerWeekCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerWeekCell.xib; sourceTree = "<group>"; };
+		DB6C41F921A168E50073EFAA /* DatePickerDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerDayCell.xib; sourceTree = "<group>"; };
 		DB6C41FD21A16B7D0073EFAA /* CalendarViewDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewDayCell.swift; sourceTree = "<group>"; };
 		DB6C41FE21A16B7D0073EFAA /* CalendarViewMonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewMonthCell.swift; sourceTree = "<group>"; };
 		DB6C41FF21A16B7D0073EFAA /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -305,6 +306,7 @@
 		E4456DCC2189603D00C13172 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		E489D0BC21A2B0AE000DE3AA /* RepeatingPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatingPickerView.swift; sourceTree = "<group>"; };
 		E48E5E48217FF5BB0072C22F /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		E493B1C0217593F80017F931 /* schetto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schetto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E493B1CA217593F90017F931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -553,8 +555,8 @@
 			children = (
 				DB6C41E0219F32790073EFAA /* DatePicker.storyboard */,
 				DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */,
-				DB6C41F721A167B50073EFAA /* DatePickerWeekView.xib */,
-				DB6C41F921A168E50073EFAA /* DatePickerDayView.xib */,
+				DB6C41F721A167B50073EFAA /* DatePickerWeekCell.xib */,
+				DB6C41F921A168E50073EFAA /* DatePickerDayCell.xib */,
 			);
 			path = DatePicker;
 			sourceTree = "<group>";
@@ -647,6 +649,14 @@
 				DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E489D0BB21A2B0AE000DE3AA /* RepeatingPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				E489D0BC21A2B0AE000DE3AA /* RepeatingPickerView.swift */,
+			);
+			path = RepeatingPickerView;
 			sourceTree = "<group>";
 		};
 		E48E5E47217FF5BB0072C22F /* Buttons */ = {
@@ -811,6 +821,7 @@
 		E493B1FC217599810017F931 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				E489D0BB21A2B0AE000DE3AA /* RepeatingPickerView */,
 				DBC0E1452184A5ED00E26514 /* TableViewCell */,
 				E48E5E47217FF5BB0072C22F /* Buttons */,
 				E493B1FD217599810017F931 /* CalendarView */,
@@ -1051,12 +1062,12 @@
 				DB1CF2AA2199CAA100C61995 /* TodoDetail.storyboard in Resources */,
 				DB1CF2B12199CAA100C61995 /* DrawerMenu.storyboard in Resources */,
 				DB1CF2A22199CAA100C61995 /* TodoList.storyboard in Resources */,
-				DB6C41FA21A168E50073EFAA /* DatePickerDayView.xib in Resources */,
+				DB6C41FA21A168E50073EFAA /* DatePickerDayCell.xib in Resources */,
 				DB1CF2982199CAA100C61995 /* Text.storyboard in Resources */,
 				DB1CF2AD2199CAA100C61995 /* Test.storyboard in Resources */,
 				DB1CF29F2199CAA100C61995 /* Launch.storyboard in Resources */,
 				DB1CF2B62199CAA100C61995 /* DesignFontSetting.storyboard in Resources */,
-				DB6C41F821A167B50073EFAA /* DatePickerWeekView.xib in Resources */,
+				DB6C41F821A167B50073EFAA /* DatePickerWeekCell.xib in Resources */,
 				DB1CF2A72199CAA100C61995 /* Bootstrap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1196,6 +1207,7 @@
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
 				E4DCFBFD218C26310091B016 /* StickerGroupModel.swift in Sources */,
+				E489D0BD21A2B0AE000DE3AA /* RepeatingPickerView.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
 				DB22840621876E09008F00F6 /* Font+Definition.swift in Sources */,
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
