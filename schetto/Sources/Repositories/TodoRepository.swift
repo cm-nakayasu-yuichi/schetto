@@ -8,42 +8,52 @@ protocol TodoInteractorInput: class {
     
     var output: TodoInteractorOutput! { get set }
     
-    func fetchList(sortType: TodoSortType)
-    
-    func register(_ model: TodoModel)
-    func remove(_ model: TodoModel)
-    func updateComplete(_ complete: Bool, to id: String)
+    func createTodo()
+    func copy(_ todo: TodoModel)
+    func fetchTodoList(sortType: TodoSortType)
+    func register(_ todo: TodoModel)
     func registerNotify(before minutes: Int, to id: String)
+    func remove(_ todo: TodoModel)
 }
 
 protocol TodoInteractorOutput: class {
     
+    func created(todo: TodoModel)
+    func copied(todo: TodoModel)
     func fetched(list: [TodoListModel])
-    
-    func updated(_ models: [TodoModel])
+    func registered(todo: TodoModel)
+    func removed()
 }
 
 class TodoRepository: TodoInteractorInput {
     
     weak var output: TodoInteractorOutput!
     
-    func fetchList(sortType: TodoSortType) {
+    func createTodo() {
+        let todo = TodoModel()
+        output.created(todo: todo)
+    }
+    
+    func copy(_ todo: TodoModel) {
+        let translator = TodoTranslator()
+        let dbEntity = translator.detranslate(todo)
+        let copied = translator.translate(dbEntity)
+        output.copied(todo: copied)
+    }
+    
+    func fetchTodoList(sortType: TodoSortType) {
         
     }
     
-    func register(_ model: TodoModel) {
-        
-    }
-    
-    func remove(_ model: TodoModel) {
-        
-    }
-    
-    func updateComplete(_ complete: Bool, to id: String) {
-        
+    func register(_ todo: TodoModel) {
+        output.registered(todo: todo)
     }
     
     func registerNotify(before minutes: Int, to id: String) {
+        
+    }
+    
+    func remove(_ todo: TodoModel) {
         
     }
 }

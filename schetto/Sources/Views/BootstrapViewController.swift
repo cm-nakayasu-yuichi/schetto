@@ -17,6 +17,9 @@ class BootstrapViewController: UITableViewController {
             (title: "WEBビュー", handler: { bootstrap in
                 Wireframe.showWeb(from: bootstrap)
             }),
+            (title: "日付選択", handler: { bootstrap in
+                Wireframe.showDatePicker(from: bootstrap)
+            }),
             ]),
         ]
     // =========================================================================

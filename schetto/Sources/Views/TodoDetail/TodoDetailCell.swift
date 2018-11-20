@@ -6,6 +6,21 @@ import UIKit
 
 protocol TodoDetailCellDelegate: class {
     
+    func didTapComplete(at cell: TodoDetailCell)
+    
+    func didTapEditTitle(at cell: TodoDetailCell)
+    
+    func didTapEditSummery(at cell: TodoDetailCell)
+    
+    func didChangePriority(at cell: TodoDetailCell, priority: TodoPriority)
+    
+    func didSelectKeyValue(at cell: TodoDetailCell, indexPath: IndexPath)
+    
+    func didTapAsset(at cell: TodoDetailCell, indexPath: IndexPath)
+    
+    func didTapAddAsset(at cell: TodoDetailCell)
+    
+    func didTapDelete(at cell: TodoDetailCell)
 }
 
 protocol TodoDetailCell: class {
@@ -33,11 +48,11 @@ class TodoDetailTitleCell: UITableViewCell, TodoDetailCell {
     }
     
     @IBAction private func didTapCheckButton() {
-        
+        delegate.didTapComplete(at: self)
     }
     
     @IBAction private func didTapEditButton() {
-        
+        delegate.didTapEditTitle(at: self)
     }
 }
 
@@ -54,13 +69,14 @@ class TodoDetailSummeryCell: UITableViewCell, TodoDetailCell {
     }
     
     @IBAction private func didTapEditButton() {
-        
+        delegate.didTapEditSummery(at: self)
     }
 }
 
 class TodoDetailKeyValueCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
+    var indexPath: IndexPath!
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
@@ -72,7 +88,7 @@ class TodoDetailKeyValueCell: UITableViewCell, TodoDetailCell {
         }
     }
     
-    var value = "" {
+    var value: String? = "" {
         didSet {
             valueLabel.text = value
         }
@@ -91,15 +107,13 @@ class TodoDetailKeyValueCell: UITableViewCell, TodoDetailCell {
     }
     
     @IBAction private func didTapEditButton() {
-        
+        delegate.didSelectKeyValue(at: self, indexPath: indexPath)
     }
 }
 
 class TodoDetailPriorityCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
-    
-    @IBOutlet private weak var titleLabel: UILabel!
     
     var priority: TodoPriority = .normal {
         didSet {
@@ -111,6 +125,7 @@ class TodoDetailPriorityCell: UITableViewCell, TodoDetailCell {
 class TodoDetailAssetCell: UITableViewCell, TodoDetailCell {
     
     weak var delegate: TodoDetailCellDelegate!
+    var indexPath: IndexPath!
     
     @IBOutlet private weak var assetImageView: UIImageView!
     
@@ -120,10 +135,22 @@ class TodoDetailAssetCell: UITableViewCell, TodoDetailCell {
         }
     }
     
-    @IBAction private func didTapCheckButton() {
-        
+    @IBAction private func didTapAssetImageView() {
+        delegate.didTapAsset(at: self, indexPath: indexPath)
     }
 }
+
+class TodoDetailAddAssetCell: UITableViewCell, TodoDetailCell {
+    
+    weak var delegate: TodoDetailCellDelegate!
+    
+    @IBOutlet private weak var addButton: UIButton!
+    
+    @IBAction private func didTapAddButton() {
+        delegate.didTapAddAsset(at: self)
+    }
+}
+
 
 class TodoDetailDeleteCell: UITableViewCell, TodoDetailCell {
     
@@ -132,6 +159,6 @@ class TodoDetailDeleteCell: UITableViewCell, TodoDetailCell {
     @IBOutlet private weak var deleteButton: UIButton!
     
     @IBAction private func didTapDeleteButton() {
-        
+        delegate.didTapDelete(at: self)
     }
 }
