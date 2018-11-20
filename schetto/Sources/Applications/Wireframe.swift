@@ -55,7 +55,7 @@ class Wireframe {
     
     static func showWeb(from fromViewController: UIViewController) {
         let viewController = builder.web()
-        helper.present(viewController, from: fromViewController)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func showDatePicker(from fromViewController: UIViewController) {

@@ -23,6 +23,9 @@ class WebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCloseButtonOnNavigationBar()
+        
+        
         webView.navigationDelegate = presenter
         webView.uiDelegate = presenter
         webView.allowsBackForwardNavigationGestures = true
