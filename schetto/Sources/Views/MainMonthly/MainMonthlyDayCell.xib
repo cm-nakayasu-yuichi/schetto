@@ -28,9 +28,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sticker-1" translatesAutoresizingMaskIntoConstraints="NO" id="UBi-uw-vFw">
+                                <rect key="frame" x="20" y="17.5" width="167" height="208.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UBi-uw-vFw" secondAttribute="height" multiplier="4:5" id="1I1-Za-AkP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.4978863441780822" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="UBi-uw-vFw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o0B-LH-SXX" secondAttribute="leading" constant="20" id="4pU-Nm-irW"/>
+                            <constraint firstAttribute="trailing" secondItem="UBi-uw-vFw" secondAttribute="trailing" constant="2" id="AtF-HY-XL4"/>
+                            <constraint firstAttribute="bottom" secondItem="UBi-uw-vFw" secondAttribute="bottom" constant="2" id="LLe-Me-mMA"/>
                             <constraint firstItem="Wdn-93-Rfr" firstAttribute="leading" secondItem="o0B-LH-SXX" secondAttribute="leading" constant="4" id="Rcz-hZ-yeL"/>
                             <constraint firstItem="Wdn-93-Rfr" firstAttribute="top" secondItem="o0B-LH-SXX" secondAttribute="top" constant="4" id="aKa-co-3J1"/>
                         </constraints>
@@ -53,4 +62,7 @@
             <point key="canvasLocation" x="-374.39999999999998" y="176.76161919040482"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="sticker-1" width="200" height="240"/>
+    </resources>
 </document>
