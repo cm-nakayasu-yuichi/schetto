@@ -112,6 +112,10 @@
 		E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */; };
 		E4456DCB2189601300C13172 /* CalendarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DCA2189601300C13172 /* CalendarSetting.swift */; };
 		E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DCC2189603D00C13172 /* AppConfig.swift */; };
+		E45C4EC121A392C2002002AC /* MainMonthlyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4EB921A392C2002002AC /* MainMonthlyRepository.swift */; };
+		E45C4EC321A392C2002002AC /* MainMonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4EBB21A392C2002002AC /* MainMonthlyViewController.swift */; };
+		E45C4EC521A392C2002002AC /* MainMonthlyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4EBD21A392C2002002AC /* MainMonthlyPresenter.swift */; };
+		E45C4EC821A392C2002002AC /* MainMonthly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E45C4EC021A392C2002002AC /* MainMonthly.storyboard */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
 		E48E5E49217FF5BB0072C22F /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48E5E48217FF5BB0072C22F /* ClearButton.swift */; };
@@ -303,6 +307,10 @@
 		E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSettingModel.swift; sourceTree = "<group>"; };
 		E4456DCA2189601300C13172 /* CalendarSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSetting.swift; sourceTree = "<group>"; };
 		E4456DCC2189603D00C13172 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		E45C4EB921A392C2002002AC /* MainMonthlyRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyRepository.swift; sourceTree = "<group>"; };
+		E45C4EBB21A392C2002002AC /* MainMonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyViewController.swift; sourceTree = "<group>"; };
+		E45C4EBD21A392C2002002AC /* MainMonthlyPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyPresenter.swift; sourceTree = "<group>"; };
+		E45C4EC021A392C2002002AC /* MainMonthly.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainMonthly.storyboard; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		E48E5E48217FF5BB0072C22F /* ClearButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
@@ -649,6 +657,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E45C4EB821A392C2002002AC /* MainMonthly */ = {
+			isa = PBXGroup;
+			children = (
+				E45C4EBB21A392C2002002AC /* MainMonthlyViewController.swift */,
+				E45C4EC021A392C2002002AC /* MainMonthly.storyboard */,
+			);
+			path = MainMonthly;
+			sourceTree = "<group>";
+		};
 		E48E5E47217FF5BB0072C22F /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -754,6 +771,7 @@
 				DB1CF2692199CAA100C61995 /* Tutorial */,
 				DB1CF2882199CAA100C61995 /* Terms */,
 				DB1CF28E2199CAA100C61995 /* Main */,
+				E45C4EB821A392C2002002AC /* MainMonthly */,
 				DB1CF2822199CAA100C61995 /* DrawerMenu */,
 				DB1CF2712199CAA100C61995 /* TodoList */,
 				DB1CF27A2199CAA100C61995 /* TodoDetail */,
@@ -774,6 +792,7 @@
 				DB954F782190AC4E007BC9D1 /* TodoListPresenter.swift */,
 				DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */,
 				DB22840C21888D6D008F00F6 /* MainPresenter.swift */,
+				E45C4EBD21A392C2002002AC /* MainMonthlyPresenter.swift */,
 				DB950A2F218E806600D0B286 /* EventEditPresenter.swift */,
 				DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */,
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
@@ -799,8 +818,9 @@
 			children = (
 				DBA6BCB5219B0D0B00FE5CD9 /* Mocks */,
 				E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */,
-				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				DB22840E21888D6D008F00F6 /* MainRepository.swift */,
+				E45C4EB921A392C2002002AC /* MainMonthlyRepository.swift */,
+				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */,
 				DB950A33218E806600D0B286 /* EventEditRepository.swift */,
 				DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */,
@@ -1053,6 +1073,7 @@
 				DB1CF2A22199CAA100C61995 /* TodoList.storyboard in Resources */,
 				DB6C41FA21A168E50073EFAA /* DatePickerDayView.xib in Resources */,
 				DB1CF2982199CAA100C61995 /* Text.storyboard in Resources */,
+				E45C4EC821A392C2002002AC /* MainMonthly.storyboard in Resources */,
 				DB1CF2AD2199CAA100C61995 /* Test.storyboard in Resources */,
 				DB1CF29F2199CAA100C61995 /* Launch.storyboard in Resources */,
 				DB1CF2B62199CAA100C61995 /* DesignFontSetting.storyboard in Resources */,
@@ -1165,11 +1186,13 @@
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
 				DB6C420521A16B7D0073EFAA /* CalendarViewWeekCell.swift in Sources */,
 				E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */,
+				E45C4EC121A392C2002002AC /* MainMonthlyRepository.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				DB1CF29D2199CAA100C61995 /* TutorialCell.swift in Sources */,
 				DBA6BCB7219B0D0B00FE5CD9 /* TodoRepositoryMock.swift in Sources */,
 				E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */,
 				DB950A11218B543300D0B286 /* WebPresenter.swift in Sources */,
+				E45C4EC321A392C2002002AC /* MainMonthlyViewController.swift in Sources */,
 				DB1CF2A32199CAA100C61995 /* TodoListViewController.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
@@ -1184,6 +1207,7 @@
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
 				E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
+				E45C4EC521A392C2002002AC /* MainMonthlyPresenter.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
 				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
