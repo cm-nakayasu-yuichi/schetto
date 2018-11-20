@@ -14,8 +14,11 @@ class BootstrapViewController: UITableViewController {
             (title: "TODO", handler: { bootstrap in
                 Wireframe.showTodoList(from: bootstrap)
             }),
-            (title: "WEBビュー", handler: { bootstrap in
-                Wireframe.showWeb(from: bootstrap)
+            (title: "メイン", handler: { bootstrap in
+                Wireframe.showMain(from: bootstrap)
+            }),
+            (title: "メインカレンダー", handler: { bootstrap in
+                Wireframe.showMainMonthly(from: bootstrap)
             }),
             (title: "日付選択", handler: { bootstrap in
                 Wireframe.showDatePicker(from: bootstrap)
