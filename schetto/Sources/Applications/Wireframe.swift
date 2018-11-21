@@ -53,8 +53,8 @@ class Wireframe {
         helper.push(viewController, from: fromViewController)
     }
     
-    static func showWeb(from fromViewController: UIViewController) {
-        let viewController = builder.web()
+	static func showWeb(from fromViewController: UIViewController, urlString: String) {
+        let viewController = builder.web(urlString: urlString)
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
