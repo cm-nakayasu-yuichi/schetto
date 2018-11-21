@@ -6,6 +6,11 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
     
+    typealias CommitHandler = (Date) -> ()
+    
+    var dateTime: Date = .now
+    var commitHandler: CommitHandler? = nil
+    
     @IBOutlet private weak var calendarView: CalendarView!
     @IBOutlet private weak var hourPickerView: RepeatingPickerView!
     @IBOutlet private weak var minutePickerView: RepeatingPickerView!
@@ -21,8 +26,6 @@ class DatePickerViewController: UIViewController {
     @IBOutlet private weak var centerTopView: UIView!
     @IBOutlet private weak var centerBottomView: UIView!
     @IBOutlet private weak var bottomView: UIView!
-    
-    var dateTime: Date = .now
     
     private var layouted = false
 
