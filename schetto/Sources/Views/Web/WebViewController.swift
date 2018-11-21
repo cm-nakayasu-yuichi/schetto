@@ -23,6 +23,7 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCloseButtonOnNavigationBar()
+        setupToolbarAppearances()
 		
 		urlArea.dropShadowBottom()
 		toolbar.dropShadowTop()
@@ -45,7 +46,7 @@ class WebViewController: UIViewController {
 	}
 	
 	@objc private func didTapStopButtonOnNavigationBar() {
-		presenter.stopLoading()
+		presenter.stop()
 	}
 	
     @IBAction private func didTapPrevButton() {
@@ -58,6 +59,12 @@ class WebViewController: UIViewController {
     
     @IBAction private func didTapShareButton() {
         // NOP.
+    }
+    
+    private func setupToolbarAppearances() {
+        toolbar.isTranslucent = false
+        toolbar.barTintColor = .baseNavigationBackground
+        toolbar.tintColor = .baseNavigationForeground
     }
 }
 

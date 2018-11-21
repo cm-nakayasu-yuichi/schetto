@@ -11,7 +11,7 @@ protocol WebPresenterProtocol: WKNavigationDelegate, WKUIDelegate {
 	
 	func setup(webView: WKWebView)
 	func load(urlString: String)
-	func stopLoading()
+	func stop()
 	func reload()
 	func back()
 	func foeward()
@@ -41,9 +41,11 @@ class WebPresenter: NSObject, WebPresenterProtocol {
 	func setup(webView: WKWebView) {
 		self.webView = webView
 		webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+        webView.addObserver(self, forKeyPath: "title", options: .new, context: nil)
 	}
 	
 	deinit {
+        webView?.removeObserver(self, forKeyPath: "title")
 		webView?.removeObserver(self, forKeyPath: "estimatedProgress")
 	}
 	
@@ -54,7 +56,7 @@ class WebPresenter: NSObject, WebPresenterProtocol {
 		}
 	}
 	
-	func stopLoading() {
+	func stop() {
 		if webView?.isLoading ?? false {
 			webView?.stopLoading()
 		}
@@ -89,7 +91,6 @@ class WebPresenter: NSObject, WebPresenterProtocol {
 	func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 		view.showWebView()
 		view.showReload()
-		view.show(pageTitle: webView.title ?? "")
 		view.show(canBack: webView.canGoBack, canNext: webView.canGoForward)
 		view.finishLoading()
 	}
@@ -114,8 +115,9 @@ class WebPresenter: NSObject, WebPresenterProtocol {
 	}
 	
 	func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-		let urlString = webView.url?.absoluteString ?? ""
-		view.show(pageUrl: urlString)
+        if let urlString = webView.url?.absoluteString {
+            view.show(pageUrl: urlString)
+        }
 		decisionHandler(.allow)
 	}
 	
@@ -124,5 +126,9 @@ class WebPresenter: NSObject, WebPresenterProtocol {
 			let progressing = webView?.estimatedProgress ?? 0
 			view.show(progressLoading: progressing.f)
 		}
+        if keyPath == "title" {
+            let title = webView?.title ?? ""
+            view.show(pageTitle: title)
+        }
 	}
 }
