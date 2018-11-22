@@ -28,7 +28,7 @@ protocol WebViewProtocol: class {
 	func show(progressLoading progressing: CGFloat)
 	
 	func showWebView()
-    func showError()
+    func showError(message: String?)
 	func showReload()
 	func showStopLoading()
 }
@@ -103,7 +103,7 @@ class WebPresenter: NSObject, WebPresenterProtocol {
 	}
 	
 	func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-		view.showError()
+		view.showError(message: errorMessage(error: error))
 		view.showReload()
 		view.show(pageTitle: "")
 		view.show(canBack: false, canNext: false)
@@ -131,4 +131,13 @@ class WebPresenter: NSObject, WebPresenterProtocol {
             view.show(pageTitle: title)
         }
 	}
+    
+    private func errorMessage(error: Error) -> String? {
+        guard let urlError = error as? URLError else { return "ページが開けません" }
+        switch urlError.code {
+        case .cancelled: return "キャンセルされました"
+        case .notConnectedToInternet: return "インターネットに接続されていません"
+        default: return "ページが開けません \(urlError.errorCode)"
+        }
+    }
 }

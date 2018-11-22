@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TzS-dH-gti">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TzS-dH-gti">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-G3-QQ2">
+                                <rect key="frame" x="0.0" y="40" width="320" height="396"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ページが開けません" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNP-zv-vrf">
+                                        <rect key="frame" x="77.5" y="187" width="165.5" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.58101448450000004" green="0.59442172770000001" blue="0.62570529509999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YNP-zv-vrf" firstAttribute="centerX" secondItem="Tba-G3-QQ2" secondAttribute="centerX" id="5uC-Iz-WuQ"/>
+                                    <constraint firstItem="YNP-zv-vrf" firstAttribute="centerY" secondItem="Tba-G3-QQ2" secondAttribute="centerY" id="D6p-E2-YZ0"/>
+                                </constraints>
+                            </view>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0t-Wz-FCo">
                                 <rect key="frame" x="0.0" y="40" width="320" height="396"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -110,21 +127,28 @@
                             <constraint firstItem="SxW-lp-LUm" firstAttribute="leading" secondItem="AHk-dT-1d5" secondAttribute="leading" id="D0I-ah-HPU"/>
                             <constraint firstItem="y0t-Wz-FCo" firstAttribute="trailing" secondItem="AHk-dT-1d5" secondAttribute="trailing" id="EEu-wC-wB0"/>
                             <constraint firstItem="mDB-J5-WvQ" firstAttribute="trailing" secondItem="AHk-dT-1d5" secondAttribute="trailing" id="I2O-ck-Hbd"/>
-                            <constraint firstItem="xMw-dS-F7D" firstAttribute="top" secondItem="CcJ-lh-nL2" secondAttribute="bottom" id="KkZ-3n-WpT"/>
                             <constraint firstItem="CcJ-lh-nL2" firstAttribute="trailing" secondItem="AHk-dT-1d5" secondAttribute="trailing" id="Kt9-54-puW"/>
                             <constraint firstItem="CcJ-lh-nL2" firstAttribute="top" secondItem="y0t-Wz-FCo" secondAttribute="bottom" id="LbW-qi-TLY"/>
+                            <constraint firstItem="Tba-G3-QQ2" firstAttribute="top" secondItem="mDB-J5-WvQ" secondAttribute="bottom" id="Nlh-Vr-Lg4"/>
                             <constraint firstItem="xMw-dS-F7D" firstAttribute="leading" secondItem="AHk-dT-1d5" secondAttribute="leading" id="Onp-cL-mPe"/>
                             <constraint firstItem="SxW-lp-LUm" firstAttribute="trailing" secondItem="AHk-dT-1d5" secondAttribute="trailing" id="RjO-Jk-Tch"/>
                             <constraint firstItem="SxW-lp-LUm" firstAttribute="top" secondItem="AHk-dT-1d5" secondAttribute="top" id="RtO-3F-sro"/>
+                            <constraint firstItem="Tba-G3-QQ2" firstAttribute="leading" secondItem="AHk-dT-1d5" secondAttribute="leading" id="UiV-oV-gYB"/>
                             <constraint firstItem="y0t-Wz-FCo" firstAttribute="leading" secondItem="AHk-dT-1d5" secondAttribute="leading" id="UvJ-pG-ZTk"/>
                             <constraint firstItem="mDB-J5-WvQ" firstAttribute="leading" secondItem="AHk-dT-1d5" secondAttribute="leading" id="VyK-Ot-QdW"/>
+                            <constraint firstItem="AHk-dT-1d5" firstAttribute="bottom" secondItem="CcJ-lh-nL2" secondAttribute="bottom" id="Y8O-p5-hmG"/>
                             <constraint firstItem="CcJ-lh-nL2" firstAttribute="leading" secondItem="AHk-dT-1d5" secondAttribute="leading" id="bMd-3L-hdD"/>
                             <constraint firstItem="mDB-J5-WvQ" firstAttribute="top" secondItem="SxW-lp-LUm" secondAttribute="bottom" id="jlS-yf-hHi"/>
                             <constraint firstAttribute="bottom" secondItem="xMw-dS-F7D" secondAttribute="bottom" id="mEe-4B-Qx6"/>
+                            <constraint firstItem="Tba-G3-QQ2" firstAttribute="trailing" secondItem="AHk-dT-1d5" secondAttribute="trailing" id="sgo-4Y-PCF"/>
+                            <constraint firstItem="CcJ-lh-nL2" firstAttribute="top" secondItem="Tba-G3-QQ2" secondAttribute="bottom" id="tw0-R8-Yw2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AHk-dT-1d5"/>
                     </view>
                     <connections>
+                        <outlet property="bottomOutsideView" destination="xMw-dS-F7D" id="nlv-BX-UrZ"/>
+                        <outlet property="errorLabel" destination="YNP-zv-vrf" id="OMl-kM-qnI"/>
+                        <outlet property="errorView" destination="Tba-G3-QQ2" id="wZN-KM-evY"/>
                         <outlet property="nextButton" destination="E5g-0h-3ka" id="hWD-uL-tlf"/>
                         <outlet property="prevButton" destination="Dqj-ji-Jdm" id="OCm-66-zgZ"/>
                         <outlet property="progressView" destination="iK3-Wr-BPI" id="YgV-aa-6U0"/>

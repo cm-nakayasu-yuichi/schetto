@@ -19,6 +19,9 @@ class WebViewController: UIViewController {
     @IBOutlet private weak var shareButton: UIBarButtonItem!
 	@IBOutlet private weak var urlArea: UIView!
 	@IBOutlet private weak var toolbar: UIToolbar!
+    @IBOutlet private weak var bottomOutsideView: UIView!
+    @IBOutlet private weak var errorView: UIView!
+    @IBOutlet private weak var errorLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +68,8 @@ class WebViewController: UIViewController {
         toolbar.isTranslucent = false
         toolbar.barTintColor = .baseNavigationBackground
         toolbar.tintColor = .baseNavigationForeground
+        
+        bottomOutsideView.backgroundColor = .baseNavigationBackground
     }
 }
 
@@ -87,23 +92,27 @@ extension WebViewController: WebViewProtocol {
 		UIView.animate(withDuration: 0.1) {
 			let parentWidth = self.progressView.parent!.width
 			self.progressViewWidth.constant = parentWidth * progressing
-			self.view.layoutIfNeeded()
+			self.progressView.layoutIfNeeded()
 		}
 	}
 	
     func finishLoading() {
 		UIView.animate(withDuration: 0.8) {
 			self.progressView.alpha = 0
-			self.view.layoutIfNeeded()
+			self.progressView.layoutIfNeeded()
 		}
     }
 	
 	func showWebView() {
 		webView.isHidden = false
+        errorView.isHidden = true
+        errorLabel.text = nil
 	}
     
-    func showError() {
+    func showError(message: String?) {
         webView.isHidden = true
+        errorView.isHidden = false
+        errorLabel.text = message
     }
     
     func show(canBack: Bool, canNext: Bool) {
