@@ -132,6 +132,16 @@ class Builder {
         let view = instantiate(DatePickerViewController.self, storyboardName: "DatePicker")
         view.dateTime = dateTime
         view.commitHandler = commitHandler
+        
+        let presenter: DatePickerPresenterProtocol = DatePickerPresenter()
+        presenter.view = view
+        
+        let interactor: DatePickerInteractorInput = DatePickerRepository()
+        interactor.output = presenter as? DatePickerInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
         return view
     }
     

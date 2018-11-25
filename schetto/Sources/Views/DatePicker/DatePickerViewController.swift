@@ -8,6 +8,8 @@ class DatePickerViewController: UIViewController {
     
     typealias CommitHandler = (Date) -> ()
     
+    var presenter: DatePickerPresenterProtocol!
+    
     var dateTime: Date!
     var commitHandler: CommitHandler!
     
@@ -81,6 +83,10 @@ class DatePickerViewController: UIViewController {
     @IBAction private func didTapOkButton() {
         Wireframe.dismiss(from: self)
     }
+}
+
+extension DatePickerViewController: DatePickerViewProtocol {
+    
 }
 
 extension DatePickerViewController: CalendarViewDataStore, CalendarViewDelegate {

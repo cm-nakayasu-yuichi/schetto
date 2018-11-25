@@ -251,7 +251,6 @@
                         <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
                     </view>
                     <connections>
-                        <outlet property="bottomView" destination="02u-7Y-dXR" id="qDg-JY-E66"/>
                         <outlet property="calendarView" destination="JXv-uk-kZT" id="5SW-sY-x5H"/>
                         <outlet property="calendarYearMonthLabel" destination="44N-1D-FzD" id="fls-xt-LNT"/>
                         <outlet property="centerBottomView" destination="fqY-wS-WkI" id="8wl-ul-kwv"/>
@@ -262,6 +261,7 @@
                         <outlet property="minuteLabel" destination="l8c-tw-bmh" id="UU2-Bu-3gl"/>
                         <outlet property="minutePickerView" destination="a1t-dF-gAV" id="wsk-4S-Tcd"/>
                         <outlet property="monthDayLabel" destination="QVe-vv-95l" id="L4k-n3-MoA"/>
+                        <outlet property="toolbar" destination="02u-7Y-dXR" id="8Ud-Us-aFV"/>
                         <outlet property="weekLabel" destination="UWL-0d-Jv6" id="Zpu-xm-qOn"/>
                         <outlet property="yearLabel" destination="Df5-fL-VCX" id="0Cq-Kc-sYX"/>
                     </connections>

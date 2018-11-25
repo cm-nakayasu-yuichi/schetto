@@ -14,6 +14,8 @@
 		DB0CA14221A5A0E5003A254F /* SafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14021A5A0E5003A254F /* SafariActivity.swift */; };
 		DB0CA14521AAF667003A254F /* DatePickerWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14321AAF667003A254F /* DatePickerWeekCell.swift */; };
 		DB0CA14621AAF667003A254F /* DatePickerDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14421AAF667003A254F /* DatePickerDayCell.swift */; };
+		DB0CA14821AAF930003A254F /* DatePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14721AAF930003A254F /* DatePickerPresenter.swift */; };
+		DB0CA14A21AAFA00003A254F /* DatePickerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14921AAFA00003A254F /* DatePickerRepository.swift */; };
 		DB1CF2982199CAA100C61995 /* Text.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1CF2662199CAA100C61995 /* Text.storyboard */; };
 		DB1CF2992199CAA100C61995 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CF2672199CAA100C61995 /* TextViewController.swift */; };
 		DB1CF29A2199CAA100C61995 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CF2682199CAA100C61995 /* BootstrapViewController.swift */; };
@@ -211,6 +213,8 @@
 		DB0CA14021A5A0E5003A254F /* SafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariActivity.swift; sourceTree = "<group>"; };
 		DB0CA14321AAF667003A254F /* DatePickerWeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerWeekCell.swift; sourceTree = "<group>"; };
 		DB0CA14421AAF667003A254F /* DatePickerDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDayCell.swift; sourceTree = "<group>"; };
+		DB0CA14721AAF930003A254F /* DatePickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerPresenter.swift; sourceTree = "<group>"; };
+		DB0CA14921AAFA00003A254F /* DatePickerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerRepository.swift; sourceTree = "<group>"; };
 		DB1CF2662199CAA100C61995 /* Text.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Text.storyboard; sourceTree = "<group>"; };
 		DB1CF2672199CAA100C61995 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		DB1CF2682199CAA100C61995 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
@@ -807,6 +811,7 @@
 				DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */,
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
 				E4959E6021874A80008778F1 /* TermsPresenter.swift */,
+				DB0CA14721AAF930003A254F /* DatePickerPresenter.swift */,
 				DB950A09218B543300D0B286 /* WebPresenter.swift */,
 			);
 			path = Presenters;
@@ -833,6 +838,7 @@
 				E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */,
 				DB950A33218E806600D0B286 /* EventEditRepository.swift */,
 				DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */,
+				DB0CA14921AAFA00003A254F /* DatePickerRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1243,6 +1249,8 @@
 				DB950A3D218E806600D0B286 /* EventEditRepository.swift in Sources */,
 				DB1CF2A42199CAA100C61995 /* TodoListCell.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
+				DB0CA14A21AAFA00003A254F /* DatePickerRepository.swift in Sources */,
+				DB0CA14821AAF930003A254F /* DatePickerPresenter.swift in Sources */,
 				DB950A39218E806600D0B286 /* EventEditPresenter.swift in Sources */,
 				DB6C420221A16B7D0073EFAA /* CalendarViewDayCell.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
