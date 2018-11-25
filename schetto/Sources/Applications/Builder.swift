@@ -92,7 +92,7 @@ class Builder {
         let presenter: TodoListPresenterProtocol = TodoListPresenter()
         presenter.view = view
         
-        let interactor: TodoInteractorInput = TodoRepository()
+        let interactor: TodoInteractorInput = TodoRepositoryMock()//TodoRepository()
         interactor.output = presenter as? TodoInteractorOutput
         presenter.interactor = interactor
         
@@ -101,13 +101,14 @@ class Builder {
         return view
     }
         
-    func todoDetail() -> TodoDetailViewController {
+    func todoDetail(todo: TodoModel?) -> TodoDetailViewController {
         let view = instantiate(TodoDetailViewController.self, storyboardName: "TodoDetail")
+        view.todo = todo
         
         let presenter: TodoDetailPresenterProtocol = TodoDetailPresenter()
         presenter.view = view
         
-        let interactor: TodoInteractorInput = TodoRepository()
+        let interactor: TodoInteractorInput = TodoRepositoryMock()//TodoRepository()
         interactor.output = presenter as? TodoInteractorOutput
         presenter.interactor = interactor
         
@@ -116,11 +117,19 @@ class Builder {
         return view
     }
     
-    func web() -> WebViewController {
+	func web(urlString: String) -> WebViewController {
         let view = instantiate(WebViewController.self, storyboardName: "Web")
-        let presenter: WebPresenterProtocol = WebPresenter()
+		view.initialUrlString = urlString
+		
+		let presenter: WebPresenterProtocol = WebPresenter()
         presenter.view = view
         view.presenter = presenter
+		
+		return view
+    }
+    
+    func datePicker() -> DatePickerViewController {
+        let view = instantiate(DatePickerViewController.self, storyboardName: "DatePicker")
         return view
     }
     

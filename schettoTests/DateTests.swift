@@ -87,11 +87,11 @@ class DateTests: XCTestCase {
     
     func test_week() {
         XCTAssertEqual(sample.weekIndex, 6)
-        XCTAssertEqual(sample.week(), "Sat")
-        XCTAssertEqual(sample.week(locale: .jp), "土")
-        XCTAssertEqual(sample.weeks(.default, locale: .jp), ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"])
-        XCTAssertEqual(sample.weeks(.default), ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"])
-        XCTAssertEqual(sample.weeks(.shortStandalone, locale: .jp), ["日", "月", "火", "水", "木", "金", "土"])
+        XCTAssertEqual(sample.weak.symbol(), "Sat")
+        XCTAssertEqual(sample.weak.symbol(locale: .jp), "土")
+        XCTAssertEqual(Date.Week.symbols(.default, locale: .jp), ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"])
+        XCTAssertEqual(Date.Week.symbols(.default), ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"])
+        XCTAssertEqual(Date.Week.symbols(.shortStandalone, locale: .jp), ["日", "月", "火", "水", "木", "金", "土"])
     }
     
     func test_month() {

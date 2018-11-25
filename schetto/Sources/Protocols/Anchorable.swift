@@ -131,6 +131,22 @@ extension Anchorable {
     }
 }
 
+extension Anchorable {
+    
+    func addConstraint(topToBottomOf target: Anchorable?, constant: CGFloat = 0, operator ope: LayoutConstraintOperator = .equal, priority: UILayoutPriority = .required) -> NSLayoutConstraint {
+        return addConstraint(constant: constant, from: topAnchor, to: targetOrSuperview(target).bottomAnchor, operator: ope, priority: priority)
+    }
+    
+    /*
+    layout_constraintEnd_toStartOf    指定したViewの左側に配置    layout_toStartOf
+    layout_constraintStart_toEndOf    指定したViewの右側に配置    layout_toEndOf
+    layout_constraintRight_toLeftOf    指定したViewの左側に配置    layout_toLeftOf
+    layout_constraintLeft_toRightOf    指定したViewの右側に配置    layout_toRightOf
+    layout_constraintBottom_toTopOf    指定したViewの上側に配置    layout_above
+    layout_constraintTop_toBottomOf
+    */
+}
+
 private extension Anchorable {
     
     func addConstraint<T>(constant: CGFloat, from source: NSLayoutAnchor<T>, to target: NSLayoutAnchor<T>, operator constraintOperator: LayoutConstraintOperator, priority: UILayoutPriority) -> NSLayoutConstraint {

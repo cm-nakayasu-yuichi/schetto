@@ -145,33 +145,73 @@ extension Date {
         case veryShortStandalone
         case custom(symbols: [String])
     }
+}
+
+extension Date {
+    
+    enum Week: Int {
+        case sunday
+        case monday
+        case tuesday
+        case wednesday
+        case thursday
+        case friday
+        case saturday
+        
+        static func weeks(startWeek: Week = .sunday) -> [Week] {
+            return (0..<7).map { i -> Week in // 7 = number of weeks
+                let n = startWeek.rawValue + i
+                let m = (n < 7) ? n : n - 7
+                return Week(rawValue: m)!
+            }
+        }
+        
+        static func symbols(_ type: SymbolType = .short, locale: Locale? = nil) -> [String] {
+            let formatter = DateFormatter()
+            formatter.locale = locale ?? calendar.locale
+            
+            switch type {
+            case .`default`:           return formatter.weekdaySymbols
+            case .standalone:          return formatter.standaloneWeekdaySymbols
+            case .veryShort:           return formatter.veryShortWeekdaySymbols
+            case .short:               return formatter.shortWeekdaySymbols
+            case .shortStandalone:     return formatter.shortStandaloneWeekdaySymbols
+            case .veryShortStandalone: return formatter.veryShortStandaloneWeekdaySymbols
+            case let .custom(symbols): return symbols
+            }
+        }
+        
+        func symbol(_ type: SymbolType = .short, locale: Locale? = nil) -> String {
+            return Week.symbols(type, locale: locale)[rawValue]
+        }
+        
+        var symbol: String {
+            return symbol(.shortStandalone, locale: .jp)
+        }
+    }
     
     var weekIndex: Int {
         return calendar.component(.weekday, from: self) - 1
     }
     
-    var weekName: String {
-        let index = calendar.component(.weekday, from: self) - 1 // index値を 1〜7 から 0〜6 にしている
-        return ["日", "月", "火", "水", "木", "金", "土"][index]
+    var weak: Week {
+        return Week(rawValue: weekIndex)!
     }
     
-    func weeks(_ type: SymbolType = .short, locale: Locale? = nil) -> [String] {
-        let formatter = DateFormatter()
-        formatter.locale = locale ?? calendar.locale
-        
-        switch type {
-        case .`default`:           return formatter.weekdaySymbols
-        case .standalone:          return formatter.standaloneWeekdaySymbols
-        case .veryShort:           return formatter.veryShortWeekdaySymbols
-        case .short:               return formatter.shortWeekdaySymbols
-        case .shortStandalone:     return formatter.shortStandaloneWeekdaySymbols
-        case .veryShortStandalone: return formatter.veryShortStandaloneWeekdaySymbols
-        case let .custom(symbols): return symbols
-        }
+    var isSunday: Bool {
+        return weekIndex == Week.sunday.rawValue
     }
     
-    func week(_ type: SymbolType = .short, locale: Locale? = nil) -> String {
-        return weeks(type, locale: locale)[weekIndex]
+    var isSaturday: Bool {
+        return weekIndex == Week.saturday.rawValue
+    }
+    
+    var isWeekend: Bool {
+        return isSunday || isSaturday
+    }
+    
+    var isUsualDay: Bool {
+        return !isWeekend
     }
 }
 
@@ -259,11 +299,15 @@ extension Date {
 extension Date {
     
     func isSameDay(_ otherDay: Date) -> Bool {
-        return self.zeroclock == otherDay.zeroclock
+        return zeroclock == otherDay.zeroclock
     }
     
     func isSameDay(after days: Int) -> Bool {
         return isSameDay(Date.day(after: days))
+    }
+    
+    func isSameMonth(_ otherDay: Date) -> Bool {
+        return year == otherDay.year && month == otherDay.month
     }
     
     var isToday: Bool {
@@ -285,24 +329,74 @@ extension Date {
 
 extension Date {
     
-    enum Week: Int {
-        case sunday, monday, tuesday, wednesday, thursday, friday, saturday
+    static func dates(year: Int, month: Int) -> [Date] {
+        let date = Date(year: year, month: month)
+        return (date.firstDayOfMonth...date.lastDayOfMonth).map { $0 }
     }
     
-    var isSunday: Bool {
-        return weekIndex == Week.sunday.rawValue
+    static func datesForCalendar(year: Int, month: Int, startWeek: Date.Week = .sunday) -> [Date] {
+        var ret = [Date]()
+        let weeks = Week.weeks(startWeek: startWeek)
+        let date = Date(year: year, month: month)
+        
+        if let weekIndex = weeks.index(of: date.firstDayOfMonth.weak) {
+            for i in 0..<weekIndex {
+                let n = -(weekIndex - i)
+                ret.append(date.firstDayOfMonth.added(day: n))
+            }
+        }
+        
+        ret.append(contentsOf: dates(year: year, month: month))
+        
+        if let weekIndex = weeks.index(of: date.lastDayOfMonth.weak), weekIndex + 1 < 7 {
+            for (i, _) in (weekIndex + 1..<7).enumerated() {
+                ret.append(date.lastDayOfMonth.added(day: 1 + i))
+            }
+        }
+        
+        return ret
     }
     
-    var isSaturday: Bool {
-        return weekIndex == Week.saturday.rawValue
+    static func datesMatrixForCalendar(year: Int, month: Int, startWeek: Date.Week = .sunday) -> [Date] {
+        var ret = [Date]()
+        var i = 0, add = 1
+        let dates = datesForCalendar(year: year, month: month, startWeek: startWeek)
+        
+        (0..<6).forEach { _ in // rows
+            (0..<7).forEach { _ in // columns
+                if i <= dates.lastIndex {
+                    ret.append(dates[i])
+                    i += 1
+                } else {
+                    ret.append(dates.last!.added(day: add))
+                    add += 1
+                }
+            }
+        }
+        
+        return ret
     }
     
-    var isWeekend: Bool {
-        return isSunday || isSaturday
-    }
-    
-    var isUsualDay: Bool {
-        return !isWeekend
+    static func datesMatrixArraysForCalendar(year: Int, month: Int, startWeek: Date.Week = .sunday) -> [[Date]] {
+        var ret = [[Date]]()
+        var i = 0, add = 1
+        let dates = datesForCalendar(year: year, month: month, startWeek: startWeek)
+        
+        (0..<6).forEach { _ in // rows
+            var columns = [Date]()
+            (0..<7).forEach { _ in // columns
+                if i <= dates.lastIndex {
+                    columns.append(dates[i])
+                    i += 1
+                } else {
+                    columns.append(dates.last!.added(day: add))
+                    add += 1
+                }
+            }
+            ret.append(columns)
+        }
+        
+        return ret
     }
 }
 
@@ -377,5 +471,26 @@ extension Date {
         formatter.timeZone = Date.timezone
         formatter.locale = Locale(identifier: "en_US_POSIX")
         return formatter
+    }
+}
+
+extension Date {
+    
+    public func clone() -> Date {
+        return Date(timeIntervalSince1970: timeIntervalSince1970)
+    }
+}
+
+// Strideable準拠で date1...date2, date1..<date2 などが表現できる
+extension Date: Strideable {
+    
+    public typealias Stride = Int
+    
+    public func distance(to other: Date) -> Int {
+        return other.day - day
+    }
+    
+    public func advanced(by n: Int) -> Date {
+        return added(day: n)
     }
 }

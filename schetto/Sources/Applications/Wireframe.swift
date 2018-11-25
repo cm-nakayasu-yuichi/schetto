@@ -48,14 +48,19 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
-    static func showTodoDetail(from fromViewController: UIViewController) {
-        let viewController = builder.todoDetail()
+    static func showTodoDetail(from fromViewController: UIViewController, todo: TodoModel?) {
+        let viewController = builder.todoDetail(todo: todo)
         helper.push(viewController, from: fromViewController)
     }
     
-    static func showWeb(from fromViewController: UIViewController) {
-        let viewController = builder.web()
-        helper.present(viewController, from: fromViewController)
+	static func showWeb(from fromViewController: UIViewController, urlString: String) {
+        let viewController = builder.web(urlString: urlString)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
+    }
+    
+    static func showDatePicker(from fromViewController: UIViewController) {
+        let viewController = builder.datePicker()
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func showText(from fromViewController: UIViewController, options: TextViewControllerOptions, handler: @escaping (String) -> ()) {
@@ -81,6 +86,15 @@ class Wireframe {
             from: fromViewController,
             title: "確認",
             message: "このイベントを削除しますか",
+            didDecide: didDecide
+        )
+    }
+    
+    static func showConfirmDeleteTodo(from fromViewController: UIViewController, didDecide: @escaping () -> ()) {
+        alertHelper.alertDeleteCancel(
+            from: fromViewController,
+            title: "確認",
+            message: "このタスクを削除しますか",
             didDecide: didDecide
         )
     }
