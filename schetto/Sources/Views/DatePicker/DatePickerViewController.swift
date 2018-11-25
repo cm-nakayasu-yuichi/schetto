@@ -119,30 +119,3 @@ extension DatePickerViewController: RepeatingPickerViewDelegate {
         updateDateTime()
     }
 }
-
-class DatePickerWeekCell: CalendarViewWeekCell {
-    
-    @IBOutlet private weak var weekLabel: UILabel!
-    
-    override var week: Date.Week! {
-        didSet {
-            weekLabel.text = week.symbol
-        }
-    }
-}
-
-class DatePickerDayCell: CalendarViewDayCell{
-    
-    @IBOutlet private weak var dayButton: UIButton!
-    
-    override var date: Date! {
-        didSet {
-            if !month.isSameMonth(date) {
-                dayButton.isHidden = true
-                return
-            }
-            dayButton.isHidden = false
-            dayButton.title = date.day.string
-        }
-    }
-}
