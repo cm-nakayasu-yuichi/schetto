@@ -435,6 +435,11 @@ extension String {
     
     /// URLエンコードした文字列
     var urlEncode: String {
+//        let set: CharacterSet = [
+//            CharacterSet.alphanumerics,
+//            CharacterSet.urlHostAllowed,
+//            CharacterSet.urlQueryAllowed,
+//            ]
         return addingPercentEncoding(withAllowedCharacters: .alphanumerics) ?? ""
     }
     

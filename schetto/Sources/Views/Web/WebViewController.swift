@@ -61,7 +61,21 @@ class WebViewController: UIViewController {
     }
     
     @IBAction private func didTapShareButton() {
-        // NOP.
+        var items = [Any]()
+        var activities = [UIActivity]()
+        var text = ""
+
+        if let title = webView.title {
+            text += title + "\n"
+        }
+        if let url = webView.url {
+            items.append(url)
+            text += url.absoluteString
+            activities.append(SafariActivity(url: url))
+            activities.append(ChromeActivity())
+        }
+        items.append(text)
+        present(UIActivityViewController(activityItems: items, applicationActivities: activities), animated: true, completion: nil)
     }
     
     private func setupToolbarAppearances() {
