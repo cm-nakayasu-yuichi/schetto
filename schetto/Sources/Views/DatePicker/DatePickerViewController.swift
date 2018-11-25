@@ -8,8 +8,8 @@ class DatePickerViewController: UIViewController {
     
     typealias CommitHandler = (Date) -> ()
     
-    var dateTime: Date = .now
-    var commitHandler: CommitHandler? = nil
+    var dateTime: Date!
+    var commitHandler: CommitHandler!
     
     @IBOutlet private weak var calendarView: CalendarView!
     @IBOutlet private weak var hourPickerView: RepeatingPickerView!

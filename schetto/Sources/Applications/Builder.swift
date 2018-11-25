@@ -128,8 +128,10 @@ class Builder {
 		return view
     }
     
-    func datePicker() -> DatePickerViewController {
+    func datePicker(dateTime: Date, commitHandler: @escaping DatePickerViewController.CommitHandler) -> DatePickerViewController {
         let view = instantiate(DatePickerViewController.self, storyboardName: "DatePicker")
+        view.dateTime = dateTime
+        view.commitHandler = commitHandler
         return view
     }
     
