@@ -10,6 +10,8 @@
 		6F738B7713350D884A1BAA34 /* Pods_schetto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE5F7143E55700D3F4D293C /* Pods_schetto.framework */; };
 		DB0455E7218767FD003902B8 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0455E6218767FD003902B8 /* Button.swift */; };
 		DB0455E921876B9A003902B8 /* Color+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0455E821876B9A003902B8 /* Color+Definition.swift */; };
+		DB0CA14121A5A0E5003A254F /* ChromeActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA13F21A5A0E5003A254F /* ChromeActivity.swift */; };
+		DB0CA14221A5A0E5003A254F /* SafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14021A5A0E5003A254F /* SafariActivity.swift */; };
 		DB1CF2982199CAA100C61995 /* Text.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1CF2662199CAA100C61995 /* Text.storyboard */; };
 		DB1CF2992199CAA100C61995 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CF2672199CAA100C61995 /* TextViewController.swift */; };
 		DB1CF29A2199CAA100C61995 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CF2682199CAA100C61995 /* BootstrapViewController.swift */; };
@@ -203,6 +205,8 @@
 		9FA7AFAEAFB6AC132A3F1A7D /* Pods_schettoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_schettoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0455E6218767FD003902B8 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DB0455E821876B9A003902B8 /* Color+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Definition.swift"; sourceTree = "<group>"; };
+		DB0CA13F21A5A0E5003A254F /* ChromeActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromeActivity.swift; sourceTree = "<group>"; };
+		DB0CA14021A5A0E5003A254F /* SafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariActivity.swift; sourceTree = "<group>"; };
 		DB1CF2662199CAA100C61995 /* Text.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Text.storyboard; sourceTree = "<group>"; };
 		DB1CF2672199CAA100C61995 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		DB1CF2682199CAA100C61995 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +423,15 @@
 				7AC74EB13AEB92F1275AE480 /* Pods-schettoTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB0CA13E21A5A0E5003A254F /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				DB0CA14021A5A0E5003A254F /* SafariActivity.swift */,
+				DB0CA13F21A5A0E5003A254F /* ChromeActivity.swift */,
+			);
+			path = Activities;
 			sourceTree = "<group>";
 		};
 		DB1CF2652199CAA100C61995 /* Text */ = {
@@ -880,6 +893,7 @@
 		E493B2112176BF890017F931 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DB0CA13E21A5A0E5003A254F /* Activities */,
 				E4204014217F2DDD0036DAE0 /* Dialog */,
 				E493B2122176BF890017F931 /* WireframeHelper.swift */,
 				E4BF1A8421802D2F00AFBAB8 /* ApplicationLifeCycle.swift */,
@@ -1206,6 +1220,7 @@
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,
 				DBB52A5521761968009C5097 /* String+App.swift in Sources */,
+				DB0CA14121A5A0E5003A254F /* ChromeActivity.swift in Sources */,
 				E4DCFBFD218C26310091B016 /* StickerGroupModel.swift in Sources */,
 				E489D0BD21A2B0AE000DE3AA /* RepeatingPickerView.swift in Sources */,
 				E4F86E1F21815261003C0CD0 /* DialogNoneBehavior.swift in Sources */,
@@ -1225,6 +1240,7 @@
 				DB950A39218E806600D0B286 /* EventEditPresenter.swift in Sources */,
 				DB6C420221A16B7D0073EFAA /* CalendarViewDayCell.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
+				DB0CA14221A5A0E5003A254F /* SafariActivity.swift in Sources */,
 				E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E4959D7421848299008778F1 /* Realm.swift in Sources */,
