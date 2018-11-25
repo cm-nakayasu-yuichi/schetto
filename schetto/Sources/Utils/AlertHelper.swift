@@ -45,6 +45,18 @@ class AlertHelper {
         alert(from: fromViewController, title: title, message: message, actions: actions)
     }
     
+    func alertSaveClose(from fromViewController: UIViewController, title: String, message: String, didSave: @escaping (() -> ()), didClose: @escaping (() -> ())) {
+        let actions: [UIAlertAction] = [
+            UIAlertAction(title: "閉じる", style: .cancel, handler: { _ in
+                didClose()
+            }),
+            UIAlertAction(title: "保存", style: .default, handler: { _ in
+                didSave()
+            }),
+            ]
+        alert(from: fromViewController, title: title, message: message, actions: actions)
+    }
+    
     func alert(from fromViewController: UIViewController, title: String, message: String, actions: [UIAlertAction]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         actions.forEach { action in

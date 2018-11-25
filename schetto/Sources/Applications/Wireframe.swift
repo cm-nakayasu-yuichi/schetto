@@ -99,15 +99,16 @@ class Wireframe {
         )
     }
     
-    static func showConfirmDisposeChange(from fromViewController: UIViewController, didDecide: @escaping () -> ()) {
-        alertHelper.alertDeleteCancel(
+    static func showConfirmChange(from fromViewController: UIViewController, didSave: @escaping () -> (), didClose: @escaping () -> ()) {
+        alertHelper.alertSaveClose(
             from: fromViewController,
             title: "確認",
-            message: "変更を破棄しますか",
-            didDecide: didDecide
+            message: "変更を保存しますか",
+            didSave: didSave,
+            didClose: didClose
         )
     }
-    
+        
     private static var builder: Builder { return Builder() }
     private static var helper: WireframeHelper { return WireframeHelper() }
     private static var alertHelper: AlertHelper { return AlertHelper() }

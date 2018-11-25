@@ -43,6 +43,7 @@ class DatePickerViewController: UIViewController {
         
         updateDateTime()
         updateCalendarYearMonth(month: dateTime)
+        presenter.register(initialDateTime: dateTime)
     }
     
     override func viewDidLayoutSubviews() {
@@ -80,13 +81,29 @@ class DatePickerViewController: UIViewController {
         calendarYearMonthLabel.text = month.string(.custom(format: "yyyy年MM月"))
     }
     
+    override func didTapCloseButtonOnNavigationBar() {
+        presenter.check(dateTime: dateTime)
+    }
+    
     @IBAction private func didTapOkButton() {
-        Wireframe.dismiss(from: self)
+        
     }
 }
 
 extension DatePickerViewController: DatePickerViewProtocol {
     
+    func close() {
+        Wireframe.dismiss(from: self)
+    }
+    
+    func showConfirmClose() {
+        Wireframe.showConfirmChange(from: self, didSave: {
+            self.commitHandler(self.dateTime)
+            self.close()
+        }, didClose: {
+            self.close()
+        })
+    }
 }
 
 extension DatePickerViewController: CalendarViewDataStore, CalendarViewDelegate {
