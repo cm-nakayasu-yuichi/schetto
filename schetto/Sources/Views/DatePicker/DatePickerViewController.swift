@@ -25,7 +25,7 @@ class DatePickerViewController: UIViewController {
     
     @IBOutlet private weak var centerTopView: UIView!
     @IBOutlet private weak var centerBottomView: UIView!
-    @IBOutlet private weak var bottomView: UIView!
+    @IBOutlet private weak var toolbar: UIView!
     
     private var layouted = false
 
@@ -37,7 +37,7 @@ class DatePickerViewController: UIViewController {
         
         centerTopView.dropShadowTop()
         centerBottomView.dropShadowBottom()
-        bottomView.dropShadowTop()
+        toolbar.dropShadowTop()
         
         updateDateTime()
         updateCalendarYearMonth(month: dateTime)
@@ -64,15 +64,6 @@ class DatePickerViewController: UIViewController {
         let components = [(0..<60).map { i -> String in i.string }]
         let indecies = [dateTime.minute]
         minutePickerView.set(rowsInComponents: components, indecies: indecies)
-    }
-    
-    private func setupBottomView() {
-//        bottomView.layer.masksToBounds = false
-        bottomView.layer.shadowColor = UIColor.black.cgColor
-        bottomView.layer.shadowOffset = CGSize(width: 0, height: -2)
-        bottomView.layer.shadowOpacity = 0.15
-        bottomView.layer.shadowRadius = 2
-//        bottomView.layer.shadowPath = UIBezierPath(rect: bottomView.bounds).cgPath
     }
     
     private func updateDateTime() {
