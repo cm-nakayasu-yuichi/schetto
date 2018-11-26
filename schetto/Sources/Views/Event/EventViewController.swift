@@ -11,10 +11,12 @@ class EventViewController: UIViewController {
     private var adapter: EventAdapter!
     
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var closeButton: UIButton!
+    @IBOutlet private weak var toolbar: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCloseButtonOnNavigationBar()
+        toolbar.dropShadowTop()
         adapter = EventAdapter(tableView, delegate: self)
     }
     

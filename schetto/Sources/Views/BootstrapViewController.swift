@@ -28,6 +28,9 @@ class BootstrapViewController: UITableViewController {
                     print(date.string())
                 }
             }),
+            (title: "予定", handler: { bootstrap in
+                Wireframe.showEvent(from: bootstrap)
+            }),
             ]),
         ]
     // =========================================================================

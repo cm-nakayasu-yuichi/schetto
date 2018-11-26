@@ -18,7 +18,7 @@ class Wireframe {
     
     static func showEvent(from fromViewController: UIViewController) {
         let viewController = builder.event()
-        helper.present(crossDisolve: viewController, from: fromViewController)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func showDrawerMenu(from fromViewController: UIViewController) {
