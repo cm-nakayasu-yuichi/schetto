@@ -18,7 +18,7 @@ class BootstrapViewController: UITableViewController {
 				Wireframe.showWeb(from: bootstrap, urlString: "https://dev.classmethod.jp/author/nakayasu-yuichi/")
             }),
             (title: "日付選択", handler: { bootstrap in
-                Wireframe.showDatePicker(from: bootstrap, dateTime: .now) { date in
+                Wireframe.showDatePicker(from: bootstrap, dateTime: .now, title: "日付を選ぶ") { date in
                     print(date.string())
                 }
             }),

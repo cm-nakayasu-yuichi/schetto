@@ -58,8 +58,8 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
-    static func showDatePicker(from fromViewController: UIViewController, dateTime: Date, commitHandler: @escaping DatePickerViewController.CommitHandler) {
-        let viewController = builder.datePicker(dateTime: dateTime, commitHandler: commitHandler)
+    static func showDatePicker(from fromViewController: UIViewController, dateTime: Date, title: String, commitHandler: @escaping DatePickerViewController.CommitHandler) {
+        let viewController = builder.datePicker(dateTime: dateTime, title: title, commitHandler: commitHandler)
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     

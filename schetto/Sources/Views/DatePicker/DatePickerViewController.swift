@@ -38,6 +38,7 @@ class DatePickerViewController: UIViewController {
         setupDropShadow()
         setupHourPickerView()
         setupMinutePickerView()
+        setupNavigationTitle()
         updateDateTime()
         updateCalendarYearMonth(month: dateTime)
         presenter.register(initialDateTime: dateTime)
@@ -49,6 +50,13 @@ class DatePickerViewController: UIViewController {
             calendarView.delegate = self
             calendarView.dataStore = self
             layouted = true
+        }
+    }
+    
+    private func setupNavigationTitle() {
+        setNavigationTitle() { titleLabel in
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapTitleOnNavigationBar))
+            titleLabel.parent?.addGestureRecognizer(gesture)
         }
     }
     
@@ -95,6 +103,10 @@ class DatePickerViewController: UIViewController {
     @IBAction private func didTapOkButton() {
         self.commitHandler(self.dateTime)
         self.close()
+    }
+    
+    @objc private func didTapTitleOnNavigationBar() {
+        print(1)
     }
     
     @objc private func didTapThisMonthButtonOnNavigationBar() {

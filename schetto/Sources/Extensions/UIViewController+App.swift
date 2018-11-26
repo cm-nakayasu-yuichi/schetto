@@ -15,6 +15,19 @@ extension UIViewController {
         let button = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: selector)
         navigationItem.leftBarButtonItem = button
     }
+    
+    func setNavigationTitle(updateLabelBlock: (UILabel) -> ()) {
+        let titleView = UIView()
+        let label = UILabel()
+        label.parent = titleView
+        label.text = title
+        label.font = .navigationTitle
+        label.textColor = .baseNavigationForeground
+        label.textAlignment = .center
+        updateLabelBlock(label)
+        _ = label.addConstraint(allSideSpaceTo: titleView)
+        navigationItem.titleView = titleView
+    }
 }
 
 extension UIViewController {
