@@ -6,24 +6,37 @@ import UIKit
 
 extension UIViewController {
     
-    func setupCloseButtonOnNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(didTapCloseButtonOnNavigationBar))
+    func setRightBarButtonSystemItem(_ systemItem:  UIBarButtonItem.SystemItem, selector: Selector) {
+        let button = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: selector)
+        navigationItem.rightBarButtonItem = button
+    }
+    
+    func setLeftBarButtonSystemItem(_ systemItem:  UIBarButtonItem.SystemItem, selector: Selector) {
+        let button = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: selector)
         navigationItem.leftBarButtonItem = button
     }
     
-    @objc func didTapCloseButtonOnNavigationBar() {
-        Wireframe.dismiss(from: self)
+    func setNavigationTitle(updateLabelBlock: (UILabel) -> ()) {
+        let titleView = UIView()
+        let label = UILabel()
+        label.parent = titleView
+        label.text = title
+        label.font = .navigationTitle
+        label.textColor = .baseNavigationForeground
+        label.textAlignment = .center
+        updateLabelBlock(label)
+        _ = label.addConstraint(allSideSpaceTo: titleView)
+        navigationItem.titleView = titleView
     }
 }
 
 extension UIViewController {
     
-    func setupAddButtonOnNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddButtonOnNavigationBar))
-        navigationItem.rightBarButtonItem = button
+    func setupCloseButtonOnNavigationBar() {
+        setLeftBarButtonSystemItem(.stop, selector: #selector(didTapCloseButtonOnNavigationBar))
     }
     
-    @objc func didTapAddButtonOnNavigationBar() {
-        
+    @objc func didTapCloseButtonOnNavigationBar() {
+        Wireframe.dismiss(from: self)
     }
 }
