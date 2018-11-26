@@ -132,12 +132,15 @@ class Builder {
         return view
     }
     
-    func web() -> WebViewController {
+	func web(urlString: String) -> WebViewController {
         let view = instantiate(WebViewController.self, storyboardName: "Web")
-        let presenter: WebPresenterProtocol = WebPresenter()
+		view.initialUrlString = urlString
+		
+		let presenter: WebPresenterProtocol = WebPresenter()
         presenter.view = view
         view.presenter = presenter
-        return view
+		
+		return view
     }
     
     func datePicker() -> DatePickerViewController {
