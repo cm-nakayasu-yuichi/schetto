@@ -34,6 +34,7 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCloseButtonOnNavigationBar()
+        setupThisMonthButtonOnNavigationBar()
         setupHourPickerView()
         setupMinutePickerView()
         
@@ -53,6 +54,11 @@ class DatePickerViewController: UIViewController {
             calendarView.dataStore = self
             layouted = true
         }
+    }
+    
+    private func setupThisMonthButtonOnNavigationBar() {
+        let button = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapThisMonthButtonOnNavigationBar))
+        navigationItem.rightBarButtonItem = button
     }
     
     private func setupHourPickerView() {
@@ -86,7 +92,13 @@ class DatePickerViewController: UIViewController {
     }
     
     @IBAction private func didTapOkButton() {
-        
+        self.commitHandler(self.dateTime)
+        self.close()
+    }
+    
+    @objc private func didTapThisMonthButtonOnNavigationBar() {
+        let month = calendarView.moveToThisMonth()
+        updateCalendarYearMonth(month: month)
     }
 }
 
@@ -98,8 +110,7 @@ extension DatePickerViewController: DatePickerViewProtocol {
     
     func showConfirmClose() {
         Wireframe.showConfirmChange(from: self, didSave: {
-            self.commitHandler(self.dateTime)
-            self.close()
+            self.didTapOkButton()
         }, didClose: {
             self.close()
         })

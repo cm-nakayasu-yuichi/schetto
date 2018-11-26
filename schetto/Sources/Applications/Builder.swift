@@ -130,7 +130,7 @@ class Builder {
     
     func datePicker(dateTime: Date, commitHandler: @escaping DatePickerViewController.CommitHandler) -> DatePickerViewController {
         let view = instantiate(DatePickerViewController.self, storyboardName: "DatePicker")
-        view.dateTime = dateTime
+        view.dateTime = dateTime.fixed(second: 0) // 秒は不要
         view.commitHandler = commitHandler
         
         let presenter: DatePickerPresenterProtocol = DatePickerPresenter()
