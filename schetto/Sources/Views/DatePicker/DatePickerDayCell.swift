@@ -4,7 +4,14 @@
 //
 import UIKit
 
+protocol DatePickerDayCellDelegate: class {
+    
+    func datePickerDayCell(_ cell: DatePickerDayCell, date: Date)
+}
+
 class DatePickerDayCell: CalendarViewDayCell{
+    
+    weak var delegate: DatePickerDayCellDelegate!
     
     @IBOutlet private weak var dayButton: UIButton!
     
@@ -17,5 +24,9 @@ class DatePickerDayCell: CalendarViewDayCell{
             dayButton.isHidden = false
             dayButton.title = date.day.string
         }
+    }
+    
+    @IBAction private func didTapDayButton() {
+        delegate.datePickerDayCell(self, date: date)
     }
 }
