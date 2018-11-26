@@ -19,14 +19,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="140" height="66"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOK-0v-Xyo">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJq-Vr-6XV">
+                        <rect key="frame" x="54" y="17" width="32" height="32"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOK-0v-Xyo" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
                         <rect key="frame" x="54" y="17" width="32" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ZOK-0v-Xyo" secondAttribute="height" multiplier="1:1" id="gE6-Pk-5mT"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="qOq-cK-tMa"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                        <state key="normal" title="31">
+                        <state key="normal">
                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
@@ -37,13 +43,18 @@
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="KJq-Vr-6XV" firstAttribute="top" secondItem="ZOK-0v-Xyo" secondAttribute="top" id="9Gw-kn-LPJ"/>
+                <constraint firstItem="KJq-Vr-6XV" firstAttribute="leading" secondItem="ZOK-0v-Xyo" secondAttribute="leading" id="VhR-Gx-HgO"/>
                 <constraint firstItem="ZOK-0v-Xyo" firstAttribute="centerX" secondItem="ESj-4F-9TH" secondAttribute="centerX" id="W99-AE-fNE"/>
                 <constraint firstItem="ZOK-0v-Xyo" firstAttribute="centerY" secondItem="ESj-4F-9TH" secondAttribute="centerY" id="YeA-YS-3JC"/>
+                <constraint firstItem="KJq-Vr-6XV" firstAttribute="trailing" secondItem="ZOK-0v-Xyo" secondAttribute="trailing" id="bS1-Op-Fk4"/>
+                <constraint firstItem="KJq-Vr-6XV" firstAttribute="bottom" secondItem="ZOK-0v-Xyo" secondAttribute="bottom" id="e1A-mo-aQQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="3nQ-B8-Lj8"/>
             <size key="customSize" width="140" height="66"/>
             <connections>
                 <outlet property="dayButton" destination="ZOK-0v-Xyo" id="JU8-ML-T7V"/>
+                <outlet property="dayLabel" destination="KJq-Vr-6XV" id="TkK-8i-FUx"/>
             </connections>
             <point key="canvasLocation" x="-413" y="104"/>
         </collectionViewCell>

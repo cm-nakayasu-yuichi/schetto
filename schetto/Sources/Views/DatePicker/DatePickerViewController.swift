@@ -119,6 +119,9 @@ extension DatePickerViewController: CalendarViewDataStore, CalendarViewDelegate 
     func calendarView(_ calendarView: CalendarView, dayCell: CalendarViewDayCell, date: Date, month: Date) {
         let cell = dayCell as! DatePickerDayCell
         cell.delegate = self
+        
+        let cellState: DatePickerDayCell.State = dateTime.isSameDay(date) ? .selected : (date.isToday ? .today : .default)
+        cell.state = cellState
     }
     
     func calendarView(_ calendarView: CalendarView, weekCell: CalendarViewWeekCell, week: Date.Week) {
@@ -148,6 +151,7 @@ extension DatePickerViewController: DatePickerDayCellDelegate {
     func datePickerDayCell(_ cell: DatePickerDayCell, date: Date) {
         dateTime = dateTime.fixed(year: date.year, month: date.month, day: date.day)
         updateDateTime()
+        calendarView.reloadData()
     }
 }
 

@@ -56,6 +56,10 @@ class CalendarView: UIView {
     
     private var month = Date.now.firstDayOfMonth
     private var contentsCollectionView: UICollectionView!
+    
+    func reloadData() {
+        contentsCollectionView.reloadItems(at: contentsCollectionView.indexPathsForVisibleItems)
+    }
         
     private func setupContentsCollectionView() {
         let layout = UICollectionViewFlowLayout()
