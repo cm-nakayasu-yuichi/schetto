@@ -187,30 +187,36 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-Fi-OEp" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
-                                        <rect key="frame" x="249.5" y="32" width="36" height="36"/>
+                                        <rect key="frame" x="247.5" y="30" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="3Wl-07-ruN"/>
-                                            <constraint firstAttribute="height" constant="36" id="pgu-sA-Ise"/>
+                                            <constraint firstAttribute="width" constant="40" id="3Wl-07-ruN"/>
+                                            <constraint firstAttribute="height" constant="40" id="pgu-sA-Ise"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="corner">
-                                                <real key="value" value="18"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapHourButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="WWQ-rm-WU6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5j-kO-GyV" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
-                                        <rect key="frame" x="300" y="32" width="36" height="36"/>
+                                        <rect key="frame" x="298" y="30" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="LZh-jt-sHD"/>
-                                            <constraint firstAttribute="height" constant="36" id="XYH-8b-UaA"/>
+                                            <constraint firstAttribute="width" constant="40" id="LZh-jt-sHD"/>
+                                            <constraint firstAttribute="height" constant="40" id="XYH-8b-UaA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="corner">
-                                                <real key="value" value="18"/>
+                                                <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapMinuteButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="JL7-1u-S4U"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iO9-TJ-BZi">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="0.5"/>

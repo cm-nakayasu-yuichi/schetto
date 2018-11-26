@@ -74,14 +74,14 @@ class DatePickerViewController: UIViewController {
     
     private func setupHourPickerView() {
         hourPickerView.repeatingDelegate = self
-        let components = [(0..<24).map { i -> String in i.string }]
+        let components = [(0..<24).map { i -> String in i.paddingZero(length: 2) }]
         let indecies = [dateTime.hour]
         hourPickerView.set(rowsInComponents: components, indecies: indecies)
     }
     
     private func setupMinutePickerView() {
         minutePickerView.repeatingDelegate = self
-        let components = [(0..<60).map { i -> String in i.string }]
+        let components = [(0..<60).map { i -> String in i.paddingZero(length: 2) }]
         let indecies = [dateTime.minute]
         minutePickerView.set(rowsInComponents: components, indecies: indecies)
     }
@@ -94,6 +94,11 @@ class DatePickerViewController: UIViewController {
         minuteLabel.text = dateTime.string(.custom(format: "mm"))
     }
     
+    private func updatePickerViews() {
+        hourPickerView.moveToCenter(row: dateTime.hour, forComponent: 0)
+        minutePickerView.moveToCenter(row: dateTime.minute, forComponent: 0)
+    }
+    
     private func updateCalendarYearMonth(month: Date) {
         calendarYearMonthLabel.text = month.string(.custom(format: "yyyy年MM月"))
     }
@@ -102,13 +107,20 @@ class DatePickerViewController: UIViewController {
         presenter.check(dateTime: dateTime)
     }
     
+    @IBAction private func didTapHourButton() {
+        presenter.calculateNextHour(date: dateTime)
+    }
+    
+    @IBAction private func didTapMinuteButton() {
+        presenter.calculateNextMinute(date: dateTime)
+    }
+    
     @IBAction private func didTapOkButton() {
         self.commitHandler(self.dateTime)
         self.close()
     }
     
     @objc private func didTapTitleOnNavigationBar() {
-        print(1)
     }
     
     @objc private func didTapThisMonthButtonOnNavigationBar() {
@@ -129,6 +141,20 @@ extension DatePickerViewController: DatePickerViewProtocol {
         }, didClose: {
             self.close()
         })
+    }
+    
+    func showCalculatedDate(date: Date) {
+        let monthChanged = !dateTime.isSameMonth(date)
+        dateTime = date
+        updateDateTime()
+        updatePickerViews()
+        
+        if monthChanged {
+            let month = calendarView.moveTo(year: dateTime.year, month: dateTime.month)
+            updateCalendarYearMonth(month: month)
+        }
+        
+        calendarView.reloadData()
     }
 }
 
