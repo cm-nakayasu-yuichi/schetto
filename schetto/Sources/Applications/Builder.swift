@@ -21,6 +21,21 @@ class Builder {
         return view
     }
     
+    func mainMonthly() -> MainMonthlyViewController {
+        let view = instantiate(MainMonthlyViewController.self, storyboardName: "MainMonthly")
+        
+        let presenter: MainMonthlyPresenterProtocol = MainMonthlyPresenter()
+        presenter.view = view
+        
+        let interactor: MainMonthlyInteractorInput = MainMonthlyRepository()
+        interactor.output = presenter as! MainMonthlyInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
     func eventEdit() -> EventEditViewController {
         let view = instantiate(EventEditViewController.self, storyboardName: "EventEdit")
         

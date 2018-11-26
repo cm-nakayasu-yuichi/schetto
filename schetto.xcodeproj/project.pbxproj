@@ -120,6 +120,14 @@
 		E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */; };
 		E4456DCB2189601300C13172 /* CalendarSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DCA2189601300C13172 /* CalendarSetting.swift */; };
 		E4456DCD2189603D00C13172 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DCC2189603D00C13172 /* AppConfig.swift */; };
+		E45C4EC121A392C2002002AC /* MainMonthlyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4EB921A392C2002002AC /* MainMonthlyRepository.swift */; };
+		E45C4EC321A392C2002002AC /* MainMonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4EBB21A392C2002002AC /* MainMonthlyViewController.swift */; };
+		E45C4EC521A392C2002002AC /* MainMonthlyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4EBD21A392C2002002AC /* MainMonthlyPresenter.swift */; };
+		E45C4EC821A392C2002002AC /* MainMonthly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E45C4EC021A392C2002002AC /* MainMonthly.storyboard */; };
+		E45C4ECD21A3A770002002AC /* MainMonthlyWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4EC921A3A76F002002AC /* MainMonthlyWeekCell.swift */; };
+		E45C4ECE21A3A770002002AC /* MainMonthlyDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C4ECA21A3A76F002002AC /* MainMonthlyDayCell.swift */; };
+		E45C4ECF21A3A770002002AC /* MainMonthlyWeekCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45C4ECB21A3A76F002002AC /* MainMonthlyWeekCell.xib */; };
+		E45C4ED021A3A770002002AC /* MainMonthlyDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45C4ECC21A3A76F002002AC /* MainMonthlyDayCell.xib */; };
 		E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47278BD21780F5C003DA88E /* Notifiable.swift */; };
 		E477351421780C8F00DE3AA7 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477351321780C8F00DE3AA7 /* KeyboardManager.swift */; };
 		E489D0BD21A2B0AE000DE3AA /* RepeatingPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489D0BC21A2B0AE000DE3AA /* RepeatingPickerView.swift */; };
@@ -320,6 +328,14 @@
 		E4456DC621895FCC00C13172 /* CalendarSettingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSettingModel.swift; sourceTree = "<group>"; };
 		E4456DCA2189601300C13172 /* CalendarSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSetting.swift; sourceTree = "<group>"; };
 		E4456DCC2189603D00C13172 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		E45C4EB921A392C2002002AC /* MainMonthlyRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyRepository.swift; sourceTree = "<group>"; };
+		E45C4EBB21A392C2002002AC /* MainMonthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyViewController.swift; sourceTree = "<group>"; };
+		E45C4EBD21A392C2002002AC /* MainMonthlyPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyPresenter.swift; sourceTree = "<group>"; };
+		E45C4EC021A392C2002002AC /* MainMonthly.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainMonthly.storyboard; sourceTree = "<group>"; };
+		E45C4EC921A3A76F002002AC /* MainMonthlyWeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyWeekCell.swift; sourceTree = "<group>"; };
+		E45C4ECA21A3A76F002002AC /* MainMonthlyDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMonthlyDayCell.swift; sourceTree = "<group>"; };
+		E45C4ECB21A3A76F002002AC /* MainMonthlyWeekCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMonthlyWeekCell.xib; sourceTree = "<group>"; };
+		E45C4ECC21A3A76F002002AC /* MainMonthlyDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMonthlyDayCell.xib; sourceTree = "<group>"; };
 		E47278BD21780F5C003DA88E /* Notifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		E477351321780C8F00DE3AA7 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		E489D0BC21A2B0AE000DE3AA /* RepeatingPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatingPickerView.swift; sourceTree = "<group>"; };
@@ -680,6 +696,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E45C4EB821A392C2002002AC /* MainMonthly */ = {
+			isa = PBXGroup;
+			children = (
+				E45C4EC021A392C2002002AC /* MainMonthly.storyboard */,
+				E45C4ECB21A3A76F002002AC /* MainMonthlyWeekCell.xib */,
+				E45C4ECC21A3A76F002002AC /* MainMonthlyDayCell.xib */,
+				E45C4EBB21A392C2002002AC /* MainMonthlyViewController.swift */,
+				E45C4EC921A3A76F002002AC /* MainMonthlyWeekCell.swift */,
+				E45C4ECA21A3A76F002002AC /* MainMonthlyDayCell.swift */,
+			);
+			path = MainMonthly;
+			sourceTree = "<group>";
+		};
 		E489D0BB21A2B0AE000DE3AA /* RepeatingPickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,6 +822,7 @@
 				DB1CF2692199CAA100C61995 /* Tutorial */,
 				DB1CF2882199CAA100C61995 /* Terms */,
 				DB1CF28E2199CAA100C61995 /* Main */,
+				E45C4EB821A392C2002002AC /* MainMonthly */,
 				DB1CF2822199CAA100C61995 /* DrawerMenu */,
 				DB1CF2712199CAA100C61995 /* TodoList */,
 				DB1CF27A2199CAA100C61995 /* TodoDetail */,
@@ -813,6 +843,7 @@
 				DB954F782190AC4E007BC9D1 /* TodoListPresenter.swift */,
 				DB954FA72190B04F007BC9D1 /* TodoDetailPresenter.swift */,
 				DB22840C21888D6D008F00F6 /* MainPresenter.swift */,
+				E45C4EBD21A392C2002002AC /* MainMonthlyPresenter.swift */,
 				DB950A2F218E806600D0B286 /* EventEditPresenter.swift */,
 				DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */,
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
@@ -839,8 +870,9 @@
 			children = (
 				DBA6BCB5219B0D0B00FE5CD9 /* Mocks */,
 				E4DCFC06218FCDAA0091B016 /* TodoRepository.swift */,
-				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				DB22840E21888D6D008F00F6 /* MainRepository.swift */,
+				E45C4EB921A392C2002002AC /* MainMonthlyRepository.swift */,
+				E4959E3221869B6D008778F1 /* LaunchRepository.swift */,
 				E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */,
 				DB950A33218E806600D0B286 /* EventEditRepository.swift */,
 				DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */,
@@ -1087,6 +1119,7 @@
 				DB6C41E8219F32790073EFAA /* DatePicker.storyboard in Resources */,
 				E493B1CB217593F90017F931 /* Assets.xcassets in Resources */,
 				DB1CF2BB2199CAA100C61995 /* EventEdit.storyboard in Resources */,
+				E45C4ECF21A3A770002002AC /* MainMonthlyWeekCell.xib in Resources */,
 				DB1CF2A52199CAA100C61995 /* Web.storyboard in Resources */,
 				DB1CF2B42199CAA100C61995 /* Terms.storyboard in Resources */,
 				E42F696B2189B99C00426E3C /* default_calendar_setting.json in Resources */,
@@ -1094,8 +1127,10 @@
 				DB1CF2AA2199CAA100C61995 /* TodoDetail.storyboard in Resources */,
 				DB1CF2B12199CAA100C61995 /* DrawerMenu.storyboard in Resources */,
 				DB1CF2A22199CAA100C61995 /* TodoList.storyboard in Resources */,
+				E45C4ED021A3A770002002AC /* MainMonthlyDayCell.xib in Resources */,
 				DB6C41FA21A168E50073EFAA /* DatePickerDayCell.xib in Resources */,
 				DB1CF2982199CAA100C61995 /* Text.storyboard in Resources */,
+				E45C4EC821A392C2002002AC /* MainMonthly.storyboard in Resources */,
 				DB1CF2AD2199CAA100C61995 /* Test.storyboard in Resources */,
 				DB1CF29F2199CAA100C61995 /* Launch.storyboard in Resources */,
 				DB1CF2B62199CAA100C61995 /* DesignFontSetting.storyboard in Resources */,
@@ -1202,17 +1237,20 @@
 				DB1CF29B2199CAA100C61995 /* TutorialAdapter.swift in Sources */,
 				E4DCFBE3218BD42B0091B016 /* DBTemplate.swift in Sources */,
 				DB6C41E6219F32790073EFAA /* DatePickerViewController.swift in Sources */,
+				E45C4ECD21A3A770002002AC /* MainMonthlyWeekCell.swift in Sources */,
 				E42F69662189A3EA00426E3C /* CalendarThemeModel.swift in Sources */,
 				DB1CF2A62199CAA100C61995 /* WebViewController.swift in Sources */,
 				E4BF1A8B2180685E00AFBAB8 /* PushNotification.swift in Sources */,
 				E4BF1A892180445700AFBAB8 /* main.swift in Sources */,
 				DB6C420521A16B7D0073EFAA /* CalendarViewWeekCell.swift in Sources */,
 				E4DCFC00218C26310091B016 /* TodoModel.swift in Sources */,
+				E45C4EC121A392C2002002AC /* MainMonthlyRepository.swift in Sources */,
 				DBB52A5221761968009C5097 /* Date+App.swift in Sources */,
 				DB1CF29D2199CAA100C61995 /* TutorialCell.swift in Sources */,
 				DBA6BCB7219B0D0B00FE5CD9 /* TodoRepositoryMock.swift in Sources */,
 				E4456DC821895FCC00C13172 /* CalendarSettingModel.swift in Sources */,
 				DB950A11218B543300D0B286 /* WebPresenter.swift in Sources */,
+				E45C4EC321A392C2002002AC /* MainMonthlyViewController.swift in Sources */,
 				DB1CF2A32199CAA100C61995 /* TodoListViewController.swift in Sources */,
 				DBB52A5621761968009C5097 /* Notification+App.swift in Sources */,
 				E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */,
@@ -1227,6 +1265,7 @@
 				E4959D69218368B3008778F1 /* WebApiAccessor.swift in Sources */,
 				E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
+				E45C4EC521A392C2002002AC /* MainMonthlyPresenter.swift in Sources */,
 				DB11CD0821AC2990000AD5EC /* DatePickerWizardAdapter.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
@@ -1235,6 +1274,7 @@
 				DB6C420421A16B7D0073EFAA /* CalendarView.swift in Sources */,
 				DB950A2B218D7C9F00D0B286 /* DesignFontSetting.swift in Sources */,
 				DB22841F2188C288008F00F6 /* CoreGraphics+Dimension.swift in Sources */,
+				E45C4ECE21A3A770002002AC /* MainMonthlyDayCell.swift in Sources */,
 				E4456DC321894DDB00C13172 /* File+Definition.swift in Sources */,
 				E4F86E1E21815261003C0CD0 /* DialogBottomDrawBehavior.swift in Sources */,
 				E4F86E1D21815261003C0CD0 /* DialogZoomBehavior.swift in Sources */,

@@ -11,6 +11,11 @@ class Wireframe {
         helper.present(crossDisolve: viewController, from: fromViewController)
     }
     
+    static func showMainMonthly(from fromViewController: UIViewController) {
+        let viewController = builder.mainMonthly()
+        helper.present(crossDisolve: viewController, from: fromViewController)
+    }
+    
     static func showEventEdit(from fromViewController: UIViewController) {
         let viewController = builder.eventEdit()
         helper.present(crossDisolve: viewController, from: fromViewController)
