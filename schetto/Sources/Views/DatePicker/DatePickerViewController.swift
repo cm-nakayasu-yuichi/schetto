@@ -29,6 +29,7 @@ class DatePickerViewController: UIViewController {
     @IBOutlet private weak var centerBottomView: UIView!
     @IBOutlet private weak var toolbar: UIView!
     
+    private var wizardAdapter: DatePickerWizardAdapter!
     private var layouted = false
 
     override func viewDidLoad() {
@@ -49,6 +50,7 @@ class DatePickerViewController: UIViewController {
         if !layouted {
             calendarView.delegate = self
             calendarView.dataStore = self
+            wizardAdapter = DatePickerWizardAdapter(wizardTableView, delegate: self)
             layouted = true
         }
     }
@@ -187,3 +189,6 @@ extension DatePickerViewController: DatePickerDayCellDelegate {
     }
 }
 
+extension DatePickerViewController: DatePickerWizardAdapterDelegate {
+    
+}
