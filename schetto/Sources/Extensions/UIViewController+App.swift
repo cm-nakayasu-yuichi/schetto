@@ -6,24 +6,24 @@ import UIKit
 
 extension UIViewController {
     
-    func setupCloseButtonOnNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(didTapCloseButtonOnNavigationBar))
-        navigationItem.leftBarButtonItem = button
+    func setRightBarButtonSystemItem(_ systemItem:  UIBarButtonItem.SystemItem, selector: Selector) {
+        let button = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: selector)
+        navigationItem.rightBarButtonItem = button
     }
     
-    @objc func didTapCloseButtonOnNavigationBar() {
-        Wireframe.dismiss(from: self)
+    func setLeftBarButtonSystemItem(_ systemItem:  UIBarButtonItem.SystemItem, selector: Selector) {
+        let button = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: selector)
+        navigationItem.leftBarButtonItem = button
     }
 }
 
 extension UIViewController {
     
-    func setupAddButtonOnNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddButtonOnNavigationBar))
-        navigationItem.rightBarButtonItem = button
+    func setupCloseButtonOnNavigationBar() {
+        setLeftBarButtonSystemItem(.stop, selector: #selector(didTapCloseButtonOnNavigationBar))
     }
     
-    @objc func didTapAddButtonOnNavigationBar() {
-        
+    @objc func didTapCloseButtonOnNavigationBar() {
+        Wireframe.dismiss(from: self)
     }
 }

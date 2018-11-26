@@ -257,12 +257,12 @@
                         <outlet property="centerTopView" destination="urv-7K-LgH" id="LTR-h3-9dA"/>
                         <outlet property="hourLabel" destination="3cK-Xf-kQa" id="fWV-1c-9hi"/>
                         <outlet property="hourPickerView" destination="0Fu-ue-wew" id="8Kw-gA-i10"/>
-                        <outlet property="menuTableView" destination="sPz-ra-iq9" id="wjt-4g-KKH"/>
                         <outlet property="minuteLabel" destination="l8c-tw-bmh" id="UU2-Bu-3gl"/>
                         <outlet property="minutePickerView" destination="a1t-dF-gAV" id="wsk-4S-Tcd"/>
                         <outlet property="monthDayLabel" destination="QVe-vv-95l" id="L4k-n3-MoA"/>
                         <outlet property="toolbar" destination="02u-7Y-dXR" id="8Ud-Us-aFV"/>
                         <outlet property="weekLabel" destination="UWL-0d-Jv6" id="Zpu-xm-qOn"/>
+                        <outlet property="wizardTableView" destination="sPz-ra-iq9" id="XXm-kj-Ivq"/>
                         <outlet property="yearLabel" destination="Df5-fL-VCX" id="0Cq-Kc-sYX"/>
                     </connections>
                 </viewController>

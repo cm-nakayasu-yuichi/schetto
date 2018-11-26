@@ -16,7 +16,7 @@ class DatePickerViewController: UIViewController {
     @IBOutlet private weak var calendarView: CalendarView!
     @IBOutlet private weak var hourPickerView: RepeatingPickerView!
     @IBOutlet private weak var minutePickerView: RepeatingPickerView!
-    @IBOutlet private weak var menuTableView: UITableView!
+    @IBOutlet private weak var wizardTableView: UITableView!
     
     @IBOutlet private weak var calendarYearMonthLabel: UILabel!
     @IBOutlet private weak var yearLabel: UILabel!
@@ -35,13 +35,9 @@ class DatePickerViewController: UIViewController {
         super.viewDidLoad()
         setupCloseButtonOnNavigationBar()
         setupThisMonthButtonOnNavigationBar()
+        setupDropShadow()
         setupHourPickerView()
         setupMinutePickerView()
-        
-        centerTopView.dropShadowTop()
-        centerBottomView.dropShadowBottom()
-        toolbar.dropShadowTop()
-        
         updateDateTime()
         updateCalendarYearMonth(month: dateTime)
         presenter.register(initialDateTime: dateTime)
@@ -57,8 +53,13 @@ class DatePickerViewController: UIViewController {
     }
     
     private func setupThisMonthButtonOnNavigationBar() {
-        let button = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapThisMonthButtonOnNavigationBar))
-        navigationItem.rightBarButtonItem = button
+        setRightBarButtonSystemItem(.refresh, selector: #selector(didTapThisMonthButtonOnNavigationBar))
+    }
+    
+    private func setupDropShadow() {
+        centerTopView.dropShadowTop()
+        centerBottomView.dropShadowBottom()
+        toolbar.dropShadowTop()
     }
     
     private func setupHourPickerView() {
@@ -130,17 +131,25 @@ extension DatePickerViewController: CalendarViewDataStore, CalendarViewDelegate 
     func calendarView(_ calendarView: CalendarView, dayCell: CalendarViewDayCell, date: Date, month: Date) {
         let cell = dayCell as! DatePickerDayCell
         cell.delegate = self
-        
-        let cellState: DatePickerDayCell.State = dateTime.isSameDay(date) ? .selected : (date.isToday ? .today : .default)
-        cell.state = cellState
+        cell.state = cellState(date: date)
     }
     
     func calendarView(_ calendarView: CalendarView, weekCell: CalendarViewWeekCell, week: Date.Week) {
-        
+        // nop.
     }
     
     func calendarView(_ calendarView: CalendarView, didChangeMonth month: Date) {
         updateCalendarYearMonth(month: month)
+    }
+    
+    private func cellState(date: Date) -> DatePickerDayCell.State {
+        if dateTime.isSameDay(date) {
+            return .selected
+        } else if date.isToday {
+            return .today
+        } else {
+            return .default
+        }
     }
 }
 
