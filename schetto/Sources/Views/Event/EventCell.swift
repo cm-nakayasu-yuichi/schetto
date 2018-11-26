@@ -4,13 +4,13 @@
 //
 import UIKit
 
-protocol EventEditCellDelegate: class {
+protocol EventCellDelegate: class {
     
 }
 
-class EventEditCell: UITableViewCell {
+class EventCell: UITableViewCell {
     
-    weak var delegate: EventEditCellDelegate!
+    weak var delegate: EventCellDelegate!
     var indexPath: IndexPath!
     
     var item: Any! {

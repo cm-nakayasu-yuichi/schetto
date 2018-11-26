@@ -16,8 +16,8 @@ class Wireframe {
         helper.present(crossDisolve: viewController, from: fromViewController)
     }
     
-    static func showEventEdit(from fromViewController: UIViewController) {
-        let viewController = builder.eventEdit()
+    static func showEvent(from fromViewController: UIViewController) {
+        let viewController = builder.event()
         helper.present(crossDisolve: viewController, from: fromViewController)
     }
     

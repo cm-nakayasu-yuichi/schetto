@@ -4,21 +4,21 @@
 //
 import UIKit
 
-protocol EventEditAdapterDelegate: class {
+protocol EventAdapterDelegate: class {
     
-    func numberOfItems(in adapter: EventEditAdapter) -> Int
+    func numberOfItems(in adapter: EventAdapter) -> Int
     
-    func eventEditAdapter(_ adapter: EventEditAdapter, itemAt index: Int) -> Any
+    func eventAdapter(_ adapter: EventAdapter, itemAt index: Int) -> Any
     
-    func eventEditAdapter(_ adapter: EventEditAdapter, didSelectAt index: Int)
+    func eventAdapter(_ adapter: EventAdapter, didSelectAt index: Int)
 }
 
-class EventEditAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
+class EventAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     weak var tableView: UITableView!
-    weak var delegate: EventEditAdapterDelegate!
+    weak var delegate: EventAdapterDelegate!
     
-    convenience init(_ tableView: UITableView, delegate: EventEditAdapterDelegate) {
+    convenience init(_ tableView: UITableView, delegate: EventAdapterDelegate) {
         self.init()
         self.tableView = tableView
         self.delegate = delegate
@@ -32,19 +32,19 @@ class EventEditAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventEditCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventCell
         cell.indexPath = indexPath
         cell.delegate = self
-        cell.item = delegate.eventEditAdapter(self, itemAt: indexPath.row)
+        cell.item = delegate.eventAdapter(self, itemAt: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        delegate.eventEditAdapter(self, didSelectAt: indexPath.row)
+        delegate.eventAdapter(self, didSelectAt: indexPath.row)
     }
 }
 
-extension EventEditAdapter: EventEditCellDelegate {
+extension EventAdapter: EventCellDelegate {
     
 }
