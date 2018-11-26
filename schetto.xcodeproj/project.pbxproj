@@ -12,6 +12,12 @@
 		DB0455E921876B9A003902B8 /* Color+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0455E821876B9A003902B8 /* Color+Definition.swift */; };
 		DB0CA14121A5A0E5003A254F /* ChromeActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA13F21A5A0E5003A254F /* ChromeActivity.swift */; };
 		DB0CA14221A5A0E5003A254F /* SafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14021A5A0E5003A254F /* SafariActivity.swift */; };
+		DB0CA14521AAF667003A254F /* DatePickerWeekCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14321AAF667003A254F /* DatePickerWeekCell.swift */; };
+		DB0CA14621AAF667003A254F /* DatePickerDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14421AAF667003A254F /* DatePickerDayCell.swift */; };
+		DB0CA14821AAF930003A254F /* DatePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14721AAF930003A254F /* DatePickerPresenter.swift */; };
+		DB0CA14A21AAFA00003A254F /* DatePickerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0CA14921AAFA00003A254F /* DatePickerRepository.swift */; };
+		DB11CD0821AC2990000AD5EC /* DatePickerWizardAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB11CD0621AC2990000AD5EC /* DatePickerWizardAdapter.swift */; };
+		DB11CD0921AC2990000AD5EC /* DatePickerWizardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB11CD0721AC2990000AD5EC /* DatePickerWizardCell.swift */; };
 		DB1CF2982199CAA100C61995 /* Text.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1CF2662199CAA100C61995 /* Text.storyboard */; };
 		DB1CF2992199CAA100C61995 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CF2672199CAA100C61995 /* TextViewController.swift */; };
 		DB1CF29A2199CAA100C61995 /* BootstrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CF2682199CAA100C61995 /* BootstrapViewController.swift */; };
@@ -215,6 +221,12 @@
 		DB0455E821876B9A003902B8 /* Color+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Definition.swift"; sourceTree = "<group>"; };
 		DB0CA13F21A5A0E5003A254F /* ChromeActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChromeActivity.swift; sourceTree = "<group>"; };
 		DB0CA14021A5A0E5003A254F /* SafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariActivity.swift; sourceTree = "<group>"; };
+		DB0CA14321AAF667003A254F /* DatePickerWeekCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerWeekCell.swift; sourceTree = "<group>"; };
+		DB0CA14421AAF667003A254F /* DatePickerDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDayCell.swift; sourceTree = "<group>"; };
+		DB0CA14721AAF930003A254F /* DatePickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerPresenter.swift; sourceTree = "<group>"; };
+		DB0CA14921AAFA00003A254F /* DatePickerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerRepository.swift; sourceTree = "<group>"; };
+		DB11CD0621AC2990000AD5EC /* DatePickerWizardAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerWizardAdapter.swift; sourceTree = "<group>"; };
+		DB11CD0721AC2990000AD5EC /* DatePickerWizardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerWizardCell.swift; sourceTree = "<group>"; };
 		DB1CF2662199CAA100C61995 /* Text.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Text.storyboard; sourceTree = "<group>"; };
 		DB1CF2672199CAA100C61995 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		DB1CF2682199CAA100C61995 /* BootstrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapViewController.swift; sourceTree = "<group>"; };
@@ -583,9 +595,13 @@
 			isa = PBXGroup;
 			children = (
 				DB6C41E0219F32790073EFAA /* DatePicker.storyboard */,
-				DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */,
 				DB6C41F721A167B50073EFAA /* DatePickerWeekCell.xib */,
 				DB6C41F921A168E50073EFAA /* DatePickerDayCell.xib */,
+				DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */,
+				DB0CA14321AAF667003A254F /* DatePickerWeekCell.swift */,
+				DB0CA14421AAF667003A254F /* DatePickerDayCell.swift */,
+				DB11CD0621AC2990000AD5EC /* DatePickerWizardAdapter.swift */,
+				DB11CD0721AC2990000AD5EC /* DatePickerWizardCell.swift */,
 			);
 			path = DatePicker;
 			sourceTree = "<group>";
@@ -832,6 +848,7 @@
 				DB950A1B218D7C9F00D0B286 /* DesignFontSettingPresenter.swift */,
 				E4959E3021869B6D008778F1 /* LaunchPresenter.swift */,
 				E4959E6021874A80008778F1 /* TermsPresenter.swift */,
+				DB0CA14721AAF930003A254F /* DatePickerPresenter.swift */,
 				DB950A09218B543300D0B286 /* WebPresenter.swift */,
 			);
 			path = Presenters;
@@ -859,6 +876,7 @@
 				E4DCFC08218FD52A0091B016 /* TemplateRepository.swift */,
 				DB950A33218E806600D0B286 /* EventEditRepository.swift */,
 				DB950A1C218D7C9F00D0B286 /* DesignFontSettingRepository.swift */,
+				DB0CA14921AAFA00003A254F /* DatePickerRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -906,8 +924,8 @@
 				DBB52A4821761968009C5097 /* CoreGraphics+App.swift */,
 				DB22841E2188C288008F00F6 /* CoreGraphics+Dimension.swift */,
 				DBB52A4721761968009C5097 /* Date+App.swift */,
-				DB40E093219B1C280088441D /* Date+Conversion .swift */,
 				DBB52A4921761968009C5097 /* Directory+App.swift */,
+				DB40E093219B1C280088441D /* Date+Conversion .swift */,
 				E4BF1A8D2180C2A200AFBAB8 /* IndexPath+App.swift */,
 				DBB52A4B21761968009C5097 /* Notification+App.swift */,
 				E4DC8DC62176E2F100958641 /* Codable+App.swift */,
@@ -1248,6 +1266,7 @@
 				E4DCFC03218C2B1D0091B016 /* StickerType.swift in Sources */,
 				DBB52A5421761968009C5097 /* Directory+App.swift in Sources */,
 				E45C4EC521A392C2002002AC /* MainMonthlyPresenter.swift in Sources */,
+				DB11CD0821AC2990000AD5EC /* DatePickerWizardAdapter.swift in Sources */,
 				DBB52A4E21761968009C5097 /* UIView+App.swift in Sources */,
 				E495077C2181BE0500583C06 /* UITextField+App.swift in Sources */,
 				DBC0E1472184A5ED00E26514 /* UnhighlightCell.swift in Sources */,
@@ -1277,10 +1296,13 @@
 				DB950A3D218E806600D0B286 /* EventEditRepository.swift in Sources */,
 				DB1CF2A42199CAA100C61995 /* TodoListCell.swift in Sources */,
 				E4959D7321848299008778F1 /* RealmSwift+App.swift in Sources */,
+				DB0CA14A21AAFA00003A254F /* DatePickerRepository.swift in Sources */,
+				DB0CA14821AAF930003A254F /* DatePickerPresenter.swift in Sources */,
 				DB950A39218E806600D0B286 /* EventEditPresenter.swift in Sources */,
 				DB6C420221A16B7D0073EFAA /* CalendarViewDayCell.swift in Sources */,
 				E4959E3A21869B6D008778F1 /* LaunchRepository.swift in Sources */,
 				DB0CA14221A5A0E5003A254F /* SafariActivity.swift in Sources */,
+				DB11CD0921AC2990000AD5EC /* DatePickerWizardCell.swift in Sources */,
 				E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E4959D7421848299008778F1 /* Realm.swift in Sources */,
@@ -1313,6 +1335,7 @@
 				DB1CF2A82199CAA100C61995 /* TodoDetailCell.swift in Sources */,
 				DBB52A5021761968009C5097 /* Array+App.swift in Sources */,
 				DB954F822190AC4E007BC9D1 /* TodoListPresenter.swift in Sources */,
+				DB0CA14621AAF667003A254F /* DatePickerDayCell.swift in Sources */,
 				DB950A2A218D7C9F00D0B286 /* DesignFontSettingTranslator.swift in Sources */,
 				E493B2102176BF190017F931 /* Wireframe.swift in Sources */,
 				E493B1E6217595370017F931 /* AppDelegate.swift in Sources */,
@@ -1326,6 +1349,7 @@
 				E4DCFBD7218BD12E0091B016 /* DBCalendar.swift in Sources */,
 				DB1CF2BC2199CAA100C61995 /* EventEditViewController.swift in Sources */,
 				DBD2573A2184D2CC0007AC44 /* UIApplication+App.swift in Sources */,
+				DB0CA14521AAF667003A254F /* DatePickerWeekCell.swift in Sources */,
 				DBD2573C2184D7300007AC44 /* Timer.swift in Sources */,
 				E493B2132176BF890017F931 /* WireframeHelper.swift in Sources */,
 				E4959D6A218368B3008778F1 /* WebApiResponse.swift in Sources */,

@@ -35,6 +35,15 @@ extension Int {
         fmt.groupingSize = 3
         return fmt.string(from: NSNumber(integerLiteral: self)) ?? ""
     }
+    
+    /// 0埋めした文字列を取得する
+    /// - Parameters:
+    ///   - length: 必要な文字数
+    ///   - prefix: 前方を0で埋める場合はtrue 後方を0で埋める場合はfalse
+    /// - Returns: 0埋めした文字列
+    func paddingZero(length: Int, prefix: Bool = true) -> String {
+        return string.paddingZero(length: length, prefix: prefix)
+    }
 }
 
 extension Bool {

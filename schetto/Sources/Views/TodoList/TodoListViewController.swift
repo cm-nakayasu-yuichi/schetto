@@ -31,12 +31,16 @@ class TodoListViewController: UIViewController, EmptyViewControllable {
         Wireframe.showTodoDetail(from: self, todo: nil)
     }
     
-    override func didTapAddButtonOnNavigationBar() {
+    @objc func didTapAddButtonOnNavigationBar() {
         Wireframe.showTodoDetail(from: self, todo: nil)
     }
     
     @IBAction private func didChangeSortTypeSegment() {
         presenter.fetchTodoList(sortType: sortType)
+    }
+    
+    func setupAddButtonOnNavigationBar() {
+        setRightBarButtonSystemItem(.add, selector: #selector(didTapAddButtonOnNavigationBar))
     }
     
     private func setupSortTypeSegmentedControl() {

@@ -63,8 +63,8 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
-    static func showDatePicker(from fromViewController: UIViewController) {
-        let viewController = builder.datePicker()
+    static func showDatePicker(from fromViewController: UIViewController, dateTime: Date, title: String, commitHandler: @escaping DatePickerViewController.CommitHandler) {
+        let viewController = builder.datePicker(dateTime: dateTime, title: title, commitHandler: commitHandler)
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
@@ -104,6 +104,16 @@ class Wireframe {
         )
     }
     
+    static func showConfirmChange(from fromViewController: UIViewController, didSave: @escaping () -> (), didClose: @escaping () -> ()) {
+        alertHelper.alertSaveClose(
+            from: fromViewController,
+            title: "確認",
+            message: "変更を保存しますか",
+            didSave: didSave,
+            didClose: didClose
+        )
+    }
+        
     private static var builder: Builder { return Builder() }
     private static var helper: WireframeHelper { return WireframeHelper() }
     private static var alertHelper: AlertHelper { return AlertHelper() }
