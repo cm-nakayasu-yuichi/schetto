@@ -159,6 +159,7 @@
 		E4CFAC9121ACD3FE0034D304 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CFAC8721ACD3FE0034D304 /* ColorPicker.storyboard */; };
 		E4CFAC9221ACD3FE0034D304 /* ColorPickerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8821ACD3FE0034D304 /* ColorPickerRepository.swift */; };
 		E4CFAC9421ACD3FE0034D304 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8A21ACD3FE0034D304 /* ColorPickerViewController.swift */; };
+		E4CFAC9721AD06870034D304 /* Dimansions+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC9621AD06860034D304 /* Dimansions+Definition.swift */; };
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
 		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
 		E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */; };
@@ -371,6 +372,7 @@
 		E4CFAC8721ACD3FE0034D304 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		E4CFAC8821ACD3FE0034D304 /* ColorPickerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerRepository.swift; sourceTree = "<group>"; };
 		E4CFAC8A21ACD3FE0034D304 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		E4CFAC9621AD06860034D304 /* Dimansions+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dimansions+Definition.swift"; sourceTree = "<group>"; };
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
 		E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -793,6 +795,7 @@
 				E4456DC221894DDB00C13172 /* File+Definition.swift */,
 				DB0455E821876B9A003902B8 /* Color+Definition.swift */,
 				DB22840521876E09008F00F6 /* Font+Definition.swift */,
+				E4CFAC9621AD06860034D304 /* Dimansions+Definition.swift */,
 				E493B20D2176BF180017F931 /* Builder.swift */,
 				E493B20E2176BF190017F931 /* Wireframe.swift */,
 			);
@@ -1306,6 +1309,7 @@
 				E4DCFBE8218C1B0E0091B016 /* TodoTranslator.swift in Sources */,
 				E4DCFC05218C327F0091B016 /* TodoEnums.swift in Sources */,
 				E4F86E2021815261003C0CD0 /* DialogLeftDrawBehavior.swift in Sources */,
+				E4CFAC9721AD06870034D304 /* Dimansions+Definition.swift in Sources */,
 				E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
 				E4CFAC8E21ACD3FE0034D304 /* ColorPickerItemModel.swift in Sources */,
