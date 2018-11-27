@@ -22,6 +22,9 @@ class BootstrapViewController: UITableViewController {
                     print(date.string())
                 }
             }),
+            (title: "カラーピッカー", handler: { bootstrap in
+                Wireframe.showColorPicker(from: bootstrap)
+            }),
             ]),
         ]
     // =========================================================================
