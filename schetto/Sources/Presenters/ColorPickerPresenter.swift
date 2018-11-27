@@ -8,6 +8,8 @@ protocol ColorPickerPresenterProtocol: class {
     
     var view: ColorPickerViewProtocol! { get set }
     var interactor: ColorPickerInteractorInput! { get set }
+    
+    
 }
 
 protocol ColorPickerViewProtocol: class {

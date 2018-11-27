@@ -11,15 +11,11 @@ class ColorPickerViewController: UIViewController {
     private var adapter: ColorPickerAdapter!
     
     @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var closeButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        adapter = ColorPickerAdapter(collectionView, delegate: self)
-    }
-    
-    @IBAction private func didTapCloseButton() {
-        // NOP.
+        setupCloseButtonOnNavigationBar()
+        adapter = ColorPickerAdapter(collectionView, delegate: self, colors: ColorSet.default.colors)
     }
 }
 
@@ -29,17 +25,7 @@ extension ColorPickerViewController: ColorPickerViewProtocol {
 
 extension ColorPickerViewController: ColorPickerAdapterDelegate {
     
-    func numberOfItems(in adapter: ColorPickerAdapter) -> Int {
-        return 20
-//        return presenter.items.count
-    }
-    
-    func colorPickerAdapter(_ adapter: ColorPickerAdapter, itemAt index: Int) -> Any {
-        return "hoge"
-//        return presenter.items[index]
-    }
-    
-    func colorPickerAdapter(_ adapter: ColorPickerAdapter, didSelectAt index: Int) {
-        // NOP.
+    func colorPickerAdapter(_ adapter: ColorPickerAdapter, didSelectColor color: UIColor) {
+        
     }
 }

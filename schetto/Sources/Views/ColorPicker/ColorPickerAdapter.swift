@@ -6,45 +6,53 @@ import UIKit
 
 protocol ColorPickerAdapterDelegate: class {
     
-    func numberOfItems(in adapter: ColorPickerAdapter) -> Int
-    
-    func colorPickerAdapter(_ adapter: ColorPickerAdapter, itemAt index: Int) -> Any
-    
-    func colorPickerAdapter(_ adapter: ColorPickerAdapter, didSelectAt index: Int)
+    func colorPickerAdapter(_ adapter: ColorPickerAdapter, didSelectColor color: UIColor)
 }
 
 class ColorPickerAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     weak var collectionView: UICollectionView!
     weak var delegate: ColorPickerAdapterDelegate!
+    private var colors: [UIColor]!
     
-    convenience init(_ collectionView: UICollectionView, delegate: ColorPickerAdapterDelegate) {
+    convenience init(_ collectionView: UICollectionView, delegate: ColorPickerAdapterDelegate, colors: [UIColor]) {
         self.init()
         self.collectionView = collectionView
         self.delegate = delegate
+        self.colors = colors
         
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return delegate.numberOfItems(in: self)
+        return colors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ColorPickerCell
-        cell.indexPath = indexPath
         cell.delegate = self
-        cell.item = delegate.colorPickerAdapter(self, itemAt: indexPath.row)
+        cell.color = colors[indexPath.row]
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        delegate.colorPickerAdapter(self, didSelectAt: indexPath.row)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.width / 6
+        return CGSize(width, width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }
 
 extension ColorPickerAdapter: ColorPickerCellDelegate {
     
+    func colorPickerCell(_ cell: ColorPickerCell, didSelectColor color: UIColor) {
+        delegate.colorPickerAdapter(self, didSelectColor: color)
+    }
 }

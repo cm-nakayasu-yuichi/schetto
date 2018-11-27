@@ -154,12 +154,12 @@
 		E4BF1A902180C3CB00AFBAB8 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */; };
 		E4CFAC8C21ACD3FE0034D304 /* ColorPickerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8221ACD3FE0034D304 /* ColorPickerAdapter.swift */; };
 		E4CFAC8D21ACD3FE0034D304 /* ColorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8321ACD3FE0034D304 /* ColorPickerCell.swift */; };
-		E4CFAC8E21ACD3FE0034D304 /* ColorPickerItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8421ACD3FE0034D304 /* ColorPickerItemModel.swift */; };
 		E4CFAC9021ACD3FE0034D304 /* ColorPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8621ACD3FE0034D304 /* ColorPickerPresenter.swift */; };
 		E4CFAC9121ACD3FE0034D304 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CFAC8721ACD3FE0034D304 /* ColorPicker.storyboard */; };
 		E4CFAC9221ACD3FE0034D304 /* ColorPickerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8821ACD3FE0034D304 /* ColorPickerRepository.swift */; };
 		E4CFAC9421ACD3FE0034D304 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC8A21ACD3FE0034D304 /* ColorPickerViewController.swift */; };
 		E4CFAC9721AD06870034D304 /* Dimansions+Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC9621AD06860034D304 /* Dimansions+Definition.swift */; };
+		E4CFAC9921AD0F4F0034D304 /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFAC9821AD0F4F0034D304 /* ColorSet.swift */; };
 		E4DC8DC52176D8AD00958641 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */; };
 		E4DC8DC72176E2F100958641 /* Codable+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DC62176E2F100958641 /* Codable+App.swift */; };
 		E4DC8DCB2176EC3400958641 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */; };
@@ -367,12 +367,12 @@
 		E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		E4CFAC8221ACD3FE0034D304 /* ColorPickerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerAdapter.swift; sourceTree = "<group>"; };
 		E4CFAC8321ACD3FE0034D304 /* ColorPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerCell.swift; sourceTree = "<group>"; };
-		E4CFAC8421ACD3FE0034D304 /* ColorPickerItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerItemModel.swift; sourceTree = "<group>"; };
 		E4CFAC8621ACD3FE0034D304 /* ColorPickerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerPresenter.swift; sourceTree = "<group>"; };
 		E4CFAC8721ACD3FE0034D304 /* ColorPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
 		E4CFAC8821ACD3FE0034D304 /* ColorPickerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerRepository.swift; sourceTree = "<group>"; };
 		E4CFAC8A21ACD3FE0034D304 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		E4CFAC9621AD06860034D304 /* Dimansions+Definition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dimansions+Definition.swift"; sourceTree = "<group>"; };
+		E4CFAC9821AD0F4F0034D304 /* ColorSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 		E4DC8DC42176D8AD00958641 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		E4DC8DC62176E2F100958641 /* Codable+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+App.swift"; sourceTree = "<group>"; };
 		E4DC8DCA2176EC3400958641 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -692,7 +692,6 @@
 				E4DCFBF2218C26300091B016 /* StickerModel.swift */,
 				E4DCFBF7218C26310091B016 /* TemplateModel.swift */,
 				DB950A1E218D7C9F00D0B286 /* DesignFontSettingModel.swift */,
-				E4CFAC8421ACD3FE0034D304 /* ColorPickerItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1021,6 +1020,7 @@
 				E4DCFC02218C2B1D0091B016 /* StickerType.swift */,
 				E4DCFBEE218C1DCC0091B016 /* TemplateType.swift */,
 				E4DCFC04218C327F0091B016 /* TodoEnums.swift */,
+				E4CFAC9821AD0F4F0034D304 /* ColorSet.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1298,6 +1298,7 @@
 				DB11CD0921AC2990000AD5EC /* DatePickerWizardCell.swift in Sources */,
 				E4CFAC9221ACD3FE0034D304 /* ColorPickerRepository.swift in Sources */,
 				E4DCFC07218FCDAB0091B016 /* TodoRepository.swift in Sources */,
+				E4CFAC9921AD0F4F0034D304 /* ColorSet.swift in Sources */,
 				DBB52A5121761968009C5097 /* UIImage+App.swift in Sources */,
 				E4959D7421848299008778F1 /* Realm.swift in Sources */,
 				E47278BE21780F5C003DA88E /* Notifiable.swift in Sources */,
@@ -1312,7 +1313,6 @@
 				E4CFAC9721AD06870034D304 /* Dimansions+Definition.swift in Sources */,
 				E4DCFC09218FD52A0091B016 /* TemplateRepository.swift in Sources */,
 				E495077E2181C38D00583C06 /* TextFieldManager.swift in Sources */,
-				E4CFAC8E21ACD3FE0034D304 /* ColorPickerItemModel.swift in Sources */,
 				DB0455E7218767FD003902B8 /* Button.swift in Sources */,
 				E4DCFBE5218BD42B0091B016 /* DBSticker.swift in Sources */,
 				E4DCFBFE218C26310091B016 /* DayModel.swift in Sources */,

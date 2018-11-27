@@ -6,16 +6,23 @@ import UIKit
 
 protocol ColorPickerCellDelegate: class {
     
+    func colorPickerCell(_ cell: ColorPickerCell, didSelectColor color: UIColor)
 }
 
 class ColorPickerCell: UICollectionViewCell {
     
     weak var delegate: ColorPickerCellDelegate!
-    var indexPath: IndexPath!
     
-    var item: Any! {
+    @IBOutlet private weak var outerView: UIView!
+    @IBOutlet private weak var innerView: UIView!
+    
+    var color: UIColor! {
         didSet {
-            // NOP.
+            innerView.backgroundColor = color
         }
+    }
+    
+    @IBAction private func didTapColorButton() {
+        delegate.colorPickerCell(self, didSelectColor: color)
     }
 }
