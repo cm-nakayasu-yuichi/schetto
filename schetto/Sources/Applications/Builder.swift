@@ -146,6 +146,21 @@ class Builder {
         return view
     }
     
+    func colorPicker() -> ColorPickerViewController {
+        let view = instantiate(ColorPickerViewController.self, storyboardName: "ColorPicker")
+        
+        let presenter: ColorPickerPresenterProtocol = ColorPickerPresenter()
+        presenter.view = view
+        
+        let interactor: ColorPickerInteractorInput = ColorPickerRepository()
+        interactor.output = presenter as! ColorPickerInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
     func text(options: TextViewControllerOptions, handler: @escaping (String) -> ()) -> TextViewController {
         let view = instantiate(TextViewController.self, storyboardName: "Text")
         view.options = options

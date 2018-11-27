@@ -63,6 +63,11 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
+    static func showColorPicker(from fromViewController: UIViewController) {
+        let viewController = builder.colorPicker()
+        helper.present(crossDisolve: viewController, from: fromViewController)
+    }
+    
     static func showText(from fromViewController: UIViewController, options: TextViewControllerOptions, handler: @escaping (String) -> ()) {
         let viewController = builder.text(options: options, handler: handler)
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
