@@ -7,17 +7,20 @@ import UIKit
 class EventViewController: UIViewController {
 
     var presenter: EventPresenterProtocol!
+    var event: EventModel?
     
     private var adapter: EventAdapter!
+    private var editEvent: EventModel!
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var toolbar: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "予定"
         setupCloseButtonOnNavigationBar()
         toolbar.dropShadowTop()
-        adapter = EventAdapter(tableView, delegate: self)
+        presenter.fetchEditableEvent(from: event)
     }
     
     @IBAction private func didTapCloseButton() {
@@ -26,7 +29,19 @@ class EventViewController: UIViewController {
 }
 
 extension EventViewController: EventViewProtocol {
-
+    
+    func fetchedEditable(event: EventModel) {
+        editEvent = event
+        adapter = EventAdapter(tableView, event: editEvent, delegate: self)
+    }
+    
+    func registered() {
+        
+    }
+    
+    func removed() {
+        
+    }
 }
 
 extension EventViewController: EventAdapterDelegate {
