@@ -32,7 +32,7 @@ class EventAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "date", for: indexPath) as! EventCell
         cell.indexPath = indexPath
         cell.delegate = self
         cell.item = delegate.eventAdapter(self, itemAt: indexPath.row)
