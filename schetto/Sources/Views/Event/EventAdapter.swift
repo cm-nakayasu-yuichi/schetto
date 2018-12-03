@@ -50,12 +50,13 @@ protocol TodoDetailAdapterDelegate: class {
 class EventAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     enum RowItem {
+        case title
+        case date
+        case info
         case summery
-        case notify
-        case repeating
+        case location
         case asset(model: AssetModel)
-        case addAsset
-        case delete
+        case add
         
         var assetModel: AssetModel? {
             switch self { case .asset(let model): return model; default: return nil }
@@ -77,6 +78,43 @@ class EventAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
     }
     
+    private var rowItems: [RowItem] {
+        var ret: [RowItem] = [
+            .title, .date, .info, .summery, .location
+        ]
+        if !event.assets.isEmpty {
+            ret.append(contentsOf: event.assets.map { asset -> RowItem in
+                RowItem.asset(model: asset)
+            })
+        } else {
+            ret.append(.add)
+        }
+        
+        /*
+        var ret: [[RowItem]] = [
+            [.title, .limit, .summery],
+            [.priority, .registered],
+            [.notify]
+        ]
+        
+        if let assets = todo?.assets, !assets.isEmpty {
+            let assetsItems = assets.map { asset -> RowItem in
+                RowItem.asset(model: asset)
+            }
+            ret.append(assetsItems)
+        } else {
+            ret.append([.addAsset])
+        }
+        
+        if todo != nil {
+            ret.append([.delete])
+        }
+        */
+        
+        return ret
+    }
+    
+    /*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return delegate.numberOfItems(in: self)
     }
@@ -93,6 +131,7 @@ class EventAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         delegate.eventAdapter(self, didSelectAt: indexPath.row)
     }
+    */
 }
 
 extension EventAdapter: EventCellDelegate {
