@@ -68,6 +68,11 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
+    static func showLocationSearch(from fromViewController: UIViewController) {
+        let viewController = builder.locationSearch()
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
+    }
+    
     static func showTest(from fromViewController: UIViewController) {
         let viewController = builder.test()
         helper.present(helper.withinNavigation(viewController), from: fromViewController)

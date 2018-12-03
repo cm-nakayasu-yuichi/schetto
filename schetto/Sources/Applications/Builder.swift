@@ -146,6 +146,11 @@ class Builder {
         return view
     }
     
+    func locationSearch() -> LocationSearchViewController {
+        let view = instantiate(LocationSearchViewController.self, storyboardName: "LocationSearch")
+        return view
+    }
+    
     func text(options: TextViewControllerOptions, handler: @escaping (String) -> ()) -> TextViewController {
         let view = instantiate(TextViewController.self, storyboardName: "Text")
         view.options = options
