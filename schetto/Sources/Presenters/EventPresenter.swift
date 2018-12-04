@@ -47,15 +47,15 @@ class EventPresenter: EventPresenterProtocol {
 extension EventPresenter: EventInteractorOutput {
     
     func created(model: EventModel) {
-        
+        view.fetchedEditable(event: model)
     }
     
     func copied(model: EventModel) {
-        
+        view.fetchedEditable(event: model)
     }
     
     func fetched(list: [EventModel]) {
-        
+        // NOP.
     }
     
     func registered(model: EventModel) {
