@@ -20,7 +20,10 @@ class EventTranslator: MultiTranslator, MultiDetranslator {
         model.notify = input.notify
         model.color = UIColor(rgbString: input.color)
         model.status = RecordStatus(rawValue: input.status)!
-        //model.stickers = input.stickers
+        
+        let stickerTranslator = StickerTranslator()
+        model.stickers = stickerTranslator.translate(input.stickers.array)
+        
         return model
     }
     
@@ -35,7 +38,10 @@ class EventTranslator: MultiTranslator, MultiDetranslator {
         db.notify = output.notify
         db.color = output.color?.rgbString ?? ""
         db.status = output.status.rawValue
-        //db.stickers = output.stickers
+        
+        let stickerTranslator = StickerTranslator()
+        db.stickers.set(stickerTranslator.detranslate(output.stickers))
+        
         return db
     }
     
