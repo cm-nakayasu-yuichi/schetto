@@ -113,7 +113,6 @@
 		E42798452193E5E0000F4B3A /* DialogTopDrawBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42798442193E5DF000F4B3A /* DialogTopDrawBehavior.swift */; };
 		E42F69642189A32B00426E3C /* CalendarSettingTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */; };
 		E42F69662189A3EA00426E3C /* CalendarThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */; };
-		E42F69682189A80300426E3C /* Detranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F69672189A80300426E3C /* Detranslator.swift */; };
 		E42F696B2189B99C00426E3C /* default_calendar_setting.json in Resources */ = {isa = PBXBuildFile; fileRef = E42F696A2189B99C00426E3C /* default_calendar_setting.json */; };
 		E43EFDA92178869800EBDEED /* StringSubstringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EFDA82178869700EBDEED /* StringSubstringTests.swift */; };
 		E4456DC121894D5A00C13172 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4456DC021894D5A00C13172 /* Json.swift */; };
@@ -322,7 +321,6 @@
 		E42798442193E5DF000F4B3A /* DialogTopDrawBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogTopDrawBehavior.swift; sourceTree = "<group>"; };
 		E42F69632189A32B00426E3C /* CalendarSettingTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarSettingTranslator.swift; sourceTree = "<group>"; };
 		E42F69652189A3EA00426E3C /* CalendarThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarThemeModel.swift; sourceTree = "<group>"; };
-		E42F69672189A80300426E3C /* Detranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detranslator.swift; sourceTree = "<group>"; };
 		E42F696A2189B99C00426E3C /* default_calendar_setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default_calendar_setting.json; sourceTree = "<group>"; };
 		E43EFDA82178869700EBDEED /* StringSubstringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSubstringTests.swift; sourceTree = "<group>"; };
 		E4456DC021894D5A00C13172 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
@@ -910,7 +908,6 @@
 			isa = PBXGroup;
 			children = (
 				E493B201217599900017F931 /* Translator.swift */,
-				E42F69672189A80300426E3C /* Detranslator.swift */,
 				E47278BD21780F5C003DA88E /* Notifiable.swift */,
 				E4A6D629217D89A600036D27 /* Anchorable.swift */,
 				E4BF1A8F2180C3CB00AFBAB8 /* Configurable.swift */,
@@ -1361,7 +1358,6 @@
 				E493B20F2176BF190017F931 /* Builder.swift in Sources */,
 				E4DCFBD8218BD12E0091B016 /* DBEvent.swift in Sources */,
 				E4DCFC0B218FD9960091B016 /* TemplateTranslator.swift in Sources */,
-				E42F69682189A80300426E3C /* Detranslator.swift in Sources */,
 				E420401A217F2DDD0036DAE0 /* DialogRightDrawBehavior.swift in Sources */,
 				DB1CF2B72199CAA100C61995 /* MainViewController.swift in Sources */,
 				E420401B217F2DDD0036DAE0 /* DialogRiseupBehavior.swift in Sources */,

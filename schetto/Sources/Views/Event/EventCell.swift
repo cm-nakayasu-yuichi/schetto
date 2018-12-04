@@ -4,83 +4,153 @@
 //
 import UIKit
 
-protocol EventCellDelegate: class {
+// MARK: - Title Cell Class. -
+
+protocol EventTextCellDelegate: class {
     
-    
-//    case summery
-//    case notify
-//    case repeating
-//    case asset(model: AssetModel)
-//    case addAsset
-//    case delete
+    func didTapEditText(in cell: EventTextCell, at indexPath: IndexPath)
 }
 
-class EventCell: UITableViewCell {
+class EventTextCell: UITableViewCell {
     
-    weak var delegate: EventCellDelegate!
+    weak var delegate: EventTextCellDelegate!
     
-    var event: EventModel!
-}
-
-class EventTitleCell: EventCell {
+    @IBOutlet private weak var valueLabel: UILabel!
     
-    override var event: EventModel! {
+    var indexPath: IndexPath!
+    
+    var value = "" {
         didSet {
-            
+            valueLabel.text = value
         }
+    }
+    
+    @IBAction private func didTapEditButton() {
+        
     }
 }
 
-class EventDateCell: EventCell {
+// MARK: - Date Cell Class. -
+
+protocol EventDateCellDelegate: class {
     
-    override var event: EventModel! {
+    func didTapStartDate(in cell: EventDateCell)
+    func didTapEndDate(in cell: EventDateCell)
+    func didChangeAllDay(in cell: EventDateCell, to value: Bool)
+}
+
+class EventDateCell: UITableViewCell {
+    
+    weak var delegate: EventDateCellDelegate!
+    
+    @IBOutlet private weak var startDayLabel: UILabel!
+    @IBOutlet private weak var startTimeLabel: UILabel!
+    @IBOutlet private weak var endDayLabel: UILabel!
+    @IBOutlet private weak var endTimeLabel: UILabel!
+    @IBOutlet private weak var allDaySwitch: UISwitch!
+    
+    var indexPath: IndexPath!
+    
+    var startDate: Date! {
         didSet {
-            
+            startDayLabel.text = startDate.string(.custom(format: ""))
+            startTimeLabel.text = startDate.string(.custom(format: ""))
         }
+    }
+    
+    var endDate: Date! {
+        didSet {
+            endDayLabel.text = endDate.string(.custom(format: ""))
+            endTimeLabel.text = endDate.string(.custom(format: ""))
+        }
+    }
+    
+    var allDay = false {
+        didSet {
+            allDaySwitch.isOn = allDay
+        }
+    }
+    
+    @IBAction private func didTapStartButton() {
+        
+    }
+    
+    @IBAction private func didTapEndButton() {
+        
+    }
+    
+    @IBAction private func didChangeAllDaySwitch() {
+        
     }
 }
 
-class EventInfoCell: EventCell {
+// MARK: - Information Cell Class. -
+
+protocol EventInfoCellDelegate: class {
     
-    override var event: EventModel! {
+    func didTapEditText(in cell: EventInfoCell, at indexPath: IndexPath)
+}
+
+class EventInfoCell: UITableViewCell {
+    
+    weak var delegate: EventInfoCellDelegate!
+    
+    @IBOutlet private weak var titleLabel: UILabel!
+    
+    var indexPath: IndexPath!
+    
+    var title = "" {
         didSet {
-            
+            titleLabel.text = title
         }
+    }
+    
+    @IBAction private func didTapEditButton() {
+        
     }
 }
 
-class EventSummeryCell: EventCell {
+// MARK: - Asset Cell Class. -
+
+protocol EventAssetCellDelegate: class {
     
-    override var event: EventModel! {
+    func didTapAsset(in cell: EventAssetCell, asset: AssetModel)
+    func didTapDeleteAsset(in cell: EventAssetCell, asset: AssetModel)
+}
+
+class EventAssetCell: UITableViewCell {
+    
+    weak var delegate: EventAssetCellDelegate!
+    
+    @IBOutlet private weak var assetImageView: UIImageView!
+    
+    var asset: AssetModel! {
         didSet {
-            
+//            assetImageView.image = asset.image
         }
+    }
+    
+    @IBAction private func didTapAssetButton() {
+        
+    }
+    
+    @IBAction private func didTapDeleteButton() {
+        
     }
 }
 
-class EventLocationCell: EventCell {
+// MARK: - AddAsset Cell Class. -
+
+protocol EventAddAssetCellDelegate: class {
     
-    override var event: EventModel! {
-        didSet {
-            
-        }
-    }
+    func didTapAddAsset(in cell: EventAddAssetCell)
 }
 
-class EventAssetCell: EventCell {
+class EventAddAssetCell: UITableViewCell {
     
-    override var event: EventModel! {
-        didSet {
-            
-        }
-    }
-}
-
-class EventAddAssetCell: EventCell {
+    weak var delegate: EventAddAssetCellDelegate!
     
-    override var event: EventModel! {
-        didSet {
-            
-        }
+    @IBAction private func didTapAddAssetButton() {
+        
     }
 }

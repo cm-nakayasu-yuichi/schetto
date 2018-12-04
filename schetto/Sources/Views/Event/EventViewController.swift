@@ -14,7 +14,11 @@ class EventViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var toolbar: UIView!
-
+    @IBOutlet private weak var deleteButton: UIBarButtonItem!
+    @IBOutlet private weak var templateButton: UIBarButtonItem!
+    @IBOutlet private weak var copyButton: UIBarButtonItem!
+    @IBOutlet private weak var saveButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "予定"
@@ -23,8 +27,20 @@ class EventViewController: UIViewController {
         presenter.fetchEditableEvent(from: event)
     }
     
-    @IBAction private func didTapCloseButton() {
-        // NOP.
+    @IBAction private func didTapDeleteButton() {
+        // Nop.
+    }
+    
+    @IBAction private func didTapTemplateButton() {
+        // Nop.
+    }
+    
+    @IBAction private func didTapCopyButton() {
+        // Nop.
+    }
+    
+    @IBAction private func didTapSaveButton() {
+        // Nop.
     }
 }
 
@@ -46,17 +62,38 @@ extension EventViewController: EventViewProtocol {
 
 extension EventViewController: EventAdapterDelegate {
     
-    func numberOfItems(in adapter: EventAdapter) -> Int {
-        return 20
-//        return presenter.items.count
+    func eventAdapterDidTapEditTitle(_ adapter: EventAdapter) {
+        
     }
     
-    func eventAdapter(_ adapter: EventAdapter, itemAt index: Int) -> Any {
-        return "hoge"
-//        return presenter.items[index]
+    func eventAdapterDidTapEditStartDate(_ adapter: EventAdapter) {
+        
     }
     
-    func eventAdapter(_ adapter: EventAdapter, didSelectAt index: Int) {
-        // NOP.
+    func eventAdapterDidTapEditEndDate(_ adapter: EventAdapter) {
+    
+    }
+    
+    func eventAdapter(_ adapter: EventAdapter, didTapAllDay value: Bool) {
+        
+    }
+    
+    func eventAdapterDidTapEditSummery(_ adapter: EventAdapter) {
+        
+    }
+    
+    func eventAdapterDidSelectNotify(_ adapter: EventAdapter) {
+        
+    }
+    
+    func eventAdapter(_ adapter: EventAdapter, didTapAsset asset: AssetModel) {
+        
+    }
+    
+    func eventAdapterDidTapAddAsset(_ adapter: EventAdapter) {
+    
+    }
+    func eventAdapter(_ adapter: EventAdapter, didTapDeleteAsset asset: AssetModel) {
+        
     }
 }

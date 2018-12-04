@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="text" rowHeight="109" id="4bk-Fu-4FA" customClass="TodoDetailSummeryCell" customModule="schetto" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="text" rowHeight="109" id="4bk-Fu-4FA" customClass="EventTextCell" customModule="schetto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bk-Fu-4FA" id="RR3-te-nHh">
@@ -46,7 +46,7 @@
                                                         <color key="titleColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="didTapEditButton" destination="4bk-Fu-4FA" eventType="touchUpInside" id="hnw-Ra-s4n"/>
+                                                        <action selector="didTapEditButton" destination="4bk-Fu-4FA" eventType="touchUpInside" id="7E5-l5-ywY"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -61,10 +61,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="summeryLabel" destination="aJf-ca-YZE" id="Rie-Wt-yrv"/>
+                                            <outlet property="valueLabel" destination="aJf-ca-YZE" id="cKy-Br-LNV"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="date" rowHeight="122" id="eCc-mp-cB2" customClass="EventCell" customModule="schetto" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="date" rowHeight="122" id="eCc-mp-cB2" customClass="EventDateCell" customModule="schetto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="137" width="320" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eCc-mp-cB2" id="J6h-zs-FGk">
@@ -117,6 +117,9 @@
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapStartButton" destination="eCc-mp-cB2" eventType="touchUpInside" id="0ba-s8-caw"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DY2-Q7-OUd" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
                                                     <rect key="frame" x="147" y="11" width="117.5" height="51"/>
@@ -125,6 +128,9 @@
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="didTapEndButton" destination="eCc-mp-cB2" eventType="touchUpInside" id="7B6-8Q-xmZ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -154,8 +160,15 @@
                                                 <constraint firstItem="hvg-te-jff" firstAttribute="top" secondItem="J6h-zs-FGk" secondAttribute="top" constant="16" id="wUh-sg-hrA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="allDaySwitch" destination="M8E-3v-y64" id="yIh-Y4-sjx"/>
+                                            <outlet property="endDayLabel" destination="hvg-te-jff" id="EWA-V0-JME"/>
+                                            <outlet property="endTimeLabel" destination="Ryo-sA-Yy3" id="mNk-Or-Ufh"/>
+                                            <outlet property="startDayLabel" destination="maW-Et-fGA" id="gmd-R8-Jjh"/>
+                                            <outlet property="startTimeLabel" destination="0zx-qu-36d" id="9c9-V5-raT"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="add-asset" rowHeight="120" id="GS6-hP-T6R" customClass="TodoDetailDeleteCell" customModule="schetto" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="add" rowHeight="120" id="GS6-hP-T6R" customClass="EventAddAssetCell" customModule="schetto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="259" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GS6-hP-T6R" id="1KT-2a-iyC">
@@ -169,7 +182,7 @@
                                                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="didTapDeleteButton" destination="GS6-hP-T6R" eventType="touchUpInside" id="3se-zS-s4v"/>
+                                                        <action selector="didTapAddAssetButton" destination="GS6-hP-T6R" eventType="touchUpInside" id="Zg2-1S-M3f"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -180,49 +193,69 @@
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="11j-VO-bcX" secondAttribute="bottom" constant="32" id="mOQ-H5-3Mm"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="deleteButton" destination="11j-VO-bcX" id="hYS-oP-P0Z"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="asset" rowHeight="56" id="rza-S6-bCP" customClass="TodoDetailAssetCell" customModule="schetto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="379" width="320" height="56"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="asset" rowHeight="106" id="rza-S6-bCP" customClass="EventAssetCell" customModule="schetto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="379" width="320" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rza-S6-bCP" id="Zdu-rz-ARe">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rza-S6-bCP" id="Zdu-rz-ARe">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UVG-4b-WlP">
-                                                    <rect key="frame" x="4" y="4" width="367" height="47.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="47.5" id="Pgy-gP-4Jx"/>
-                                                        <constraint firstAttribute="width" constant="367" id="oai-66-s7c"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="4" y="4" width="312" height="97.5"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdJ-pU-ZFh" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="4" width="367" height="47.5"/>
+                                                    <rect key="frame" x="4" y="4" width="312" height="97.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <state key="normal">
                                                         <color key="titleColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="didTapAssetImageView" destination="rza-S6-bCP" eventType="touchUpInside" id="Ual-PT-eAS"/>
+                                                        <action selector="didTapAssetButton" destination="rza-S6-bCP" eventType="touchUpInside" id="c1c-V5-sAo"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV0-NV-YnI">
+                                                    <rect key="frame" x="272" y="16" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="BUg-0a-Xj2"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="LIg-J5-ibb"/>
+                                                        <constraint firstAttribute="width" constant="32" id="UB2-rJ-r9b"/>
+                                                        <constraint firstAttribute="width" secondItem="BV0-NV-YnI" secondAttribute="height" id="thw-80-7At"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="削">
+                                                        <color key="titleColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTapDeleteButton" destination="rza-S6-bCP" eventType="touchUpInside" id="zkv-bj-FhE"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UVG-4b-WlP" secondAttribute="bottom" constant="4" id="6qE-J1-cyv"/>
-                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="trailing" secondItem="UVG-4b-WlP" secondAttribute="trailing" id="Abh-Wf-E00"/>
-                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="top" secondItem="UVG-4b-WlP" secondAttribute="top" id="Jhy-uX-8VW"/>
-                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="leading" secondItem="UVG-4b-WlP" secondAttribute="leading" id="Lqg-fp-uzL"/>
-                                                <constraint firstItem="UVG-4b-WlP" firstAttribute="leading" secondItem="Zdu-rz-ARe" secondAttribute="leading" constant="4" id="O9m-mz-pGi"/>
-                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="bottom" secondItem="UVG-4b-WlP" secondAttribute="bottom" id="OSy-aZ-3qf"/>
-                                                <constraint firstAttribute="trailing" secondItem="UVG-4b-WlP" secondAttribute="trailing" constant="4" id="Ypc-lM-CoE"/>
-                                                <constraint firstItem="UVG-4b-WlP" firstAttribute="top" secondItem="Zdu-rz-ARe" secondAttribute="top" constant="4" id="cZM-18-iS6"/>
+                                                <constraint firstItem="BV0-NV-YnI" firstAttribute="width" secondItem="BV0-NV-YnI" secondAttribute="height" id="58h-c6-8jY"/>
+                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="top" secondItem="UVG-4b-WlP" secondAttribute="top" id="TIc-eE-OQn"/>
+                                                <constraint firstItem="UVG-4b-WlP" firstAttribute="top" secondItem="Zdu-rz-ARe" secondAttribute="top" constant="4" id="XS6-Cc-q2d"/>
+                                                <constraint firstAttribute="bottom" secondItem="UVG-4b-WlP" secondAttribute="bottom" constant="4" id="d2J-rt-VCd"/>
+                                                <constraint firstAttribute="trailing" secondItem="UVG-4b-WlP" secondAttribute="trailing" constant="4" id="dJ3-o4-xWL"/>
+                                                <constraint firstItem="UVG-4b-WlP" firstAttribute="leading" secondItem="Zdu-rz-ARe" secondAttribute="leading" constant="4" id="gPr-jd-EVI"/>
+                                                <constraint firstItem="BV0-NV-YnI" firstAttribute="top" secondItem="Zdu-rz-ARe" secondAttribute="top" constant="16" id="k8J-zU-4wb"/>
+                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="bottom" secondItem="UVG-4b-WlP" secondAttribute="bottom" id="ljo-FN-3un"/>
+                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="trailing" secondItem="UVG-4b-WlP" secondAttribute="trailing" id="sSb-Yx-rzl"/>
+                                                <constraint firstAttribute="trailing" secondItem="BV0-NV-YnI" secondAttribute="trailing" constant="16" id="sgt-VA-yNO"/>
+                                                <constraint firstItem="KdJ-pU-ZFh" firstAttribute="leading" secondItem="UVG-4b-WlP" secondAttribute="leading" id="x5d-O2-YGQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="assetImageView" destination="UVG-4b-WlP" id="Tgf-84-RTJ"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="info" rowHeight="56" id="Lxd-Ef-WiR" customClass="EventInfoCell" customModule="schetto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="485" width="320" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lxd-Ef-WiR" id="N8u-vk-DUb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

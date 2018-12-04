@@ -28,11 +28,11 @@ class EventPresenter: EventPresenterProtocol {
     var interactor: EventInteractorInput!
     
     func fetchEditableEvent(from soruceEvent: EventModel?) {
-//        if let event = soruceEvent {
-//            interactor.copy(event)
-//        } else {
-//            interactor.createTodo()
-//        }
+        if let event = soruceEvent {
+            interactor.copy(event)
+        } else {
+            interactor.create()
+        }
     }
     
     func register(_ event: EventModel) {
@@ -45,5 +45,24 @@ class EventPresenter: EventPresenterProtocol {
 }
 
 extension EventPresenter: EventInteractorOutput {
-	
+    
+    func created(model: EventModel) {
+        
+    }
+    
+    func copied(model: EventModel) {
+        
+    }
+    
+    func fetched(list: [EventModel]) {
+        
+    }
+    
+    func registered(model: EventModel) {
+        
+    }
+    
+    func removed() {
+        
+    }
 }
