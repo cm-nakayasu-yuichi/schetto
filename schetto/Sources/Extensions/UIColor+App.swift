@@ -93,18 +93,22 @@ extension UIColor {
 extension UIColor {
     
     func withRedComponent(_ red: CGFloat) -> UIColor {
-        return withRGBComponent(at: 0, value: red)
+        return withRGBAComponent(at: 0, value: red)
     }
     
     func withGreenComponent(_ green: CGFloat) -> UIColor {
-        return withRGBComponent(at: 1, value: green)
+        return withRGBAComponent(at: 1, value: green)
     }
     
     func withBlueComponent(_ blue: CGFloat) -> UIColor {
-        return withRGBComponent(at: 2, value: blue)
+        return withRGBAComponent(at: 2, value: blue)
     }
     
-    private func withRGBComponent(at index: Int, value: CGFloat) -> UIColor {
+    func withAlphaComponent(_ alpha: CGFloat) -> UIColor {
+        return withRGBAComponent(at: 3, value: alpha)
+    }
+    
+    private func withRGBAComponent(at index: Int, value: CGFloat) -> UIColor {
         var r: CGFloat = -1, g: CGFloat = -1, b: CGFloat = -1, a: CGFloat = -1
         getRed(&r, green: &g, blue: &b, alpha: &a)
         var rgba = [r, g, b, a]

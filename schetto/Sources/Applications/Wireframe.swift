@@ -75,7 +75,7 @@ class Wireframe {
     
     static func showTest(from fromViewController: UIViewController) {
         let viewController = builder.test()
-        helper.present(crossDisolve: viewController, from: fromViewController)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func pop(from fromViewController: UIViewController) {
