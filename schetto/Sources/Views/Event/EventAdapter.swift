@@ -91,14 +91,10 @@ class EventAdapter: NSObject {
         }
         if let cell = original as? EventDateCell {
             cell.delegate = self
-            cell.startDate = event.start ?? .now
-            cell.endDate = event.end ?? .now
-            cell.allDay = event.all
-        }
-        if let cell = original as? EventDateCell {
-            cell.delegate = self
-            cell.startDate = event.start ?? .now
-            cell.endDate = event.end ?? .now
+            cell.startDateText = event.startDateText
+            cell.endDateText = event.endDateText
+            cell.startTimeText = event.startTimeText
+            cell.endTimeText = event.endTimeText
             cell.allDay = event.all
         }
         if let cell = original as? EventInfoCell {

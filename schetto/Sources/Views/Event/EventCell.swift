@@ -51,17 +51,27 @@ class EventDateCell: UITableViewCell {
     
     var indexPath: IndexPath!
     
-    var startDate: Date! {
+    var startDateText: String! {
         didSet {
-            startDayLabel.text = startDate.string(.custom(format: ""))
-            startTimeLabel.text = startDate.string(.custom(format: ""))
+            startDayLabel.text = startDateText
         }
     }
     
-    var endDate: Date! {
+    var startTimeText: String! {
         didSet {
-            endDayLabel.text = endDate.string(.custom(format: ""))
-            endTimeLabel.text = endDate.string(.custom(format: ""))
+            startTimeLabel.text = startTimeText
+        }
+    }
+    
+    var endDateText: String! {
+        didSet {
+            endDayLabel.text = endDateText
+        }
+    }
+    
+    var endTimeText: String! {
+        didSet {
+            endTimeLabel.text = endTimeText
         }
     }
     

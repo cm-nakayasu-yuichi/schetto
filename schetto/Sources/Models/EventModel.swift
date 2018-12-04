@@ -19,3 +19,38 @@ class EventModel {
     var assets = [AssetModel]()
     var places = [String]()
 }
+
+extension EventModel {
+    
+    var startDateText: String {
+        guard let date = start else { return "-" }
+        return dateText(from: date)
+    }
+    
+    var startTimeText: String {
+        guard let date = start else { return "-" }
+        return timeText(from: date)
+    }
+    
+    var endDateText: String {
+        guard let date = end else { return "-" }
+        return dateText(from: date)
+    }
+    
+    var endTimeText: String {
+        guard let date = end else { return "-" }
+        return timeText(from: date)
+    }
+    
+    private func dateText(from date: Date, week: Bool = true) -> String {
+        var ret = date.string(.custom(format: "yyyy年MM月dd日"))
+        if week {
+            ret += "(\(date.weak.symbol))"
+        }
+        return ret
+    }
+    
+    private func timeText(from date: Date) -> String {
+        return date.string(.custom(format: "HH:mm"))
+    }
+}
