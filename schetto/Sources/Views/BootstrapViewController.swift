@@ -25,6 +25,11 @@ class BootstrapViewController: UITableViewController {
             (title: "テスト", handler: { bootstrap in
                 Wireframe.showTest(from: bootstrap)
             }),
+            (title: "場所検索", handler: { bootstrap in
+                Wireframe.showLocationSearch(from: bootstrap, location: "ss", title: "探す") { t, t2 in
+                    print(t2)
+                }
+            }),
             ]),
         ]
     // =========================================================================

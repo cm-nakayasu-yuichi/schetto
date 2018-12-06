@@ -146,6 +146,14 @@ class Builder {
         return view
     }
     
+    func locationSearch(location: String, title: String, commitHandler: @escaping LocationSearchViewController.CommitHandler) -> LocationSearchViewController {
+        let view = instantiate(LocationSearchViewController.self, storyboardName: "LocationSearch")
+        view.title = title
+        view.initialText = location
+        view.commitHandler = commitHandler
+        return view
+    }
+    
     func text(options: TextViewControllerOptions, handler: @escaping (String) -> ()) -> TextViewController {
         let view = instantiate(TextViewController.self, storyboardName: "Text")
         view.options = options
