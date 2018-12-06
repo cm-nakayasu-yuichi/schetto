@@ -17,13 +17,14 @@ class EventTranslator: MultiTranslator, MultiDetranslator {
         model.end = input.end
         model.all = input.all
         model.summery = input.summery
+        model.location = input.location
         model.notify = input.notify
         model.color = UIColor(rgbString: input.color)
         model.status = RecordStatus(rawValue: input.status)!
         
         let stickerTranslator = StickerTranslator()
-        model.stickers = stickerTranslator.translate(input.stickers.array)
-        
+        model.sticker = stickerTranslator.translateOrNil(input.sticker)
+
         return model
     }
     
@@ -40,20 +41,9 @@ class EventTranslator: MultiTranslator, MultiDetranslator {
         db.status = output.status.rawValue
         
         let stickerTranslator = StickerTranslator()
-        db.stickers.set(stickerTranslator.detranslate(output.stickers))
+        db.sticker = stickerTranslator.detranslateOrNil(output.sticker)
+        //db.stickers.set(stickerTranslator.detranslate(output.stickers))
         
         return db
-    }
-    
-    func translate(_ inputs: [DBEvent]) -> [EventModel] {
-        return inputs.map { input -> Output in
-            return translate(input)
-        }
-    }
-    
-    func detranslate(_ outputs: [EventModel]) -> [DBEvent] {
-        return outputs.map { output -> Input in
-            return detranslate(output)
-        }
     }
 }

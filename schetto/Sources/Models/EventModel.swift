@@ -11,13 +11,12 @@ class EventModel {
     var end: Date? = nil
     var all = false
     var summery = ""
+    var location = ""
     var notify = 0 // notify分前に通知する
     var color: UIColor?
     var status = RecordStatus.draft
-    
-    var stickers = [StickerModel]()
+    var sticker: StickerModel?
     var assets = [AssetModel]()
-    var places = [String]()
 }
 
 extension EventModel {

@@ -114,7 +114,7 @@ class EventInfoCell: UITableViewCell {
     
     var stickerImage: UIImage? {
         didSet {
-            stickerView.image = stickerImage
+            //stickerView.image = stickerImage
         }
     }
     

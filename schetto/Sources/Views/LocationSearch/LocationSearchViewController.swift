@@ -72,6 +72,7 @@ extension LocationSearchViewController: UITableViewDelegate, UITableViewDataSour
 extension LocationSearchViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         commitHandler(textField.text!, subtext)
         Wireframe.dismiss(from: self)
         return true

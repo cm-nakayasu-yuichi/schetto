@@ -30,8 +30,10 @@ extension RealmSwift.List {
         return map { $0 }
     }
     
-    func set(_ array: [Element]) {
+    func set(_ arrayOrNil: [Element]?) {
         removeAll()
-        append(objectsIn: array)
+        if let array = arrayOrNil {
+            append(objectsIn: array)
+        }
     }
 }

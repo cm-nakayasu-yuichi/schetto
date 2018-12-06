@@ -130,7 +130,7 @@ class EventAdapter: NSObject {
             cell.value = event.summery
         case .location:
             cell.caption = "場所"
-            cell.value = event.places.first ?? ""
+            cell.value = event.location
         default:
             return
         }

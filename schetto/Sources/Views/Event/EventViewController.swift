@@ -115,7 +115,10 @@ extension EventViewController: EventAdapterDelegate {
     }
     
     func eventAdapterDidTapEditLocation(_ adapter: EventAdapter) {
-        
+        Wireframe.showLocationSearch(from: self, location: editEvent.location, title: "予定の場所") { location, address in
+            self.editEvent.location = location
+            self.tableView.reloadData()
+        }
     }
     
     func eventAdapterDidSelectNotify(_ adapter: EventAdapter) {
