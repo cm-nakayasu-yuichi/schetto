@@ -68,6 +68,8 @@
 		DB548A6621AC3DFF00AD3B9B /* EventTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB548A5C21AC3DFE00AD3B9B /* EventTranslator.swift */; };
 		DB548A6721AC3DFF00AD3B9B /* EventAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB548A5D21AC3DFE00AD3B9B /* EventAdapter.swift */; };
 		DB548A6A21B5693D00AD3B9B /* Appearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB548A6921B5693D00AD3B9B /* Appearances.swift */; };
+		DB548A7721B5791C00AD3B9B /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB548A6D21B5791C00AD3B9B /* LocationSearchViewController.swift */; };
+		DB548A7D21B5791C00AD3B9B /* LocationSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB548A7321B5791C00AD3B9B /* LocationSearch.storyboard */; };
 		DB6C41E6219F32790073EFAA /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */; };
 		DB6C41E8219F32790073EFAA /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C41E0219F32790073EFAA /* DatePicker.storyboard */; };
 		DB6C41EC219F3A630073EFAA /* DateCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C41EB219F3A630073EFAA /* DateCalendarTests.swift */; };
@@ -279,6 +281,8 @@
 		DB548A5C21AC3DFE00AD3B9B /* EventTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTranslator.swift; sourceTree = "<group>"; };
 		DB548A5D21AC3DFE00AD3B9B /* EventAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAdapter.swift; sourceTree = "<group>"; };
 		DB548A6921B5693D00AD3B9B /* Appearances.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearances.swift; sourceTree = "<group>"; };
+		DB548A6D21B5791C00AD3B9B /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		DB548A7321B5791C00AD3B9B /* LocationSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationSearch.storyboard; sourceTree = "<group>"; };
 		DB6C41DE219F32790073EFAA /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		DB6C41E0219F32790073EFAA /* DatePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
 		DB6C41EB219F3A630073EFAA /* DateCalendarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCalendarTests.swift; sourceTree = "<group>"; };
@@ -595,6 +599,15 @@
 			path = Event;
 			sourceTree = "<group>";
 		};
+		DB548A6B21B5791C00AD3B9B /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				DB548A7321B5791C00AD3B9B /* LocationSearch.storyboard */,
+				DB548A6D21B5791C00AD3B9B /* LocationSearchViewController.swift */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
 		DB6C41DA219F32790073EFAA /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +848,7 @@
 				DB1CF28B2199CAA100C61995 /* DesignFontSetting */,
 				DB6C41DA219F32790073EFAA /* DatePicker */,
 				DB1CF2652199CAA100C61995 /* Text */,
+				DB548A6B21B5791C00AD3B9B /* LocationSearch */,
 				DB1CF2762199CAA100C61995 /* Web */,
 				DB40E095219B207C0088441D /* Common */,
 				DB1CF27F2199CAA100C61995 /* Test */,
@@ -1140,6 +1154,7 @@
 				DB1CF2B82199CAA100C61995 /* Main.storyboard in Resources */,
 				DB1CF2AA2199CAA100C61995 /* TodoDetail.storyboard in Resources */,
 				DB1CF2B12199CAA100C61995 /* DrawerMenu.storyboard in Resources */,
+				DB548A7D21B5791C00AD3B9B /* LocationSearch.storyboard in Resources */,
 				DB1CF2A22199CAA100C61995 /* TodoList.storyboard in Resources */,
 				E45C4ED021A3A770002002AC /* MainMonthlyDayCell.xib in Resources */,
 				DB6C41FA21A168E50073EFAA /* DatePickerDayCell.xib in Resources */,
@@ -1302,6 +1317,7 @@
 				E4959D6C218368B3008778F1 /* WebApiRequest.swift in Sources */,
 				DB950A25218D7C9F00D0B286 /* DesignFontSettingPresenter.swift in Sources */,
 				DB950A26218D7C9F00D0B286 /* DesignFontSettingRepository.swift in Sources */,
+				DB548A7721B5791C00AD3B9B /* LocationSearchViewController.swift in Sources */,
 				E4DCFBFC218C26310091B016 /* EventModel.swift in Sources */,
 				DB7A7B75217F8BFB0070EAEF /* AlertHelper.swift in Sources */,
 				DB6C420321A16B7D0073EFAA /* CalendarViewMonthCell.swift in Sources */,
