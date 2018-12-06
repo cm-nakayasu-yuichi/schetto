@@ -62,16 +62,36 @@ extension EventViewController: EventViewProtocol {
 
 extension EventViewController: EventAdapterDelegate {
     
-    func eventAdapterDidTapEditTitle(_ adapter: EventAdapter) {
-        
+    func eventAdapterDidTapEditName(_ adapter: EventAdapter) {
+        let options = TextViewControllerOptions(
+            title: "予定名",
+            placeholder: "予定の名前を入れてください",
+            text: editEvent.name,
+            multiLine: false
+        )
+        Wireframe.showText(from: self, options: options) { text in
+            self.editEvent.name = text
+            self.tableView.reloadData()
+        }
     }
     
     func eventAdapterDidTapEditStartDate(_ adapter: EventAdapter) {
-        
+        Wireframe.showDatePicker(from: self, dateTime: editEvent.start!, title: "予定の開始") { date in
+            self.editEvent.start = date
+            self.tableView.reloadData()
+        }
     }
     
     func eventAdapterDidTapEditEndDate(_ adapter: EventAdapter) {
+        
+    }
     
+    func eventAdapterDidTapColor(_ adapter: EventAdapter) {
+        
+    }
+    
+    func eventAdapterDidTapSticker(_ adapter: EventAdapter) {
+        
     }
     
     func eventAdapter(_ adapter: EventAdapter, didTapAllDay value: Bool) {
@@ -79,6 +99,10 @@ extension EventViewController: EventAdapterDelegate {
     }
     
     func eventAdapterDidTapEditSummery(_ adapter: EventAdapter) {
+        
+    }
+    
+    func eventAdapterDidTapEditLocation(_ adapter: EventAdapter) {
         
     }
     
@@ -91,8 +115,9 @@ extension EventViewController: EventAdapterDelegate {
     }
     
     func eventAdapterDidTapAddAsset(_ adapter: EventAdapter) {
-    
+        
     }
+    
     func eventAdapter(_ adapter: EventAdapter, didTapDeleteAsset asset: AssetModel) {
         
     }

@@ -6,15 +6,21 @@ import UIKit
 
 protocol EventAdapterDelegate: class {
     
-    func eventAdapterDidTapEditTitle(_ adapter: EventAdapter)
+    func eventAdapterDidTapEditName(_ adapter: EventAdapter)
     
     func eventAdapterDidTapEditStartDate(_ adapter: EventAdapter)
     
     func eventAdapterDidTapEditEndDate(_ adapter: EventAdapter)
     
+    func eventAdapterDidTapColor(_ adapter: EventAdapter)
+    
+    func eventAdapterDidTapSticker(_ adapter: EventAdapter)
+    
     func eventAdapter(_ adapter: EventAdapter, didTapAllDay value: Bool)
     
     func eventAdapterDidTapEditSummery(_ adapter: EventAdapter)
+    
+    func eventAdapterDidTapEditLocation(_ adapter: EventAdapter)
     
     func eventAdapterDidSelectNotify(_ adapter: EventAdapter)
     
@@ -28,7 +34,7 @@ protocol EventAdapterDelegate: class {
 class EventAdapter: NSObject {
 
     enum RowItem {
-        case title
+        case name
         case date
         case info
         case summery
@@ -58,7 +64,7 @@ class EventAdapter: NSObject {
     
     private var rowItems: [RowItem] {
         var ret: [RowItem] = [
-            .title, .date, .info, .summery, .location,
+            .name, .date, .info, .summery, .location,
         ]
         if !event.assets.isEmpty {
             ret.append(contentsOf: event.assets.map { asset -> RowItem in
@@ -76,7 +82,7 @@ class EventAdapter: NSObject {
     
     private func cellIdentifierOf(_ rowItem: RowItem) -> String {
         switch rowItem {
-        case .title, .summery, .location: return "text"
+        case .name, .summery, .location: return "text"
         case .date: return "date"
         case .info: return "info"
         case .asset(_): return "asset"
@@ -87,6 +93,7 @@ class EventAdapter: NSObject {
     private func bind(cell original: UITableViewCell, at indexPath: IndexPath) {
         if let cell = original as? EventTextCell {
             cell.delegate = self
+            cell.indexPath = indexPath
             bindText(cell: cell, rowItem: rowItemAt(indexPath))
         }
         if let cell = original as? EventDateCell {
@@ -95,10 +102,14 @@ class EventAdapter: NSObject {
             cell.endDateText = event.endDateText
             cell.startTimeText = event.startTimeText
             cell.endTimeText = event.endTimeText
-            cell.allDay = event.all
+            
         }
         if let cell = original as? EventInfoCell {
             cell.delegate = self
+            
+            cell.stickerImage = nil
+            cell.color = event.color
+            cell.allDay = event.all
         }
         if let cell = original as? EventAssetCell {
             cell.delegate = self
@@ -111,11 +122,14 @@ class EventAdapter: NSObject {
     
     private func bindText(cell: EventTextCell, rowItem: RowItem) {
         switch rowItem {
-        case .title:
+        case .name:
+            cell.caption = "予定名"
             cell.value = event.name
         case .summery:
+            cell.caption = "予定の概要・メモ"
             cell.value = event.summery
         case .location:
+            cell.caption = "場所"
             cell.value = event.places.first ?? ""
         default:
             return
@@ -141,34 +155,46 @@ extension EventAdapter: UITableViewDelegate, UITableViewDataSource {
 extension EventAdapter: EventTextCellDelegate, EventDateCellDelegate, EventInfoCellDelegate, EventAssetCellDelegate, EventAddAssetCellDelegate {
     
     func didTapEditText(in cell: EventTextCell, at indexPath: IndexPath) {
-        
+        switch rowItemAt(indexPath) {
+        case .name:
+            delegate.eventAdapterDidTapEditName(self)
+        case .summery:
+            delegate.eventAdapterDidTapEditSummery(self)
+        case .location:
+            delegate.eventAdapterDidTapEditLocation(self)
+        default: break
+        }
     }
     
     func didTapStartDate(in cell: EventDateCell) {
-        
+        delegate.eventAdapterDidTapEditStartDate(self)
     }
     
     func didTapEndDate(in cell: EventDateCell) {
-        
+        delegate.eventAdapterDidTapEditEndDate(self)
     }
     
-    func didChangeAllDay(in cell: EventDateCell, to value: Bool) {
-        
+    func didTapColorButton(in cell: EventInfoCell) {
+        delegate.eventAdapterDidTapColor(self)
     }
     
-    func didTapEditText(in cell: EventInfoCell, at indexPath: IndexPath) {
-        
+    func didTapStickerButton(in cell: EventInfoCell) {
+        delegate.eventAdapterDidTapSticker(self)
+    }
+    
+    func didChangeAllDay(in cell: EventInfoCell, to value: Bool) {
+        delegate.eventAdapter(self, didTapAllDay: value)
     }
     
     func didTapAsset(in cell: EventAssetCell, asset: AssetModel) {
-        
+        delegate.eventAdapter(self, didTapAsset: asset)
     }
     
     func didTapDeleteAsset(in cell: EventAssetCell, asset: AssetModel) {
-        
+        delegate.eventAdapter(self, didTapDeleteAsset: asset)
     }
     
     func didTapAddAsset(in cell: EventAddAssetCell) {
-        
+        delegate.eventAdapterDidTapAddAsset(self)
     }
 }

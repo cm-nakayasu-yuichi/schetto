@@ -15,9 +15,16 @@ class EventTextCell: UITableViewCell {
     
     weak var delegate: EventTextCellDelegate!
     
+    @IBOutlet private weak var captionLabel: UILabel!
     @IBOutlet private weak var valueLabel: UILabel!
     
     var indexPath: IndexPath!
+    
+    var caption = "" {
+        didSet {
+            captionLabel.text = caption
+        }
+    }
     
     var value = "" {
         didSet {
@@ -26,7 +33,7 @@ class EventTextCell: UITableViewCell {
     }
     
     @IBAction private func didTapEditButton() {
-        
+        delegate.didTapEditText(in: self, at: indexPath)
     }
 }
 
@@ -36,7 +43,6 @@ protocol EventDateCellDelegate: class {
     
     func didTapStartDate(in cell: EventDateCell)
     func didTapEndDate(in cell: EventDateCell)
-    func didChangeAllDay(in cell: EventDateCell, to value: Bool)
 }
 
 class EventDateCell: UITableViewCell {
@@ -47,9 +53,6 @@ class EventDateCell: UITableViewCell {
     @IBOutlet private weak var startTimeLabel: UILabel!
     @IBOutlet private weak var endDayLabel: UILabel!
     @IBOutlet private weak var endTimeLabel: UILabel!
-    @IBOutlet private weak var allDaySwitch: UISwitch!
-    
-    var indexPath: IndexPath!
     
     var startDateText: String! {
         didSet {
@@ -75,22 +78,12 @@ class EventDateCell: UITableViewCell {
         }
     }
     
-    var allDay = false {
-        didSet {
-            allDaySwitch.isOn = allDay
-        }
-    }
-    
     @IBAction private func didTapStartButton() {
-        
+        delegate.didTapStartDate(in: self)
     }
     
     @IBAction private func didTapEndButton() {
-        
-    }
-    
-    @IBAction private func didChangeAllDaySwitch() {
-        
+        delegate.didTapEndDate(in: self)
     }
 }
 
@@ -98,25 +91,49 @@ class EventDateCell: UITableViewCell {
 
 protocol EventInfoCellDelegate: class {
     
-    func didTapEditText(in cell: EventInfoCell, at indexPath: IndexPath)
+    func didTapColorButton(in cell: EventInfoCell)
+    func didTapStickerButton(in cell: EventInfoCell)
+    func didChangeAllDay(in cell: EventInfoCell, to value: Bool)
 }
 
 class EventInfoCell: UITableViewCell {
     
     weak var delegate: EventInfoCellDelegate!
     
-    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var colorView: ColorView!
+    @IBOutlet private weak var stickerView: UIImageView!
+    @IBOutlet private weak var allDaySwitch: UISwitch!
     
     var indexPath: IndexPath!
     
-    var title = "" {
+    var color: UIColor? {
         didSet {
-            titleLabel.text = title
+            colorView.color = color ?? .clear
         }
     }
     
-    @IBAction private func didTapEditButton() {
-        
+    var stickerImage: UIImage? {
+        didSet {
+            stickerView.image = stickerImage
+        }
+    }
+    
+    var allDay = false {
+        didSet {
+            allDaySwitch.isOn = allDay
+        }
+    }
+    
+    @IBAction private func didTapColorButton() {
+        delegate.didTapColorButton(in: self)
+    }
+    
+    @IBAction private func didTapStickerButton() {
+        delegate.didTapStickerButton(in: self)
+    }
+    
+    @IBAction private func didChangeAllDaySwitch() {
+        delegate.didChangeAllDay(in: self, to: allDaySwitch.isOn)
     }
 }
 
@@ -141,11 +158,11 @@ class EventAssetCell: UITableViewCell {
     }
     
     @IBAction private func didTapAssetButton() {
-        
+        delegate.didTapAsset(in: self, asset: asset)
     }
     
     @IBAction private func didTapDeleteButton() {
-        
+        delegate.didTapDeleteAsset(in: self, asset: asset)
     }
 }
 
@@ -161,6 +178,6 @@ class EventAddAssetCell: UITableViewCell {
     weak var delegate: EventAddAssetCellDelegate!
     
     @IBAction private func didTapAddAssetButton() {
-        
+        delegate.didTapAddAsset(in: self)
     }
 }
