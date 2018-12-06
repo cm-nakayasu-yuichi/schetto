@@ -83,7 +83,10 @@ extension EventViewController: EventAdapterDelegate {
     }
     
     func eventAdapterDidTapEditEndDate(_ adapter: EventAdapter) {
-        
+        Wireframe.showDatePicker(from: self, dateTime: editEvent.start!, title: "予定の終了") { date in
+            self.editEvent.end = date
+            self.tableView.reloadData()
+        }
     }
     
     func eventAdapterDidTapColor(_ adapter: EventAdapter) {
@@ -99,7 +102,16 @@ extension EventViewController: EventAdapterDelegate {
     }
     
     func eventAdapterDidTapEditSummery(_ adapter: EventAdapter) {
-        
+        let options = TextViewControllerOptions(
+            title: "予定の概要・メモ",
+            placeholder: "予定の概要・メモを書いてください",
+            text: editEvent.summery,
+            multiLine: false
+        )
+        Wireframe.showText(from: self, options: options) { text in
+            self.editEvent.summery = text
+            self.tableView.reloadData()
+        }
     }
     
     func eventAdapterDidTapEditLocation(_ adapter: EventAdapter) {
