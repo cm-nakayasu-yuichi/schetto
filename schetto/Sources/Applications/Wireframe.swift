@@ -11,9 +11,14 @@ class Wireframe {
         helper.present(crossDisolve: viewController, from: fromViewController)
     }
     
-    static func showEventEdit(from fromViewController: UIViewController) {
-        let viewController = builder.eventEdit()
+    static func showMainMonthly(from fromViewController: UIViewController) {
+        let viewController = builder.mainMonthly()
         helper.present(crossDisolve: viewController, from: fromViewController)
+    }
+    
+    static func showEvent(from fromViewController: UIViewController) {
+        let viewController = builder.event()
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func showDrawerMenu(from fromViewController: UIViewController) {
@@ -75,9 +80,14 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
+    static func showLocationSearch(from fromViewController: UIViewController, location: String, title: String, commitHandler: @escaping LocationSearchViewController.CommitHandler) {
+        let viewController = builder.locationSearch(location: location, title: title, commitHandler: commitHandler)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
+    }
+    
     static func showTest(from fromViewController: UIViewController) {
         let viewController = builder.test()
-        helper.present(crossDisolve: viewController, from: fromViewController)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func pop(from fromViewController: UIViewController) {

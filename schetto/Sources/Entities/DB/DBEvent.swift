@@ -12,12 +12,12 @@ class DBEvent: RealmSwift.Object, RealmIdentifiedObject {
     @objc dynamic var end: Date? = nil
     @objc dynamic var all = false // 終日フラグ
     @objc dynamic var summery = ""
-    @objc dynamic var place = ""
+    @objc dynamic var location = ""
     @objc dynamic var notify = 0 // notify分前に通知する
     @objc dynamic var color = "" // rgb
     @objc dynamic var status = RecordStatus.draft.rawValue
+    @objc dynamic var sticker: DBSticker?
     
-    var stickers = RealmSwift.List<DBSticker>()
     var assets = RealmSwift.List<DBAsset>()
     
     let linkingCalendar = LinkingObjects(fromType: DBCalendar.self, property: "events")

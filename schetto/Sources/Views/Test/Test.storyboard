@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zNM-R7-ofK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zNM-R7-ofK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,93 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jj-B5-iu5">
-                                <rect key="frame" x="50" y="70" width="275" height="200"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Y7-WH-XCx">
-                                        <rect key="frame" x="8" y="45" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.28472816779999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="CJZ-S7-gNN"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これはラベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFe-J7-FSs">
-                                <rect key="frame" x="255" y="621" width="104" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6a-e2-3iR" customClass="ClearButton" customModule="schetto" customModuleProvider="target">
-                                <rect key="frame" x="255" y="621" width="104" height="30"/>
-                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.25433433220000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="didTapCloseButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="vMF-9w-Y9j"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="なにか入力してね" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-wP-aj2">
-                                <rect key="frame" x="40" y="47" width="97" height="30"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9hV-4o-yZJ" customClass="ColorView" customModule="schetto" customModuleProvider="target">
+                                <rect key="frame" x="42" y="88" width="132" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="0.28472816779999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.38629149419999997" green="0.71725622479999995" blue="1" alpha="0.65475171229999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="border">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dh-nl-jcc" customClass="Button" customModule="schetto" customModuleProvider="target">
-                                <rect key="frame" x="53" y="544" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.25433433220000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="secondary"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="didTapCloseButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="Kub-B8-nEk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qD8-mn-iBX" customClass="Button" customModule="schetto" customModuleProvider="target">
-                                <rect key="frame" x="214" y="544" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.25433433220000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="style" value="primary"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="didTapCloseButton" destination="zNM-R7-ofK" eventType="touchUpInside" id="TeE-17-I78"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="1jj-B5-iu5" firstAttribute="top" secondItem="oGJ-hR-QhP" secondAttribute="top" constant="50" id="0Dt-d9-Soq"/>
-                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="1jj-B5-iu5" secondAttribute="trailing" constant="50" id="5Ka-NE-zQs"/>
-                            <constraint firstItem="J6a-e2-3iR" firstAttribute="bottom" secondItem="hFe-J7-FSs" secondAttribute="bottom" id="9lX-5U-anp"/>
-                            <constraint firstItem="J6a-e2-3iR" firstAttribute="trailing" secondItem="hFe-J7-FSs" secondAttribute="trailing" id="Zpo-0U-ntn"/>
-                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="trailing" secondItem="hFe-J7-FSs" secondAttribute="trailing" constant="16" id="aHG-1B-gNY"/>
-                            <constraint firstItem="oGJ-hR-QhP" firstAttribute="bottom" secondItem="hFe-J7-FSs" secondAttribute="bottom" constant="16" id="ezS-Js-PFl"/>
-                            <constraint firstItem="J6a-e2-3iR" firstAttribute="leading" secondItem="hFe-J7-FSs" secondAttribute="leading" id="oaY-WM-pT7"/>
-                            <constraint firstItem="J6a-e2-3iR" firstAttribute="top" secondItem="hFe-J7-FSs" secondAttribute="top" id="uXH-L0-7ym"/>
-                            <constraint firstItem="1jj-B5-iu5" firstAttribute="leading" secondItem="oGJ-hR-QhP" secondAttribute="leading" constant="50" id="wqz-6T-DVt"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oGJ-hR-QhP"/>
                     </view>
-                    <connections>
-                        <outlet property="closeButton" destination="J6a-e2-3iR" id="6sV-02-Aas"/>
-                        <outlet property="textField" destination="oWZ-wP-aj2" id="v30-JX-v7g"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ic7-TX-6P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-0.44977511244377816"/>
         </scene>
     </scenes>
 </document>

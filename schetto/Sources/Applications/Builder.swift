@@ -21,14 +21,29 @@ class Builder {
         return view
     }
     
-    func eventEdit() -> EventEditViewController {
-        let view = instantiate(EventEditViewController.self, storyboardName: "EventEdit")
+    func mainMonthly() -> MainMonthlyViewController {
+        let view = instantiate(MainMonthlyViewController.self, storyboardName: "MainMonthly")
         
-        let presenter: EventEditPresenterProtocol = EventEditPresenter()
+        let presenter: MainMonthlyPresenterProtocol = MainMonthlyPresenter()
         presenter.view = view
         
-        let interactor: EventEditInteractorInput = EventEditRepository()
-        interactor.output = presenter as? EventEditInteractorOutput
+        let interactor: MainMonthlyInteractorInput = MainMonthlyRepository()
+        interactor.output = presenter as! MainMonthlyInteractorOutput
+        presenter.interactor = interactor
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
+    func event() -> EventViewController {
+        let view = instantiate(EventViewController.self, storyboardName: "Event")
+        
+        let presenter: EventPresenterProtocol = EventPresenter()
+        presenter.view = view
+        
+        let interactor: EventInteractorInput = EventRepository()
+        interactor.output = presenter as! EventInteractorOutput
         presenter.interactor = interactor
         
         view.presenter = presenter
@@ -157,7 +172,15 @@ class Builder {
         presenter.interactor = interactor
         
         view.presenter = presenter
-        
+    
+        return view
+    }
+    
+    func locationSearch(location: String, title: String, commitHandler: @escaping LocationSearchViewController.CommitHandler) -> LocationSearchViewController {
+        let view = instantiate(LocationSearchViewController.self, storyboardName: "LocationSearch")
+        view.title = title
+        view.initialText = location
+        view.commitHandler = commitHandler
         return view
     }
     

@@ -25,4 +25,15 @@ extension RealmSwift.List {
     var lastIndex: Int {
         return count > 0 ? count - 1 : -1
     }
+    
+    var array: [Element] {
+        return map { $0 }
+    }
+    
+    func set(_ arrayOrNil: [Element]?) {
+        removeAll()
+        if let array = arrayOrNil {
+            append(objectsIn: array)
+        }
+    }
 }
