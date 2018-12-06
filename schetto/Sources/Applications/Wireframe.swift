@@ -68,8 +68,8 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
-    static func showLocationSearch(from fromViewController: UIViewController) {
-        let viewController = builder.locationSearch()
+    static func showLocationSearch(from fromViewController: UIViewController, location: String, title: String, commitHandler: @escaping LocationSearchViewController.CommitHandler) {
+        let viewController = builder.locationSearch(location: location, title: title, commitHandler: commitHandler)
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
