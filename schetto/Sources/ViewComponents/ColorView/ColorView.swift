@@ -8,7 +8,7 @@ import UIKit
     
     @IBInspectable var color: UIColor = UIColor.blue.withAlphaComponent(0.8) {
         didSet {
-            layoutIfNeeded()
+            backgroundColor = color
         }
     }
     

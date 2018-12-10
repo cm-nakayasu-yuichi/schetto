@@ -68,11 +68,9 @@ class Wireframe {
         helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
-    static func showColorPicker(from fromViewController: UIViewController) {
-        let viewController = builder.colorPicker()
-        let behavior = DialogRiseupBehavior()
-        behavior.fixedSize = .largeDialogSize
-        Dialog.show(helper.withinNavigation(viewController), from: fromViewController, behavior: behavior)
+    static func showColorPicker(from fromViewController: UIViewController, color: UIColor?, title: String, commitHandler: @escaping ColorPickerViewController.CommitHandler) {
+        let viewController = builder.colorPicker(color: color, title: title, commitHandler: commitHandler)
+        helper.present(helper.withinNavigation(viewController), from: fromViewController)
     }
     
     static func showText(from fromViewController: UIViewController, options: TextViewControllerOptions, handler: @escaping (String) -> ()) {

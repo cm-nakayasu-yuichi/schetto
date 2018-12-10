@@ -29,7 +29,9 @@ class BootstrapViewController: UITableViewController {
                 }
             }),
             (title: "カラーピッカー", handler: { bootstrap in
-                Wireframe.showColorPicker(from: bootstrap)
+                Wireframe.showColorPicker(from: bootstrap, color: .black, title: "色") { color in
+                    print(color.rgbString)
+                }
             }),
             (title: "テスト", handler: { bootstrap in
                 Wireframe.showTest(from: bootstrap)

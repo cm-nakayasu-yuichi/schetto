@@ -32,7 +32,9 @@ class ColorPickerAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ColorPickerCell
         cell.delegate = self
+        cell.index = indexPath.row
         cell.color = colors[indexPath.row]
+        cell.isSelected = false
         return cell
     }
     
@@ -52,7 +54,8 @@ class ColorPickerAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollec
 
 extension ColorPickerAdapter: ColorPickerCellDelegate {
     
-    func colorPickerCell(_ cell: ColorPickerCell, didSelectColor color: UIColor) {
-        delegate.colorPickerAdapter(self, didSelectColor: color)
+    func colorPickerCell(_ cell: ColorPickerCell, didTapColorButtonAt index: Int) {
+        print(index)
+        delegate.colorPickerAdapter(self, didSelectColor: self.colors[index])
     }
 }

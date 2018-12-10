@@ -5,8 +5,11 @@
 import UIKit
 
 class ColorPickerViewController: UIViewController {
+    
+    typealias CommitHandler = (UIColor) -> ()
 
-    var presenter: ColorPickerPresenterProtocol!
+    var color: UIColor?
+    var commitHandler: CommitHandler!
     
     private var adapter: ColorPickerAdapter!
     
@@ -17,10 +20,6 @@ class ColorPickerViewController: UIViewController {
         setupCloseButtonOnNavigationBar()
         adapter = ColorPickerAdapter(collectionView, delegate: self, colors: ColorSet.default.colors)
     }
-}
-
-extension ColorPickerViewController: ColorPickerViewProtocol {
-
 }
 
 extension ColorPickerViewController: ColorPickerAdapterDelegate {

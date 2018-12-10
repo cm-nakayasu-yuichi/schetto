@@ -161,18 +161,11 @@ class Builder {
         return view
     }
     
-    func colorPicker() -> ColorPickerViewController {
+    func colorPicker(color: UIColor?, title: String, commitHandler: @escaping ColorPickerViewController.CommitHandler) -> ColorPickerViewController {
         let view = instantiate(ColorPickerViewController.self, storyboardName: "ColorPicker")
-        
-        let presenter: ColorPickerPresenterProtocol = ColorPickerPresenter()
-        presenter.view = view
-        
-        let interactor: ColorPickerInteractorInput = ColorPickerRepository()
-        interactor.output = presenter as! ColorPickerInteractorOutput
-        presenter.interactor = interactor
-        
-        view.presenter = presenter
-    
+        view.title = title
+        view.color = color
+        view.commitHandler = commitHandler
         return view
     }
     
