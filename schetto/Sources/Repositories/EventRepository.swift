@@ -30,10 +30,13 @@ class EventRepository: EventInteractorInput {
     
     func create() {
         let model = EventModel()
-        let hour = Date.now.hour
+        
+        let now = Date.now
         model.name = "新しい予定"
-        model.start = Date.now.fixed(hour: hour + 1, minute: 0, second: 0)
-        model.end = Date.now.fixed(hour: hour + 2, minute: 0, second: 0)
+        model.summery = "予定の概要がここに入ります" // TODO:削除
+        model.location = "パナソニックスタジアム吹田" // TODO:削除
+        model.start = now.fixed(hour: now.hour + 1, minute: 0, second: 0)
+        model.end = now.fixed(hour: now.hour + 2, minute: 0, second: 0)
         output.created(model: model)
     }
     
